@@ -7,17 +7,20 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Research Use Only · PurePep</title>
+  <title>Seringues 100U 31G · 6mm · Emballées individuellement · PurePep</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Avertissement Research Use Only : les peptides PurePep sont réservés à un usage de recherche en laboratoire."/>
-  <meta name="keywords" content="peptides recherche, BPC-157, retatrutide, tirzepatide, HPLC, COA, Canada"/>
-  <meta property="og:title" content="Research Use Only · PurePep"/>
-  <meta property="og:description" content="Avertissement Research Use Only : les peptides PurePep sont réservés à un usage de recherche en laboratoire."/>
+  <meta name="description" content="Seringues PurePep 100U 31G · 6mm, emballées individuellement, graduées et stériles. Compatibles avec tous les flacons de peptides de recherche. Lot de 10, orange ou rose."/>
+  <meta name="keywords" content="seringue 31G, seringue insuline, seringue 100U, seringue peptide, reconstitution"/>
+  <meta property="og:title" content="Seringues 100U 31G · PurePep"/>
+  <meta property="og:description" content="Seringues PurePep 100U 31G · 6mm, emballées individuellement, graduées et stériles. Lot de 10, orange ou rose."/>
   <meta property="og:image" content="https://purepep.ca/images/logo-purepep.png"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Product","name":"Seringues 100U 31G","description":"Seringues stériles à usage unique, 100U, aiguille 31G · 6mm, emballées individuellement. Compatibles avec tous les flacons de peptides de recherche.","brand":{"@type":"Brand","name":"PurePep"},"offers":{"@type":"Offer","priceCurrency":"CAD","price":"7.00","availability":"https://schema.org/InStock","url":"https://purepep.ca/seringue-100u-31g.html"}}
+  </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     /* ── AIDE CONTEXTUELLE ── */
@@ -224,11 +227,12 @@
     }
     .hero-badge .ic{font-size:.9rem;display:flex;align-items:center}
     .hero-badge .ic svg{width:15px;height:15px}
-    .hero-video-full{
-      position:relative;z-index:2;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
-      overflow:hidden;line-height:0;
+    .hero-visual{position:relative}
+    .hero-visual-card{
+      position:relative;background:var(--card);border:1px solid var(--border);
+      border-radius:20px;box-shadow:var(--shadow-hover);padding:.6rem;overflow:hidden;
     }
-    .hero-video-full video{width:100%;height:auto;max-height:70vh;object-fit:cover;display:block}
+    .hero-visual-card svg{width:100%;height:auto;display:block}
     .hero-visual-tag{
       position:absolute;top:1.2rem;right:1.2rem;z-index:3;
       background:rgba(245,245,244,.92);backdrop-filter:blur(8px);
@@ -236,32 +240,20 @@
       padding:5px 12px;font-size:.72rem;font-weight:700;color:var(--accent-d);
       display:flex;align-items:center;gap:.35rem;
     }
-    .hero-grid-centered{display:block;padding-top:2.2rem}
-    .hero-content-centered{max-width:1100px;margin:0 auto;text-align:center}
-    .hero-content-centered .hero-eyebrow{margin-bottom:.7rem}
-    .hero-content-centered h1{margin-bottom:.5rem;font-size:clamp(2rem,4vw,2.9rem)}
-    .hero-content-centered .hero-subtagline{color:var(--muted);font-size:.98rem;margin-bottom:1.2rem}
-    .hero-content-centered .hero-subtagline strong{color:var(--text);font-weight:600}
-    .hero-content-centered .hero-action-row{
-      display:flex;align-items:center;justify-content:center;gap:1.6rem;flex-wrap:wrap;margin-bottom:1.1rem;
+    .hero-float-card{
+      position:static;margin-top:1rem;z-index:3;
+      background:var(--card);
+      border:1px solid var(--border);border-radius:14px;
+      box-shadow:var(--shadow-card);padding:.8rem 1.1rem;
+      display:flex;align-items:center;gap:.65rem;max-width:none;
     }
-    .hero-content-centered .hero-ctas{margin-bottom:0}
-    .hero-content-centered .hero-social-proof{margin-bottom:0}
-    .hero-content-centered .hero-badges{
-      justify-content:center;gap:0;flex-wrap:wrap;
-      border-top:1px solid var(--border);padding-top:.9rem;max-width:720px;margin:0 auto;
-    }
-    .hero-content-centered .hero-badge{
-      background:none;border:none;box-shadow:none;padding:.3rem .9rem;font-weight:500;color:var(--muted);
-      border-right:1px solid var(--border);border-radius:0;
-    }
-    .hero-content-centered .hero-badge:last-child{border-right:none}
-    @media (max-width:640px){
-      .hero-content-centered .hero-badge{border-right:none;padding:.3rem .6rem}
-    }
+    .hero-float-card .trust-icon{width:34px;height:34px;border-radius:8px;background:var(--trust-glow);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+    .hero-float-card strong{font-size:.8rem;color:var(--text);display:block}
+    .hero-float-card p{font-size:.72rem;color:var(--muted);margin:0}
     @media (max-width:900px){
       .hero-grid{grid-template-columns:1fr;padding:2rem 1.5rem}
-      .hero-video-full video{max-height:44vh}
+      .hero-visual{order:-1;max-width:440px;margin:0 auto}
+      .hero-float-card{position:static;margin-top:1rem;max-width:none}
     }
 
     /* ── PAYMENT BADGES ── */
@@ -297,21 +289,19 @@
     .btn-ghost:hover{color:var(--text);border-color:var(--accent)}
 
     /* ── FILTER TABS ── */
-    .filter-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-bottom:1.9rem;max-width:800px;margin-left:auto;margin-right:auto}
+    .filter-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin-bottom:1.9rem;max-width:640px}
     .filter-tab{
-      background:var(--card2);border:1px solid var(--border);color:var(--text);
-      padding:.6rem 1.1rem;border-radius:99px;font-size:.82rem;font-weight:600;
+      background:var(--card);border:1px solid var(--border);color:var(--text);
+      padding:.6rem .7rem;border-radius:8px;font-size:.78rem;font-weight:600;
       letter-spacing:0;transition:all .2s cubic-bezier(.4,0,.2,1);cursor:pointer;
-      display:inline-flex;align-items:center;justify-content:center;gap:.4rem;white-space:nowrap;
+      display:flex;align-items:center;justify-content:center;gap:.35rem;white-space:nowrap;
       text-align:center;
     }
-    .filter-tab .count{
-      color:var(--accent-d);font-weight:700;font-size:.68rem;background:rgba(85,85,85,.12);
-      border-radius:99px;padding:1px 7px;
-    }
-    .filter-tab:hover{border-color:var(--accent);background:var(--card)}
-    .filter-tab.active{background:var(--accent-d);border-color:var(--accent-d);color:#fff}
-    .filter-tab.active .count{background:rgba(255,255,255,.2);color:#fff}
+    .filter-tab .count{color:var(--muted);font-weight:500;font-size:.72rem}
+    .filter-tab:hover{border-color:var(--text);background:var(--card2)}
+    .filter-tab.active{background:var(--text);border-color:var(--text);color:#fff}
+    .filter-tab.active .count{color:rgba(255,255,255,.65)}
+    @media(max-width:640px){.filter-bar{grid-template-columns:repeat(2,1fr);max-width:none}}
 
     /* ── PRODUCT CARD ── */
     .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.2rem}
@@ -374,15 +364,16 @@
     .packs-header-banner h2 span{color:var(--accent-l)}
     .packs-header-banner p{color:var(--muted);font-size:.88rem;margin-top:.2rem}
     .packs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.2rem}
-    .pack-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.6rem 1.4rem;transition:transform .2s,border-color .2s;cursor:pointer;text-align:center;display:flex;flex-direction:column;align-items:center}
+    .pack-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.4rem;transition:transform .2s,border-color .2s}
     .pack-card:hover{transform:translateY(-4px);border-color:var(--accent)}
-    .pack-synergy-tag{
-      display:inline-flex;align-items:center;gap:.3rem;background:rgba(85,85,85,.1);color:var(--accent-d);
-      padding:3px 11px;border-radius:99px;font-size:.7rem;font-weight:700;margin-bottom:.8rem;
-    }
-    .pack-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:.4rem}
-    .pack-desc{color:var(--muted);font-size:.82rem;line-height:1.5;margin-bottom:.7rem}
-    .pack-price-single{font-family:'Plus Jakarta Sans',sans-serif;color:var(--accent-l);font-size:1.4rem;font-weight:800;margin:auto 0 1rem}
+    .pack-discount-badge{display:inline-block;align-self:flex-start;background:var(--accent);color:#fff;padding:3px 10px;border-radius:6px;font-size:.72rem;font-weight:700;margin-bottom:.7rem}
+    .pack-name{font-size:1.05rem;font-weight:700;margin-bottom:.4rem}
+    .pack-desc{color:var(--muted);font-size:.82rem;line-height:1.5;margin-bottom:.9rem}
+    .pack-items{display:flex;flex-direction:column;gap:.3rem;margin-bottom:.9rem}
+    .pack-item-row{display:flex;justify-content:space-between;color:var(--muted);font-size:.82rem}
+    .pack-pricing{display:flex;align-items:center;gap:.7rem;margin-bottom:.9rem}
+    .pack-price-old{color:var(--muted);font-size:.88rem;text-decoration:line-through}
+    .pack-price-new{color:var(--accent-l);font-size:1.15rem;font-weight:800}
 
     /* ── QUALITY ── */
     .quality-section{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;text-align:center;margin:0 2rem}
@@ -421,38 +412,18 @@
     .verified-sep{width:1px;height:26px;background:var(--border)}
 
     /* ── DOMAINES DE RECHERCHE ── */
-    .domaines-header{text-align:center;max-width:640px;margin:0 auto 2.2rem}
-    .domaines-eyebrow{
-      display:inline-flex;align-items:center;gap:.5rem;color:var(--accent-l);
-      font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.7rem;
-    }
-    .domaines-eyebrow::before,.domaines-eyebrow::after{content:'';width:22px;height:1px;background:var(--accent)}
-    .domaines-header h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.1rem;font-weight:600;margin-bottom:.5rem}
-    .domaines-header p{color:var(--muted);font-size:.92rem;line-height:1.5}
-    .domaines-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:.7rem}
+    .domaines-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
     .domaine-card{
-      background:var(--card);border:1px solid var(--border);border-radius:14px;
-      padding:1.1rem .8rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.4rem;
+      background:var(--card);border:1px solid var(--border);border-radius:16px;
+      padding:1.4rem 1.3rem;text-align:left;display:flex;flex-direction:column;gap:.3rem;
       transition:transform .2s,border-color .2s,box-shadow .2s;
     }
-    .domaine-card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 12px 30px rgba(85,85,85,.1)}
-    .domaine-icon{
-      width:38px;height:38px;border-radius:50%;background:var(--trust-glow);
-      display:flex;align-items:center;justify-content:center;color:var(--accent-d);
-    }
-    .domaine-icon svg{width:19px;height:19px}
-    .domaine-title{font-size:.84rem;font-weight:700;color:var(--text);line-height:1.25}
-    .domaine-link{font-size:.7rem;font-weight:700;color:var(--accent-l);opacity:0;transition:opacity .2s}
-    .domaine-card:hover .domaine-link{opacity:1}
-    @media(max-width:900px){.domaines-grid{grid-template-columns:repeat(3,1fr)}}
-    @media(max-width:520px){.domaines-grid{grid-template-columns:repeat(2,1fr)}}
-
-    /* ── PEPTIDES DES PACKS ── */
-    .pack-peptides{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:.3rem;flex-wrap:wrap}
-    .stack-pep{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:.3rem .6rem;font-size:.76rem;font-weight:700;color:var(--text)}
-    .stack-plus{color:var(--muted);font-weight:700;font-size:.8rem}
-    .pack-kit-note{font-size:.74rem;color:var(--accent-l);font-weight:600}
-    .packs-discount-inline{font-family:'Inter',sans-serif;font-size:.85rem;font-weight:700;color:var(--accent-l);vertical-align:middle;margin-left:.5rem}
+    .domaine-card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 30px rgba(85,85,85,.1)}
+    .domaine-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;font-weight:700;color:var(--muted);letter-spacing:.05em}
+    .domaine-icon{font-size:1.6rem;margin:.3rem 0 .2rem}
+    .domaine-title{font-size:1.05rem;font-weight:700;color:var(--text)}
+    .domaine-desc{font-size:.82rem;color:var(--muted);line-height:1.45;margin-bottom:.4rem}
+    .domaine-link{font-size:.8rem;font-weight:700;color:var(--accent-l)}
 
     /* ── UPSELL ── */
     .upsell-section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin:0 2rem 2rem}
@@ -773,16 +744,16 @@
     .section-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.7rem;font-weight:600;letter-spacing:0}
 
     /* Filter tabs */
-    .filter-bar{gap:.6rem;padding:.2rem 0;justify-content:center;max-width:800px;margin-left:auto;margin-right:auto}
+    .filter-bar{gap:.5rem;padding:.2rem 0}
     .filter-tab{
-      border-radius:99px;font-size:.82rem;font-weight:600;letter-spacing:0;
-      background:rgba(240,240,238,.9);border:1px solid rgba(20,20,20,.12);
-      color:var(--text);transition:all .2s cubic-bezier(.4,0,.2,1);padding:.6rem 1.1rem;
+      border-radius:8px;font-size:.78rem;font-weight:600;letter-spacing:0;
+      background:rgba(255,255,255,.85);border:1px solid rgba(20,20,20,.12);
+      color:var(--text);transition:all .2s cubic-bezier(.4,0,.2,1);padding:.6rem .7rem;
     }
-    .filter-tab:hover{background:#fff;border-color:var(--accent)}
-    .filter-tab.active{background:var(--accent-d);border-color:var(--accent-d);color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.25)}
-    .filter-tab .count{color:var(--accent-d);font-weight:700;font-size:.68rem;background:rgba(85,85,85,.12);border-radius:99px;padding:1px 7px}
-    .filter-tab.active .count{background:rgba(255,255,255,.2);color:#fff}
+    .filter-tab:hover{background:#fff;border-color:rgba(20,20,20,.3)}
+    .filter-tab.active{background:var(--text);border-color:var(--text);color:#fff;box-shadow:0 2px 10px rgba(20,20,20,.18)}
+    .filter-tab .count{color:var(--muted);font-weight:500;font-size:.72rem}
+    .filter-tab.active .count{color:rgba(255,255,255,.65)}
 
     /* Product cards, major upgrade */
     .product-card{
@@ -1098,18 +1069,8 @@
       .spotlight-outer.visible .spotlight::before{animation:none;opacity:0}
       .sp-vial{transform:none !important}
     }
-    .back-to-catalog{
-    display:inline-flex;align-items:center;gap:.4rem;max-width:1280px;margin:.7rem auto 0;padding:0 2rem;
-    font-size:.82rem;font-weight:700;color:var(--accent-d);
-  }
-  .back-to-catalog-inner{
-    display:inline-flex;align-items:center;gap:.4rem;background:var(--card2);border:1px solid var(--border);
-    border-radius:99px;padding:.45rem 1rem;transition:all .2s;
-  }
-  .back-to-catalog-inner:hover{background:var(--card);border-color:var(--accent)}
-  @media(max-width:640px){.back-to-catalog{padding:0 1.3rem}}
-</style>
-  <link rel="canonical" href="https://purepep.ca/research-use-only"/>
+  </style>
+  <link rel="canonical" href="https://purepep.ca/kit-reconstitution"/>
 </head>
 <body>
 <div id="scroll-progress"></div>
@@ -1212,81 +1173,225 @@
 </div>
 
 <style>
-  .breadcrumb{max-width:900px;margin:0 auto;padding:1.2rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:1280px;margin:0 auto;padding:1.2rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted);transition:color .2s}
   .breadcrumb a:hover{color:var(--accent-l)}
   .breadcrumb .sep{margin:0 .4rem;opacity:.5}
   .breadcrumb .current{color:var(--text);font-weight:600}
-  .article-wrap{max-width:900px;margin:0 auto;padding:1.5rem 2rem 4rem}
-  .article-eyebrow{display:inline-flex;align-items:center;gap:.5rem;color:var(--accent-l);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem}
-  .article-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.4rem;font-weight:600;line-height:1.1;margin-bottom:.7rem}
-  .article-meta{font-size:.8rem;color:var(--muted);margin-bottom:2rem}
-  .article-body h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.5rem;font-weight:700;margin:2rem 0 .8rem}
-  .article-body h2:first-child{margin-top:0}
-  .article-body h3{font-size:1rem;font-weight:700;margin:1.4rem 0 .5rem}
-  .article-body p{font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.1rem}
-  .article-body ul,.article-body ol{margin:.4rem 0 1.1rem 1.3rem}
-  .article-body li{font-size:1.05rem;line-height:1.75;color:var(--text);margin-bottom:.45rem}
-  .article-body strong{color:var(--text)}
-  .article-body a{color:var(--accent-l);font-weight:600}
-  .article-callout{background:var(--card2);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:1rem 1.3rem;margin:1.3rem 0;font-size:.85rem;line-height:1.6;color:var(--muted)}
-  .article-callout strong{color:var(--text);display:block;margin-bottom:.3rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.03em}
-  .article-callout-warn{border-left-color:#4a4a4a;background:rgba(251,146,60,.08)}
-  .article-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.85rem}
-  .article-table th,.article-table td{padding:.6rem .8rem;border:1px solid var(--border);text-align:left}
-  .article-table th{background:var(--card2);font-weight:700}
-  .placeholder-banner{background:rgba(251,146,60,.12);border:1px solid rgba(251,146,60,.35);border-radius:12px;padding:1rem 1.3rem;margin-bottom:2rem;font-size:.82rem;color:#4a4a4a;line-height:1.6}
-  .placeholder-banner strong{display:block;margin-bottom:.3rem}
-  .glossary-term{margin-bottom:1.3rem;padding-bottom:1.3rem;border-bottom:1px solid var(--border)}
-  .glossary-term:last-child{border-bottom:none}
-  .glossary-term dt{font-weight:800;font-size:.95rem;color:var(--text);margin-bottom:.3rem}
-  .glossary-term dd{font-size:.88rem;color:var(--muted);line-height:1.6;margin:0}
-  @media(max-width:640px){
-    .article-title{font-size:1.9rem}
-    .article-wrap{padding:1.2rem 1.3rem 3rem}
+  .back-to-catalog{
+    display:inline-flex;align-items:center;gap:.4rem;max-width:1280px;margin:.7rem auto 0;padding:0 2rem;
+    font-size:.82rem;font-weight:700;color:var(--accent-d);
+  }
+  .back-to-catalog-inner{
+    display:inline-flex;align-items:center;gap:.4rem;background:var(--card2);border:1px solid var(--border);
+    border-radius:99px;padding:.45rem 1rem;transition:all .2s;
+  }
+  .back-to-catalog-inner:hover{background:var(--card);border-color:var(--accent)}
+  @media(max-width:640px){.back-to-catalog{padding:0 1.3rem}}
+  .product-hero{max-width:1280px;margin:0 auto;padding:1.5rem 2rem 3rem;display:grid;grid-template-columns:1fr 1.05fr;gap:3rem;align-items:start}
+  .ph-gallery{position:sticky;top:90px}
+  .ph-main-img{background:#ffffff;border-radius:22px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--border)}
+  .ph-main-img img{width:100%;height:100%;object-fit:contain}
+  .ph-trust-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+  .ph-trust-item{display:flex;align-items:center;gap:.4rem;background:var(--card);border:1px solid var(--border);border-radius:99px;padding:.4rem .85rem;font-size:.72rem;font-weight:600;color:var(--muted)}
+  .ph-cat-badge{display:inline-block;text-align:left;margin:0 0 .7rem;padding:2px 9px;border-radius:99px;background:var(--card2);border:1px solid var(--border)}
+  .ph-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.6rem;font-weight:600;line-height:1.05;margin-bottom:.6rem}
+  .dose-tag{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.03em;color:var(--muted);background:var(--card2);border:1px solid var(--border);padding:.2em .55em;border-radius:7px;margin-left:.5em;vertical-align:middle}
+  .ph-subtitle{color:var(--muted);font-size:.92rem;line-height:1.55;margin-bottom:1.3rem;max-width:520px}
+  .ph-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.3rem}
+  .ph-tag{display:inline-flex;align-items:center;gap:.35rem;background:var(--card2);border:1px solid var(--border);border-radius:99px;padding:.4rem .85rem;font-size:.78rem;font-weight:600;color:var(--text)}
+  .ph-tag svg{width:12px;height:12px;flex-shrink:0;color:var(--accent-l)}
+  .ph-composition{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.3rem}
+  .ph-composition-item{display:flex;align-items:center;gap:.6rem;font-size:.88rem;color:var(--text)}
+  .ph-composition-item b{color:var(--accent-l)}
+  .ph-buybox{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:1.5rem;margin-bottom:1.5rem}
+  .ph-dose-label{font-size:.8rem;font-weight:800;color:var(--text);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.5rem}
+  .ph-price-row{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.2rem}
+  .ph-price{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.3rem;font-weight:700;color:var(--accent-l)}
+  .ph-price-unit{font-size:.78rem;color:var(--muted);font-weight:500;margin-left:.3rem}
+  .ph-buy-row{display:flex;gap:.8rem;align-items:center}
+  .ph-buy-row .qty-ctrl{height:48px}
+  .ph-buy-row .qty-btn{width:34px;height:100%}
+  .ph-buy-row .qty-val{width:36px;font-size:.92rem}
+  .ph-add-btn{flex:1;background:var(--accent-d);color:#fff;padding:0 1.4rem;height:48px;border-radius:10px;font-weight:700;font-size:.92rem;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .2s}
+  .ph-add-btn:hover{background:var(--accent-l)}
+  .ph-add-btn.added{background:var(--accent-l)}
+  .ph-tabs{display:flex;gap:1.6rem;border-bottom:1px solid var(--border);margin-bottom:1.6rem}
+  .ph-tab{padding:.7rem 0;font-size:.85rem;font-weight:700;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s;cursor:pointer}
+  .ph-tab.active{color:var(--text);border-color:var(--accent)}
+  .ph-tab-panel{display:none;font-size:.88rem;line-height:1.7;color:var(--text)}
+  .ph-tab-panel.active{display:block}
+  .ph-tab-panel h4{font-size:.95rem;font-weight:700;margin:1.1rem 0 .5rem}
+  .ph-tab-panel h4:first-child{margin-top:0}
+  .ph-tab-panel ul{margin:.4rem 0 .8rem 1.2rem}
+  .ph-tab-panel li{margin-bottom:.3rem;color:var(--muted)}
+  .ph-related{max-width:1280px;margin:0 auto;padding:0 2rem 4rem}
+  .ph-related h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.7rem;font-weight:600;margin-bottom:1.2rem}
+  .ph-related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+  .ph-related-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1rem;text-align:center;transition:all .2s}
+  .ph-related-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+  .ph-related-card img{width:100%;aspect-ratio:1/1;object-fit:contain;margin-bottom:.6rem}
+  .ph-related-name{font-size:.85rem;font-weight:700;margin-bottom:.2rem}
+  .ph-related-price{font-size:.8rem;color:var(--accent-l);font-weight:600}
+  @media(max-width:860px){
+    .product-hero{grid-template-columns:1fr;padding:1.2rem 1.3rem 2.5rem;gap:1.5rem}
+    .ph-gallery{position:static}
+    .ph-title{font-size:2.1rem}
     .breadcrumb{padding:1rem 1.3rem 0}
   }
 </style>
 
 <div class="breadcrumb">
-  <a href="index.html" data-i18n="breadcrumb_home">Accueil</a><span class="sep">/</span><span class="current">Research Use Only</span>
+  <a href="index.html" data-i18n="breadcrumb_home">Accueil</a><span class="sep">/</span><a href="index.html#produits" data-i18n="breadcrumb_products">Nos peptides</a><span class="sep">/</span><span class="current">Seringues 100U 31G</span>
 </div>
 <div class="back-to-catalog"><a href="index.html#produits" class="back-to-catalog-inner" data-i18n="back_to_catalog">← Voir tous les peptides</a></div>
-<div class="article-wrap reveal">
 
-  <div class="article-eyebrow" data-i18n="ruo_eyebrow">Avertissement produit</div>
-  <h1 class="article-title" data-i18n="ruo_h1">Research Use Only</h1>
-  <p class="article-meta" data-i18n="ruo_updated">Dernière mise à jour : Juillet 2026</p>
+<div class="product-hero reveal">
+  <div class="ph-gallery">
+    <div class="ph-main-img">
+      <img id="ph-main-img-el" src="images/syringe.jpg" alt="Seringues PurePep 100U 31G, emballées individuellement"/>
+    </div>
+    <div class="ph-trust-row">
+      <span class="ph-trust-item">✓ Matériel stérile</span>
+      <span class="ph-trust-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><rect x="1" y="4" width="14" height="11"/><path d="M15 8h4l3 3v4h-7z"/><circle cx="5.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><span data-i18n="trust_shipped">Expédié le jour même avant 14h, sinon sous 24h</span></span>
+      <span class="ph-trust-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span data-i18n="trust_packaging">Emballage discret</span></span>
+    </div>
+  </div>
 
-  <div class="article-body">
-    <h2 data-i18n="ruo_s1_h">Usage exclusivement réservé à la recherche</h2>
-    <p data-i18n="ruo_s1_p">Tous les peptides vendus sur PurePep sont des <strong>produits de recherche (Research Use Only)</strong>, destinés exclusivement à un usage en laboratoire par des professionnels ou particuliers avertis dans un cadre de recherche scientifique.</p>
+  <div class="ph-info">
+    <span class="cat-badge cat-accessoires ph-cat-badge" data-i18n="acc_cat">Accessoires</span>
+    <h1 class="ph-title">Seringues 100U 31G<span class="dose-tag">6 MM</span></h1>
+    <p class="ph-subtitle" data-i18n="syringe_subtitle">Seringues stériles à usage unique, graduées, aiguille fine 31G · 6mm, pensées pour les injections sous-cutanées de faible volume. Emballées individuellement pour un usage sûr et discret.</p>
 
-    <div class="article-callout article-callout-warn">
-      <div data-i18n="ruo_callout"><strong>Ces produits ne sont pas&nbsp;:</strong>
-      Des médicaments · Des compléments alimentaires · Des cosmétiques · Destinés à la consommation humaine ou animale · Destinés à un usage thérapeutique, diagnostic ou préventif chez l'humain ou l'animal.</div>
+    <div class="ph-composition">
+      <div class="ph-composition-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="m18 2 4 4M13 7l4-4M7 13l4 4M6 12l6 6M3 21l3-3M15 5l4 4L9 19l-4-4z"/></svg><b>10</b> seringues 100U (1 ml), graduées</div>
+      <div class="ph-composition-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/></svg>Aiguille <b>31G · 6mm</b>, fixe</div>
+      <div class="ph-composition-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Emballées <b>individuellement</b>, usage unique</div>
     </div>
 
-    <h2 data-i18n="ruo_s2_h">Engagement de l'acheteur</h2>
-    <p data-i18n="ruo_s2_p">En achetant sur PurePep, vous déclarez et garantissez&nbsp;:</p>
-    <ul data-i18n="ruo_list">
-      <li>Être âgé de 18 ans ou plus</li>
-      <li>Utiliser les produits achetés exclusivement à des fins de recherche en laboratoire</li>
-      <li>Ne pas ingérer, injecter en dehors d'un cadre de recherche, inhaler ou appliquer ces produits sur un être humain ou un animal en dehors d'un protocole de recherche encadré</li>
-      <li>Être seul responsable de l'usage fait des produits achetés, et du respect de la réglementation applicable dans votre pays</li>
-    </ul>
+    <div class="ph-buybox">
+      <div class="ph-dose-label">Couleur</div>
+      <select class="ph-dose-select" id="ph-dose-select" onchange="updateHeroPrice()">
+        <option value="orange" data-price="7.00" data-img="images/syringe.jpg" selected data-i18n="color_orange">Orange</option>
+        <option value="rose" data-price="7.00" data-img="images/syringe-rose.jpg" data-i18n="color_rose">Rose</option>
+      </select>
+      <div class="ph-price-row">
+        <div><span class="ph-price" id="ph-price">$7.00</span><span class="ph-price-unit">CAD</span></div>
+      </div>
+      <div class="ph-buy-row">
+        <div class="qty-ctrl">
+          <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
+          <span class="qty-val">1</span>
+          <button class="qty-btn" onclick="changeQty(this,1)">+</button>
+        </div>
+        <button class="ph-add-btn" onclick="addHeroToCart(this)">
+          <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span> <span data-i18n="add_to_cart_btn">Ajouter au panier</span>
+        </button>
+      </div>
+    </div>
 
-    <h2 data-i18n="ruo_s3_h">COA et traçabilité</h2>
-    <p data-i18n="ruo_s3_p">Chaque lot est testé par un laboratoire tiers indépendant (Janoshik Analytical) pour vérifier une pureté ≥99% par HPLC. Le certificat d'analyse (COA) de chaque lot est disponible sur demande. Voir notre page <a href="coa.html">COA</a>.</p>
+    <div class="ph-tabs">
+      <div class="ph-tab active" onmouseenter="switchPhTab(this,'desc')" onclick="switchPhTab(this,'desc')" data-i18n="tab_desc">Description</div>
+      <div class="ph-tab" onmouseenter="switchPhTab(this,'usage')" onclick="switchPhTab(this,'usage')" data-i18n="tab_usage">Utilisation</div>
+      <div class="ph-tab" onmouseenter="switchPhTab(this,'conservation')" onclick="switchPhTab(this,'conservation')" data-i18n="tab_conservation">Conservation</div>
+      <div class="ph-tab" onmouseenter="switchPhTab(this,'faq')" onclick="switchPhTab(this,'faq')" data-i18n="tab_faq">FAQ</div>
+    </div>
 
-    <h2 data-i18n="ruo_s4_h">Cadre réglementaire</h2>
-    <p data-i18n="ruo_s4_p">Le statut réglementaire des peptides de recherche varie selon les pays et évolue régulièrement. Il appartient à l'acheteur de vérifier la conformité de sa commande avec la réglementation en vigueur dans son pays de résidence avant de passer commande. Voir notre article <a href="cadre-legal-peptides-recherche-france.html">Le cadre légal des peptides de recherche au Canada</a> à titre informatif, ce contenu ne constitue pas un conseil juridique.</p>
+    <div class="ph-tab-panel active" id="ph-panel-desc" data-i18n="syringe_panel_desc">
+      <h4>Caractéristiques</h4>
+      <ul>
+        <li><b>Contenance :</b> 100U (1 ml), échelle graduée en unités pour un dosage précis</li>
+        <li><b>Aiguille :</b> 31G · 6mm, fixe, conçue pour minimiser la douleur à l'injection</li>
+        <li><b>Stériles</b> et à <b>usage unique</b>, emballées individuellement</li>
+        <li>Compatibles avec tous les flacons de peptides PurePep et l'eau bactériostatique</li>
+      </ul>
+      <h4>Pourquoi le 31G · 6mm&nbsp;?</h4>
+      <p>Une aiguille fine et courte réduit l'inconfort et convient bien aux injections sous-cutanées de faible volume, typiques des protocoles de recherche sur peptides.</p>
+    </div>
 
-    <h2 data-i18n="ruo_s5_h">Contact</h2>
-    <p data-i18n="ruo_s5_p">Pour toute question sur l'usage prévu de nos produits : [EMAIL DE CONTACT].</p>
+    <div class="ph-tab-panel" id="ph-panel-usage" data-i18n="syringe_panel_usage">
+      <h4>Bonnes pratiques</h4>
+      <ul>
+        <li>Désinfecter le septum du flacon avec un tampon d'alcool avant chaque prélèvement</li>
+        <li>Retirer le capuchon juste avant usage, ne jamais réutiliser une seringue déjà ouverte</li>
+        <li>Prélever lentement pour éviter les bulles d'air dans la seringue</li>
+        <li>Utiliser le <a href="index.html#produits" style="color:var(--accent-l);font-weight:600">calculateur de dosage</a> pour déterminer le volume exact à injecter</li>
+      </ul>
+    </div>
+
+    <div class="ph-tab-panel" id="ph-panel-conservation" data-i18n="syringe_panel_conservation">
+      <h4>Conservation</h4>
+      <p>Conserver dans leur emballage individuel scellé, dans un endroit sec et à l'abri de la lumière directe, jusqu'à utilisation.</p>
+      <h4>Usage unique</h4>
+      <p>Chaque seringue est à usage unique, jeter après utilisation dans un contenant adapté aux objets piquants, ne jamais réutiliser ou partager.</p>
+    </div>
+
+    <div class="ph-tab-panel" id="ph-panel-faq" data-i18n="syringe_panel_faq">
+      <h4>La couleur change-t-elle la seringue&nbsp;?</h4>
+      <p>Non, orange et rose sont la même seringue 100U 31G · 6mm, seule la teinte du corps et du capuchon diffère.</p>
+      <h4>Combien de seringues par commande&nbsp;?</h4>
+      <p>Chaque commande correspond à un lot de 10 seringues, emballées individuellement.</p>
+      <h4>Sont-elles compatibles avec tous nos produits&nbsp;?</h4>
+      <p>Oui, elles conviennent à tous les flacons de peptides PurePep ainsi qu'à l'eau bactériostatique.</p>
+    </div>
   </div>
-  
 </div>
+
+<div class="ph-related reveal">
+  <h3>Complète ta commande</h3>
+  <div class="ph-related-grid">
+    <a class="ph-related-card" href="eau-bacteriostatique-10ml.html">
+      <img src="images/eau-bacteriostatique-10ml.jpg" alt="Eau Bactériostatique"/>
+      <div class="ph-related-name">EAU BACTÉRIOSTATIQUE</div>
+      <div class="ph-related-price">$15.00</div>
+    </a>
+    <a class="ph-related-card" href="lingettes-alcool-70.html">
+      <img src="images/wipes.jpg" alt="Lingettes alcool 70%"/>
+      <div class="ph-related-name">LINGETTES ALCOOL 70%</div>
+      <div class="ph-related-price">$2.00</div>
+    </a>
+    <a class="ph-related-card" href="kit-reconstitution.html">
+      <img src="images/kit-reconstitution.jpg" alt="Kit de reconstitution"/>
+      <div class="ph-related-name">KIT DE RECONSTITUTION</div>
+      <div class="ph-related-price">$20.00</div>
+    </a>
+  </div>
+</div>
+
+<script>
+function updateHeroPrice(){
+  const sel = document.getElementById('ph-dose-select');
+  const price = parseFloat(sel.selectedOptions[0].dataset.price);
+  document.getElementById('ph-price').textContent = '$' + price.toFixed(2);
+  const img = sel.selectedOptions[0].dataset.img;
+  if(img) document.getElementById('ph-main-img-el').src = img;
+}
+
+function addHeroToCart(btn){
+  const sel = document.getElementById('ph-dose-select');
+  const price = parseFloat(sel.selectedOptions[0].dataset.price);
+  const dose = sel.selectedOptions[0].textContent;
+  const qtyEl = document.querySelector('.ph-buy-row .qty-val');
+  const qty = qtyEl ? parseInt(qtyEl.textContent) : 1;
+  for(let i=0;i<qty;i++) cart.push({name:'Seringue 100U 31G', price, dose});
+  saveCart(); updateCartUI();
+  btn.classList.add('added');
+  const orig = btn.innerHTML;
+  const isEnHero = localStorage.getItem('purepep_lang') === 'en';
+  btn.innerHTML = isEnHero ? (qty > 1 ? `✓ ${qty}x added!` : '✓ Added!') : (qty > 1 ? `✓ ${qty}x ajouté !` : '✓ Ajouté !');
+  setTimeout(() => { btn.classList.remove('added'); btn.innerHTML = orig; }, 1400);
+  showToast(isEnHero ? (qty > 1 ? `${qty}x Seringue 100U 31G added to cart` : 'Seringue 100U 31G added to cart') : (qty > 1 ? `${qty}× Seringue 100U 31G ajouté au panier` : 'Seringue 100U 31G ajouté au panier'), '🛒');
+  setTimeout(openCart, 500);
+}
+
+function switchPhTab(el, key){
+  document.querySelectorAll('.ph-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.ph-tab-panel').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('ph-panel-' + key).classList.add('active');
+}
+</script>
+
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-grid">
@@ -1385,7 +1490,7 @@ document.addEventListener('click', (e) => {
 // ── PARALLAXE LÉGÈRE SUR LE VISUEL DU HERO ──
 (function(){
   if(prefersReducedMotion || window.innerWidth < 900) return;
-  const visual = document.querySelector('.hero-video-full video');
+  const visual = document.querySelector('.hero-visual-card');
   const hero = document.querySelector('.hero');
   if(!visual || !hero) return;
   let ticking = false;
@@ -1779,7 +1884,13 @@ const I18N = {
   en: {
     ship_msg_prefix: "Only",
     ship_msg_suffix: "left for free shipping",
-    help_ruo: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What is a COA?</button><p class="help-a">A certificate of analysis issued by an independent laboratory, attesting to the purity and chemical identity of a batch.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What does Research Use Only mean?</button><p class="help-a">This label indicates the product is intended exclusively for laboratory research use, not for human or animal consumption.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Is it legal to buy research peptides in Canada?</button><p class="help-a">Sale for laboratory purposes is governed by current regulations — this content is informational, not legal advice.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
+    color_orange: "Orange",
+    color_rose: "Pink",
+    help_product: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What purity do you guarantee?</button><p class="help-a">≥99% across our entire catalog, verified by HPLC on every batch.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Where can I find a product's COA?</button><p class="help-a">On each product page, as well as in the full list available on our quality page.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Some products show several dosages, how do I choose?</button><p class="help-a">The dosage is the amount of active ingredient in the vial (in mg) — the choice depends on the concentration you want after reconstitution, calculable with our dedicated tool.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
+    breadcrumb_products: "Our peptides",
+    add_to_cart_btn: "Add to cart",
+    trust_shipped: "Shipped same day before 2pm, otherwise within 24h",
+    trust_packaging: "Discreet packaging",
     breadcrumb_home: "Home",
     back_to_catalog: "← See all peptides",
     cart_checkout_btn: "Checkout →",
@@ -1791,16 +1902,13 @@ const I18N = {
     cart_title_prefix: "My cart (",
     cart_title_article: " item",
     cart_title_suffix: ")",
-    ruo_eyebrow: "Product Disclaimer",
-    ruo_h1: "Research Use Only",
-    ruo_updated: "Last updated: July 2026",
-    ruo_s1_h: "Use strictly reserved for research", ruo_s1_p: "All peptides sold on PurePep are <strong>research products (Research Use Only)</strong>, intended exclusively for laboratory use by knowledgeable professionals or individuals within a scientific research context.",
-    ruo_callout: "<strong>These products are NOT:</strong>Medications · Dietary supplements · Cosmetics · Intended for human or animal consumption · Intended for therapeutic, diagnostic, or preventive use in humans or animals.",
-    ruo_s2_h: "Buyer's commitment", ruo_s2_p: "By purchasing on PurePep, you declare and warrant that you:",
-    ruo_list: "<li>Are 18 years of age or older</li><li>Will use the purchased products exclusively for laboratory research purposes</li><li>Will not ingest, inject outside a research context, inhale, or apply these products to a human or animal outside a controlled research protocol</li><li>Are solely responsible for the use made of the purchased products, and for compliance with applicable regulations in your country</li>",
-    ruo_s3_h: "COA and Traceability", ruo_s3_p: 'Every batch is tested by an independent third-party laboratory (Janoshik Analytical) to verify ≥99% purity by HPLC. The certificate of analysis (COA) for each batch is available upon request. See our <a href="coa.html">COA</a> page.',
-    ruo_s4_h: "Regulatory Framework", ruo_s4_p: 'The regulatory status of research peptides varies by country and changes regularly. It is the buyer&#39;s responsibility to verify that their order complies with the regulations in effect in their country of residence before ordering. See our article <a href="cadre-legal-peptides-recherche-france.html">The legal framework for research peptides in Canada</a> for informational purposes — this content does not constitute legal advice.',
-    ruo_s5_h: "Contact", ruo_s5_p: "For any question about the intended use of our products: [CONTACT EMAIL].",
+    tab_desc: "Description", tab_usage: "Usage", tab_conservation: "Storage", tab_faq: "FAQ",
+    acc_cat: "Accessories",
+    syringe_subtitle: "Sterile, single-use, graduated syringes with a fine 31G · 6mm needle, designed for low-volume subcutaneous injections. Individually packaged for safe, discreet use.",
+    syringe_panel_desc: "<h4>Features</h4><ul><li><b>Capacity:</b> 100U (1 ml), unit-graduated scale for precise dosing</li><li><b>Needle:</b> 31G · 6mm, fixed, designed to minimize injection discomfort</li><li><b>Sterile</b> and <b>single-use</b>, individually packaged</li><li>Compatible with all PurePep peptide vials and bacteriostatic water</li></ul><h4>Why 31G · 6mm?</h4><p>A fine, short needle reduces discomfort and suits low-volume subcutaneous injections, typical of peptide research protocols.</p>",
+    syringe_panel_usage: "<h4>Best practices</h4><ul><li>Disinfect the vial septum with an alcohol swab before each draw</li><li>Remove the cap just before use, never reuse an already-opened syringe</li><li>Draw slowly to avoid air bubbles in the syringe</li><li>Use the <a href=\"index.html#produits\" style=\"color:var(--accent-l);font-weight:600\">dosage calculator</a> to determine the exact volume to inject</li></ul>",
+    syringe_panel_conservation: "<h4>Storage</h4><p>Store in their sealed individual packaging, in a dry place away from direct light, until use.</p><h4>Single use</h4><p>Each syringe is single-use — dispose of after use in a sharps-appropriate container, never reuse or share.</p>",
+    syringe_panel_faq: "<h4>Does the color change the syringe?</h4><p>No, orange and pink are the same 100U 31G · 6mm syringe — only the body and cap color differs.</p><h4>How many syringes per order?</h4><p>Each order corresponds to a batch of 10 syringes, individually packaged.</p><h4>Are they compatible with all our products?</h4><p>Yes, they fit all PurePep peptide vials as well as bacteriostatic water.</p>",
     age_gate_title: "Just a moment before entering",
     age_gate_desc: "PurePep offers research peptides intended for laboratory use only. Access to this site is restricted to adults.",
     age_gate_yes: "I am over 18, Enter",
@@ -1837,7 +1945,7 @@ const I18N = {
     gtcat5: "Quality", gtcat6: "Glossary",
     gtcat7: "Scientific literature", gttitle1: "BPC-157: complete reconstitution and dosing guide",
     gttitle2: "Retatrutide vs Tirzepatide vs Semaglutide: which to choose in 2026?", gttitle3: "NAD+: mitochondrial mechanisms and research protocols",
-    gttitle4: "The legal framework for research peptides in Canada", gttitle5: "How to read a research peptide COA",
+    gttitle4: "The legal framework for research peptides in France", gttitle5: "How to read a research peptide COA",
     gttitle6: "Research peptide glossary: COA, HPLC, LC-MS...", gttitle7: "Human studies: retatrutide, tirzepatide, BPC-157, GHK-Cu",
     hero_badge_coa: "COA on every batch", hero_badge_payment: "Secure payment",
     hero_badge_refund: "Satisfaction guaranteed", hero_badge_shipping: "Discreet shipping",
@@ -2160,13 +2268,13 @@ window.addEventListener('pageshow', function(e){
   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg>
 </button>
 <div class="help-panel" id="help-panel">
-  <div data-i18n="help_ruo"><h4>Questions fréquentes ici</h4>
-    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Qu'est-ce qu'un COA ?</button>
-    <p class="help-a">Un certificat d'analyse émis par un laboratoire indépendant, qui atteste de la pureté et de l'identité chimique d'un lot.</p>
-    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Que signifie Research Use Only ?</button>
-    <p class="help-a">Cette mention indique que le produit est destiné exclusivement à un usage de recherche en laboratoire, non à la consommation humaine ou animale.</p>
-    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Est-il légal d'acheter des peptides de recherche au Canada ?</button>
-    <p class="help-a">La vente à des fins de laboratoire est encadrée par la réglementation en vigueur, ce contenu est informatif, pas un conseil juridique.</p>
+  <div data-i18n="help_product"><h4>Questions fréquentes ici</h4>
+    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Quelle est votre pureté garantie ?</button>
+    <p class="help-a">≥99% pour l'ensemble de notre catalogue, vérifiée par HPLC sur chaque lot.</p>
+    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Où trouver le COA d'un produit ?</button>
+    <p class="help-a">Sur chaque fiche produit, ainsi que dans la liste complète disponible sur notre page qualité.</p>
+    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Certains produits affichent plusieurs dosages, comment choisir ?</button>
+    <p class="help-a">Le dosage correspond à la quantité de principe actif dans le flacon (en mg), le choix dépend de la concentration voulue après reconstitution, calculable via notre outil dédié.</p>
   <div class="help-panel-footer"><a href="faq.html">Voir toute la FAQ →</a></div></div>
 </div>
 </body>

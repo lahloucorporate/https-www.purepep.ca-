@@ -7,19 +7,19 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Selank · Peptide de Recherche HPLC ≥98% · PurePep</title>
+  <title>Selank · Peptide de Recherche HPLC ≥99% · PurePep</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Selank — peptide de recherche, pureté ≥98% HPLC certifiée Janoshik. COA par lot, livré partout au Canada. À partir de $55.00."/>
+  <meta name="description" content="Selank, peptide de recherche, pureté ≥99% HPLC certifiée Janoshik. COA par lot, livré partout au Canada. À partir de $55.00."/>
   <meta name="keywords" content="selank, peptide recherche, HPLC, COA, Canada"/>
   <meta property="og:title" content="Selank · PurePep"/>
-  <meta property="og:description" content="Selank — peptide de recherche, pureté ≥98% HPLC certifiée Janoshik. COA par lot, livré partout au Canada. À partir de $55.00."/>
-  <meta property="og:image" content="https://purepep.fr/images/logo-purepep.png"/>
+  <meta property="og:description" content="Selank, peptide de recherche, pureté ≥99% HPLC certifiée Janoshik. COA par lot, livré partout au Canada. À partir de $55.00."/>
+  <meta property="og:image" content="https://purepep.ca/images/logo-purepep.png"/>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Product","name":"Selank","description":"Le Selank est un heptapeptide synthétique dérivé de la tuftsine. Il est étudié pour ses propriétés anxiolytiques et immunomodulatrices, ainsi que son influence sur l'expression du BDNF dans les modèles de recherche comportementale.","brand":{"@type":"Brand","name":"PurePep"},"offers":{"@type":"Offer","priceCurrency":"CAD","price":"55.00","availability":"https://schema.org/InStock","url":"https://purepep.fr/selank-10mg.html"}}
+  {"@context":"https://schema.org","@type":"Product","name":"Selank","description":"Le Selank est un heptapeptide synthétique dérivé de la tuftsine. Il est étudié pour ses propriétés anxiolytiques et immunomodulatrices, ainsi que son influence sur l'expression du BDNF dans les modèles de recherche comportementale.","brand":{"@type":"Brand","name":"PurePep"},"offers":{"@type":"Offer","priceCurrency":"CAD","price":"55.00","availability":"https://schema.org/InStock","url":"https://purepep.ca/selank-10mg.html"}}
   </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -436,7 +436,7 @@
     }
     .upsell-item:hover{border-color:var(--accent)}
     .upsell-item input[type=checkbox]{accent-color:var(--accent);width:16px;height:16px;flex-shrink:0}
-    .upsell-kit-img{width:44px;height:44px;object-fit:contain;border-radius:6px;background:#fff;flex-shrink:0}
+    .upsell-kit-img{width:88px;height:88px;object-fit:contain;border-radius:8px;background:#fff;border:1px solid var(--border);flex-shrink:0}
     .upsell-kit-color{margin-top:.3rem;font-size:.72rem;padding:.15rem .4rem;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--text)}
     .upsell-info{}
     .upsell-name{font-size:.82rem;font-weight:700}
@@ -531,6 +531,7 @@
     .cart-items{flex:1;overflow-y:auto;padding:1rem 1.4rem;display:flex;flex-direction:column;gap:.8rem}
     .cart-empty{text-align:center;color:var(--muted);padding:3rem 1rem;font-size:.9rem}
     .cart-item{display:flex;gap:.8rem;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.7rem}
+    .cart-item-img{width:56px;height:56px;object-fit:contain;border-radius:8px;background:#fff;border:1px solid var(--border);flex-shrink:0}
     .cart-item-name{font-size:.85rem;font-weight:700;flex:1}
     .cart-item-dose{font-size:.75rem;color:var(--muted)}
     .cart-item-price{font-size:.88rem;font-weight:700;color:var(--accent-l);white-space:nowrap}
@@ -562,7 +563,7 @@
     .telegram-btn{background:#26A5E4;box-shadow:0 4px 20px rgba(38,165,228,.4)}
     .telegram-btn:hover{box-shadow:0 8px 28px rgba(38,165,228,.5)}
 
-    /* Panier flottant — mobile uniquement, pour un accès au panier en un tap */
+    /* Panier flottant, mobile uniquement, pour un accès au panier en un tap */
     .mobile-cart-fab{
       display:none;position:fixed;bottom:calc(9.4rem + env(safe-area-inset-bottom));right:1.8rem;z-index:255;
       width:52px;height:52px;border-radius:50%;
@@ -664,13 +665,13 @@
 
 
     /* ═══════════════════════════════════════════
-       DESIGN UPGRADE — PurePep v2
+       DESIGN UPGRADE, PurePep v2
     ═══════════════════════════════════════════ */
 
     /* Scroll progress bar */
     #scroll-progress{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,var(--accent-d),var(--accent-l));z-index:9999;transition:width .1s linear}
 
-    /* Promo banner — animated gradient */
+    /* Promo banner, animated gradient */
     .promo-banner{
       background:linear-gradient(270deg,#555555,#000000,#555555,#000000);
       background-size:600% 100%;
@@ -679,7 +680,7 @@
     }
     @keyframes bannerShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 
-    /* Nav — improved glass */
+    /* Nav, improved glass */
     nav{
       background:rgba(245,245,244,.92);
       backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
@@ -710,7 +711,7 @@
     .lang-menu button:hover{background:var(--card2)}
     .lang-menu button.active{background:rgba(85,85,85,.1);font-weight:700;color:var(--accent-d)}
 
-    /* Hero — richer background */
+    /* Hero, richer background */
     .hero{background:linear-gradient(135deg,#f5f5f4 0%,#ebebe9 55%,#e3e3e0 100%)}
     .hero-bg{background:radial-gradient(ellipse at 65% 40%,rgba(85,85,85,.12) 0%,transparent 55%),radial-gradient(ellipse at 20% 80%,rgba(0,0,0,.08) 0%,transparent 40%)}
     /* Grid pattern overlay */
@@ -723,7 +724,7 @@
     .trust-card:hover{border-color:rgba(85,85,85,.25)}
     .trust-icon{background:var(--trust-glow);border-color:rgba(122,122,118,.15);border-radius:10px}
 
-    /* Buttons — refined */
+    /* Buttons, refined */
     .btn-primary{
       background:linear-gradient(135deg,var(--accent),var(--accent-d));
       border:1px solid rgba(85,85,85,.2);
@@ -756,7 +757,7 @@
     .filter-tab .count{color:var(--muted);font-weight:500;font-size:.72rem}
     .filter-tab.active .count{color:rgba(255,255,255,.65)}
 
-    /* Product cards — major upgrade */
+    /* Product cards, major upgrade */
     .product-card{
       background:linear-gradient(145deg,var(--card),var(--card2));
       border:1px solid rgba(85,85,85,.1);
@@ -902,7 +903,7 @@
     @keyframes toastIn{from{opacity:0;transform:translateX(20px) scale(.95)}to{opacity:1;transform:translateX(0) scale(1)}}
     @keyframes toastOut{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(20px)}}
 
-    /* Preuve sociale — notification d'achat récent */
+    /* Preuve sociale, notification d'achat récent */
     .social-proof-toast{
       position:fixed;left:1.8rem;bottom:5.6rem;z-index:260;
       display:none;align-items:center;gap:.7rem;max-width:290px;
@@ -954,7 +955,7 @@
     .reveal-delay-2{transition-delay:.16s}
     .reveal-delay-3{transition-delay:.24s}
 
-    /* Mobile menu — improved */
+    /* Mobile menu, improved */
     .mobile-menu{
       background:rgba(9,15,25,.98);backdrop-filter:blur(20px);
       transform:translateX(-100%);opacity:0;
@@ -1071,7 +1072,7 @@
       .sp-vial{transform:none !important}
     }
   </style>
-  <link rel="canonical" href="https://purepep.fr/selank-10mg"/>
+  <link rel="canonical" href="https://purepep.ca/selank-10mg"/>
 </head>
 <body>
 <div id="scroll-progress"></div>
@@ -1082,14 +1083,14 @@
 <!-- ── AGE VERIFICATION GATE ── -->
 <div class="age-gate" id="age-gate">
   <div class="age-gate-card">
-    <div class="age-gate-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 3c0 6 12 12 12 18M18 3c0 6-12 12-12 18M4 8h16M4 16h16"/></svg></div>
-    <h3>Un instant avant d'entrer</h3>
-    <p>PurePep propose des peptides de recherche réservés à un usage en laboratoire. L'accès à ce site est limité aux personnes majeures.</p>
+    <div class="age-gate-icon"><img src="images/logo-purepep.png" alt="PurePep" style="height:2.4rem;width:auto"/></div>
+    <h3 data-i18n="age_gate_title">Un instant avant d'entrer</h3>
+    <p data-i18n="age_gate_desc">PurePep propose des peptides de recherche réservés à un usage en laboratoire. L'accès à ce site est limité aux personnes majeures.</p>
     <div class="age-gate-actions">
-      <button class="age-yes" onclick="confirmAgeGate(true)">J'ai plus de 18 ans — Entrer</button>
-      <button class="age-no" onclick="confirmAgeGate(false)">J'ai moins de 18 ans</button>
+      <button class="age-yes" onclick="confirmAgeGate(true)" data-i18n="age_gate_yes">J'ai plus de 18 ans, Entrer</button>
+      <button class="age-no" onclick="confirmAgeGate(false)" data-i18n="age_gate_no">J'ai moins de 18 ans</button>
     </div>
-    <p class="age-gate-legal">En continuant, vous confirmez être majeur et acceptez nos conditions d'utilisation.</p>
+    <p class="age-gate-legal" data-i18n="age_gate_legal">En continuant, vous confirmez être majeur et acceptez nos conditions d'utilisation.</p>
   </div>
 </div>
 
@@ -1110,7 +1111,7 @@
       <img src="images/logo-purepep.png" alt="PurePep" class="logo-img"/>
     </a>
             <ul class="nav-links">
-      <li><a href="c-est-quoi.html" class="nav-newcomer"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg><span>Nouveau ici ?</span></a></li>
+      <li><a href="c-est-quoi.html" class="nav-newcomer"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg><span data-i18n="nav_newcomer">Nouveau ici ?</span></a></li>
       <li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li>
       <li><a href="coa.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span data-i18n="nav_quality">COA</span></a></li>
       <li><a href="packs.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><span data-i18n="nav_packs">Packs</span></a></li>
@@ -1138,7 +1139,7 @@
 
 <!-- ── MOBILE MENU ── -->
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-  <a href="c-est-quoi.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg> Nouveau ici ?</a>
+  <a href="c-est-quoi.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg> <span data-i18n="nav_newcomer2">Nouveau ici ?</span></a>
   <a href="index.html#produits" onclick="toggleMenu()">Nos peptides</a>
   <a href="coa.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> COA</a>
   <a href="packs.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Packs</a>
@@ -1153,23 +1154,23 @@
 <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
 <div class="cart-drawer" id="cart-drawer">
   <div class="cart-drawer-header">
-    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;vertical-align:-2px;margin-right:4px"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>Mon panier (<span id="cart-count-drawer">0</span> article<span id="cart-plural"></span>)</h3>
+    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;vertical-align:-2px;margin-right:4px"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><span data-i18n="cart_title_prefix">Mon panier (</span><span id="cart-count-drawer">0</span><span data-i18n="cart_title_article"> article</span><span id="cart-plural"></span><span data-i18n="cart_title_suffix">)</span></h3>
     <button class="cart-close" onclick="closeCart()">✕</button>
   </div>
   <div class="cart-items" id="cart-items-list">
-    <div class="cart-empty" id="cart-empty">Votre panier est vide.<br><br>Découvrez nos peptides ci-dessous.</div>
+    <div class="cart-empty" id="cart-empty"><span data-i18n="cart_empty1">Votre panier est vide.</span><br><br><span data-i18n="cart_empty2">Découvrez nos peptides ci-dessous.</span></div>
   </div>
   <div class="cart-footer">
     <div class="cart-shipping-progress">
-      <p id="shipping-msg">Plus que <span id="shipping-left">$120.00</span> pour la livraison offerte<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-left:3px"><rect x="1" y="4" width="14" height="11"/><path d="M15 8h4l3 3v4h-7z"/><circle cx="5.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></p>
+      <p id="shipping-msg"><span data-i18n="ship_msg_prefix">Plus que</span> <span id="shipping-left">$160.00</span> <span data-i18n="ship_msg_suffix">pour la livraison offerte</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-left:3px"><rect x="1" y="4" width="14" height="11"/><path d="M15 8h4l3 3v4h-7z"/><circle cx="5.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></p>
       <div class="shipping-bar-track"><div class="shipping-bar-fill" id="shipping-fill" style="width:0%"></div></div>
     </div>
     <div class="cart-total-row">
       <span>Total</span>
       <span class="total-price" id="cart-total">$0.00</span>
     </div>
-    <button class="btn-checkout" onclick="window.location.href='checkout.html'">Passer la commande →</button>
-    <p class="cart-secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;vertical-align:-1px;margin-right:2px"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Paiement 100% sécurisé · SSL</p>
+    <button class="btn-checkout" onclick="window.location.href='checkout.html'" data-i18n="cart_checkout_btn">Passer la commande →</button>
+    <p class="cart-secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;vertical-align:-1px;margin-right:2px"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span data-i18n="cart_secure_note">Paiement 100% sécurisé</span></p>
   </div>
 </div>
 
@@ -1243,35 +1244,35 @@
 </style>
 
 <div class="breadcrumb">
-  <a href="index.html">Accueil</a><span class="sep">/</span><a href="index.html#produits">Nos peptides</a><span class="sep">/</span><span class="current">Selank</span>
+  <a href="index.html" data-i18n="breadcrumb_home">Accueil</a><span class="sep">/</span><a href="index.html#produits" data-i18n="breadcrumb_products">Nos peptides</a><span class="sep">/</span><span class="current">Selank</span>
 </div>
-<div class="back-to-catalog"><a href="index.html#produits" class="back-to-catalog-inner">← Voir tous les peptides</a></div>
+<div class="back-to-catalog"><a href="index.html#produits" class="back-to-catalog-inner" data-i18n="back_to_catalog">← Voir tous les peptides</a></div>
 
 <div class="product-hero reveal">
   <div class="ph-gallery">
     <div class="ph-main-img">
-      <img src="images/selank-10mg.jpg" alt="Flacon Selank PurePep, étiquette verte, pureté HPLC ≥98%"/>
+      <img src="images/selank-10mg.jpg" alt="Flacon Selank PurePep, étiquette verte, pureté HPLC ≥99%"/>
     </div>
     <div class="ph-trust-row">
-      <span class="ph-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px"><path d="M9 2v6.5L4 18a2 2 0 0 0 1.8 3h12.4a2 2 0 0 0 1.8-3l-5-9.5V2"/><path d="M8.5 2h7"/><path d="M7.5 15h9"/></svg>COA par lot</span>
-      <span class="ph-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px"><path d="M20 6 9 17l-5-5"/></svg>Pureté ≥98% HPLC</span>
-      <span class="ph-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px"><rect x="1" y="4" width="14" height="11"/><path d="M15 8h4l3 3v4h-7z"/><circle cx="5.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>Expédié sous 48h</span>
-      <span class="ph-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>Emballage discret</span>
+      <span class="ph-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px"><path d="M9 2v6.5L4 18a2 2 0 0 0 1.8 3h12.4a2 2 0 0 0 1.8-3l-5-9.5V2"/><path d="M8.5 2h7"/><path d="M7.5 15h9"/></svg><span data-i18n="trust_coa">COA par lot</span></span>
+      <span class="ph-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="trust_purity">Pureté ≥99% HPLC</span></span>
+      <span class="ph-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px"><rect x="1" y="4" width="14" height="11"/><path d="M15 8h4l3 3v4h-7z"/><circle cx="5.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><span data-i18n="trust_shipped">Expédié le jour même avant 14h, sinon sous 24h</span></span>
+      <span class="ph-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><span data-i18n="trust_packaging">Emballage discret</span></span>
     </div>
   </div>
 
   <div class="ph-info">
-    <span class="cat-badge cat-focus ph-cat-badge">Focus & Cognition</span>
+    <span class="cat-badge cat-focus ph-cat-badge" data-i18n="selank_cat">Focus & Cognition</span>
     <h1 class="ph-title">Selank<span class="dose-tag">10 MG</span></h1>
-    <div class="ph-rating"><span class="stars">★★★★★</span> 4.8/5 · avis vérifiés</div>
-    <p class="ph-subtitle">Le Selank est un heptapeptide synthétique dérivé de la tuftsine. Il est étudié pour ses propriétés anxiolytiques et immunomodulatrices, ainsi que son influence sur l'expression du BDNF dans les modèles de recherche comportementale.</p>
+    <div class="ph-rating"><span class="stars">★★★★★</span> 4.8/5 · <span data-i18n="rating_reviews">avis vérifiés</span></div>
+    <p class="ph-subtitle" data-i18n="selank_subtitle">Le Selank est un heptapeptide synthétique dérivé de la tuftsine. Il est étudié pour ses propriétés anxiolytiques et immunomodulatrices, ainsi que son influence sur l'expression du BDNF dans les modèles de recherche comportementale.</p>
 
     <div class="ph-tags">
-      <span class="ph-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Réduit l'anxiété et le stress</span>
-      <span class="ph-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Améliore le focus et la mémoire</span>
-      <span class="ph-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Améliore l'humeur</span>
-      <span class="ph-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Pas d'effet sédatif</span>
-      <span class="ph-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Renforce le système immunitaire</span>
+      <span class="ph-tag" data-i18n="selank_tag1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Réduit l'anxiété et le stress</span>
+      <span class="ph-tag" data-i18n="selank_tag2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Améliore le focus et la mémoire</span>
+      <span class="ph-tag" data-i18n="selank_tag3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Améliore l'humeur</span>
+      <span class="ph-tag" data-i18n="selank_tag4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Pas d'effet sédatif</span>
+      <span class="ph-tag" data-i18n="selank_tag5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Renforce le système immunitaire</span>
     </div>
 
     <div class="ph-buybox">
@@ -1284,19 +1285,19 @@
           <button class="qty-btn" onclick="changeQty(this,1)">+</button>
         </div>
         <button class="ph-add-btn" onclick="addHeroToCartFixed(this)">
-          <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span> Ajouter au panier
+          <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span> <span data-i18n="add_to_cart_btn">Ajouter au panier</span>
         </button>
       </div>
     </div>
 
     <div class="ph-tabs">
-      <div class="ph-tab active" onmouseenter="switchPhTab(this,'desc')" onclick="switchPhTab(this,'desc')">Description</div>
-      <div class="ph-tab" onmouseenter="switchPhTab(this,'proto')" onclick="switchPhTab(this,'proto')">Reconstitution</div>
-      <div class="ph-tab" onmouseenter="switchPhTab(this,'conservation')" onclick="switchPhTab(this,'conservation')">Conservation</div>
-      <div class="ph-tab" onmouseenter="switchPhTab(this,'faq')" onclick="switchPhTab(this,'faq')">FAQ</div>
+      <div class="ph-tab active" onmouseenter="switchPhTab(this,'desc')" onclick="switchPhTab(this,'desc')" data-i18n="tab_desc">Description</div>
+      <div class="ph-tab" onmouseenter="switchPhTab(this,'proto')" onclick="switchPhTab(this,'proto')" data-i18n="tab_proto">Reconstitution</div>
+      <div class="ph-tab" onmouseenter="switchPhTab(this,'conservation')" onclick="switchPhTab(this,'conservation')" data-i18n="tab_conservation">Conservation</div>
+      <div class="ph-tab" onmouseenter="switchPhTab(this,'faq')" onclick="switchPhTab(this,'faq')" data-i18n="tab_faq">FAQ</div>
     </div>
 
-    <div class="ph-tab-panel active" id="ph-panel-desc">
+    <div class="ph-tab-panel active" id="ph-panel-desc" data-i18n="selank_panel_desc">
       <h4>Mécanisme d'action</h4>
       <p>Le Selank est un heptapeptide synthétique dérivé de la tuftsine. Il est étudié pour ses propriétés anxiolytiques et immunomodulatrices, ainsi que son influence sur l'expression du BDNF dans les modèles de recherche comportementale.</p>
       <h4>Ce que contient le flacon</h4>
@@ -1309,23 +1310,23 @@
       <p>Produit vendu exclusivement à des fins de recherche scientifique (Research Use Only). Non destiné à la consommation humaine ou animale.</p>
     </div>
 
-    <div class="ph-tab-panel" id="ph-panel-proto">
+    <div class="ph-tab-panel" id="ph-panel-proto" data-i18n="generic_panel_proto">
       <h4>Reconstitution recommandée</h4>
-      <p>Utiliser de l'eau bactériostatique (0,9% alcool benzylique) pour reconstituer la poudre lyophilisée. Injecter l'eau lentement le long de la paroi du flacon, sans agiter — rouler doucement entre les mains pour dissoudre.</p>
+      <p>Utiliser de l'eau bactériostatique (0,9% alcool benzylique) pour reconstituer la poudre lyophilisée. Injecter l'eau lentement le long de la paroi du flacon, sans agiter, rouler doucement entre les mains pour dissoudre.</p>
       <ul>
         <li>Utiliser le <a href="index.html#produits" style="color:var(--accent-l);font-weight:600">calculateur de dosage</a> pour déterminer le volume exact à prélever</li>
         <li>Conserver la solution reconstituée au réfrigérateur (2-8°C)</li>
       </ul>
     </div>
 
-    <div class="ph-tab-panel" id="ph-panel-conservation">
+    <div class="ph-tab-panel" id="ph-panel-conservation" data-i18n="generic_panel_conservation">
       <h4>Avant reconstitution</h4>
       <p>Conserver le flacon lyophilisé au congélateur ou au réfrigérateur, à l'abri de la lumière. Stable jusqu'à 24 mois dans ces conditions.</p>
       <h4>Après reconstitution</h4>
       <p>Conserver au réfrigérateur (2-8°C) et utiliser dans les 4 à 6 semaines. Éviter les cycles répétés de congélation/décongélation qui dégradent le peptide.</p>
     </div>
 
-    <div class="ph-tab-panel" id="ph-panel-faq">
+    <div class="ph-tab-panel" id="ph-panel-faq" data-i18n="generic_panel_faq">
       <h4>Le COA est-il disponible avant achat&nbsp;?</h4>
       <p>Oui, le certificat d'analyse du lot en cours est disponible sur demande.</p>
       <h4>Quel délai de livraison&nbsp;?</h4>
@@ -1337,7 +1338,7 @@
 </div>
 
 <div class="upsell-section reveal" id="upsell-pdp" style="max-width:1280px;margin:0 auto 2rem;">
-  <h3><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>Souvent acheté avec le Selank</h3>
+  <h3><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><span data-i18n="upsell_pdp_prefix">Souvent acheté avec le </span>Selank</h3>
   <div class="upsell-grid">
     <label class="upsell-item">
       <input type="checkbox" checked data-name="Kit de reconstitution" data-price="20.00" onchange="updateUpsellTotalPdp()"/>
@@ -1346,17 +1347,17 @@
         <div class="upsell-name">Kit de reconstitution</div>
         <div class="upsell-price">$20.00</div>
         <select class="upsell-kit-color" onclick="event.stopPropagation()" onchange="event.stopPropagation();this.closest('.upsell-item').querySelector('.upsell-kit-img').src=this.value">
-          <option value="images/kit-reconstitution.jpg">Orange</option>
-          <option value="images/kit-reconstitution-rose.jpg">Rose</option>
+          <option value="images/kit-reconstitution.jpg" data-i18n="color_orange">Orange</option>
+          <option value="images/kit-reconstitution-rose.jpg" data-i18n="color_rose">Rose</option>
         </select>
       </div>
     </label>
   </div>
-  <button class="upsell-add" id="upsell-pdp-btn" onclick="addUpsellToCartPdp(this)">Ajouter la sélection au panier — <span id="upsell-pdp-total">$20.00</span></button>
+  <button class="upsell-add" id="upsell-pdp-btn" onclick="addUpsellToCartPdp(this)"><span data-i18n="upsell_pdp_addtext">Ajouter la sélection au panier,</span> <span id="upsell-pdp-total">$20.00</span></button>
 </div>
 
 <div class="ph-related reveal">
-  <h3>Autres peptides focus & cognition</h3>
+  <h3><span data-i18n="related_prefix">Autres peptides </span><span data-i18n="cat_focus">focus & cognition</span></h3>
   <div class="ph-related-grid">
     <a class="ph-related-card" href="semax-10mg.html">
       <img src="images/semax-10mg.jpg" alt="Semax"/>
@@ -1392,13 +1393,14 @@ function addHeroToCartFixed(btn){
   const price = 55.00;
   const qtyEl = document.querySelector('.ph-buy-row .qty-val');
   const qty = qtyEl ? parseInt(qtyEl.textContent) : 1;
-  for(let i=0;i<qty;i++) cart.push({name:'Selank', price, dose:''});
+  for(let i=0;i<qty;i++) cart.push({name:'Selank', price, dose:'10mg'});
   saveCart(); updateCartUI();
   btn.classList.add('added');
   const orig = btn.innerHTML;
-  btn.innerHTML = qty > 1 ? `✓ ${qty}x ajouté !` : '✓ Ajouté !';
+  const isEnHero = localStorage.getItem('purepep_lang') === 'en';
+  btn.innerHTML = isEnHero ? (qty > 1 ? `✓ ${qty}x added!` : '✓ Added!') : (qty > 1 ? `✓ ${qty}x ajouté !` : '✓ Ajouté !');
   setTimeout(() => { btn.classList.remove('added'); btn.innerHTML = orig; }, 1400);
-  showToast(qty > 1 ? `${qty}× Selank ajouté au panier` : 'Selank ajouté au panier', '🛒');
+  showToast(isEnHero ? (qty > 1 ? `${qty}x Selank added to cart` : 'Selank added to cart') : (qty > 1 ? `${qty}× Selank ajouté au panier` : 'Selank ajouté au panier'), '🛒');
   setTimeout(openCart, 500);
 }
 
@@ -1418,8 +1420,9 @@ function updateUpsellTotalPdp(){
 if(document.getElementById('upsell-pdp-total')) updateUpsellTotalPdp();
 
 function addUpsellToCartPdp(btn){
+  const isEnUp = localStorage.getItem('purepep_lang') === 'en';
   const checked = Array.from(document.querySelectorAll('#upsell-pdp input[type="checkbox"]')).filter(cb => cb.checked);
-  if(checked.length === 0){ showToast('Sélectionne au moins un produit', '!'); return; }
+  if(checked.length === 0){ showToast(isEnUp ? 'Select at least one product' : 'Sélectionne au moins un produit', '!'); return; }
   checked.forEach(cb => {
     const colorSel = cb.closest('.upsell-item').querySelector('.upsell-kit-color');
     const dose = colorSel ? colorSel.selectedOptions[0].textContent : '';
@@ -1428,9 +1431,9 @@ function addUpsellToCartPdp(btn){
   saveCart(); updateCartUI();
   const orig = btn.innerHTML;
   btn.classList.add('added');
-  btn.innerHTML = `✓ ${checked.length} produit${checked.length > 1 ? 's' : ''} ajouté${checked.length > 1 ? 's' : ''} !`;
+  btn.innerHTML = isEnUp ? `✓ ${checked.length} product${checked.length > 1 ? 's' : ''} added!` : `✓ ${checked.length} produit${checked.length > 1 ? 's' : ''} ajouté${checked.length > 1 ? 's' : ''} !`;
   setTimeout(() => { btn.classList.remove('added'); btn.innerHTML = orig; }, 1400);
-  showToast(`${checked.length} produit${checked.length > 1 ? 's' : ''} ajouté${checked.length > 1 ? 's' : ''} au panier`, '✓');
+  showToast(isEnUp ? `${checked.length} product${checked.length > 1 ? 's' : ''} added to cart` : `${checked.length} produit${checked.length > 1 ? 's' : ''} ajouté${checked.length > 1 ? 's' : ''} au panier`, '✓');
   setTimeout(openCart, 500);
 }
 </script>
@@ -1442,13 +1445,12 @@ function addUpsellToCartPdp(btn){
       <div class="logo">
         <img src="images/logo-purepep.png" alt="PurePep" class="logo-img"/>
       </div>
-      <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥98%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrÃ©s.</p>
+      <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
         <span class="payment-badge payment-badge-logo" title="Visa"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo" title="Mastercard"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo" title="Apple Pay"><img src="images/applepay.png" alt="Apple Pay" style="height:16px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo" title="Google Pay"><img src="images/googlepay.png" alt="Google Pay" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;vertical-align:-1px;margin-right:2px"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>SSL</span>
       </div>
     </div>
     <div class="footer-col"><h4 data-i18n="footer_products">Produits</h4><ul><li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li><li><a href="index.html#produits" data-i18n="footer_categories">Catégories</a></li><li><a href="packs.html" data-i18n="footer_packs">Packs</a></li><li><a href="calculateur.html" data-i18n="footer_calculator">Calculateur de dosage</a></li><li><a href="index.html#produits" data-i18n="footer_accessories">Accessoires</a></li><li><a href="index.html#produits" data-i18n="footer_new">Nouveautés</a></li></ul></div>
@@ -1597,8 +1599,36 @@ function updatePrice(sel, priceId, prices){
 // ── PANIER ──
 // Le panier est persisté en localStorage : il ne se vide plus au rechargement de page
 // (limite : reste local à ce navigateur, ne remplace pas un vrai panier serveur)
+const CART_IMAGES = {
+  'Retatrutide': 'images/retatrutide-10mg.jpg',
+  'GHK-Cu': 'images/ghk-cu-100mg.jpg',
+  'Melanotan 2': 'images/melanotan-2-10mg.jpg',
+  'Tesamorelin': 'images/tesamorelin-5mg.jpg',
+  'BPC-157': 'images/bpc-157-10mg.jpg',
+  'Ipamorelin': 'images/ipamorelin-5mg.jpg',
+  'NAD+': 'images/nad-500mg.jpg',
+  'TB-500': 'images/tb500-10mg.jpg',
+  'BPC-157 + TB-500': 'images/bpc157-tb500.jpg',
+  'Klow': 'images/klow80.jpg',
+  'Semax': 'images/semax-10mg.jpg',
+  'MOTS-c': 'images/mots-c-10mg.jpg',
+  'PT-141': 'images/pt141-10mg.jpg',
+  'Selank': 'images/selank-10mg.jpg',
+  'Cagrilintide': 'images/cagrilintide-5mg.jpg',
+  'Eau Bactériostatique': 'images/eau-bacteriostatique-10ml.jpg',
+  'Seringue 100U 31G': 'images/syringe.jpg',
+  'Lingettes alcool 70%': 'images/wipes.jpg',
+  'Kit de reconstitution': 'images/kit-reconstitution.jpg',
+  'Pack Wolverine': 'images/bpc-157-5mg-wolverine.jpg',
+  'Pack Phénix': 'images/nad-500mg.jpg',
+  'Pack Clarté Mentale': 'images/semax-10mg.jpg',
+  'Pack Peau & Cheveux': 'images/ghk-cu-100mg.jpg',
+  'Pack Perte de Poids Extrême': 'images/retatrutide-10mg.jpg',
+  'Pack Titan': 'images/tesamorelin-5mg.jpg',
+  'Pack KLOW Elite Bundle': 'images/klow80.jpg'
+};
 let cart=JSON.parse(localStorage.getItem('purepep_cart')||'[]');
-const FREE_SHIPPING=120;
+const FREE_SHIPPING=160;
 
 function saveCart(){ localStorage.setItem('purepep_cart', JSON.stringify(cart)); }
 
@@ -1627,9 +1657,9 @@ function updateCartUI(){
   const pct=Math.min(100,(total/FREE_SHIPPING)*100);
   document.getElementById('shipping-fill').style.width=pct+'%';
   if(left===0){
-    document.getElementById('shipping-msg').innerHTML='Livraison <span>offerte</span> — vous économisez $4.90 !';
+    const isEnShipG = localStorage.getItem('purepep_lang') === 'en'; document.getElementById('shipping-msg').innerHTML = isEnShipG ? 'Shipping <span>free</span>, you save $15.00!' : 'Livraison <span>offerte</span>, vous économisez $15.00 !';
   } else {
-    document.getElementById('shipping-msg').innerHTML='Plus que <span id="shipping-left">$'+left.toFixed(2)+'</span> pour la livraison offerte<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"width:13px;height:13px;vertical-align:-2px;margin-left:3px\"><rect x=\"1\" y=\"4\" width=\"14\" height=\"11\"/><path d=\"M15 8h4l3 3v4h-7z\"/><circle cx=\"5.5\" cy=\"18\" r=\"1.6\"/><circle cx=\"17.5\" cy=\"18\" r=\"1.6\"/></svg>';
+    const isEnShipG2 = localStorage.getItem('purepep_lang') === 'en'; const shipPfx = isEnShipG2 ? 'Only' : 'Plus que'; const shipSfx = isEnShipG2 ? 'left for free shipping' : 'pour la livraison offerte'; document.getElementById('shipping-msg').innerHTML=shipPfx+' <span id="shipping-left">$'+left.toFixed(2)+'</span> '+shipSfx+'<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"width:13px;height:13px;vertical-align:-2px;margin-left:3px\"><rect x=\"1\" y=\"4\" width=\"14\" height=\"11\"/><path d=\"M15 8h4l3 3v4h-7z\"/><circle cx=\"5.5\" cy=\"18\" r=\"1.6\"/><circle cx=\"17.5\" cy=\"18\" r=\"1.6\"/></svg>';
   }
   // items
   const list=document.getElementById('cart-items-list');
@@ -1642,7 +1672,8 @@ function updateCartUI(){
   cart.forEach((item,idx)=>{
     const div=document.createElement('div');
     div.className='cart-item';
-    div.innerHTML=`<div style="flex:1"><div class="cart-item-name">${item.name}</div><div class="cart-item-dose">${item.dose||''}</div></div><span class="cart-item-price">$${item.price.toFixed(2)}</span><button class="cart-item-remove" onclick="removeFromCart(${idx})">✕</button>`;
+    const imgSrc = CART_IMAGES[item.name] || 'images/kit-reconstitution.jpg';
+    div.innerHTML=`<img class="cart-item-img" src="${imgSrc}" alt="${item.name}"/><div style="flex:1"><div class="cart-item-name">${item.name}</div><div class="cart-item-dose">${item.dose||''}</div></div><span class="cart-item-price">$${item.price.toFixed(2)}</span><button class="cart-item-remove" onclick="removeFromCart(${idx})">✕</button>`;
     list.appendChild(div);
   });
 }
@@ -1702,11 +1733,12 @@ function addToCart(name,btn){
   saveCart();
   updateCartUI();
   // toast + flash
+  const isEnAtc = localStorage.getItem('purepep_lang') === 'en';
   btn.classList.add('added');
   const orig = btn.textContent;
-  btn.textContent = qty > 1 ? `✓ ${qty}x ajouté !` : '✓ Ajouté !';
+  btn.textContent = isEnAtc ? (qty > 1 ? `✓ ${qty}x added!` : '✓ Added!') : (qty > 1 ? `✓ ${qty}x ajouté !` : '✓ Ajouté !');
   setTimeout(() => { btn.classList.remove('added'); btn.textContent = orig; }, 1400);
-  showToast(qty > 1 ? `${qty}× ${name} ajouté au panier` : `${name} ajouté au panier`, '✓');
+  showToast(isEnAtc ? (qty > 1 ? `${qty}x ${name} added to cart` : `${name} added to cart`) : (qty > 1 ? `${qty}× ${name} ajouté au panier` : `${name} ajouté au panier`), '✓');
   setTimeout(openCart, 500);
 }
 
@@ -1846,9 +1878,10 @@ function toggleWish(btn) {
 // ── PREUVE SOCIALE (notifications d'achat récent) ──
 (function(){
   const prenoms = ['Thomas','Lucas','Léa','Emma','Hugo','Chloé','Nathan','Camille','Julien','Sarah','Maxime','Manon','Antoine','Julie','Alexandre','Clara','Romain','Laura','Nicolas','Marion','Kevin','Aurélie','Florian','Pauline','Mathieu','Charlotte','Baptiste','Inès','Quentin','Marine'];
-  const villes = ['Paris','Lyon','Marseille','Toulouse','Nice','Nantes','Strasbourg','Montpellier','Bordeaux','Lille','Rennes','Reims','Toulon','Grenoble','Angers','Dijon','Nîmes','Le Havre','Saint-Étienne','Metz','Besançon','Orléans','Rouen','Mulhouse','Caen','Nancy','Tours','Limoges','Amiens','Perpignan','Clermont-Ferrand','Annecy','Biarritz'];
+  const villes = ['Montréal','Toronto','Vancouver','Calgary','Ottawa','Québec','Edmonton','Winnipeg','Halifax','Victoria','Hamilton','London','Saskatoon','Regina','Mississauga','Kitchener','New York','Los Angeles','Chicago','Houston','Phoenix','Miami','Seattle','Boston','Austin','Denver','San Diego','Dallas','Atlanta','Portland'];
   const produits = ['BPC-157','Retatrutide','GHK-Cu','TB-500','Melanotan 2','NAD+','Selank','Semax','MOTS-c','PT-141','Ipamorelin','Epithalon','Tesamorelin','Klow','Cagrilintide'];
-  const delais = ['à l\'instant','il y a 2 min','il y a 4 min','il y a 7 min','il y a 12 min','il y a 18 min','il y a 25 min'];
+  const delais = ['à l&#39;instant','il y a 2 min','il y a 4 min','il y a 7 min','il y a 12 min','il y a 18 min','il y a 25 min'];
+  const delaisEn = ['just now','2 min ago','4 min ago','7 min ago','12 min ago','18 min ago','25 min ago'];
 
   const toast = document.getElementById('social-proof-toast');
   const textEl = document.getElementById('sp-text');
@@ -1860,8 +1893,12 @@ function toggleWish(btn) {
 
   function afficherNotification(){
     if(dismissed) return;
-    textEl.textContent = pick(prenoms) + ' à ' + pick(villes) + ' vient de commander ' + pick(produits);
-    timeEl.textContent = pick(delais);
+    const isEnSp = localStorage.getItem('purepep_lang') === 'en';
+    const prenom = pick(prenoms), ville = pick(villes), produit = pick(produits);
+    textEl.textContent = isEnSp
+      ? `${prenom} in ${ville} just ordered ${produit}`
+      : `${prenom} à ${ville} vient de commander ${produit}`;
+    timeEl.textContent = isEnSp ? pick(delaisEn) : pick(delais);
     toast.classList.add('show');
     clearTimeout(hideTimer);
     hideTimer = setTimeout(() => toast.classList.remove('show'), 5500);
@@ -1891,6 +1928,50 @@ function toggleWish(btn) {
 // ── SÉLECTEUR DE LANGUE / i18n ──
 const I18N = {
   en: {
+    ship_msg_prefix: "Only",
+    ship_msg_suffix: "left for free shipping",
+    color_orange: "Orange",
+    color_rose: "Pink",
+    help_product: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What purity do you guarantee?</button><p class="help-a">≥99% across our entire catalog, verified by HPLC on every batch.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Where can I find a product's COA?</button><p class="help-a">On each product page, as well as in the full list available on our quality page.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Some products show several dosages, how do I choose?</button><p class="help-a">The dosage is the amount of active ingredient in the vial (in mg) — the choice depends on the concentration you want after reconstitution, calculable with our dedicated tool.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
+    breadcrumb_products: "Our peptides",
+    rating_reviews: "verified reviews",
+    add_to_cart_btn: "Add to cart",
+    cat_focus: "Focus & Cognition",
+    trust_coa: "COA per batch",
+    trust_purity: "≥99% HPLC purity",
+    trust_shipped: "Shipped same day before 2pm, otherwise within 24h",
+    trust_packaging: "Discreet packaging",
+    upsell_pdp_prefix: "Often bought with the ",
+    upsell_pdp_addtext: "Add selection to cart",
+    related_prefix: "Other ",
+    breadcrumb_home: "Home",
+    back_to_catalog: "← See all peptides",
+    cart_checkout_btn: "Checkout →",
+    cart_secure_note: "100% secure payment",
+    nav_newcomer: "New here?",
+    nav_newcomer2: "New here?",
+    cart_empty1: "Your cart is empty.",
+    cart_empty2: "Discover our peptides below.",
+    cart_title_prefix: "My cart (",
+    cart_title_article: " item",
+    cart_title_suffix: ")",
+    tab_desc: "Description", tab_proto: "Reconstitution", tab_conservation: "Storage", tab_faq: "FAQ",
+    generic_panel_proto: "<h4>Recommended reconstitution</h4><p>Use bacteriostatic water (0.9% benzyl alcohol) to reconstitute the lyophilized powder. Inject the water slowly down the side of the vial, without shaking, and gently swirl between your hands to dissolve.</p><ul><li>Use the <a href=\"index.html#produits\" style=\"color:var(--accent-l);font-weight:600\">dosage calculator</a> to determine the exact volume to draw</li><li>Store the reconstituted solution refrigerated (2-8°C)</li></ul>",
+    generic_panel_conservation: "<h4>Before reconstitution</h4><p>Store the lyophilized vial in the freezer or refrigerator, away from light. Stable for up to 24 months under these conditions.</p><h4>After reconstitution</h4><p>Store refrigerated (2-8°C) and use within 4 to 6 weeks. Avoid repeated freeze/thaw cycles, which degrade the peptide.</p>",
+    generic_panel_faq: "<h4>Is the COA available before purchase?</h4><p>Yes, the certificate of analysis for the current batch is available upon request.</p><h4>What is the delivery time?</h4><p>Shipped within 48h from Canada, in discreet packaging with no indication of contents.</p><h4>Can I change the dosage after ordering?</h4><p>Contact our support before shipment — we'll adjust the order if stock allows.</p>",
+    selank_cat: "Focus & Cognition",
+    selank_subtitle: "Selank is a synthetic heptapeptide derived from tuftsin. It is studied for its anxiolytic and immunomodulatory properties, as well as its influence on BDNF expression in behavioral research models.",
+    selank_tag1: "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg>Reduces anxiety and stress",
+    selank_tag2: "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg>Improves focus and memory",
+    selank_tag3: "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg>Improves mood",
+    selank_tag4: "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg>No sedative effect",
+    selank_tag5: "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg>Strengthens the immune system",
+    selank_panel_desc: "<h4>Mechanism of action</h4><p>Selank is a synthetic heptapeptide derived from tuftsin. It is studied for its anxiolytic and immunomodulatory properties, as well as its influence on BDNF expression in behavioral research models.</p><h4>What's in the vial</h4><ul><li>Lyophilized Selank powder, dosage indicated on the label</li><li>Sealed glass vial, sterile septum compatible with 31G syringes</li><li>COA (certificate of analysis) available per batch, Janoshik laboratory</li></ul><h4>Use</h4><p>Product sold exclusively for scientific research purposes (Research Use Only). Not intended for human or animal consumption.</p>",
+    age_gate_title: "Just a moment before entering",
+    age_gate_desc: "PurePep offers research peptides intended for laboratory use only. Access to this site is restricted to adults.",
+    age_gate_yes: "I am over 18, Enter",
+    age_gate_no: "I am under 18",
+    age_gate_legal: "By continuing, you confirm you are of legal age and accept our terms of use.",
     btn_add_cart: "Add to cart", catb1: "Weight Loss",
     catb10: "Skin & Beauty", catb12: "Focus & Cognition",
     catb13: "Anti-Aging", catb14: "Anti-Aging",
@@ -1901,8 +1982,8 @@ const I18N = {
     catb3: "Wellness", catb4: "Weight Loss",
     catb5: "Recovery", catb6: "Muscle Growth",
     catb7: "Anti-Aging", catb8: "Recovery",
-    catb9: "Recovery", faqa1: "Use bacteriostatic water (available on our site). Gently inject the water along the wall of the vial without aiming directly at the powder. Do not shake — swirl gently. Let sit for 2-3 minutes. Storage: 2-4°C after reconstitution, use within 4 weeks.",
-    faqa2: "The COA (Certificate of Analysis) is the purity report produced by Janoshik Analytical, a recognized independent laboratory in the sector, via HPLC chromatography. Every PurePep batch has its own COA downloadable on the product page. You can check the batch number on the vial and compare it to the provided PDF. Our guaranteed minimum purity is ≥98%.", faqa3: "Orders are shipped within 24 business hours. Delivery across Canada within 2-5 business days (Canada Post), free from \$120 of purchase (otherwise \$4.90). International delivery to the US and abroad within 5-10 days, free from \$200 of purchase (otherwise a flat rate of \$15). Every order is tracked and you receive a confirmation email with a tracking number. Neutral, discreet packaging with no indication of contents.",
+    catb9: "Recovery", faqa1: "Use bacteriostatic water (available on our site). Gently inject the water along the wall of the vial without aiming directly at the powder. Do not shake, swirl gently. Let sit for 2-3 minutes. Storage: 2-4°C after reconstitution, use within 4 weeks.",
+    faqa2: "The COA (Certificate of Analysis) is the purity report produced by Janoshik Analytical, a recognized independent laboratory in the sector, via HPLC chromatography. Every PurePep batch has its own COA downloadable on the product page. You can check the batch number on the vial and compare it to the provided PDF. Our guaranteed minimum purity is ≥99%.", faqa3: "Orders are shipped within 24 business hours. Delivery across Canada within 2-5 business days (Canada Post), free from \$160 of purchase (otherwise \$4.90). International delivery to the US and abroad within 5-10 days, free from \$200 of purchase (otherwise a flat rate of \$15). Every order is tracked and you receive a confirmation email with a tracking number. Neutral, discreet packaging with no indication of contents.",
     faqa4: "You have 14 days after receipt to return an unopened product. In case of a quality issue (batch not matching the COA), we offer a full replacement or refund at no cost. Contact us via WhatsApp or email for any return.", faqa5: "Our peptides are sold exclusively for scientific research purposes (Research Use Only). They are not intended for human or animal consumption. It is your responsibility to comply with local legislation. PurePep provides no medical advice.",
     faqa6: "Lyophilized peptides (powder): stable at room temperature for 12-24 months, ideally refrigerated. After reconstitution: store at 2-4°C, use within 4 weeks. For long-term storage: freezer at -20°C in powder form. Avoid repeated freeze/thaw cycles.", faqq1: "How do I reconstitute a lyophilized peptide?",
     faqq2: "What is a COA and how do I check it?", faqq3: "What are your delivery times?",
@@ -1916,7 +1997,7 @@ const I18N = {
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
     footer_privacy: "Privacy Policy", footer_products: "Products",
-    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥98%.",
+    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.",
     gtcat1: "Protocol", gtcat2: "Comparison",
     gtcat3: "Science", gtcat4: "Legal framework",
     gtcat5: "Quality", gtcat6: "Glossary",
@@ -1927,14 +2008,14 @@ const I18N = {
     hero_badge_coa: "COA on every batch", hero_badge_payment: "Secure payment",
     hero_badge_refund: "Satisfaction guaranteed", hero_badge_shipping: "Discreet shipping",
     hero_cta_primary: "Order now →", hero_cta_secondary: "Protocol guides",
-    hero_eyebrow: "🔬 HPLC ≥98% · Verifiable COA", hero_social_num: "1,200+ researchers",
-    hero_social_text: "supplied since 2024", hero_subtitle: "Certified batch by batch · Purity ≥98%",
+    hero_eyebrow: "🔬 HPLC ≥99% · Verifiable COA", hero_social_num: "1,200+ researchers",
+    hero_social_text: "supplied since 2024", hero_subtitle: "Certified batch by batch · Purity ≥99%",
     hero_tagline: "Order today, reconstitute tomorrow.", hero_title: "Research<br>Peptides",
     nav_calculator: "Calculator", nav_faq: "FAQ",
     nav_guides: "Guides", nav_packs: "Packs",
     nav_products: "Our peptides", nav_quality: "COA",
     nl_incentive: "-10% off your next order for subscribers", nl_legal: "No spam. Unsubscribe in 1 click. GDPR-protected data.",
-    nl_submit: "Subscribe →", nl_subtitle: "New peptides, scientific studies and exclusive guides — straight to your inbox.",
+    nl_submit: "Subscribe →", nl_subtitle: "New peptides, scientific studies and exclusive guides, straight to your inbox.",
     nl_title: "Stay at the forefront of research", p10_name: "Klow",
     p12_name: "Semax", p13_name: "DSIP",
     p14_name: "MOTS-c", p15_name: "PT-141",
@@ -1947,12 +2028,12 @@ const I18N = {
     p7_name: "NAD+", p8_name: "TB-500",
     p9_name: "BPC-157 + TB-500", pay_discreet: "Neutral packaging, no indication of contents",
     pay_free_shipping: "Free shipping from \$120 in Canada", pay_returns: "14-day return window",
-    pay_ssl: "Secure SSL payment", q_subtitle: "HPLC ≥98%, downloadable COA. Check before you buy.",
+    pay_ssl: "Secure payment", q_subtitle: "HPLC ≥99%, downloadable COA. Check before you buy.",
     q_title: "Zero approximation on every batch", qb0_s: "Guaranteed purity",
-    qb0_t: "HPLC ≥98%", qb1_s: "Downloadable PDF",
+    qb0_t: "HPLC ≥99%", qb1_s: "Downloadable PDF",
     qb1_t: "Verifiable COA", qb2_s: "48h delivery",
     qb2_t: "24h shipping", qb3_s: "EU reference",
-    qb3_t: "EU stock", qb4_s: "SSL / 3D Secure",
+    qb3_t: "CA stock", qb4_s: "3D Secure",
     qb4_t: "Secure payment", qb5_s: "Satisfaction guaranteed",
     qb5_t: "14-day return", rev1: "Order received in 48h, products impeccably packaged. Excellent quality BPC-157, COA PDF matching the listing. I recommend without hesitation.",
     rev2: "3rd order, always as reliable. Verified HPLC purity, ultra-fast delivery. The best peptide supplier in Canada, period.", rev3: "Flawless quality on the GHK-Cu, very visible results after 3 weeks of protocol. Support response in under 2h. Loyal customer.",
@@ -1990,6 +2071,12 @@ function applyLang(lang){
     btnEl.title = titles[lang] || titles.fr;
   }
   localStorage.setItem('purepep_lang', lang);
+  const helpBtn = document.getElementById('help-widget-btn-el');
+  if(helpBtn){
+    const helpLabel = lang === 'en' ? 'Quick help' : 'Aide rapide';
+    helpBtn.setAttribute('aria-label', helpLabel);
+    helpBtn.setAttribute('title', helpLabel);
+  }
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){
@@ -2164,7 +2251,7 @@ const ioNav = new IntersectionObserver((entries) => {
 sections.forEach(s => ioNav.observe(s));
 
 
-// ── ANALYTICS (GA4) — chargé uniquement après consentement, jamais avant ──
+// ── ANALYTICS (GA4), chargé uniquement après consentement, jamais avant ──
 const GA4_ID = 'G-XXXXXXXXXX'; // TODO: remplacer par le vrai Measurement ID (analytics.google.com)
 function loadGoogleAnalytics(){
   if(GA4_ID.includes('XXXX') || window.__ga4Loaded) return; // pas encore configuré, ou déjà chargé
@@ -2199,7 +2286,7 @@ function initCookieBanner(){
   }
 }
 
-// ── COOKIE CONSENT (RGPD) ──
+// ── COOKIE CONSENT (LPRPDE) ──
 function setCookieConsent(accepted){
   localStorage.setItem('purepep_cookie_consent', accepted ? 'accepted' : 'refused');
   localStorage.setItem('purepep_cookie_consent_date', new Date().toISOString());
@@ -2223,7 +2310,7 @@ calcDosage();
 <script>
 // Fix iOS Safari bfcache : au retour arrière (swipe/bouton back), le menu mobile
 // ou le panier pouvaient rester visuellement "ouverts" (fond sombre plein écran)
-// car le DOM restauré depuis le cache garde la classe .open — on force la fermeture.
+// car le DOM restauré depuis le cache garde la classe .open, on force la fermeture.
 window.addEventListener('pageshow', function(e){
   if (e.persisted) {
     var menu = document.getElementById('mobile-menu');
@@ -2235,18 +2322,18 @@ window.addEventListener('pageshow', function(e){
   }
 });
 </script>
-<button class="help-widget-btn" onclick="document.getElementById('help-panel').classList.toggle('open')" aria-label="Aide rapide" title="Aide rapide">
+<button class="help-widget-btn" onclick="document.getElementById('help-panel').classList.toggle('open')" aria-label="Aide rapide" title="Aide rapide" id="help-widget-btn-el">
   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg>
 </button>
 <div class="help-panel" id="help-panel">
-  <h4>Questions fréquentes ici</h4>
+  <div data-i18n="help_product"><h4>Questions fréquentes ici</h4>
     <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Quelle est votre pureté garantie ?</button>
-    <p class="help-a">≥98% pour l'ensemble de notre catalogue, vérifiée par HPLC sur chaque lot.</p>
+    <p class="help-a">≥99% pour l'ensemble de notre catalogue, vérifiée par HPLC sur chaque lot.</p>
     <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Où trouver le COA d'un produit ?</button>
     <p class="help-a">Sur chaque fiche produit, ainsi que dans la liste complète disponible sur notre page qualité.</p>
     <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Certains produits affichent plusieurs dosages, comment choisir ?</button>
-    <p class="help-a">Le dosage correspond à la quantité de principe actif dans le flacon (en mg) — le choix dépend de la concentration voulue après reconstitution, calculable via notre outil dédié.</p>
-  <div class="help-panel-footer"><a href="faq.html">Voir toute la FAQ →</a></div>
+    <p class="help-a">Le dosage correspond à la quantité de principe actif dans le flacon (en mg), le choix dépend de la concentration voulue après reconstitution, calculable via notre outil dédié.</p>
+  <div class="help-panel-footer"><a href="faq.html">Voir toute la FAQ →</a></div></div>
 </div>
 </body>
 </html>
