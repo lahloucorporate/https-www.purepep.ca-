@@ -138,6 +138,15 @@
     .logo .pep{color:var(--accent-l);font-weight:700;font-size:1.2rem;letter-spacing:-.01em}
     .nav-links{display:flex;align-items:center;gap:1.4rem;list-style:none;font-size:.88rem;font-weight:500}
     .nav-links a{color:var(--muted);transition:color .2s;display:inline-flex;align-items:center;gap:.35rem}.nav-links a:hover{color:var(--text)}
+    .nav-dropdown{position:relative}
+    .nav-dropdown-btn{background:none;border:none;color:var(--muted);font-size:.88rem;font-weight:500;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;transition:color .2s}
+    .nav-dropdown-btn:hover{color:var(--text)}
+    .nav-dropdown-caret{width:9px;height:9px;transition:transform .2s}
+    .nav-dropdown.open .nav-dropdown-caret{transform:rotate(180deg)}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + .8rem);left:50%;transform:translateX(-50%);background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:.5rem;min-width:170px;box-shadow:0 12px 30px rgba(0,0,0,.12);display:none;flex-direction:column;gap:.1rem;z-index:50}
+    .nav-dropdown.open .nav-dropdown-menu{display:flex}
+    .nav-dropdown-menu a{padding:.55rem .8rem;border-radius:8px;color:var(--text)!important;font-weight:500;white-space:nowrap}
+    .nav-dropdown-menu a:hover{background:var(--card2)}
     .nav-newcomer{background:rgba(85,85,85,.1);border:1px solid var(--accent-l);border-radius:99px;padding:.35rem .8rem!important;color:var(--accent-d)!important;font-weight:700!important}
     .nav-newcomer:hover{background:var(--accent-l);color:#fff!important}
     .nav-icon{flex-shrink:0;opacity:.75}
@@ -1150,12 +1159,20 @@
             <ul class="nav-links">
       <li><a href="c-est-quoi.html" class="nav-newcomer"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg><span data-i18n="nav_newcomer">Nouveau ici ?</span></a></li>
       <li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li>
-      <li><a href="coa.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span data-i18n="nav_quality">COA</span></a></li>
       <li><a href="packs.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><span data-i18n="nav_packs">Packs</span></a></li>
-      <li><a href="calculateur.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="8" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r=".6" fill="currentColor" stroke="none"/></svg><span data-i18n="nav_calculator">Calculateur</span></a></li>
-      <li><a href="guides.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span data-i18n="nav_guides">Guides</span></a></li>
-      <li><a href="blog.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span>Blog</span></a></li>
+      <li><a href="coa.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span data-i18n="nav_quality">COA</span></a></li>
+      <li><a href="partner-program.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-i18n="nav_partner">Partenaires</span></a></li>
+      <li><a href="why-us.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg><span data-i18n="nav_whyus">Pourquoi nous</span></a></li>
       <li><a href="faq.html" data-i18n="nav_faq">FAQ</a></li>
+      <li class="nav-dropdown" id="nav-more-dropdown">
+        <button class="nav-dropdown-btn" onclick="toggleNavDropdown(event)"><span data-i18n="nav_more">Plus</span><svg class="nav-dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-dropdown-menu">
+          <a href="contact.html" data-i18n="nav_contact">Contact</a>
+          <a href="calculateur.html" data-i18n="nav_calculator">Calculateur</a>
+          <a href="guides.html" data-i18n="nav_guides">Guides</a>
+          <a href="blog.html">Blog</a>
+        </div>
+      </li>
     </ul>
   </div>
   <div class="nav-right">
@@ -1178,12 +1195,15 @@
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
   <a href="c-est-quoi.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg> <span data-i18n="nav_newcomer2">Nouveau ici ?</span></a>
   <a href="index.html#produits" onclick="toggleMenu()">Nos peptides</a>
-  <a href="coa.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> COA</a>
   <a href="packs.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Packs</a>
+  <a href="coa.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> COA</a>
+  <a href="partner-program.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Partenaires</a>
+  <a href="why-us.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> Pourquoi nous</a>
+  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact</a>
   <a href="calculateur.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="8" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r=".6" fill="currentColor" stroke="none"/></svg> Calculateur de dosage</a>
   <a href="guides.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Guides</a>
   <a href="blog.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> Blog</a>
-  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
   <a href="index.html#avis" onclick="toggleMenu()">Avis clients</a>
 </div>
 
@@ -1293,7 +1313,7 @@
     </div>
     <div class="footer-col"><h4 data-i18n="footer_products">Produits</h4><ul><li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li><li><a href="index.html#produits" data-i18n="footer_categories">Catégories</a></li><li><a href="packs.html" data-i18n="footer_packs">Packs</a></li><li><a href="calculateur.html" data-i18n="footer_calculator">Calculateur de dosage</a></li><li><a href="index.html#produits" data-i18n="footer_accessories">Accessoires</a></li><li><a href="index.html#produits" data-i18n="footer_new">Nouveautés</a></li></ul></div>
     <div class="footer-col"><h4 data-i18n="footer_info">Informations</h4><ul><li><a href="a-propos.html" data-i18n="footer_about">À propos</a></li><li><a href="guides.html" data-i18n="footer_guides">Guides & Protocoles</a></li><li><a href="faq.html" data-i18n="nav_faq">FAQ</a></li><li><a href="contact.html" data-i18n="footer_contact">Contact</a></li><li><a href="programme-fidelite.html" data-i18n="footer_loyalty">Programme fidélité</a></li></ul></div>
-    <div class="footer-col"><h4 data-i18n="footer_legal">Légal</h4><ul><li><a href="cgv.html" data-i18n="footer_cgv">CGV</a></li><li><a href="politique-confidentialite.html" data-i18n="footer_privacy">Politique de confidentialité</a></li><li><a href="politique-cookies.html" data-i18n="footer_cookies">Politique cookies</a></li><li><a href="mentions-legales.html" data-i18n="footer_notices">Mentions légales</a></li><li><a href="research-use-only.html">Research Use Only</a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_legal">Légal</h4><ul><li><a href="research-use-only.html">Research Use Only</a></li><li><a href="mentions-legales.html" data-i18n="footer_notices">Mentions légales</a></li><li><a href="cgv.html" data-i18n="footer_cgv">CGV</a></li><li><a href="politique-confidentialite.html" data-i18n="footer_privacy">Politique de confidentialité</a></li><li><a href="politique-cookies.html" data-i18n="footer_cookies">Politique cookies</a></li><li><a href="politique-expedition.html" data-i18n="footer_shipping">Politique d'expédition</a></li><li><a href="politique-remboursement.html" data-i18n="footer_refund">Politique de remboursement</a></li></ul></div>
   </div>
   <div class="footer-bottom">
     <span data-i18n="footer_copyright">© 2026 PurePep. Tous droits réservés.</span>
@@ -1419,6 +1439,14 @@ function unlockScroll(){
 }
 
 // ── MOBILE MENU ──
+function toggleNavDropdown(e){
+  e.stopPropagation();
+  document.getElementById('nav-more-dropdown').classList.toggle('open');
+}
+document.addEventListener('click', function(e){
+  const dd = document.getElementById('nav-more-dropdown');
+  if(dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
 function toggleMenu(){
   const menu = document.getElementById('mobile-menu');
   menu.classList.toggle('open');
@@ -1465,6 +1493,24 @@ const CART_IMAGES = {
   'Pack Titan': 'images/tesamorelin-5mg.jpg',
   'Pack KLOW Elite Bundle': 'images/klow80.jpg'
 };
+const CART_NAMES_EN = {
+  'Eau Bactériostatique': 'Bacteriostatic Water',
+  'Seringue 100U 31G': 'Syringe 100U 31G',
+  'Lingettes alcool 70%': 'Alcohol Wipes 70%',
+  'Kit de reconstitution': 'Reconstitution Kit',
+  'Pack Wolverine': 'Pack Wolverine',
+  'Pack Phénix': 'Pack Phoenix',
+  'Pack Clarté Mentale': 'Pack Mental Clarity',
+  'Pack Peau & Cheveux': 'Pack Skin & Hair',
+  'Pack Perte de Poids Extrême': 'Pack Extreme Weight Loss',
+  'Pack Titan': 'Pack Titan',
+  'Pack KLOW Elite Bundle': 'Pack KLOW Elite Bundle'
+};
+function cartDisplayName(name){
+  if(localStorage.getItem('purepep_lang') === 'en' && CART_NAMES_EN[name]) return CART_NAMES_EN[name];
+  return name;
+}
+
 let cart=JSON.parse(localStorage.getItem('purepep_cart')||'[]');
 const FREE_SHIPPING=160;
 
@@ -1511,7 +1557,7 @@ function updateCartUI(){
     const div=document.createElement('div');
     div.className='cart-item';
     const imgSrc = CART_IMAGES[item.name] || 'images/kit-reconstitution.jpg';
-    div.innerHTML=`<img class="cart-item-img" src="${imgSrc}" alt="${item.name}"/><div style="flex:1"><div class="cart-item-name">${item.name}</div><div class="cart-item-dose">${item.dose||''}</div></div><span class="cart-item-price">$${item.price.toFixed(2)}</span><button class="cart-item-remove" onclick="removeFromCart(${idx})">✕</button>`;
+    div.innerHTML=`<img class="cart-item-img" src="${imgSrc}" alt="${item.name}"/><div style="flex:1"><div class="cart-item-name">${cartDisplayName(item.name)}</div><div class="cart-item-dose">${item.dose||''}</div></div><span class="cart-item-price">$${item.price.toFixed(2)}</span><button class="cart-item-remove" onclick="removeFromCart(${idx})">✕</button>`;
     list.appendChild(div);
   });
 }
@@ -1576,7 +1622,7 @@ function addToCart(name,btn){
   const orig = btn.textContent;
   btn.textContent = isEnAtc ? (qty > 1 ? `✓ ${qty}x added!` : '✓ Added!') : (qty > 1 ? `✓ ${qty}x ajouté !` : '✓ Ajouté !');
   setTimeout(() => { btn.classList.remove('added'); btn.textContent = orig; }, 1400);
-  showToast(isEnAtc ? (qty > 1 ? `${qty}x ${name} added to cart` : `${name} added to cart`) : (qty > 1 ? `${qty}× ${name} ajouté au panier` : `${name} ajouté au panier`), '✓');
+  showToast(isEnAtc ? (qty > 1 ? `${qty}x ${cartDisplayName(name)} added to cart` : `${cartDisplayName(name)} added to cart`) : (qty > 1 ? `${qty}× ${name} ajouté au panier` : `${name} ajouté au panier`), '✓');
   setTimeout(openCart, 500);
 }
 
@@ -1766,9 +1812,13 @@ function toggleWish(btn) {
 // ── SÉLECTEUR DE LANGUE / i18n ──
 const I18N = {
   en: {
+    nav_partner: "Partners program",
+    nav_whyus: "Why Us",
+    nav_more: "More",
+    nav_contact: "Contact",
     ship_msg_prefix: "Only",
     ship_msg_suffix: "left for free shipping",
-    help_ruo: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What is a COA?</button><p class="help-a">A certificate of analysis issued by an independent laboratory, attesting to the purity and chemical identity of a batch.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What does Research Use Only mean?</button><p class="help-a">This label indicates the product is intended exclusively for laboratory research use, not for human or animal consumption.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Is it legal to buy research peptides in Canada?</button><p class="help-a">Sale for laboratory purposes is governed by current regulations — this content is informational, not legal advice.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
+    help_ruo: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What is a COA?</button><p class="help-a">A certificate of analysis issued by an independent laboratory, attesting to the purity and chemical identity of a batch.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What does Research Use Only mean?</button><p class="help-a">This label indicates the product is intended exclusively for laboratory research use, not for human or animal consumption.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Is it legal to buy research peptides in Canada?</button><p class="help-a">Sale for laboratory purposes is governed by current regulations. This content is informational, not legal advice.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
     breadcrumb_home: "Home",
     back_to_catalog: "← See all peptides",
     cart_checkout_btn: "Checkout →",
@@ -1798,7 +1848,7 @@ const I18N = {
     catb5: "Recovery", catb6: "Muscle Growth",
     catb7: "Anti-Aging", catb8: "Recovery",
     catb9: "Recovery", faqa1: "Use bacteriostatic water (available on our site). Gently inject the water along the wall of the vial without aiming directly at the powder. Do not shake, swirl gently. Let sit for 2-3 minutes. Storage: 2-4°C after reconstitution, use within 4 weeks.",
-    faqa2: "The COA (Certificate of Analysis) is the purity report produced by Janoshik Analytical, a recognized independent laboratory in the sector, via HPLC chromatography. Every PurePep batch has its own COA downloadable on the product page. You can check the batch number on the vial and compare it to the provided PDF. Our guaranteed minimum purity is ≥99%.", faqa3: "Orders are shipped within 24 business hours. Delivery across Canada within 2-5 business days (Canada Post), free from \$160 of purchase (otherwise \$4.90). International delivery to the US and abroad within 5-10 days, free from \$200 of purchase (otherwise a flat rate of \$15). Every order is tracked and you receive a confirmation email with a tracking number. Neutral, discreet packaging with no indication of contents.",
+    faqa2: "The COA (Certificate of Analysis) is the purity report produced by Freedom Diagnostics, a recognized independent laboratory in the sector, via HPLC chromatography. Every PurePep batch has its own COA downloadable on the product page. You can check the batch number on the vial and compare it to the provided PDF. Our guaranteed minimum purity is ≥99%.", faqa3: "Orders are shipped within 24 business hours. Delivery across Canada within 2-5 business days (Canada Post), free from \$160 of purchase (otherwise \$4.90). International delivery to the US and abroad within 5-10 days, free from \$200 of purchase (otherwise a flat rate of \$15). Every order is tracked and you receive a confirmation email with a tracking number. Neutral, discreet packaging with no indication of contents.",
     faqa4: "You have 14 days after receipt to return an unopened product. In case of a quality issue (batch not matching the COA), we offer a full replacement or refund at no cost. Contact us via WhatsApp or email for any return.", faqa5: "Our peptides are sold exclusively for scientific research purposes (Research Use Only). They are not intended for human or animal consumption. It is your responsibility to comply with local legislation. PurePep provides no medical advice.",
     faqa6: "Lyophilized peptides (powder): stable at room temperature for 12-24 months, ideally refrigerated. After reconstitution: store at 2-4°C, use within 4 weeks. For long-term storage: freezer at -20°C in powder form. Avoid repeated freeze/thaw cycles.", faqq1: "How do I reconstitute a lyophilized peptide?",
     faqq2: "What is a COA and how do I check it?", faqq3: "What are your delivery times?",
@@ -1811,7 +1861,7 @@ const I18N = {
     footer_info: "Information", footer_legal: "Legal",
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
-    footer_privacy: "Privacy Policy", footer_products: "Products",
+    footer_privacy: "Privacy Policy", footer_products: "Products", footer_shipping: "Shipping Policy", footer_refund: "Refund Policy",
     footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.",
     gtcat1: "Protocol", gtcat2: "Comparison",
     gtcat3: "Science", gtcat4: "Legal framework",
@@ -1827,7 +1877,7 @@ const I18N = {
     hero_social_text: "supplied since 2024", hero_subtitle: "Certified batch by batch · Purity ≥99%",
     hero_tagline: "Order today, reconstitute tomorrow.", hero_title: "Research<br>Peptides",
     nav_calculator: "Calculator", nav_faq: "FAQ",
-    nav_guides: "Guides", nav_packs: "Packs",
+    nav_guides: "Guides", nav_packs: "Bundles",
     nav_products: "Our peptides", nav_quality: "COA",
     nl_incentive: "-10% off your next order for subscribers", nl_legal: "No spam. Unsubscribe in 1 click. GDPR-protected data.",
     nl_submit: "Subscribe →", nl_subtitle: "New peptides, scientific studies and exclusive guides, straight to your inbox.",

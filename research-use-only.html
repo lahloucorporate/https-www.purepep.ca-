@@ -138,6 +138,15 @@
     .logo .pep{color:var(--accent-l);font-weight:700;font-size:1.2rem;letter-spacing:-.01em}
     .nav-links{display:flex;align-items:center;gap:1.4rem;list-style:none;font-size:.88rem;font-weight:500}
     .nav-links a{color:var(--muted);transition:color .2s;display:inline-flex;align-items:center;gap:.35rem}.nav-links a:hover{color:var(--text)}
+    .nav-dropdown{position:relative}
+    .nav-dropdown-btn{background:none;border:none;color:var(--muted);font-size:.88rem;font-weight:500;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;transition:color .2s}
+    .nav-dropdown-btn:hover{color:var(--text)}
+    .nav-dropdown-caret{width:9px;height:9px;transition:transform .2s}
+    .nav-dropdown.open .nav-dropdown-caret{transform:rotate(180deg)}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + .8rem);left:50%;transform:translateX(-50%);background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:.5rem;min-width:170px;box-shadow:0 12px 30px rgba(0,0,0,.12);display:none;flex-direction:column;gap:.1rem;z-index:50}
+    .nav-dropdown.open .nav-dropdown-menu{display:flex}
+    .nav-dropdown-menu a{padding:.55rem .8rem;border-radius:8px;color:var(--text)!important;font-weight:500;white-space:nowrap}
+    .nav-dropdown-menu a:hover{background:var(--card2)}
     .nav-newcomer{background:rgba(85,85,85,.1);border:1px solid var(--accent-l);border-radius:99px;padding:.35rem .8rem!important;color:var(--accent-d)!important;font-weight:700!important}
     .nav-newcomer:hover{background:var(--accent-l);color:#fff!important}
     .nav-icon{flex-shrink:0;opacity:.75}
@@ -1150,12 +1159,20 @@
             <ul class="nav-links">
       <li><a href="c-est-quoi.html" class="nav-newcomer"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg><span data-i18n="nav_newcomer">Nouveau ici ?</span></a></li>
       <li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li>
-      <li><a href="coa.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span data-i18n="nav_quality">COA</span></a></li>
       <li><a href="packs.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><span data-i18n="nav_packs">Packs</span></a></li>
-      <li><a href="calculateur.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="8" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r=".6" fill="currentColor" stroke="none"/></svg><span data-i18n="nav_calculator">Calculateur</span></a></li>
-      <li><a href="guides.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span data-i18n="nav_guides">Guides</span></a></li>
-      <li><a href="blog.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span>Blog</span></a></li>
+      <li><a href="coa.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span data-i18n="nav_quality">COA</span></a></li>
+      <li><a href="partner-program.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-i18n="nav_partner">Partenaires</span></a></li>
+      <li><a href="why-us.html"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg><span data-i18n="nav_whyus">Pourquoi nous</span></a></li>
       <li><a href="faq.html" data-i18n="nav_faq">FAQ</a></li>
+      <li class="nav-dropdown" id="nav-more-dropdown">
+        <button class="nav-dropdown-btn" onclick="toggleNavDropdown(event)"><span data-i18n="nav_more">Plus</span><svg class="nav-dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-dropdown-menu">
+          <a href="contact.html" data-i18n="nav_contact">Contact</a>
+          <a href="calculateur.html" data-i18n="nav_calculator">Calculateur</a>
+          <a href="guides.html" data-i18n="nav_guides">Guides</a>
+          <a href="blog.html">Blog</a>
+        </div>
+      </li>
     </ul>
   </div>
   <div class="nav-right">
@@ -1178,12 +1195,15 @@
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
   <a href="c-est-quoi.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg> <span data-i18n="nav_newcomer2">Nouveau ici ?</span></a>
   <a href="index.html#produits" onclick="toggleMenu()">Nos peptides</a>
-  <a href="coa.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> COA</a>
   <a href="packs.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Packs</a>
+  <a href="coa.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> COA</a>
+  <a href="partner-program.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Partenaires</a>
+  <a href="why-us.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> Pourquoi nous</a>
+  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact</a>
   <a href="calculateur.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="8" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r=".6" fill="currentColor" stroke="none"/></svg> Calculateur de dosage</a>
   <a href="guides.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Guides</a>
   <a href="blog.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> Blog</a>
-  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
   <a href="index.html#avis" onclick="toggleMenu()">Avis clients</a>
 </div>
 
@@ -1235,6 +1255,30 @@
   .article-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.85rem}
   .article-table th,.article-table td{padding:.6rem .8rem;border:1px solid var(--border);text-align:left}
   .article-table th{background:var(--card2);font-weight:700}
+
+  /* ── RUO, mise en page visuelle ── */
+  .ruo-hero-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.8rem;margin:1.6rem 0 2.4rem}
+  .ruo-hero-item{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.7rem;box-shadow:var(--shadow-card);transition:transform .2s,box-shadow .2s}
+  .ruo-hero-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+  .ruo-hero-item strong{font-size:.88rem;color:var(--text);line-height:1.35;font-weight:700}
+  .ruo-section-head{display:flex;align-items:center;gap:.85rem;margin:2.5rem 0 .9rem}
+  .ruo-section-head:first-of-type{margin-top:0}
+  .ruo-section-head h2{margin:0}
+  .ruo-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+  .ruo-icon.c-teal{background:rgba(45,212,191,.16);color:#129388}
+  .ruo-icon.c-red{background:rgba(248,113,113,.16);color:#dc4545}
+  .ruo-icon.c-blue{background:rgba(96,165,250,.16);color:#3b7de0}
+  .ruo-icon.c-purple{background:rgba(167,139,250,.18);color:#8257e5}
+  .ruo-icon.c-orange{background:rgba(251,146,60,.16);color:#e0761b}
+  .ruo-icon.c-pink{background:rgba(244,114,182,.16);color:#e2569e}
+  .ruo-icon.c-yellow{background:rgba(251,191,36,.2);color:#b8860b}
+  .ruo-not-list{list-style:none!important;margin:.6rem 0 1.2rem!important;padding:0!important;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.6rem}
+  .ruo-not-list li{background:rgba(248,113,113,.07);border:1px solid rgba(248,113,113,.28);border-radius:10px;padding:.65rem .9rem!important;font-size:.92rem!important;display:flex;align-items:center;gap:.55rem;margin:0!important}
+  .ruo-not-list li::before{content:'✕';color:#dc4545;font-weight:800;font-size:.8rem;flex-shrink:0}
+  .ruo-check-list{list-style:none!important;margin:.6rem 0 1.2rem!important;padding:0!important}
+  .ruo-check-list li{padding:.6rem 0 .6rem 2.1rem!important;position:relative;font-size:1.02rem!important;border-bottom:1px solid var(--border);margin:0!important}
+  .ruo-check-list li:last-child{border-bottom:none}
+  .ruo-check-list li::before{content:'✓';position:absolute;left:0;top:.55rem;width:24px;height:24px;border-radius:50%;background:rgba(45,212,191,.18);color:#129388;font-weight:800;font-size:.78rem;display:flex;align-items:center;justify-content:center}
   .placeholder-banner{background:rgba(251,146,60,.12);border:1px solid rgba(251,146,60,.35);border-radius:12px;padding:1rem 1.3rem;margin-bottom:2rem;font-size:.82rem;color:#4a4a4a;line-height:1.6}
   .placeholder-banner strong{display:block;margin-bottom:.3rem}
   .glossary-term{margin-bottom:1.3rem;padding-bottom:1.3rem;border-bottom:1px solid var(--border)}
@@ -1255,37 +1299,98 @@
 <div class="article-wrap reveal">
 
   <div class="article-eyebrow" data-i18n="ruo_eyebrow">Avertissement produit</div>
-  <h1 class="article-title" data-i18n="ruo_h1">Research Use Only</h1>
+  <h1 class="article-title" data-i18n="ruo_h1">Research Use Only (RUO)</h1>
   <p class="article-meta" data-i18n="ruo_updated">Dernière mise à jour : Juillet 2026</p>
 
-  <div class="article-body">
-    <h2 data-i18n="ruo_s1_h">Usage exclusivement réservé à la recherche</h2>
-    <p data-i18n="ruo_s1_p">Tous les peptides vendus sur PurePep sont des <strong>produits de recherche (Research Use Only)</strong>, destinés exclusivement à un usage en laboratoire par des professionnels ou particuliers avertis dans un cadre de recherche scientifique.</p>
+  <div class="ruo-hero-summary" data-i18n="ruo_summary">
+    <div class="ruo-hero-item"><span class="ruo-icon c-teal">🔬</span><strong>Recherche scientifique uniquement (RUO)</strong></div>
+    <div class="ruo-hero-item"><span class="ruo-icon c-red">🚫</span><strong>Pas pour consommation humaine ou animale</strong></div>
+    <div class="ruo-hero-item"><span class="ruo-icon c-blue">📄</span><strong>COA disponible pour chaque lot</strong></div>
+    <div class="ruo-hero-item"><span class="ruo-icon c-purple">⚖️</span><strong>Aucune allégation médicale</strong></div>
+    <div class="ruo-hero-item"><span class="ruo-icon c-orange">🔞</span><strong>Réservé aux 18 ans et plus</strong></div>
+  </div>
 
-    <div class="article-callout article-callout-warn">
-      <div data-i18n="ruo_callout"><strong>Ces produits ne sont pas&nbsp;:</strong>
-      Des médicaments · Des compléments alimentaires · Des cosmétiques · Destinés à la consommation humaine ou animale · Destinés à un usage thérapeutique, diagnostic ou préventif chez l'humain ou l'animal.</div>
+  <div class="article-body">
+    <div class="ruo-section-head"><span class="ruo-icon c-teal">🔬</span><h2 data-i18n="ruo_s1_h">Usage exclusivement réservé à la recherche</h2></div>
+    <div data-i18n="ruo_s1_p">
+      <p>Tous les produits commercialisés par PurePep Labs sont strictement destinés à la recherche scientifique (Research Use Only – RUO).</p>
+      <p>Ils sont fournis exclusivement pour des activités de recherche, de développement et d'analyse en laboratoire.</p>
+      <p>Les produits vendus sur ce site ne sont pas destinés à la consommation humaine ou animale.</p>
+      <p>Ils ne sont pas commercialisés comme des médicaments, des dispositifs médicaux, des compléments alimentaires ou des produits cosmétiques.</p>
     </div>
 
-    <h2 data-i18n="ruo_s2_h">Engagement de l'acheteur</h2>
-    <p data-i18n="ruo_s2_p">En achetant sur PurePep, vous déclarez et garantissez&nbsp;:</p>
-    <ul data-i18n="ruo_list">
-      <li>Être âgé de 18 ans ou plus</li>
-      <li>Utiliser les produits achetés exclusivement à des fins de recherche en laboratoire</li>
-      <li>Ne pas ingérer, injecter en dehors d'un cadre de recherche, inhaler ou appliquer ces produits sur un être humain ou un animal en dehors d'un protocole de recherche encadré</li>
-      <li>Être seul responsable de l'usage fait des produits achetés, et du respect de la réglementation applicable dans votre pays</li>
-    </ul>
+    <div class="ruo-section-head"><span class="ruo-icon c-red">🚫</span><h2 data-i18n="ruo_s2_h">Les produits ne sont pas destinés à</h2></div>
+    <div data-i18n="ruo_s2_p">
+      <p>Les produits proposés par PurePep Labs ne sont pas destinés à&nbsp;:</p>
+      <ul class="ruo-not-list">
+        <li>la consommation humaine ou animale</li>
+        <li>un usage thérapeutique</li>
+        <li>un usage médical</li>
+        <li>un usage vétérinaire</li>
+        <li>un usage diagnostique</li>
+        <li>un usage préventif</li>
+        <li>un usage cosmétique</li>
+        <li>un usage alimentaire</li>
+      </ul>
+      <p>Aucune déclaration figurant sur ce site ne doit être interprétée comme une recommandation médicale, pharmaceutique ou vétérinaire.</p>
+    </div>
 
-    <h2 data-i18n="ruo_s3_h">COA et traçabilité</h2>
-    <p data-i18n="ruo_s3_p">Chaque lot est testé par un laboratoire tiers indépendant (Janoshik Analytical) pour vérifier une pureté ≥99% par HPLC. Le certificat d'analyse (COA) de chaque lot est disponible sur demande. Voir notre page <a href="coa.html">COA</a>.</p>
+    <div class="ruo-section-head"><span class="ruo-icon c-teal">✅</span><h2 data-i18n="ruo_s3_h">Engagement de l'acheteur</h2></div>
+    <div data-i18n="ruo_s3_p">
+      <p>En passant une commande sur PurePep Labs, vous déclarez et garantissez que&nbsp;:</p>
+      <ul class="ruo-check-list">
+        <li>vous êtes âgé d'au moins 18 ans</li>
+        <li>vous utilisez les produits exclusivement à des fins de recherche scientifique</li>
+        <li>vous possédez les connaissances nécessaires pour manipuler des produits destinés à la recherche</li>
+        <li>vous n'utiliserez pas ces produits à des fins de consommation humaine ou animale</li>
+        <li>vous ne procéderez pas à leur ingestion, injection, inhalation ou application sur un être humain ou un animal</li>
+        <li>vous respecterez toutes les lois, réglementations et exigences applicables dans votre pays ou votre juridiction</li>
+        <li>vous assumez l'entière responsabilité de l'utilisation des produits achetés</li>
+      </ul>
+    </div>
 
-    <h2 data-i18n="ruo_s4_h">Cadre réglementaire</h2>
-    <p data-i18n="ruo_s4_p">Le statut réglementaire des peptides de recherche varie selon les pays et évolue régulièrement. Il appartient à l'acheteur de vérifier la conformité de sa commande avec la réglementation en vigueur dans son pays de résidence avant de passer commande. Voir notre article <a href="cadre-legal-peptides-recherche-france.html">Le cadre légal des peptides de recherche au Canada</a> à titre informatif, ce contenu ne constitue pas un conseil juridique.</p>
+    <div class="ruo-section-head"><span class="ruo-icon c-blue">📄</span><h2 data-i18n="ruo_s4_h">Certificats d'analyse (COA)</h2></div>
+    <div data-i18n="ruo_s4_p">
+      <p>Chaque lot commercialisé par PurePep Labs est soumis à un contrôle qualité réalisé par un laboratoire tiers indépendant.</p>
+      <p>Les analyses comprennent notamment une vérification de la pureté par chromatographie liquide haute performance (HPLC).</p>
+      <p>Le certificat d'analyse (COA) correspondant au lot concerné est disponible sur la fiche du produit ou peut être fourni sur demande.</p>
+    </div>
 
-    <h2 data-i18n="ruo_s5_h">Contact</h2>
-    <p data-i18n="ruo_s5_p">Pour toute question sur l'usage prévu de nos produits : [EMAIL DE CONTACT].</p>
+    <div class="ruo-section-head"><span class="ruo-icon c-purple">⚖️</span><h2 data-i18n="ruo_s5_h">Limitation de responsabilité</h2></div>
+    <div data-i18n="ruo_s5_p">
+      <p>PurePep Labs fournit exclusivement des produits destinés à la recherche scientifique.</p>
+      <p>PurePep Labs ne garantit pas que ses produits conviennent à un usage autre que celui expressément indiqué dans la présente politique.</p>
+      <p>L'acheteur assume l'entière responsabilité du stockage, de la manipulation, de l'utilisation et de l'élimination des produits conformément aux lois applicables.</p>
+      <p>Dans la mesure permise par la loi, PurePep Labs ne pourra être tenu responsable des dommages directs, indirects, accessoires ou consécutifs résultant d'une utilisation non conforme des produits.</p>
+    </div>
+
+    <div class="ruo-section-head"><span class="ruo-icon c-orange">🔒</span><h2 data-i18n="ruo_s6_h">Restrictions de vente</h2></div>
+    <div data-i18n="ruo_s6_p">
+      <p>PurePep Labs se réserve le droit de refuser, suspendre ou annuler toute commande lorsqu'il existe des motifs raisonnables de croire que les produits pourraient être utilisés à des fins incompatibles avec leur destination Research Use Only (RUO).</p>
+      <p>Nous nous réservons également le droit de demander des renseignements supplémentaires lorsque cela est nécessaire pour respecter nos obligations légales ou réglementaires.</p>
+    </div>
+
+    <div class="ruo-section-head"><span class="ruo-icon c-yellow">🩺</span><h2 data-i18n="ruo_s7_h">Aucune allégation médicale</h2></div>
+    <div data-i18n="ruo_s7_p">
+      <p>Les informations présentées sur ce site sont fournies uniquement à des fins éducatives et informatives.</p>
+      <p>Elles ne constituent pas un avis médical, pharmaceutique, vétérinaire ou juridique.</p>
+      <p>Aucune information présente sur ce site n'a pour objet de diagnostiquer, traiter, guérir ou prévenir une maladie.</p>
+    </div>
+
+    <div class="ruo-section-head"><span class="ruo-icon c-teal">🌐</span><h2 data-i18n="ruo_s8_h">Cadre réglementaire</h2></div>
+    <div data-i18n="ruo_s8_p">
+      <p>Le statut réglementaire des peptides de recherche varie selon les pays et peut évoluer au fil du temps.</p>
+      <p>Il appartient exclusivement à l'acheteur de vérifier que l'importation, la possession, l'achat et l'utilisation des produits sont autorisés dans sa juridiction avant de passer commande.</p>
+      <p>Les informations publiées sur ce site concernant la réglementation sont fournies uniquement à titre informatif et ne constituent pas un conseil juridique.</p>
+    </div>
+
+    <div class="ruo-section-head"><span class="ruo-icon c-pink">✉️</span><h2 data-i18n="ruo_s9_h">Contact</h2></div>
+    <div data-i18n="ruo_s9_p">
+      <p>Pour toute question concernant notre politique Research Use Only, nos certificats d'analyse (COA) ou nos produits, vous pouvez communiquer avec notre équipe&nbsp;:</p>
+      <p>Courriel&nbsp;: <a href="mailto:support@purepep.com">support@purepep.com</a></p>
+    </div>
   </div>
-  
+
 </div>
 <!-- ── FOOTER ── -->
 <footer>
@@ -1304,7 +1409,7 @@
     </div>
     <div class="footer-col"><h4 data-i18n="footer_products">Produits</h4><ul><li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li><li><a href="index.html#produits" data-i18n="footer_categories">Catégories</a></li><li><a href="packs.html" data-i18n="footer_packs">Packs</a></li><li><a href="calculateur.html" data-i18n="footer_calculator">Calculateur de dosage</a></li><li><a href="index.html#produits" data-i18n="footer_accessories">Accessoires</a></li><li><a href="index.html#produits" data-i18n="footer_new">Nouveautés</a></li></ul></div>
     <div class="footer-col"><h4 data-i18n="footer_info">Informations</h4><ul><li><a href="a-propos.html" data-i18n="footer_about">À propos</a></li><li><a href="guides.html" data-i18n="footer_guides">Guides & Protocoles</a></li><li><a href="faq.html" data-i18n="nav_faq">FAQ</a></li><li><a href="contact.html" data-i18n="footer_contact">Contact</a></li><li><a href="programme-fidelite.html" data-i18n="footer_loyalty">Programme fidélité</a></li></ul></div>
-    <div class="footer-col"><h4 data-i18n="footer_legal">Légal</h4><ul><li><a href="cgv.html" data-i18n="footer_cgv">CGV</a></li><li><a href="politique-confidentialite.html" data-i18n="footer_privacy">Politique de confidentialité</a></li><li><a href="politique-cookies.html" data-i18n="footer_cookies">Politique cookies</a></li><li><a href="mentions-legales.html" data-i18n="footer_notices">Mentions légales</a></li><li><a href="research-use-only.html">Research Use Only</a></li></ul></div>
+    <div class="footer-col"><h4 data-i18n="footer_legal">Légal</h4><ul><li><a href="research-use-only.html">Research Use Only</a></li><li><a href="mentions-legales.html" data-i18n="footer_notices">Mentions légales</a></li><li><a href="cgv.html" data-i18n="footer_cgv">CGV</a></li><li><a href="politique-confidentialite.html" data-i18n="footer_privacy">Politique de confidentialité</a></li><li><a href="politique-cookies.html" data-i18n="footer_cookies">Politique cookies</a></li><li><a href="politique-expedition.html" data-i18n="footer_shipping">Politique d'expédition</a></li><li><a href="politique-remboursement.html" data-i18n="footer_refund">Politique de remboursement</a></li></ul></div>
   </div>
   <div class="footer-bottom">
     <span data-i18n="footer_copyright">© 2026 PurePep. Tous droits réservés.</span>
@@ -1430,6 +1535,14 @@ function unlockScroll(){
 }
 
 // ── MOBILE MENU ──
+function toggleNavDropdown(e){
+  e.stopPropagation();
+  document.getElementById('nav-more-dropdown').classList.toggle('open');
+}
+document.addEventListener('click', function(e){
+  const dd = document.getElementById('nav-more-dropdown');
+  if(dd && !dd.contains(e.target)) dd.classList.remove('open');
+});
 function toggleMenu(){
   const menu = document.getElementById('mobile-menu');
   menu.classList.toggle('open');
@@ -1476,6 +1589,24 @@ const CART_IMAGES = {
   'Pack Titan': 'images/tesamorelin-5mg.jpg',
   'Pack KLOW Elite Bundle': 'images/klow80.jpg'
 };
+const CART_NAMES_EN = {
+  'Eau Bactériostatique': 'Bacteriostatic Water',
+  'Seringue 100U 31G': 'Syringe 100U 31G',
+  'Lingettes alcool 70%': 'Alcohol Wipes 70%',
+  'Kit de reconstitution': 'Reconstitution Kit',
+  'Pack Wolverine': 'Pack Wolverine',
+  'Pack Phénix': 'Pack Phoenix',
+  'Pack Clarté Mentale': 'Pack Mental Clarity',
+  'Pack Peau & Cheveux': 'Pack Skin & Hair',
+  'Pack Perte de Poids Extrême': 'Pack Extreme Weight Loss',
+  'Pack Titan': 'Pack Titan',
+  'Pack KLOW Elite Bundle': 'Pack KLOW Elite Bundle'
+};
+function cartDisplayName(name){
+  if(localStorage.getItem('purepep_lang') === 'en' && CART_NAMES_EN[name]) return CART_NAMES_EN[name];
+  return name;
+}
+
 let cart=JSON.parse(localStorage.getItem('purepep_cart')||'[]');
 const FREE_SHIPPING=160;
 
@@ -1522,7 +1653,7 @@ function updateCartUI(){
     const div=document.createElement('div');
     div.className='cart-item';
     const imgSrc = CART_IMAGES[item.name] || 'images/kit-reconstitution.jpg';
-    div.innerHTML=`<img class="cart-item-img" src="${imgSrc}" alt="${item.name}"/><div style="flex:1"><div class="cart-item-name">${item.name}</div><div class="cart-item-dose">${item.dose||''}</div></div><span class="cart-item-price">$${item.price.toFixed(2)}</span><button class="cart-item-remove" onclick="removeFromCart(${idx})">✕</button>`;
+    div.innerHTML=`<img class="cart-item-img" src="${imgSrc}" alt="${item.name}"/><div style="flex:1"><div class="cart-item-name">${cartDisplayName(item.name)}</div><div class="cart-item-dose">${item.dose||''}</div></div><span class="cart-item-price">$${item.price.toFixed(2)}</span><button class="cart-item-remove" onclick="removeFromCart(${idx})">✕</button>`;
     list.appendChild(div);
   });
 }
@@ -1587,7 +1718,7 @@ function addToCart(name,btn){
   const orig = btn.textContent;
   btn.textContent = isEnAtc ? (qty > 1 ? `✓ ${qty}x added!` : '✓ Added!') : (qty > 1 ? `✓ ${qty}x ajouté !` : '✓ Ajouté !');
   setTimeout(() => { btn.classList.remove('added'); btn.textContent = orig; }, 1400);
-  showToast(isEnAtc ? (qty > 1 ? `${qty}x ${name} added to cart` : `${name} added to cart`) : (qty > 1 ? `${qty}× ${name} ajouté au panier` : `${name} ajouté au panier`), '✓');
+  showToast(isEnAtc ? (qty > 1 ? `${qty}x ${cartDisplayName(name)} added to cart` : `${cartDisplayName(name)} added to cart`) : (qty > 1 ? `${qty}× ${name} ajouté au panier` : `${name} ajouté au panier`), '✓');
   setTimeout(openCart, 500);
 }
 
@@ -1777,9 +1908,13 @@ function toggleWish(btn) {
 // ── SÉLECTEUR DE LANGUE / i18n ──
 const I18N = {
   en: {
+    nav_partner: "Partners program",
+    nav_whyus: "Why Us",
+    nav_more: "More",
+    nav_contact: "Contact",
     ship_msg_prefix: "Only",
     ship_msg_suffix: "left for free shipping",
-    help_ruo: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What is a COA?</button><p class="help-a">A certificate of analysis issued by an independent laboratory, attesting to the purity and chemical identity of a batch.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What does Research Use Only mean?</button><p class="help-a">This label indicates the product is intended exclusively for laboratory research use, not for human or animal consumption.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Is it legal to buy research peptides in Canada?</button><p class="help-a">Sale for laboratory purposes is governed by current regulations — this content is informational, not legal advice.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
+    help_ruo: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What is a COA?</button><p class="help-a">A certificate of analysis issued by an independent laboratory, attesting to the purity and chemical identity of a batch.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What does Research Use Only mean?</button><p class="help-a">This label indicates the product is intended exclusively for laboratory research use, not for human or animal consumption.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Is it legal to buy research peptides in Canada?</button><p class="help-a">Sale for laboratory purposes is governed by current regulations. This content is informational, not legal advice.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
     breadcrumb_home: "Home",
     back_to_catalog: "← See all peptides",
     cart_checkout_btn: "Checkout →",
@@ -1792,15 +1927,27 @@ const I18N = {
     cart_title_article: " item",
     cart_title_suffix: ")",
     ruo_eyebrow: "Product Disclaimer",
-    ruo_h1: "Research Use Only",
+    ruo_h1: "Research Use Only (RUO)",
     ruo_updated: "Last updated: July 2026",
-    ruo_s1_h: "Use strictly reserved for research", ruo_s1_p: "All peptides sold on PurePep are <strong>research products (Research Use Only)</strong>, intended exclusively for laboratory use by knowledgeable professionals or individuals within a scientific research context.",
-    ruo_callout: "<strong>These products are NOT:</strong>Medications · Dietary supplements · Cosmetics · Intended for human or animal consumption · Intended for therapeutic, diagnostic, or preventive use in humans or animals.",
-    ruo_s2_h: "Buyer's commitment", ruo_s2_p: "By purchasing on PurePep, you declare and warrant that you:",
-    ruo_list: "<li>Are 18 years of age or older</li><li>Will use the purchased products exclusively for laboratory research purposes</li><li>Will not ingest, inject outside a research context, inhale, or apply these products to a human or animal outside a controlled research protocol</li><li>Are solely responsible for the use made of the purchased products, and for compliance with applicable regulations in your country</li>",
-    ruo_s3_h: "COA and Traceability", ruo_s3_p: 'Every batch is tested by an independent third-party laboratory (Janoshik Analytical) to verify ≥99% purity by HPLC. The certificate of analysis (COA) for each batch is available upon request. See our <a href="coa.html">COA</a> page.',
-    ruo_s4_h: "Regulatory Framework", ruo_s4_p: 'The regulatory status of research peptides varies by country and changes regularly. It is the buyer&#39;s responsibility to verify that their order complies with the regulations in effect in their country of residence before ordering. See our article <a href="cadre-legal-peptides-recherche-france.html">The legal framework for research peptides in Canada</a> for informational purposes — this content does not constitute legal advice.',
-    ruo_s5_h: "Contact", ruo_s5_p: "For any question about the intended use of our products: [CONTACT EMAIL].",
+    ruo_s1_h: "Use strictly reserved for research",
+    ruo_s1_p: "<p>All products sold by PurePep Labs are strictly intended for scientific research (Research Use Only – RUO).</p><p>They are supplied exclusively for research, development, and laboratory analysis activities.</p><p>The products sold on this site are not intended for human or animal consumption.</p><p>They are not marketed as drugs, medical devices, dietary supplements, or cosmetic products.</p>",
+    ruo_s2_h: "Products are not intended for",
+    ruo_s2_p: '<p>The products offered by PurePep Labs are not intended for:</p><ul class="ruo-not-list"><li>human or animal consumption</li><li>therapeutic use</li><li>medical use</li><li>veterinary use</li><li>diagnostic use</li><li>preventive use</li><li>cosmetic use</li><li>food use</li></ul><p>No statement on this site should be interpreted as medical, pharmaceutical, or veterinary advice.</p>',
+    ruo_s3_h: "Buyer's commitment",
+    ruo_s3_p: '<p>By placing an order with PurePep Labs, you declare and warrant that:</p><ul class="ruo-check-list"><li>you are at least 18 years old</li><li>you use the products exclusively for scientific research purposes</li><li>you have the necessary knowledge to handle products intended for research</li><li>you will not use these products for human or animal consumption</li><li>you will not ingest, inject, inhale, or apply them to a human being or an animal</li><li>you will comply with all laws, regulations, and requirements applicable in your country or jurisdiction</li><li>you assume full responsibility for the use of the products purchased</li></ul>',
+    ruo_summary: '<div class="ruo-hero-item"><span class="ruo-icon c-teal">🔬</span><strong>Scientific research use only (RUO)</strong></div><div class="ruo-hero-item"><span class="ruo-icon c-red">🚫</span><strong>Not for human or animal consumption</strong></div><div class="ruo-hero-item"><span class="ruo-icon c-blue">📄</span><strong>COA available for every batch</strong></div><div class="ruo-hero-item"><span class="ruo-icon c-purple">⚖️</span><strong>No medical claims</strong></div><div class="ruo-hero-item"><span class="ruo-icon c-orange">🔞</span><strong>Restricted to 18 years and older</strong></div>',
+    ruo_s4_h: "Certificates of Analysis (COA)",
+    ruo_s4_p: "<p>Every batch sold by PurePep Labs undergoes quality control performed by an independent third-party laboratory.</p><p>Testing includes verification of purity by high-performance liquid chromatography (HPLC).</p><p>The Certificate of Analysis (COA) corresponding to the relevant batch is available on the product page or can be provided upon request.</p>",
+    ruo_s5_h: "Limitation of liability",
+    ruo_s5_p: "<p>PurePep Labs exclusively supplies products intended for scientific research.</p><p>PurePep Labs does not warrant that its products are suitable for any use other than the one expressly stated in this policy.</p><p>The buyer assumes full responsibility for the storage, handling, use, and disposal of the products in accordance with applicable laws.</p><p>To the extent permitted by law, PurePep Labs shall not be held liable for any direct, indirect, incidental, or consequential damages resulting from improper use of the products.</p>",
+    ruo_s6_h: "Sales restrictions",
+    ruo_s6_p: "<p>PurePep Labs reserves the right to refuse, suspend, or cancel any order where there are reasonable grounds to believe the products could be used for purposes incompatible with their Research Use Only (RUO) designation.</p><p>We also reserve the right to request additional information when necessary to comply with our legal or regulatory obligations.</p>",
+    ruo_s7_h: "No medical claims",
+    ruo_s7_p: "<p>The information presented on this site is provided for educational and informational purposes only.</p><p>It does not constitute medical, pharmaceutical, veterinary, or legal advice.</p><p>No information on this site is intended to diagnose, treat, cure, or prevent any disease.</p>",
+    ruo_s8_h: "Regulatory framework",
+    ruo_s8_p: "<p>The regulatory status of research peptides varies by country and may change over time.</p><p>It is the buyer&#39;s sole responsibility to verify that the import, possession, purchase, and use of the products are permitted in their jurisdiction before placing an order.</p><p>The regulatory information published on this site is provided for informational purposes only and does not constitute legal advice.</p>",
+    ruo_s9_h: "Contact",
+    ruo_s9_p: '<p>For any question regarding our Research Use Only policy, our Certificates of Analysis (COA), or our products, you can reach our team:</p><p>Email: <a href="mailto:support@purepep.com">support@purepep.com</a></p>',
     age_gate_title: "Just a moment before entering",
     age_gate_desc: "PurePep offers research peptides intended for laboratory use only. Access to this site is restricted to adults.",
     age_gate_yes: "I am over 18, Enter",
@@ -1817,7 +1964,7 @@ const I18N = {
     catb5: "Recovery", catb6: "Muscle Growth",
     catb7: "Anti-Aging", catb8: "Recovery",
     catb9: "Recovery", faqa1: "Use bacteriostatic water (available on our site). Gently inject the water along the wall of the vial without aiming directly at the powder. Do not shake, swirl gently. Let sit for 2-3 minutes. Storage: 2-4°C after reconstitution, use within 4 weeks.",
-    faqa2: "The COA (Certificate of Analysis) is the purity report produced by Janoshik Analytical, a recognized independent laboratory in the sector, via HPLC chromatography. Every PurePep batch has its own COA downloadable on the product page. You can check the batch number on the vial and compare it to the provided PDF. Our guaranteed minimum purity is ≥99%.", faqa3: "Orders are shipped within 24 business hours. Delivery across Canada within 2-5 business days (Canada Post), free from \$160 of purchase (otherwise \$4.90). International delivery to the US and abroad within 5-10 days, free from \$200 of purchase (otherwise a flat rate of \$15). Every order is tracked and you receive a confirmation email with a tracking number. Neutral, discreet packaging with no indication of contents.",
+    faqa2: "The COA (Certificate of Analysis) is the purity report produced by Freedom Diagnostics, a recognized independent laboratory in the sector, via HPLC chromatography. Every PurePep batch has its own COA downloadable on the product page. You can check the batch number on the vial and compare it to the provided PDF. Our guaranteed minimum purity is ≥99%.", faqa3: "Orders are shipped within 24 business hours. Delivery across Canada within 2-5 business days (Canada Post), free from \$160 of purchase (otherwise \$4.90). International delivery to the US and abroad within 5-10 days, free from \$200 of purchase (otherwise a flat rate of \$15). Every order is tracked and you receive a confirmation email with a tracking number. Neutral, discreet packaging with no indication of contents.",
     faqa4: "You have 14 days after receipt to return an unopened product. In case of a quality issue (batch not matching the COA), we offer a full replacement or refund at no cost. Contact us via WhatsApp or email for any return.", faqa5: "Our peptides are sold exclusively for scientific research purposes (Research Use Only). They are not intended for human or animal consumption. It is your responsibility to comply with local legislation. PurePep provides no medical advice.",
     faqa6: "Lyophilized peptides (powder): stable at room temperature for 12-24 months, ideally refrigerated. After reconstitution: store at 2-4°C, use within 4 weeks. For long-term storage: freezer at -20°C in powder form. Avoid repeated freeze/thaw cycles.", faqq1: "How do I reconstitute a lyophilized peptide?",
     faqq2: "What is a COA and how do I check it?", faqq3: "What are your delivery times?",
@@ -1830,7 +1977,7 @@ const I18N = {
     footer_info: "Information", footer_legal: "Legal",
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
-    footer_privacy: "Privacy Policy", footer_products: "Products",
+    footer_privacy: "Privacy Policy", footer_products: "Products", footer_shipping: "Shipping Policy", footer_refund: "Refund Policy",
     footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.",
     gtcat1: "Protocol", gtcat2: "Comparison",
     gtcat3: "Science", gtcat4: "Legal framework",
@@ -1846,7 +1993,7 @@ const I18N = {
     hero_social_text: "supplied since 2024", hero_subtitle: "Certified batch by batch · Purity ≥99%",
     hero_tagline: "Order today, reconstitute tomorrow.", hero_title: "Research<br>Peptides",
     nav_calculator: "Calculator", nav_faq: "FAQ",
-    nav_guides: "Guides", nav_packs: "Packs",
+    nav_guides: "Guides", nav_packs: "Bundles",
     nav_products: "Our peptides", nav_quality: "COA",
     nl_incentive: "-10% off your next order for subscribers", nl_legal: "No spam. Unsubscribe in 1 click. GDPR-protected data.",
     nl_submit: "Subscribe →", nl_subtitle: "New peptides, scientific studies and exclusive guides, straight to your inbox.",

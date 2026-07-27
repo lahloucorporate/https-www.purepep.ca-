@@ -7,20 +7,17 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>TB-500 · Peptide de Recherche HPLC ≥99% · PurePep</title>
+  <title>Politique de remboursement · PurePep</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="TB-500, peptide de recherche, pureté ≥99% HPLC certifiée Freedom Diagnostics. COA par lot, livré partout au Canada. À partir de $70.00."/>
-  <meta name="keywords" content="tb-500, peptide recherche, HPLC, COA, Canada"/>
-  <meta property="og:title" content="TB-500 · PurePep"/>
-  <meta property="og:description" content="TB-500, peptide de recherche, pureté ≥99% HPLC certifiée Freedom Diagnostics. COA par lot, livré partout au Canada. À partir de $70.00."/>
+  <meta name="description" content="Politique de remboursement PurePep : retours, délais et conditions de remboursement."/>
+  <meta name="keywords" content="peptides recherche, BPC-157, retatrutide, tirzepatide, HPLC, COA, Canada"/>
+  <meta property="og:title" content="Politique de remboursement · PurePep"/>
+  <meta property="og:description" content="Politique de remboursement PurePep : retours, délais et conditions de remboursement."/>
   <meta property="og:image" content="https://purepep.ca/images/logo-purepep.png"/>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Product","name":"TB-500","description":"Le TB-500 est un fragment synthétique de la thymosine bêta-4. Il est étudié pour son rôle dans la migration cellulaire, l'angiogenèse et la réparation tissulaire, notamment en recherche sur la récupération musculaire et tendineuse.","brand":{"@type":"Brand","name":"PurePep"},"offers":{"@type":"Offer","priceCurrency":"CAD","price":"70.00","availability":"https://schema.org/InStock","url":"https://purepep.ca/tb-500-10mg.html"}}
-  </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     /* ── AIDE CONTEXTUELLE ── */
@@ -236,12 +233,11 @@
     }
     .hero-badge .ic{font-size:.9rem;display:flex;align-items:center}
     .hero-badge .ic svg{width:15px;height:15px}
-    .hero-visual{position:relative}
-    .hero-visual-card{
-      position:relative;background:var(--card);border:1px solid var(--border);
-      border-radius:20px;box-shadow:var(--shadow-hover);padding:.6rem;overflow:hidden;
+    .hero-video-full{
+      position:relative;z-index:2;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
+      overflow:hidden;line-height:0;
     }
-    .hero-visual-card svg{width:100%;height:auto;display:block}
+    .hero-video-full video{width:100%;height:auto;max-height:70vh;object-fit:cover;display:block}
     .hero-visual-tag{
       position:absolute;top:1.2rem;right:1.2rem;z-index:3;
       background:rgba(245,245,244,.92);backdrop-filter:blur(8px);
@@ -249,20 +245,32 @@
       padding:5px 12px;font-size:.72rem;font-weight:700;color:var(--accent-d);
       display:flex;align-items:center;gap:.35rem;
     }
-    .hero-float-card{
-      position:static;margin-top:1rem;z-index:3;
-      background:var(--card);
-      border:1px solid var(--border);border-radius:14px;
-      box-shadow:var(--shadow-card);padding:.8rem 1.1rem;
-      display:flex;align-items:center;gap:.65rem;max-width:none;
+    .hero-grid-centered{display:block;padding-top:2.2rem}
+    .hero-content-centered{max-width:1100px;margin:0 auto;text-align:center}
+    .hero-content-centered .hero-eyebrow{margin-bottom:.7rem}
+    .hero-content-centered h1{margin-bottom:.5rem;font-size:clamp(2rem,4vw,2.9rem)}
+    .hero-content-centered .hero-subtagline{color:var(--muted);font-size:.98rem;margin-bottom:1.2rem}
+    .hero-content-centered .hero-subtagline strong{color:var(--text);font-weight:600}
+    .hero-content-centered .hero-action-row{
+      display:flex;align-items:center;justify-content:center;gap:1.6rem;flex-wrap:wrap;margin-bottom:1.1rem;
     }
-    .hero-float-card .trust-icon{width:34px;height:34px;border-radius:8px;background:var(--trust-glow);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-    .hero-float-card strong{font-size:.8rem;color:var(--text);display:block}
-    .hero-float-card p{font-size:.72rem;color:var(--muted);margin:0}
+    .hero-content-centered .hero-ctas{margin-bottom:0}
+    .hero-content-centered .hero-social-proof{margin-bottom:0}
+    .hero-content-centered .hero-badges{
+      justify-content:center;gap:0;flex-wrap:wrap;
+      border-top:1px solid var(--border);padding-top:.9rem;max-width:720px;margin:0 auto;
+    }
+    .hero-content-centered .hero-badge{
+      background:none;border:none;box-shadow:none;padding:.3rem .9rem;font-weight:500;color:var(--muted);
+      border-right:1px solid var(--border);border-radius:0;
+    }
+    .hero-content-centered .hero-badge:last-child{border-right:none}
+    @media (max-width:640px){
+      .hero-content-centered .hero-badge{border-right:none;padding:.3rem .6rem}
+    }
     @media (max-width:900px){
       .hero-grid{grid-template-columns:1fr;padding:2rem 1.5rem}
-      .hero-visual{order:-1;max-width:440px;margin:0 auto}
-      .hero-float-card{position:static;margin-top:1rem;max-width:none}
+      .hero-video-full video{max-height:44vh}
     }
 
     /* ── PAYMENT BADGES ── */
@@ -298,19 +306,21 @@
     .btn-ghost:hover{color:var(--text);border-color:var(--accent)}
 
     /* ── FILTER TABS ── */
-    .filter-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin-bottom:1.9rem;max-width:640px}
+    .filter-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-bottom:1.9rem;max-width:800px;margin-left:auto;margin-right:auto}
     .filter-tab{
-      background:var(--card);border:1px solid var(--border);color:var(--text);
-      padding:.6rem .7rem;border-radius:8px;font-size:.78rem;font-weight:600;
+      background:var(--card2);border:1px solid var(--border);color:var(--text);
+      padding:.6rem 1.1rem;border-radius:99px;font-size:.82rem;font-weight:600;
       letter-spacing:0;transition:all .2s cubic-bezier(.4,0,.2,1);cursor:pointer;
-      display:flex;align-items:center;justify-content:center;gap:.35rem;white-space:nowrap;
+      display:inline-flex;align-items:center;justify-content:center;gap:.4rem;white-space:nowrap;
       text-align:center;
     }
-    .filter-tab .count{color:var(--muted);font-weight:500;font-size:.72rem}
-    .filter-tab:hover{border-color:var(--text);background:var(--card2)}
-    .filter-tab.active{background:var(--text);border-color:var(--text);color:#fff}
-    .filter-tab.active .count{color:rgba(255,255,255,.65)}
-    @media(max-width:640px){.filter-bar{grid-template-columns:repeat(2,1fr);max-width:none}}
+    .filter-tab .count{
+      color:var(--accent-d);font-weight:700;font-size:.68rem;background:rgba(85,85,85,.12);
+      border-radius:99px;padding:1px 7px;
+    }
+    .filter-tab:hover{border-color:var(--accent);background:var(--card)}
+    .filter-tab.active{background:var(--accent-d);border-color:var(--accent-d);color:#fff}
+    .filter-tab.active .count{background:rgba(255,255,255,.2);color:#fff}
 
     /* ── PRODUCT CARD ── */
     .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.2rem}
@@ -373,16 +383,15 @@
     .packs-header-banner h2 span{color:var(--accent-l)}
     .packs-header-banner p{color:var(--muted);font-size:.88rem;margin-top:.2rem}
     .packs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.2rem}
-    .pack-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.4rem;transition:transform .2s,border-color .2s}
+    .pack-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.6rem 1.4rem;transition:transform .2s,border-color .2s;cursor:pointer;text-align:center;display:flex;flex-direction:column;align-items:center}
     .pack-card:hover{transform:translateY(-4px);border-color:var(--accent)}
-    .pack-discount-badge{display:inline-block;align-self:flex-start;background:var(--accent);color:#fff;padding:3px 10px;border-radius:6px;font-size:.72rem;font-weight:700;margin-bottom:.7rem}
-    .pack-name{font-size:1.05rem;font-weight:700;margin-bottom:.4rem}
-    .pack-desc{color:var(--muted);font-size:.82rem;line-height:1.5;margin-bottom:.9rem}
-    .pack-items{display:flex;flex-direction:column;gap:.3rem;margin-bottom:.9rem}
-    .pack-item-row{display:flex;justify-content:space-between;color:var(--muted);font-size:.82rem}
-    .pack-pricing{display:flex;align-items:center;gap:.7rem;margin-bottom:.9rem}
-    .pack-price-old{color:var(--muted);font-size:.88rem;text-decoration:line-through}
-    .pack-price-new{color:var(--accent-l);font-size:1.15rem;font-weight:800}
+    .pack-synergy-tag{
+      display:inline-flex;align-items:center;gap:.3rem;background:rgba(85,85,85,.1);color:var(--accent-d);
+      padding:3px 11px;border-radius:99px;font-size:.7rem;font-weight:700;margin-bottom:.8rem;
+    }
+    .pack-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:.4rem}
+    .pack-desc{color:var(--muted);font-size:.82rem;line-height:1.5;margin-bottom:.7rem}
+    .pack-price-single{font-family:'Plus Jakarta Sans',sans-serif;color:var(--accent-l);font-size:1.4rem;font-weight:800;margin:auto 0 1rem}
 
     /* ── QUALITY ── */
     .quality-section{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2.5rem;text-align:center;margin:0 2rem}
@@ -421,18 +430,38 @@
     .verified-sep{width:1px;height:26px;background:var(--border)}
 
     /* ── DOMAINES DE RECHERCHE ── */
-    .domaines-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+    .domaines-header{text-align:center;max-width:640px;margin:0 auto 2.2rem}
+    .domaines-eyebrow{
+      display:inline-flex;align-items:center;gap:.5rem;color:var(--accent-l);
+      font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.7rem;
+    }
+    .domaines-eyebrow::before,.domaines-eyebrow::after{content:'';width:22px;height:1px;background:var(--accent)}
+    .domaines-header h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.1rem;font-weight:600;margin-bottom:.5rem}
+    .domaines-header p{color:var(--muted);font-size:.92rem;line-height:1.5}
+    .domaines-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:.7rem}
     .domaine-card{
-      background:var(--card);border:1px solid var(--border);border-radius:16px;
-      padding:1.4rem 1.3rem;text-align:left;display:flex;flex-direction:column;gap:.3rem;
+      background:var(--card);border:1px solid var(--border);border-radius:14px;
+      padding:1.1rem .8rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.4rem;
       transition:transform .2s,border-color .2s,box-shadow .2s;
     }
-    .domaine-card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 30px rgba(85,85,85,.1)}
-    .domaine-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;font-weight:700;color:var(--muted);letter-spacing:.05em}
-    .domaine-icon{font-size:1.6rem;margin:.3rem 0 .2rem}
-    .domaine-title{font-size:1.05rem;font-weight:700;color:var(--text)}
-    .domaine-desc{font-size:.82rem;color:var(--muted);line-height:1.45;margin-bottom:.4rem}
-    .domaine-link{font-size:.8rem;font-weight:700;color:var(--accent-l)}
+    .domaine-card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 12px 30px rgba(85,85,85,.1)}
+    .domaine-icon{
+      width:38px;height:38px;border-radius:50%;background:var(--trust-glow);
+      display:flex;align-items:center;justify-content:center;color:var(--accent-d);
+    }
+    .domaine-icon svg{width:19px;height:19px}
+    .domaine-title{font-size:.84rem;font-weight:700;color:var(--text);line-height:1.25}
+    .domaine-link{font-size:.7rem;font-weight:700;color:var(--accent-l);opacity:0;transition:opacity .2s}
+    .domaine-card:hover .domaine-link{opacity:1}
+    @media(max-width:900px){.domaines-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:520px){.domaines-grid{grid-template-columns:repeat(2,1fr)}}
+
+    /* ── PEPTIDES DES PACKS ── */
+    .pack-peptides{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:.3rem;flex-wrap:wrap}
+    .stack-pep{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:.3rem .6rem;font-size:.76rem;font-weight:700;color:var(--text)}
+    .stack-plus{color:var(--muted);font-weight:700;font-size:.8rem}
+    .pack-kit-note{font-size:.74rem;color:var(--accent-l);font-weight:600}
+    .packs-discount-inline{font-family:'Inter',sans-serif;font-size:.85rem;font-weight:700;color:var(--accent-l);vertical-align:middle;margin-left:.5rem}
 
     /* ── UPSELL ── */
     .upsell-section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin:0 2rem 2rem}
@@ -445,8 +474,6 @@
     }
     .upsell-item:hover{border-color:var(--accent)}
     .upsell-item input[type=checkbox]{accent-color:var(--accent);width:16px;height:16px;flex-shrink:0}
-    .upsell-kit-img{width:88px;height:88px;object-fit:contain;border-radius:8px;background:#fff;border:1px solid var(--border);flex-shrink:0}
-    .upsell-kit-color{margin-top:.3rem;font-size:.72rem;padding:.15rem .4rem;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--text)}
     .upsell-info{}
     .upsell-name{font-size:.82rem;font-weight:700}
     .upsell-price{font-size:.75rem;color:var(--accent-l);font-weight:600}
@@ -755,16 +782,16 @@
     .section-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.7rem;font-weight:600;letter-spacing:0}
 
     /* Filter tabs */
-    .filter-bar{gap:.5rem;padding:.2rem 0}
+    .filter-bar{gap:.6rem;padding:.2rem 0;justify-content:center;max-width:800px;margin-left:auto;margin-right:auto}
     .filter-tab{
-      border-radius:8px;font-size:.78rem;font-weight:600;letter-spacing:0;
-      background:rgba(255,255,255,.85);border:1px solid rgba(20,20,20,.12);
-      color:var(--text);transition:all .2s cubic-bezier(.4,0,.2,1);padding:.6rem .7rem;
+      border-radius:99px;font-size:.82rem;font-weight:600;letter-spacing:0;
+      background:rgba(240,240,238,.9);border:1px solid rgba(20,20,20,.12);
+      color:var(--text);transition:all .2s cubic-bezier(.4,0,.2,1);padding:.6rem 1.1rem;
     }
-    .filter-tab:hover{background:#fff;border-color:rgba(20,20,20,.3)}
-    .filter-tab.active{background:var(--text);border-color:var(--text);color:#fff;box-shadow:0 2px 10px rgba(20,20,20,.18)}
-    .filter-tab .count{color:var(--muted);font-weight:500;font-size:.72rem}
-    .filter-tab.active .count{color:rgba(255,255,255,.65)}
+    .filter-tab:hover{background:#fff;border-color:var(--accent)}
+    .filter-tab.active{background:var(--accent-d);border-color:var(--accent-d);color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+    .filter-tab .count{color:var(--accent-d);font-weight:700;font-size:.68rem;background:rgba(85,85,85,.12);border-radius:99px;padding:1px 7px}
+    .filter-tab.active .count{background:rgba(255,255,255,.2);color:#fff}
 
     /* Product cards, major upgrade */
     .product-card{
@@ -1080,8 +1107,18 @@
       .spotlight-outer.visible .spotlight::before{animation:none;opacity:0}
       .sp-vial{transform:none !important}
     }
-  </style>
-  <link rel="canonical" href="https://purepep.ca/tb-500-10mg"/>
+    .back-to-catalog{
+    display:inline-flex;align-items:center;gap:.4rem;max-width:1280px;margin:.7rem auto 0;padding:0 2rem;
+    font-size:.82rem;font-weight:700;color:var(--accent-d);
+  }
+  .back-to-catalog-inner{
+    display:inline-flex;align-items:center;gap:.4rem;background:var(--card2);border:1px solid var(--border);
+    border-radius:99px;padding:.45rem 1rem;transition:all .2s;
+  }
+  .back-to-catalog-inner:hover{background:var(--card);border-color:var(--accent)}
+  @media(max-width:640px){.back-to-catalog{padding:0 1.3rem}}
+</style>
+  <link rel="canonical" href="https://purepep.ca/politique-cookies"/>
 </head>
 <body>
 <div id="scroll-progress"></div>
@@ -1195,274 +1232,73 @@
 </div>
 
 <style>
-  .breadcrumb{max-width:1280px;margin:0 auto;padding:1.2rem 2rem 0;font-size:.8rem;color:var(--muted)}
+  .breadcrumb{max-width:900px;margin:0 auto;padding:1.2rem 2rem 0;font-size:.8rem;color:var(--muted)}
   .breadcrumb a{color:var(--muted);transition:color .2s}
   .breadcrumb a:hover{color:var(--accent-l)}
   .breadcrumb .sep{margin:0 .4rem;opacity:.5}
   .breadcrumb .current{color:var(--text);font-weight:600}
-  .back-to-catalog{
-    display:inline-flex;align-items:center;gap:.4rem;max-width:1280px;margin:.7rem auto 0;padding:0 2rem;
-    font-size:.82rem;font-weight:700;color:var(--accent-d);
-  }
-  .back-to-catalog-inner{
-    display:inline-flex;align-items:center;gap:.4rem;background:var(--card2);border:1px solid var(--border);
-    border-radius:99px;padding:.45rem 1rem;transition:all .2s;
-  }
-  .back-to-catalog-inner:hover{background:var(--card);border-color:var(--accent)}
-  @media(max-width:640px){.back-to-catalog{padding:0 1.3rem}}
-  .product-hero{max-width:1280px;margin:0 auto;padding:1.5rem 2rem 3rem;display:grid;grid-template-columns:1fr 1.05fr;gap:3rem;align-items:start}
-  .ph-gallery{position:sticky;top:90px}
-  .ph-main-img{background:#ffffff;border-radius:22px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--border)}
-  .ph-main-img img{width:100%;height:112%;object-fit:contain}
-  .ph-trust-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
-  .ph-coa-download{
-    display:inline-flex;align-items:center;gap:.4rem;margin-top:.8rem;font-size:.78rem;font-weight:700;
-    color:var(--accent-d);background:var(--card2);border:1px solid var(--border);border-radius:99px;
-    padding:.45rem 1rem;transition:all .2s;
-  }
-  .ph-coa-download:hover{background:var(--card);border-color:var(--accent);color:var(--accent-l)}
-  .ph-trust-item{display:flex;align-items:center;gap:.4rem;background:var(--card);border:1px solid var(--border);border-radius:99px;padding:.4rem .85rem;font-size:.72rem;font-weight:600;color:var(--muted)}
-  .ph-cat-badge{display:inline-block;text-align:left;margin:0 0 .7rem;padding:2px 9px;border-radius:99px;background:var(--card2);border:1px solid var(--border)}
-  .ph-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.6rem;font-weight:600;line-height:1.05;margin-bottom:.6rem}
-  .dose-tag{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.03em;color:var(--muted);background:var(--card2);border:1px solid var(--border);padding:.2em .55em;border-radius:7px;margin-left:.5em;vertical-align:middle}
-  .ph-subtitle{color:var(--muted);font-size:.92rem;line-height:1.55;margin-bottom:1.3rem;max-width:520px}
-  .ph-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.3rem}
-  .ph-tag{display:inline-flex;align-items:center;gap:.35rem;background:var(--card2);border:1px solid var(--border);border-radius:99px;padding:.4rem .85rem;font-size:.78rem;font-weight:600;color:var(--text)}
-  .ph-tag svg{width:12px;height:12px;flex-shrink:0;color:var(--accent-l)}
-  .ph-rating{display:flex;align-items:center;gap:.5rem;margin-bottom:1.4rem;font-size:.85rem;color:var(--muted)}
-  .ph-rating .stars{color:#8a8a8a;letter-spacing:1px}
-  .ph-buybox{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:1.5rem;margin-bottom:1.5rem}
-  .ph-dose-label{font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.5rem}
-  .ph-dose-select{width:100%;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:.7rem .9rem;border-radius:10px;font-size:.92rem;font-weight:700;margin-bottom:1.2rem;cursor:pointer}
-  .ph-price-row{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.2rem}
-  .ph-price{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.3rem;font-weight:700;color:var(--accent-l)}
-  .ph-price-unit{font-size:.78rem;color:var(--muted);font-weight:500;margin-left:.3rem}
-  .ph-buy-row{display:flex;gap:.8rem;align-items:center}
-  .ph-buy-row .qty-ctrl{height:48px}
-  .ph-buy-row .qty-btn{width:34px;height:100%}
-  .ph-buy-row .qty-val{width:36px;font-size:.92rem}
-  .ph-add-btn{flex:1;background:var(--accent-d);color:#fff;padding:0 1.4rem;height:48px;border-radius:10px;font-weight:700;font-size:.92rem;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .2s}
-  .ph-add-btn:hover{background:var(--accent-l)}
-  .ph-add-btn.added{background:var(--accent-l)}
-  .ph-tabs{display:flex;gap:1.6rem;border-bottom:1px solid var(--border);margin-bottom:1.6rem}
-  .ph-tab{padding:.7rem 0;font-size:.85rem;font-weight:700;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s;cursor:pointer}
-  .ph-tab.active{color:var(--text);border-color:var(--accent)}
-  .ph-tab-panel{display:none;font-size:.88rem;line-height:1.7;color:var(--text)}
-  .ph-tab-panel.active{display:block}
-  .ph-tab-panel h4{font-size:.95rem;font-weight:700;margin:1.1rem 0 .5rem}
-  .ph-tab-panel h4:first-child{margin-top:0}
-  .ph-tab-panel ul{margin:.4rem 0 .8rem 1.2rem}
-  .ph-tab-panel li{margin-bottom:.3rem;color:var(--muted)}
-  .ph-related{max-width:1280px;margin:0 auto;padding:0 2rem 4rem}
-  .ph-related h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.7rem;font-weight:600;margin-bottom:1.2rem}
-  .ph-related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
-  .ph-related-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1rem;text-align:center;transition:all .2s}
-  .ph-related-card:hover{border-color:var(--accent);transform:translateY(-3px)}
-  .ph-related-card img{width:100%;aspect-ratio:1/1;object-fit:contain;margin-bottom:.6rem}
-  .ph-related-name{font-size:.85rem;font-weight:700;margin-bottom:.2rem}
-  .ph-related-price{font-size:.8rem;color:var(--accent-l);font-weight:600}
-  @media(max-width:860px){
-    .product-hero{grid-template-columns:1fr;padding:1.2rem 1.3rem 2.5rem;gap:1.5rem}
-    .ph-gallery{position:static}
-    .ph-title{font-size:2.1rem}
+  .article-wrap{max-width:900px;margin:0 auto;padding:1.5rem 2rem 4rem}
+  .article-eyebrow{display:inline-flex;align-items:center;gap:.5rem;color:var(--accent-l);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem}
+  .article-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.4rem;font-weight:600;line-height:1.1;margin-bottom:.7rem}
+  .article-meta{font-size:.8rem;color:var(--muted);margin-bottom:2rem}
+  .article-body h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.5rem;font-weight:700;margin:2rem 0 .8rem}
+  .article-body h2:first-child{margin-top:0}
+  .article-body h3{font-size:1rem;font-weight:700;margin:1.4rem 0 .5rem}
+  .article-body p{font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:1.1rem}
+  .article-body ul,.article-body ol{margin:.4rem 0 1.1rem 1.3rem}
+  .article-body li{font-size:1.05rem;line-height:1.75;color:var(--text);margin-bottom:.45rem}
+  .article-body strong{color:var(--text)}
+  .article-body a{color:var(--accent-l);font-weight:600}
+  .article-callout{background:var(--card2);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:1rem 1.3rem;margin:1.3rem 0;font-size:.85rem;line-height:1.6;color:var(--muted)}
+  .article-callout strong{color:var(--text);display:block;margin-bottom:.3rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.03em}
+  .article-callout-warn{border-left-color:#4a4a4a;background:rgba(251,146,60,.08)}
+  .article-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.85rem}
+  .article-table th,.article-table td{padding:.6rem .8rem;border:1px solid var(--border);text-align:left}
+  .article-table th{background:var(--card2);font-weight:700}
+  .placeholder-banner{background:rgba(251,146,60,.12);border:1px solid rgba(251,146,60,.35);border-radius:12px;padding:1rem 1.3rem;margin-bottom:2rem;font-size:.82rem;color:#4a4a4a;line-height:1.6}
+  .placeholder-banner strong{display:block;margin-bottom:.3rem}
+  .glossary-term{margin-bottom:1.3rem;padding-bottom:1.3rem;border-bottom:1px solid var(--border)}
+  .glossary-term:last-child{border-bottom:none}
+  .glossary-term dt{font-weight:800;font-size:.95rem;color:var(--text);margin-bottom:.3rem}
+  .glossary-term dd{font-size:.88rem;color:var(--muted);line-height:1.6;margin:0}
+  @media(max-width:640px){
+    .article-title{font-size:1.9rem}
+    .article-wrap{padding:1.2rem 1.3rem 3rem}
     .breadcrumb{padding:1rem 1.3rem 0}
   }
 </style>
 
 <div class="breadcrumb">
-  <a href="index.html" data-i18n="breadcrumb_home">Accueil</a><span class="sep">/</span><a href="index.html#produits" data-i18n="breadcrumb_products">Nos peptides</a><span class="sep">/</span><span class="current">TB-500</span>
+  <a href="index.html" data-i18n="breadcrumb_home">Accueil</a><span class="sep">/</span><span class="current">Politique de remboursement</span>
 </div>
 <div class="back-to-catalog"><a href="index.html#produits" class="back-to-catalog-inner" data-i18n="back_to_catalog">← Voir tous les peptides</a></div>
+<div class="article-wrap reveal">
 
-<div class="product-hero reveal">
-  <div class="ph-gallery">
-    <div class="ph-main-img">
-      <img src="images/tb500-10mg.jpg" alt="Flacon TB-500 PurePep, étiquette verte, pureté HPLC ≥99%"/>
-    </div>
-    <div class="ph-trust-row">
-      <span class="ph-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px"><path d="M9 2v6.5L4 18a2 2 0 0 0 1.8 3h12.4a2 2 0 0 0 1.8-3l-5-9.5V2"/><path d="M8.5 2h7"/><path d="M7.5 15h9"/></svg><span data-i18n="trust_coa">COA par lot</span></span>
-      <span class="ph-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="trust_purity">Pureté ≥99% HPLC</span></span>
-      <span class="ph-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px"><rect x="1" y="4" width="14" height="11"/><path d="M15 8h4l3 3v4h-7z"/><circle cx="5.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><span data-i18n="trust_shipped">Expédié le jour même avant 14h, sinon sous 24h</span></span>
-      <span class="ph-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><span data-i18n="trust_packaging">Emballage discret</span></span>
-    </div>  </div>
+  <div class="article-eyebrow" data-i18n="pr_eyebrow">Retours</div>
+  <h1 class="article-title" data-i18n="pr_h1">Politique de remboursement</h1>
+  <p class="article-meta" data-i18n="pr_updated">Dernière mise à jour : Juillet 2026</p>
 
-  <div class="ph-info">
-    <span class="cat-badge cat-recuperation ph-cat-badge" data-i18n="tb500_cat">Récupération</span>
-    <h1 class="ph-title">TB-500<span class="dose-tag">10 MG</span></h1>
-    <div class="ph-rating"><span class="stars">★★★★★</span> 4.8/5 · <span data-i18n="rating_reviews">avis vérifiés</span></div>
-    <p class="ph-subtitle" data-i18n="tb500_subtitle">Le TB-500 est un fragment synthétique de la thymosine bêta-4. Il est étudié pour son rôle dans la migration cellulaire, l'angiogenèse et la réparation tissulaire, notamment en recherche sur la récupération musculaire et tendineuse.</p>
+  <div class="article-body">
+    <h2 data-i18n="pr_s1_h">Délai de retour</h2>
+    <p data-i18n="pr_s1_p">Tu disposes de 14 jours après réception de ta commande pour retourner un produit non ouvert. Le produit doit être renvoyé dans son emballage d'origine, non entamé, pour être éligible.</p>
 
-    <div class="ph-tags">
-      <span class="ph-tag" data-i18n="tb500_tag1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cicatrisation et réparation rapide</span>
-      <span class="ph-tag" data-i18n="tb500_tag2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Réduit l'inflammation articulaire</span>
-      <span class="ph-tag" data-i18n="tb500_tag3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Favorise l'angiogenèse (vaisseaux)</span>
-      <span class="ph-tag" data-i18n="tb500_tag4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Améliore la flexibilité</span>
-      <span class="ph-tag" data-i18n="tb500_tag5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Répare muscles et tendons</span>
-    </div>
+    <h2 data-i18n="pr_s2_h">Problème de qualité</h2>
+    <p data-i18n="pr_s2_p">En cas de problème de qualité, c'est-à-dire un lot ne correspondant pas au certificat d'analyse (COA) fourni, nous offrons un remplacement complet ou un remboursement intégral, sans frais pour toi.</p>
 
-    <div class="ph-buybox">
-      <input type="hidden" id="ph-dose-select-fixed" value="70.00"/>
-      <div class="ph-price-row"><div><span class="ph-price" id="ph-price">$70.00</span><span class="ph-price-unit">CAD</span></div></div>
-      <div class="ph-buy-row">
-        <div class="qty-ctrl">
-          <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
-          <span class="qty-val">1</span>
-          <button class="qty-btn" onclick="changeQty(this,1)">+</button>
-        </div>
-        <button class="ph-add-btn" onclick="addHeroToCartFixed(this)">
-          <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span> <span data-i18n="add_to_cart_btn">Ajouter au panier</span>
-        </button>
-      </div>
-    </div>
+    <h2 data-i18n="pr_s3_h">Comment faire une demande</h2>
+    <p data-i18n="pr_s3_p">Contacte-nous par WhatsApp ou par courriel avec ton numéro de commande et, si possible, une photo du produit concerné. Nous te répondons rapidement pour organiser le retour, le remplacement ou le remboursement.</p>
 
-    <div class="ph-tabs">
-      <div class="ph-tab active" onmouseenter="switchPhTab(this,'desc')" onclick="switchPhTab(this,'desc')" data-i18n="tab_desc">Description</div>
-      <div class="ph-tab" onmouseenter="switchPhTab(this,'proto')" onclick="switchPhTab(this,'proto')" data-i18n="tab_proto">Reconstitution</div>
-      <div class="ph-tab" onmouseenter="switchPhTab(this,'conservation')" onclick="switchPhTab(this,'conservation')" data-i18n="tab_conservation">Conservation</div>
-      <div class="ph-tab" onmouseenter="switchPhTab(this,'faq')" onclick="switchPhTab(this,'faq')" data-i18n="tab_faq">FAQ</div>
-    </div>
+    <h2 data-i18n="pr_s4_h">Traitement du remboursement</h2>
+    <p data-i18n="pr_s4_p">Une fois la demande validée, le remboursement est effectué sur le moyen de paiement utilisé lors de la commande. Le délai de traitement dépend de ta banque ou de ton fournisseur de paiement.</p>
 
-    <div class="ph-tab-panel active" id="ph-panel-desc" data-i18n="tb500_panel_desc">
-      <h4>Mécanisme d'action</h4>
-      <p>Le TB-500 est un fragment synthétique de la thymosine bêta-4. Il est étudié pour son rôle dans la migration cellulaire, l'angiogenèse et la réparation tissulaire, notamment en recherche sur la récupération musculaire et tendineuse.</p>
-      <h4>Ce que contient le flacon</h4>
-      <ul>
-        <li>Poudre lyophilisée de TB-500, dosage indiqué sur l'étiquette</li>
-        <li>Flacon en verre scellé, septum stérile compatible seringue 31G</li>
-        <li>COA (certificat d'analyse) disponible par lot, laboratoire Freedom Diagnostics</li>
-      </ul>
-      <h4>Usage</h4>
-      <p>Produit vendu exclusivement à des fins de recherche scientifique (Research Use Only). Non destiné à la consommation humaine ou animale.</p>
-    </div>
+    <h2 data-i18n="pr_s5_h">Exclusions</h2>
+    <p data-i18n="pr_s5_p">Les produits ouverts, reconstitués ou utilisés ne peuvent pas être retournés, sauf en cas de problème de qualité constaté et documenté. Voir aussi notre page <a href="research-use-only.html">Research Use Only</a>.</p>
 
-    <div class="ph-tab-panel" id="ph-panel-proto" data-i18n="generic_panel_proto">
-      <h4>Reconstitution recommandée</h4>
-      <p>Utiliser de l'eau bactériostatique (0,9% alcool benzylique) pour reconstituer la poudre lyophilisée. Injecter l'eau lentement le long de la paroi du flacon, sans agiter, rouler doucement entre les mains pour dissoudre.</p>
-      <ul>
-        <li>Utiliser le <a href="index.html#produits" style="color:var(--accent-l);font-weight:600">calculateur de dosage</a> pour déterminer le volume exact à prélever</li>
-        <li>Conserver la solution reconstituée au réfrigérateur (2-8°C)</li>
-      </ul>
-    </div>
-
-    <div class="ph-tab-panel" id="ph-panel-conservation" data-i18n="generic_panel_conservation">
-      <h4>Avant reconstitution</h4>
-      <p>Conserver le flacon lyophilisé au congélateur ou au réfrigérateur, à l'abri de la lumière. Stable jusqu'à 24 mois dans ces conditions.</p>
-      <h4>Après reconstitution</h4>
-      <p>Conserver au réfrigérateur (2-8°C) et utiliser dans les 4 à 6 semaines. Éviter les cycles répétés de congélation/décongélation qui dégradent le peptide.</p>
-    </div>
-
-    <div class="ph-tab-panel" id="ph-panel-faq" data-i18n="generic_panel_faq">
-      <h4>Le COA est-il disponible avant achat&nbsp;?</h4>
-      <p>Oui, le certificat d'analyse du lot en cours est disponible sur demande.</p>
-      <h4>Quel délai de livraison&nbsp;?</h4>
-      <p>Expédition sous 48h depuis le Canada, emballage neutre sans indication du contenu.</p>
-      <h4>Puis-je changer de dosage après commande&nbsp;?</h4>
-      <p>Contactez notre support avant expédition, nous ajustons la commande si le stock le permet.</p>
-    </div>
+    <h2 data-i18n="pr_s6_h">Contact</h2>
+    <p data-i18n="pr_s6_p">Pour toute demande de retour ou de remboursement, écris-nous à <a href="mailto:support@purepep.com">support@purepep.com</a> ou via notre <a href="contact.html">page contact</a>.</p>
   </div>
+
 </div>
-
-<div class="upsell-section reveal" id="upsell-pdp" style="max-width:1280px;margin:0 auto 2rem;">
-  <h3><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><span data-i18n="upsell_pdp_prefix">Souvent acheté avec le </span>TB-500</h3>
-  <div class="upsell-grid">
-    <label class="upsell-item">
-      <input type="checkbox" checked data-name="Kit de reconstitution" data-price="20.00" onchange="updateUpsellTotalPdp()"/>
-      <img class="upsell-kit-img" src="images/kit-reconstitution.jpg" alt="Kit de reconstitution"/>
-      <div class="upsell-info">
-        <div class="upsell-name">Kit de reconstitution</div>
-        <div class="upsell-price">$20.00</div>
-        <select class="upsell-kit-color" onclick="event.stopPropagation()" onchange="event.stopPropagation();this.closest('.upsell-item').querySelector('.upsell-kit-img').src=this.value">
-          <option value="images/kit-reconstitution.jpg" data-i18n="color_orange">Orange</option>
-          <option value="images/kit-reconstitution-rose.jpg" data-i18n="color_rose">Rose</option>
-        </select>
-      </div>
-    </label>
-  </div>
-  <button class="upsell-add" id="upsell-pdp-btn" onclick="addUpsellToCartPdp(this)"><span data-i18n="upsell_pdp_addtext">Ajouter la sélection au panier,</span> <span id="upsell-pdp-total">$20.00</span></button>
-</div>
-
-<div class="ph-related reveal">
-  <h3><span data-i18n="related_prefix">Autres peptides </span><span data-i18n="cat_recovery">récupération</span></h3>
-  <div class="ph-related-grid">
-    <a class="ph-related-card" href="bpc-157-tb-500.html">
-      <img src="images/bpc157-tb500.jpg" alt="BPC-157 + TB-500"/>
-      <div class="ph-related-name">BPC-157 + TB-500</div>
-      <div class="ph-related-price">$110.00</div>
-    </a>
-    <a class="ph-related-card" href="bpc-157-10mg.html">
-      <img src="images/bpc-157-10mg.jpg" alt="BPC-157"/>
-      <div class="ph-related-name">BPC-157</div>
-      <div class="ph-related-price">$70.00</div>
-    </a>
-    <a class="ph-related-card" href="ghk-cu-50mg.html">
-      <img src="images/ghk-cu-100mg.jpg" alt="GHK-Cu"/>
-      <div class="ph-related-name">GHK-CU</div>
-      <div class="ph-related-price">$50.00</div>
-    </a>
-    <a class="ph-related-card" href="tesamorelin-10mg.html">
-      <img src="images/tesamorelin-5mg.jpg" alt="Tesamorelin"/>
-      <div class="ph-related-name">TESAMORELIN</div>
-      <div class="ph-related-price">$90.00</div>
-    </a>
-  </div>
-</div>
-
-<script>
-function updateHeroPrice(){
-  const sel = document.getElementById('ph-dose-select');
-  const price = parseFloat(sel.selectedOptions[0].dataset.price);
-  document.getElementById('ph-price').textContent = '$' + price.toFixed(2);
-}
-
-function addHeroToCartFixed(btn){
-  const price = 70.00;
-  const qtyEl = document.querySelector('.ph-buy-row .qty-val');
-  const qty = qtyEl ? parseInt(qtyEl.textContent) : 1;
-  for(let i=0;i<qty;i++) cart.push({name:'TB-500', price, dose:'10mg'});
-  saveCart(); updateCartUI();
-  btn.classList.add('added');
-  const orig = btn.innerHTML;
-  const isEnHero = localStorage.getItem('purepep_lang') === 'en';
-  btn.innerHTML = isEnHero ? (qty > 1 ? `✓ ${qty}x added!` : '✓ Added!') : (qty > 1 ? `✓ ${qty}x ajouté !` : '✓ Ajouté !');
-  setTimeout(() => { btn.classList.remove('added'); btn.innerHTML = orig; }, 1400);
-  showToast(isEnHero ? (qty > 1 ? `${qty}x TB-500 added to cart` : 'TB-500 added to cart') : (qty > 1 ? `${qty}× TB-500 ajouté au panier` : 'TB-500 ajouté au panier'), '🛒');
-  setTimeout(openCart, 500);
-}
-
-function switchPhTab(el, key){
-  document.querySelectorAll('.ph-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.ph-tab-panel').forEach(p => p.classList.remove('active'));
-  el.classList.add('active');
-  document.getElementById('ph-panel-' + key).classList.add('active');
-}
-
-function updateUpsellTotalPdp(){
-  const total = Array.from(document.querySelectorAll('#upsell-pdp input[type="checkbox"]'))
-    .filter(cb => cb.checked)
-    .reduce((sum, cb) => sum + parseFloat(cb.dataset.price), 0);
-  document.getElementById('upsell-pdp-total').textContent = '$' + total.toFixed(2);
-}
-if(document.getElementById('upsell-pdp-total')) updateUpsellTotalPdp();
-
-function addUpsellToCartPdp(btn){
-  const isEnUp = localStorage.getItem('purepep_lang') === 'en';
-  const checked = Array.from(document.querySelectorAll('#upsell-pdp input[type="checkbox"]')).filter(cb => cb.checked);
-  if(checked.length === 0){ showToast(isEnUp ? 'Select at least one product' : 'Sélectionne au moins un produit', '!'); return; }
-  checked.forEach(cb => {
-    const colorSel = cb.closest('.upsell-item').querySelector('.upsell-kit-color');
-    const dose = colorSel ? colorSel.selectedOptions[0].textContent : '';
-    cart.push({name: cb.dataset.name, price: parseFloat(cb.dataset.price), dose});
-  });
-  saveCart(); updateCartUI();
-  const orig = btn.innerHTML;
-  btn.classList.add('added');
-  btn.innerHTML = isEnUp ? `✓ ${checked.length} product${checked.length > 1 ? 's' : ''} added!` : `✓ ${checked.length} produit${checked.length > 1 ? 's' : ''} ajouté${checked.length > 1 ? 's' : ''} !`;
-  setTimeout(() => { btn.classList.remove('added'); btn.innerHTML = orig; }, 1400);
-  showToast(isEnUp ? `${checked.length} product${checked.length > 1 ? 's' : ''} added to cart` : `${checked.length} produit${checked.length > 1 ? 's' : ''} ajouté${checked.length > 1 ? 's' : ''} au panier`, '✓');
-  setTimeout(openCart, 500);
-}
-</script>
-
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-grid">
@@ -1561,7 +1397,7 @@ document.addEventListener('click', (e) => {
 // ── PARALLAXE LÉGÈRE SUR LE VISUEL DU HERO ──
 (function(){
   if(prefersReducedMotion || window.innerWidth < 900) return;
-  const visual = document.querySelector('.hero-visual-card');
+  const visual = document.querySelector('.hero-video-full video');
   const hero = document.querySelector('.hero');
   if(!visual || !hero) return;
   let ticking = false;
@@ -1985,20 +1821,7 @@ const I18N = {
     nav_contact: "Contact",
     ship_msg_prefix: "Only",
     ship_msg_suffix: "left for free shipping",
-    color_orange: "Orange",
-    color_rose: "Pink",
-    help_product: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What purity do you guarantee?</button><p class="help-a">≥99% across our entire catalog, verified by HPLC on every batch.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Where can I find a product's COA?</button><p class="help-a">On each product page, as well as in the full list available on our quality page.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Some products show several dosages, how do I choose?</button><p class="help-a">The dosage is the amount of active ingredient in the vial (in mg). The choice depends on the concentration you want after reconstitution, calculable with our dedicated tool.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
-    breadcrumb_products: "Our peptides",
-    rating_reviews: "verified reviews",
-    add_to_cart_btn: "Add to cart",
-    cat_recovery: "Recovery",
-    trust_coa: "COA per batch",
-    trust_purity: "≥99% HPLC purity",
-    trust_shipped: "Shipped same day before 2pm, otherwise within 24h",
-    trust_packaging: "Discreet packaging",
-    upsell_pdp_prefix: "Often bought with the ",
-    upsell_pdp_addtext: "Add selection to cart",
-    related_prefix: "Other ",
+    help_default: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Do I need to create an account to order?</button><p class="help-a">No, guest checkout is possible without creating an account.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">How do I contact PurePep support?</button><p class="help-a">Via our Telegram channel, or by email, we typically reply within 24 to 48 business hours.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">How many peptides do you offer?</button><p class="help-a">26 research peptides across 7 categories, plus 4 accessories.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
     breadcrumb_home: "Home",
     back_to_catalog: "← See all peptides",
     cart_checkout_btn: "Checkout →",
@@ -2010,18 +1833,21 @@ const I18N = {
     cart_title_prefix: "My cart (",
     cart_title_article: " item",
     cart_title_suffix: ")",
-    tab_desc: "Description", tab_proto: "Reconstitution", tab_conservation: "Storage", tab_faq: "FAQ",
-    generic_panel_proto: "<h4>Recommended reconstitution</h4><p>Use bacteriostatic water (0.9% benzyl alcohol) to reconstitute the lyophilized powder. Inject the water slowly down the side of the vial, without shaking, and gently swirl between your hands to dissolve.</p><ul><li>Use the <a href=\"index.html#produits\" style=\"color:var(--accent-l);font-weight:600\">dosage calculator</a> to determine the exact volume to draw</li><li>Store the reconstituted solution refrigerated (2-8°C)</li></ul>",
-    generic_panel_conservation: "<h4>Before reconstitution</h4><p>Store the lyophilized vial in the freezer or refrigerator, away from light. Stable for up to 24 months under these conditions.</p><h4>After reconstitution</h4><p>Store refrigerated (2-8°C) and use within 4 to 6 weeks. Avoid repeated freeze/thaw cycles, which degrade the peptide.</p>",
-    generic_panel_faq: "<h4>Is the COA available before purchase?</h4><p>Yes, the certificate of analysis for the current batch is available upon request.</p><h4>What is the delivery time?</h4><p>Shipped within 48h from Canada, in discreet packaging with no indication of contents.</p><h4>Can I change the dosage after ordering?</h4><p>Contact our support before shipment. We'll adjust the order if stock allows.</p>",
-    tb500_cat: "Recovery",
-    tb500_subtitle: "TB-500 is a synthetic fragment of thymosin beta-4. It is studied for its role in cell migration, angiogenesis, and tissue repair, particularly in research on muscle and tendon recovery.",
-    tb500_tag1: "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg>Fast healing and repair",
-    tb500_tag2: "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg>Reduces joint inflammation",
-    tb500_tag3: "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg>Promotes angiogenesis (vessels)",
-    tb500_tag4: "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg>Improves flexibility",
-    tb500_tag5: "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg>Repairs muscles and tendons",
-    tb500_panel_desc: "<h4>Mechanism of action</h4><p>TB-500 is a synthetic fragment of thymosin beta-4. It is studied for its role in cell migration, angiogenesis, and tissue repair, particularly in research on muscle and tendon recovery.</p><h4>What's in the vial</h4><ul><li>Lyophilized TB-500 powder, dosage indicated on the label</li><li>Sealed glass vial, sterile septum compatible with 31G syringes</li><li>COA (certificate of analysis) available per batch, Freedom Diagnostics laboratory</li></ul><h4>Use</h4><p>Product sold exclusively for scientific research purposes (Research Use Only). Not intended for human or animal consumption.</p>",
+    pr_eyebrow: "Returns",
+    pr_h1: "Refund Policy",
+    pr_updated: "Last updated: July 2026",
+    pr_s1_h: "Return window", pr_s1_p: "You have 14 days after receiving your order to return an unopened product. The product must be returned in its original, unopened packaging to be eligible.",
+    pr_s2_h: "Quality issue", pr_s2_p: "In the event of a quality issue, meaning a batch that does not match the provided Certificate of Analysis (COA), we offer a full replacement or a full refund at no cost to you.",
+    pr_s3_h: "How to request a return", pr_s3_p: "Contact us via WhatsApp or email with your order number and, if possible, a photo of the product concerned. We will respond quickly to arrange the return, replacement, or refund.",
+    pr_s4_h: "Refund processing", pr_s4_p: "Once your request is approved, the refund is issued to the payment method used for the order. Processing time depends on your bank or payment provider.",
+    pr_s5_h: "Exclusions", pr_s5_p: 'Opened, reconstituted, or used products cannot be returned, except in the case of a documented quality issue. See also our <a href="research-use-only.html">Research Use Only</a> page.',
+    pr_s6_h: "Contact", pr_s6_p: 'For any return or refund request, email us at <a href="mailto:support@purepep.com">support@purepep.com</a> or via our <a href="contact.html">contact page</a>.',
+    pk_c_s2_h: "Cookies we use",
+    pk_c_table: "<table class=\"article-table\"><tr><th>Cookie / storage</th><th>Purpose</th><th>Duration</th></tr><tr><td><code>purepep_age_confirmed</code></td><td>Remembers age confirmation (18+)</td><td>Persistent</td></tr><tr><td><code>purepep_cookie_consent</code></td><td>Remembers your cookie choice</td><td>Persistent</td></tr><tr><td><code>purepep_cart</code></td><td>Remembers your cart contents between pages</td><td>Persistent</td></tr><tr><td>Analytics cookies</td><td>Anonymized traffic statistics (if accepted)</td><td>13 months max</td></tr></table>",
+    pk_c_s3_h: "Essential cookies", pk_c_s3_p: "Some cookies are essential to the site's operation (cart, age verification): they don't require your consent and cannot be disabled without impairing the site's functioning.",
+    pk_c_s4_h: "Analytics cookies", pk_c_s4_p: "With your consent, we use analytics cookies to understand how the site is used and improve it. This data is anonymized.",
+    pk_c_s5_h: "How to manage your preferences?", pk_c_s5_p: 'You can change your choice at any time via the "Customize" button on the cookie banner, or by clearing the browsing data stored by your browser for this site.',
+    pk_c_s6_h: "Contact", pk_c_s6_p: 'For any question: [CONTACT EMAIL]. See also our <a href="politique-confidentialite.html">privacy policy</a>.',
     age_gate_title: "Just a moment before entering",
     age_gate_desc: "PurePep offers research peptides intended for laboratory use only. Access to this site is restricted to adults.",
     age_gate_yes: "I am over 18, Enter",
@@ -2381,13 +2207,13 @@ window.addEventListener('pageshow', function(e){
   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg>
 </button>
 <div class="help-panel" id="help-panel">
-  <div data-i18n="help_product"><h4>Questions fréquentes ici</h4>
-    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Quelle est votre pureté garantie ?</button>
-    <p class="help-a">≥99% pour l'ensemble de notre catalogue, vérifiée par HPLC sur chaque lot.</p>
-    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Où trouver le COA d'un produit ?</button>
-    <p class="help-a">Sur chaque fiche produit, ainsi que dans la liste complète disponible sur notre page qualité.</p>
-    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Certains produits affichent plusieurs dosages, comment choisir ?</button>
-    <p class="help-a">Le dosage correspond à la quantité de principe actif dans le flacon (en mg), le choix dépend de la concentration voulue après reconstitution, calculable via notre outil dédié.</p>
+  <div data-i18n="help_default"><h4>Questions fréquentes ici</h4>
+    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Dois-je créer un compte pour commander ?</button>
+    <p class="help-a">Non, la commande en tant qu'invité est possible sans création de compte.</p>
+    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Comment contacter le support PurePep ?</button>
+    <p class="help-a">Via notre canal Telegram, ou par email, nous répondons généralement sous 24 à 48h ouvrées.</p>
+    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Combien de peptides proposez-vous ?</button>
+    <p class="help-a">26 peptides de recherche répartis en 7 domaines, plus 4 accessoires.</p>
   <div class="help-panel-footer"><a href="faq.html">Voir toute la FAQ →</a></div></div>
 </div>
 </body>
