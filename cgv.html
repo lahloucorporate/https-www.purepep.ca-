@@ -7,16 +7,16 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Conditions Générales de Vente · PurePep</title>
+  <title>Conditions Générales de Vente · PurePep Labs</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Conditions générales de vente PurePep : commande, prix, paiement, livraison, droit de rétractation."/>
+  <meta name="description" content="Conditions générales de vente PurePep Labs : commande, prix, paiement, livraison, droit de rétractation."/>
   <meta name="keywords" content="peptides recherche, BPC-157, retatrutide, tirzepatide, HPLC, COA, Canada"/>
-  <meta property="og:title" content="Conditions Générales de Vente · PurePep"/>
-  <meta property="og:description" content="Conditions générales de vente PurePep : commande, prix, paiement, livraison, droit de rétractation."/>
+  <meta property="og:title" content="Conditions Générales de Vente · PurePep Labs"/>
+  <meta property="og:description" content="Conditions générales de vente PurePep Labs : commande, prix, paiement, livraison, droit de rétractation."/>
   <meta property="og:image" content="https://purepep.ca/images/logo-purepep.png"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -171,12 +171,18 @@
     .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;cursor:pointer}
     .hamburger span{width:22px;height:2px;background:var(--muted);border-radius:2px;transition:.3s}
     .mobile-menu{
-      display:none;position:fixed;inset:62px 0 0 0;
-      background:var(--bg);z-index:190;padding:2rem;
+      display:none;position:fixed;inset:74px 0 0 0;
+      background:var(--bg);z-index:190;padding:1.4rem 2rem 2rem;
       flex-direction:column;gap:1.2rem;font-size:1.1rem;font-weight:600;
+      overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;
+      padding-bottom:calc(2rem + env(safe-area-inset-bottom));
     }
     .mobile-menu.open{display:flex}
-    .mobile-menu a{color:var(--text);padding:.6rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem}
+    .mobile-menu a{color:var(--text);padding:.6rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem;flex-shrink:0}
+    .mobile-lang-switch{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;border-bottom:1px solid var(--border);flex-shrink:0}
+    .mobile-lang-switch-label{font-size:.95rem;font-weight:700;display:flex;align-items:center;gap:.5rem}
+    .mobile-lang-btn{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:.5rem 1.1rem;border-radius:99px;font-weight:800;font-size:.85rem;letter-spacing:.02em}
+    .mobile-lang-btn:active{transform:scale(.96)}
 
     /* ── HERO ── */
     .hero{
@@ -701,7 +707,7 @@
 
 
     /* ═══════════════════════════════════════════
-       DESIGN UPGRADE, PurePep v2
+       DESIGN UPGRADE, PurePep Labs v2
     ═══════════════════════════════════════════ */
 
     /* Scroll progress bar */
@@ -1129,9 +1135,9 @@
 <!-- ── AGE VERIFICATION GATE ── -->
 <div class="age-gate" id="age-gate">
   <div class="age-gate-card">
-    <div class="age-gate-icon"><img src="images/logo-purepep.png" alt="PurePep" style="height:2.4rem;width:auto"/></div>
+    <div class="age-gate-icon"><img src="images/logo-purepep.png" alt="PurePep Labs" style="height:2.4rem;width:auto"/></div>
     <h3 data-i18n="age_gate_title">Un instant avant d'entrer</h3>
-    <p data-i18n="age_gate_desc">PurePep propose des peptides de recherche réservés à un usage en laboratoire. L'accès à ce site est limité aux personnes majeures.</p>
+    <p data-i18n="age_gate_desc">PurePep Labs propose des peptides de recherche réservés à un usage en laboratoire. L'accès à ce site est limité aux personnes majeures.</p>
     <div class="age-gate-actions">
       <button class="age-yes" onclick="confirmAgeGate(true)" data-i18n="age_gate_yes">J'ai plus de 18 ans, Entrer</button>
       <button class="age-no" onclick="confirmAgeGate(false)" data-i18n="age_gate_no">J'ai moins de 18 ans</button>
@@ -1154,7 +1160,7 @@
 <nav>
   <div class="nav-left">
     <a href="index.html" class="logo">
-      <img src="images/logo-purepep.png" alt="PurePep" class="logo-img"/>
+      <img src="images/logo-purepep.png" alt="PurePep Labs" class="logo-img"/>
     </a>
             <ul class="nav-links">
       <li><a href="c-est-quoi.html" class="nav-newcomer"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg><span data-i18n="nav_newcomer">Nouveau ici ?</span></a></li>
@@ -1193,18 +1199,22 @@
 
 <!-- ── MOBILE MENU ── -->
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-lang-switch">
+    <span class="mobile-lang-switch-label">🌐 <span data-i18n="mobile_lang_label">Langue</span></span>
+    <button class="mobile-lang-btn" onclick="cycleLang()" id="lang-toggle-btn-m" title="Français / English"><span id="lang-toggle-label-m">FR</span></button>
+  </div>
   <a href="c-est-quoi.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg> <span data-i18n="nav_newcomer2">Nouveau ici ?</span></a>
-  <a href="index.html#produits" onclick="toggleMenu()">Nos peptides</a>
-  <a href="packs.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Packs</a>
-  <a href="coa.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> COA</a>
-  <a href="partner-program.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Partenaires</a>
-  <a href="why-us.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> Pourquoi nous</a>
-  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
-  <a href="contact.html" onclick="toggleMenu()">Contact</a>
-  <a href="calculateur.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="8" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r=".6" fill="currentColor" stroke="none"/></svg> Calculateur de dosage</a>
-  <a href="guides.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Guides</a>
+  <a href="index.html#produits" onclick="toggleMenu()" data-i18n="nav_products">Nos peptides</a>
+  <a href="packs.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> <span data-i18n="footer_packs">Packs</span></a>
+  <a href="coa.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> <span data-i18n="nav_quality">COA</span></a>
+  <a href="partner-program.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <span data-i18n="nav_partner">Partenaires</span></a>
+  <a href="why-us.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> <span data-i18n="nav_whyus">Pourquoi nous</span></a>
+  <a href="faq.html" onclick="toggleMenu()" data-i18n="nav_faq">FAQ</a>
+  <a href="contact.html" onclick="toggleMenu()" data-i18n="footer_contact">Contact</a>
+  <a href="calculateur.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="8" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r=".6" fill="currentColor" stroke="none"/></svg> <span data-i18n="footer_calculator">Calculateur de dosage</span></a>
+  <a href="guides.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> <span data-i18n="footer_guides">Guides</span></a>
   <a href="blog.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> Blog</a>
-  <a href="index.html#avis" onclick="toggleMenu()">Avis clients</a>
+  <a href="index.html#avis" onclick="toggleMenu()" data-i18n="nav_reviews">Avis clients</a>
 </div>
 
 <!-- ── CART OVERLAY + DRAWER ── -->
@@ -1261,6 +1271,17 @@
   .glossary-term:last-child{border-bottom:none}
   .glossary-term dt{font-weight:800;font-size:.95rem;color:var(--text);margin-bottom:.3rem}
   .glossary-term dd{font-size:.88rem;color:var(--muted);line-height:1.6;margin:0}
+  .article-wrap{position:relative}
+  .cgv-glow-bg{position:absolute;top:-4rem;left:50%;transform:translateX(-50%);width:900px;max-width:140vw;height:380px;background:radial-gradient(ellipse at 30% 20%,rgba(45,212,191,.16),transparent 60%),radial-gradient(ellipse at 75% 10%,rgba(96,165,250,.14),transparent 55%);filter:blur(10px);pointer-events:none;z-index:0}
+  .cgv-eyebrow-glow{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(120deg,rgba(45,212,191,.14),rgba(96,165,250,.14));border:1px solid rgba(96,165,250,.35);color:#1a8f84;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .9rem;border-radius:99px;margin-bottom:1rem;position:relative;z-index:1}
+  .cgv-gradient-text{background:linear-gradient(120deg,#159a8e,#3b7de0 60%,#8257e5);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .cgv-section-head{display:flex;align-items:center;gap:.85rem;margin:2.5rem 0 .9rem}
+  .cgv-section-head:first-of-type{margin-top:0}
+  .cgv-section-head h2{margin:0}
+  .cgv-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(96,165,250,.14);color:#3b7de0}
+  .cgv-icon svg{width:19px;height:19px}
+  .cgv-contact-card{background:linear-gradient(135deg,var(--card2),var(--card));border:1px solid var(--border);border-left:3px solid #2dd4bf;border-radius:0 14px 14px 0;padding:1.3rem 1.6rem;margin-top:.6rem;font-size:.98rem;line-height:1.9}
+  .cgv-contact-card strong{display:block;font-size:1.05rem;margin-bottom:.2rem}
   @media(max-width:640px){
     .article-title{font-size:1.9rem}
     .article-wrap{padding:1.2rem 1.3rem 3rem}
@@ -1274,54 +1295,140 @@
 <div class="back-to-catalog"><a href="index.html#produits" class="back-to-catalog-inner" data-i18n="back_to_catalog">← Voir tous les peptides</a></div>
 <div class="article-wrap reveal">
 
-  <div class="article-eyebrow">Conditions générales</div>
-  <h1 class="article-title" data-i18n="cgv_h1">Conditions Générales de Vente</h1>
-  <p class="article-meta">Dernière mise à jour : Juillet 2026</p>
-
-  <div class="placeholder-banner">
-    <strong><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M12 2 2 20h20z"/><path d="M12 9v5M12 17h.01"/></svg>Modèle à valider juridiquement</strong>
-    Ce texte est une base de travail. Les clauses de rétractation, garanties et litiges doivent être vérifiées par un juriste avant publication, notamment parce que la vente de peptides de recherche peut être soumise à des règles particulières selon les pays de livraison.
-  </div>
+  <div class="cgv-glow-bg"></div>
+  <div class="article-eyebrow cgv-eyebrow-glow" data-i18n="cgv_eyebrow">Conditions générales</div>
+  <h1 class="article-title"><span class="cgv-gradient-text" data-i18n="cgv_h1">Conditions Générales de Vente</span></h1>
+  <p class="article-meta" data-i18n="cgv_date">Dernière mise à jour&nbsp;: juillet 2026</p>
 
   <div class="article-body">
-    <h2 data-i18n="cgv_s1_h">1. Objet</h2>
-    <p data-i18n="cgv_s1_p">Les présentes CGV régissent les ventes de produits réalisées sur le site purepep.ca entre PurePep et tout client (ci-après "le Client").</p>
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.2 2.2 4.8-5"/></svg></span><h2 data-i18n="cgv_s1_h">1. Acceptation des présentes conditions</h2></div>
+    <p data-i18n="cgv_s1_p1">Les présentes Conditions générales de vente régissent tous les achats effectués sur le site de PurePep Labs.</p>
+    <p data-i18n="cgv_s1_p2">En accédant à ce site ou en passant une commande, tu reconnais avoir lu, compris et accepté d'être lié(e) par les présentes Conditions générales de vente, notre <a href="politique-confidentialite.html">Politique de confidentialité</a>, notre <a href="research-use-only.html">Politique Research Use Only (RUO)</a>, ainsi que toute autre politique publiée sur ce site.</p>
+    <p data-i18n="cgv_s1_p3">Si tu n'acceptes pas ces conditions, tu ne dois pas utiliser ce site ni acheter nos produits.</p>
 
-    <h2 data-i18n="cgv_s2_h">2. Produits</h2>
-    <p data-i18n="cgv_s2_p">Les produits vendus sur PurePep sont des <strong>peptides de recherche destinés exclusivement à un usage en laboratoire</strong>, Research Use Only. Ils ne sont ni des médicaments, ni des compléments alimentaires, et ne sont pas destinés à la consommation humaine ou animale. En passant commande, le Client déclare être un professionnel ou particulier averti utilisant ces produits à des fins de recherche, et être majeur (18 ans ou plus).</p>
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="8" cy="11" r="2.2"/><path d="M5 17c.5-2 2-3 3-3s2.5 1 3 3"/><line x1="13" y1="9" x2="18" y2="9"/><line x1="13" y1="13" x2="18" y2="13"/></svg></span><h2 data-i18n="cgv_s2_h">2. Admissibilité</h2></div>
+    <p data-i18n="cgv_s2_p">En passant une commande, tu déclares et garantis que&nbsp;:</p>
+    <ul data-i18n="cgv_s2_list">
+      <li>tu as au moins 18 ans;</li>
+      <li>tu es légalement autorisé(e) à conclure des contrats;</li>
+      <li>tu achètes les produits exclusivement à des fins de recherche licites;</li>
+      <li>tu te conformeras à toutes les lois et réglementations applicables.</li>
+    </ul>
+    <p data-i18n="cgv_s2_p2">PurePep Labs se réserve le droit de refuser un service ou d'annuler toute commande à sa seule discrétion.</p>
 
-    <h2 data-i18n="cgv_s3_h">3. Prix</h2>
-    <p data-i18n="cgv_s3_p">Les prix sont indiqués en dollars canadiens (CAD), toutes taxes comprises. PurePep se réserve le droit de modifier ses prix à tout moment, les produits étant facturés sur la base du tarif en vigueur au moment de la validation de la commande.</p>
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6L4 20a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3L15 8V2"/><path d="M9 2h6"/><path d="M8.5 13h7"/></svg></span><h2 data-i18n="cgv_s3_h">3. Research Use Only</h2></div>
+    <p data-i18n="cgv_s3_p">Tous les produits vendus par PurePep Labs sont exclusivement destinés à un usage de recherche (Research Use Only, RUO). Les produits ne sont pas destinés&nbsp;:</p>
+    <ul data-i18n="cgv_s3_list">
+      <li>à la consommation humaine;</li>
+      <li>à la consommation animale;</li>
+      <li>à un usage médical;</li>
+      <li>à un usage thérapeutique;</li>
+      <li>à un usage diagnostique;</li>
+      <li>à un usage vétérinaire;</li>
+      <li>à un usage cosmétique.</li>
+    </ul>
+    <p data-i18n="cgv_s3_p2">Le Client reconnaît que les produits sont fournis exclusivement à des fins de recherche en laboratoire.</p>
 
-    <h2 data-i18n="cgv_s4_h">4. Commande</h2>
-    <p data-i18n="cgv_s4_p">Toute commande passée sur le site vaut acceptation des présentes CGV. Une confirmation de commande est envoyée par email au Client après validation du paiement.</p>
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h4"/></svg></span><h2 data-i18n="cgv_s4_h">4. Informations sur les produits</h2></div>
+    <p data-i18n="cgv_s4_p">Nous faisons des efforts raisonnables pour garantir l'exactitude de toutes les descriptions de produits, spécifications, informations de pureté et documents techniques. Toutefois, les spécifications des produits peuvent être modifiées sans préavis. Des <a href="coa.html">certificats d'analyse (COA)</a> sont fournis pour chaque lot de production lorsqu'ils sont disponibles.</p>
 
-    <h2 data-i18n="cgv_s5_h">5. Paiement</h2>
-    <p data-i18n="cgv_s5_p">Le paiement s'effectue en ligne au moment de la commande, par carte bancaire ou tout autre moyen proposé sur le site. [SECTION À COMPLÉTER une fois le prestataire de paiement choisi.]</p>
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span><h2 data-i18n="cgv_s5_h">5. Commandes</h2></div>
+    <p data-i18n="cgv_s5_p">La soumission d'une commande ne garantit pas son acceptation. PurePep Labs se réserve le droit de&nbsp;:</p>
+    <ul data-i18n="cgv_s5_list">
+      <li>refuser toute commande;</li>
+      <li>limiter les quantités;</li>
+      <li>demander des renseignements supplémentaires;</li>
+      <li>annuler toute transaction suspectée de fraude;</li>
+      <li>refuser les commandes qui semblent incompatibles avec les exigences Research Use Only.</li>
+    </ul>
 
-    <h2 data-i18n="cgv_s6_h">6. Livraison</h2>
-    <p data-i18n="cgv_s6_p">Les commandes sont expédiées sous 24h ouvrées, dans un emballage neutre. La livraison est offerte à partir de $160 d'achat au Canada (dès $200 aux États-Unis et à l'international). Voir le détail des délais et frais de livraison sur notre <a href="politique-expedition.html">politique d'expédition</a>.</p>
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 11 3.83A2 2 0 0 0 9.59 3.24L4 3a1 1 0 0 0-1 1l.24 5.59a2 2 0 0 0 .58 1.41l9.58 9.59a2 2 0 0 0 2.83 0l4.36-4.36a2 2 0 0 0 0-2.82z"/><circle cx="7.5" cy="7.5" r="1.1" fill="currentColor" stroke="none"/></svg></span><h2 data-i18n="cgv_s6_h">6. Prix</h2></div>
+    <p data-i18n="cgv_s6_p">Tous les prix affichés sur ce site peuvent être modifiés sans préavis. Les taxes, droits ou frais de douane applicables peuvent s'ajouter selon le pays de destination et demeurent à la charge du Client, sauf indication contraire.</p>
 
-    <h2 data-i18n="cgv_s7_h">7. Droit de rétractation</h2>
-    <p data-i18n="cgv_s7_p">Conformément à la réglementation en vigueur, le Client dispose d'un délai de 14 jours à compter de la réception de sa commande pour exercer son droit de rétractation, sous réserve que les produits n'aient pas été ouverts ou utilisés (produits scellés, pour des raisons d'hygiène et de sécurité). Voir les conditions détaillées sur notre <a href="politique-remboursement.html">politique de remboursement</a>.</p>
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span><h2 data-i18n="cgv_s7_h">7. Paiement</h2></div>
+    <p data-i18n="cgv_s7_p">Les paiements sont traités par des fournisseurs de paiement tiers autorisés. PurePep Labs ne conserve pas l'ensemble des renseignements de carte de paiement. Les commandes ne sont traitées qu'une fois le paiement autorisé avec succès.</p>
 
-    <h2 data-i18n="cgv_s8_h">8. Garanties et responsabilité</h2>
-    <p data-i18n="cgv_s8_p">PurePep garantit la conformité de ses produits à leur fiche descriptive (dosage, pureté HPLC ≥99%, certificat d'analyse disponible par lot). PurePep décline toute responsabilité en cas d'usage des produits non conforme à leur finalité de recherche déclarée.</p>
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="14" height="11"/><path d="M15 8h4l3 3v4h-7z"/><circle cx="5.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></span><h2 data-i18n="cgv_s8_h">8. Livraison</h2></div>
+    <p data-i18n="cgv_s8_p">Les délais de livraison sont donnés à titre indicatif seulement. PurePep Labs n'est pas responsable des retards causés par&nbsp;:</p>
+    <ul data-i18n="cgv_s8_list">
+      <li>les autorités douanières;</li>
+      <li>les transporteurs;</li>
+      <li>les conditions météorologiques;</li>
+      <li>les mesures gouvernementales;</li>
+      <li>les cas de force majeure.</li>
+    </ul>
+    <p data-i18n="cgv_s8_p2">Le Client est responsable de s'assurer que les produits peuvent être légalement importés dans sa juridiction. Voir aussi notre <a href="politique-expedition.html">politique d'expédition</a>.</p>
 
-    <h2 data-i18n="cgv_s9_h">9. Litiges</h2>
-    <p data-i18n="cgv_s9_p">Les présentes CGV sont soumises au droit [PAYS]. En cas de litige, une solution amiable sera recherchée avant toute action judiciaire.</p>
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg></span><h2 data-i18n="cgv_s9_h">9. Douanes et réglementation d'importation</h2></div>
+    <p data-i18n="cgv_s9_p">Les clients internationaux sont seuls responsables du respect des lois d'importation locales. PurePep Labs ne garantit pas que les produits peuvent légalement entrer dans tous les pays. Les commandes refusées, retardées ou saisies par les douanes en raison de la réglementation locale demeurent sous la responsabilité du Client, sauf lorsque la loi applicable l'interdit.</p>
 
-    <h2 data-i18n="cgv_s10_h">10. Contact</h2>
-    <p data-i18n="cgv_s10_p">Pour toute question relative à une commande : [EMAIL DE CONTACT].</p>
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span><h2 data-i18n="cgv_s10_h">10. Retours et remboursements</h2></div>
+    <p data-i18n="cgv_s10_p">En raison de la nature sensible des produits de recherche en laboratoire, toutes les ventes sont généralement considérées comme finales une fois la commande expédiée. Si tu reçois&nbsp;:</p>
+    <ul data-i18n="cgv_s10_list">
+      <li>le mauvais produit;</li>
+      <li>un colis endommagé;</li>
+      <li>un produit défectueux;</li>
+    </ul>
+    <p data-i18n="cgv_s10_p2">contacte-nous dans les 7 jours suivant la livraison. Chaque demande sera examinée individuellement. Les remboursements ou remplacements approuvés demeurent à l'entière discrétion de PurePep Labs, sauf lorsque les lois sur la protection du consommateur exigent le contraire. Voir aussi notre <a href="politique-remboursement.html">politique de remboursement</a>.</p>
+
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/></svg></span><h2 data-i18n="cgv_s11_h">11. Limitation de responsabilité</h2></div>
+    <p data-i18n="cgv_s11_p">Dans toute la mesure permise par la loi applicable, PurePep Labs ne pourra être tenu responsable de tout dommage direct, indirect, accessoire, consécutif ou spécial découlant&nbsp;:</p>
+    <ul data-i18n="cgv_s11_list">
+      <li>de l'utilisation de ce site;</li>
+      <li>de l'achat de produits;</li>
+      <li>d'une conservation inappropriée;</li>
+      <li>d'une manipulation inappropriée;</li>
+      <li>d'un usage détourné des produits Research Use Only.</li>
+    </ul>
+    <p data-i18n="cgv_s11_p2">Le Client assume l'entière responsabilité de la manipulation et de l'utilisation des produits achetés.</p>
+
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M14.8 9.7a3.2 3.2 0 1 0 0 4.6"/></svg></span><h2 data-i18n="cgv_s12_h">12. Propriété intellectuelle</h2></div>
+    <p data-i18n="cgv_s12_p">Tout le contenu du site, incluant notamment&nbsp;:</p>
+    <ul data-i18n="cgv_s12_list">
+      <li>les logos;</li>
+      <li>les marques de commerce;</li>
+      <li>les descriptions de produits;</li>
+      <li>les documents techniques;</li>
+      <li>les éléments graphiques;</li>
+      <li>les photographies;</li>
+      <li>les logiciels;</li>
+      <li>le code source;</li>
+      <li>le design;</li>
+    </ul>
+    <p data-i18n="cgv_s12_p2">demeure la propriété exclusive de PurePep Labs ou de ses concédants de licence. Aucun contenu ne peut être reproduit sans autorisation écrite préalable.</p>
+
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><h2 data-i18n="cgv_s13_h">13. Confidentialité</h2></div>
+    <p data-i18n="cgv_s13_p">Les renseignements personnels sont collectés et traités conformément à notre <a href="politique-confidentialite.html">Politique de confidentialité</a>. En utilisant ce site, tu consens à la collecte et au traitement de tes renseignements tel que décrit dans cette politique.</p>
+
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><line x1="12" y1="9" x2="12" y2="13"/><circle cx="12" cy="16.5" r=".6" fill="currentColor" stroke="none"/></svg></span><h2 data-i18n="cgv_s14_h">14. Force majeure</h2></div>
+    <p data-i18n="cgv_s14_p">PurePep Labs ne pourra être tenu responsable des retards ou du défaut d'exécution résultant de circonstances raisonnablement hors de son contrôle, incluant notamment&nbsp;:</p>
+    <ul data-i18n="cgv_s14_list">
+      <li>les catastrophes naturelles;</li>
+      <li>les pandémies;</li>
+      <li>les mesures gouvernementales;</li>
+      <li>les perturbations du transport;</li>
+      <li>les cyberattaques;</li>
+      <li>les conflits de travail.</li>
+    </ul>
+
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><line x1="5" y1="7" x2="19" y2="7"/><path d="M5 7l-3 6a3 3 0 0 0 6 0z"/><path d="M19 7l-3 6a3 3 0 0 0 6 0z"/></svg></span><h2 data-i18n="cgv_s15_h">15. Droit applicable</h2></div>
+    <p data-i18n="cgv_s15_p">Les présentes Conditions générales de vente sont régies par les lois de la province de Québec et les lois fédérales applicables du Canada. Tout litige découlant des présentes conditions sera soumis aux tribunaux compétents du Québec, sauf lorsque la loi applicable exige autrement.</p>
+
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span><h2 data-i18n="cgv_s16_h">16. Modifications des présentes conditions</h2></div>
+    <p data-i18n="cgv_s16_p">PurePep Labs se réserve le droit de modifier les présentes Conditions générales de vente à tout moment. Les versions mises à jour entrent en vigueur dès leur publication sur ce site. Les clients sont invités à consulter ces conditions périodiquement.</p>
+
+    <div class="cgv-section-head"><span class="cgv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></span><h2 data-i18n="cgv_s17_h">17. Contact</h2></div>
+    <p data-i18n="cgv_s17_p">Pour toute question relative aux présentes Conditions générales de vente, contacte-nous&nbsp;:</p>
+    <div class="cgv-contact-card"><strong>PurePep Labs</strong><svg style="width:12px;height:12px;vertical-align:-1px;margin-right:2px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg><a href="mailto:support@purepep.com">support@purepep.com</a></div>
   </div>
-  
+
 </div>
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="logo">
-        <img src="images/logo-purepep.png" alt="PurePep" class="logo-img"/>
+        <img src="images/logo-purepep.png" alt="PurePep Labs" class="logo-img"/>
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
@@ -1336,7 +1443,7 @@
     <div class="footer-col"><h4 data-i18n="footer_legal">Légal</h4><ul><li><a href="research-use-only.html">Research Use Only</a></li><li><a href="mentions-legales.html" data-i18n="footer_notices">Mentions légales</a></li><li><a href="cgv.html" data-i18n="footer_cgv">CGV</a></li><li><a href="politique-confidentialite.html" data-i18n="footer_privacy">Politique de confidentialité</a></li><li><a href="politique-cookies.html" data-i18n="footer_cookies">Politique cookies</a></li><li><a href="politique-expedition.html" data-i18n="footer_shipping">Politique d'expédition</a></li><li><a href="politique-remboursement.html" data-i18n="footer_refund">Politique de remboursement</a></li></ul></div>
   </div>
   <div class="footer-bottom">
-    <span data-i18n="footer_copyright">© 2026 PurePep. Tous droits réservés.</span>
+    <span data-i18n="footer_copyright">© 2026 PurePep Labs. Tous droits réservés.</span>
     <span data-i18n="footer_ruo">Research Use Only · Pour usage en laboratoire uniquement</span>
   </div>
 </footer>
@@ -1350,7 +1457,7 @@
     <span>Telegram</span>
   </a>
   <!-- TODO: remplacer 33743781232 par le vrai numéro WhatsApp Business (format international sans le +, ex: 33612345678) -->
-  <a href="https://wa.me/33743781232?text=Bonjour%20PurePep%2C%20je%20voudrais%20des%20informations%20sur%20vos%20peptides."
+  <a href="https://wa.me/33743781232?text=Bonjour%20PurePep Labs%2C%20je%20voudrais%20des%20informations%20sur%20vos%20peptides."
      target="_blank" rel="noopener" class="whatsapp-btn" title="Nous contacter sur WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span>WhatsApp</span>
@@ -1505,8 +1612,9 @@ const CART_IMAGES = {
   'Seringue 100U 31G': 'images/syringe.jpg',
   'Lingettes alcool 70%': 'images/wipes.jpg',
   'Kit de reconstitution': 'images/kit-reconstitution.jpg',
-  'Pack Wolverine': 'images/bpc-157-5mg-wolverine.jpg',
-  'Pack Phénix': 'images/nad-500mg.jpg',
+  'Pack Wolverine Elite': 'images/bpc-157-5mg-wolverine.jpg',
+  'Pack Wolverine': 'images/bpc157-tb500.jpg',
+  'Pack Renaissance': 'images/nad-500mg.jpg',
   'Pack Clarté Mentale': 'images/semax-10mg.jpg',
   'Pack Peau & Cheveux': 'images/ghk-cu-100mg.jpg',
   'Pack Perte de Poids Extrême': 'images/retatrutide-10mg.jpg',
@@ -1518,13 +1626,14 @@ const CART_NAMES_EN = {
   'Seringue 100U 31G': 'Syringe 100U 31G',
   'Lingettes alcool 70%': 'Alcohol Wipes 70%',
   'Kit de reconstitution': 'Reconstitution Kit',
-  'Pack Wolverine': 'Pack Wolverine',
-  'Pack Phénix': 'Pack Phoenix',
-  'Pack Clarté Mentale': 'Pack Mental Clarity',
-  'Pack Peau & Cheveux': 'Pack Skin & Hair',
-  'Pack Perte de Poids Extrême': 'Pack Extreme Weight Loss',
-  'Pack Titan': 'Pack Titan',
-  'Pack KLOW Elite Bundle': 'Pack KLOW Elite Bundle'
+  'Pack Wolverine Elite': 'Wolverine Elite Bundle',
+  'Pack Wolverine': 'Wolverine Bundle',
+  'Pack Renaissance': 'Renaissance Bundle',
+  'Pack Clarté Mentale': 'Mental Clarity Bundle',
+  'Pack Peau & Cheveux': 'Skin & Hair Bundle',
+  'Pack Perte de Poids Extrême': 'Extreme Weight Loss Bundle',
+  'Pack Titan': 'Titan Bundle',
+  'Pack KLOW Elite Bundle': 'KLOW Elite Bundle'
 };
 function cartDisplayName(name){
   if(localStorage.getItem('purepep_lang') === 'en' && CART_NAMES_EN[name]) return CART_NAMES_EN[name];
@@ -1838,7 +1947,7 @@ const I18N = {
     nav_contact: "Contact",
     ship_msg_prefix: "Only",
     ship_msg_suffix: "left for free shipping",
-    help_default: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Do I need to create an account to order?</button><p class="help-a">No, guest checkout is possible without creating an account.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">How do I contact PurePep support?</button><p class="help-a">Via our Telegram channel, or by email, we typically reply within 24 to 48 business hours.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">How many peptides do you offer?</button><p class="help-a">26 research peptides across 7 categories, plus 4 accessories.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
+    help_default: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Do I need to create an account to order?</button><p class="help-a">No, guest checkout is possible without creating an account.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">How do I contact PurePep Labs support?</button><p class="help-a">Via our Telegram channel, or by email, we typically reply within 24 to 48 business hours.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">How many peptides do you offer?</button><p class="help-a">26 research peptides across 7 categories, plus 4 accessories.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
     breadcrumb_home: "Home",
     back_to_catalog: "← See all peptides",
     cart_checkout_btn: "Checkout →",
@@ -1850,19 +1959,61 @@ const I18N = {
     cart_title_prefix: "My cart (",
     cart_title_article: " item",
     cart_title_suffix: ")",
-    cgv_h1: "Terms and Conditions of Sale",
-    cgv_s1_h: "1. Purpose", cgv_s1_p: 'These Terms and Conditions of Sale govern product sales made on the purepep.ca website between PurePep and any customer (hereinafter "the Customer").',
-    cgv_s2_h: "2. Products", cgv_s2_p: "The products sold on PurePep are <strong>research peptides intended exclusively for laboratory use</strong>, Research Use Only. They are neither medications nor dietary supplements, and are not intended for human or animal consumption. By placing an order, the Customer declares being a knowledgeable professional or individual using these products for research purposes, and being of legal age (18 years or older).",
-    cgv_s3_h: "3. Price", cgv_s3_p: "Prices are shown in Canadian dollars (CAD), all taxes included. PurePep reserves the right to change its prices at any time, products being invoiced based on the rate in effect at the time the order is confirmed.",
-    cgv_s4_h: "4. Order", cgv_s4_p: "Any order placed on the site constitutes acceptance of these Terms and Conditions of Sale. An order confirmation is sent by email to the Customer once payment is confirmed.",
-    cgv_s5_h: "5. Payment", cgv_s5_p: "Payment is made online at the time of ordering, by credit card or any other method offered on the site. [SECTION TO BE COMPLETED once the payment provider is chosen.]",
-    cgv_s6_h: "6. Shipping", cgv_s6_p: 'Orders are shipped within 24 business hours, in neutral packaging. Shipping is free from $160 of purchase in Canada (from $200 in the United States and internationally). See full delivery times and fees on our <a href="politique-expedition.html">shipping policy</a>.',
-    cgv_s7_h: "7. Right of withdrawal", cgv_s7_p: 'In accordance with applicable regulations, the Customer has a period of 14 days from receipt of their order to exercise their right of withdrawal, provided the products have not been opened or used (sealed products, for hygiene and safety reasons). See the detailed conditions on our <a href="politique-remboursement.html">refund policy</a>.',
-    cgv_s8_h: "8. Warranties and liability", cgv_s8_p: "PurePep guarantees that its products conform to their product description (dosage, ≥99% HPLC purity, certificate of analysis available per batch). PurePep disclaims all liability in the event products are used inconsistently with their declared research purpose.",
-    cgv_s9_h: "9. Disputes", cgv_s9_p: "These Terms and Conditions of Sale are governed by the laws of [COUNTRY]. In the event of a dispute, an amicable solution will be sought before any legal action.",
-    cgv_s10_h: "10. Contact", cgv_s10_p: "For any question regarding an order: [CONTACT EMAIL].",
+    cgv_eyebrow: "Terms & Conditions",
+    cgv_h1: "Terms & Conditions of Sale",
+    cgv_date: "Last Updated: July 2026",
+    cgv_s1_h: "1. Acceptance of these Terms",
+    cgv_s1_p1: "These Terms & Conditions govern all purchases made through the PurePep Labs website.",
+    cgv_s1_p2: 'By accessing this website or placing an order, you acknowledge that you have read, understood, and agree to be bound by these Terms & Conditions, our <a href="politique-confidentialite.html">Privacy Policy</a>, our <a href="research-use-only.html">Research Use Only (RUO) Policy</a>, and any other policies published on this website.',
+    cgv_s1_p3: "If you do not agree with these Terms, you must not use this website or purchase our products.",
+    cgv_s2_h: "2. Eligibility",
+    cgv_s2_p: "By placing an order, you represent and warrant that:",
+    cgv_s2_list: "<li>you are at least 18 years of age;</li><li>you are legally authorized to enter into binding agreements;</li><li>you are purchasing products exclusively for lawful research purposes;</li><li>you will comply with all applicable laws and regulations.</li>",
+    cgv_s2_p2: "PurePep Labs reserves the right to refuse service or cancel any order at its sole discretion.",
+    cgv_s3_h: "3. Research Use Only",
+    cgv_s3_p: "All products sold by PurePep Labs are intended strictly for Research Use Only (RUO). Products are not intended for:",
+    cgv_s3_list: "<li>human consumption;</li><li>animal consumption;</li><li>medical use;</li><li>therapeutic use;</li><li>diagnostic use;</li><li>veterinary use;</li><li>cosmetic use.</li>",
+    cgv_s3_p2: "Customers acknowledge that the products are supplied exclusively for laboratory research purposes.",
+    cgv_s4_h: "4. Product Information",
+    cgv_s4_p: 'We make reasonable efforts to ensure that all product descriptions, specifications, purity information and technical documents are accurate. However, product specifications may change without prior notice. <a href="coa.html">Certificates of Analysis (COAs)</a> are provided for each production lot where available.',
+    cgv_s5_h: "5. Orders",
+    cgv_s5_p: "Submitting an order does not guarantee acceptance. PurePep Labs reserves the right to:",
+    cgv_s5_list: "<li>refuse any order;</li><li>limit quantities;</li><li>request additional information;</li><li>cancel suspected fraudulent transactions;</li><li>refuse orders that appear inconsistent with Research Use Only requirements.</li>",
+    cgv_s6_h: "6. Pricing",
+    cgv_s6_p: "All prices displayed on this website are subject to change without prior notice. Applicable taxes, duties or customs fees may apply depending on the destination country and remain the responsibility of the customer unless otherwise stated.",
+    cgv_s7_h: "7. Payment",
+    cgv_s7_p: "Payments are processed through authorized third-party payment providers. PurePep Labs does not store complete payment card information. Orders are processed only after payment authorization has been successfully completed.",
+    cgv_s8_h: "8. Shipping",
+    cgv_s8_p: "Shipping times are estimates only. PurePep Labs is not responsible for delays caused by:",
+    cgv_s8_list: "<li>customs authorities;</li><li>shipping carriers;</li><li>weather conditions;</li><li>governmental actions;</li><li>force majeure events.</li>",
+    cgv_s8_p2: 'Customers are responsible for ensuring that products may legally be imported into their jurisdiction. See also our <a href="politique-expedition.html">shipping policy</a>.',
+    cgv_s9_h: "9. Customs & Import Regulations",
+    cgv_s9_p: "International customers are solely responsible for complying with local import laws. PurePep Labs does not guarantee that products may legally enter every country. Orders refused, delayed or seized by customs due to local regulations remain the customer's responsibility, except where prohibited by applicable law.",
+    cgv_s10_h: "10. Returns & Refunds",
+    cgv_s10_p: "Due to the sensitive nature of laboratory research products, all sales are generally considered final once an order has shipped. If you receive:",
+    cgv_s10_list: "<li>the wrong product;</li><li>a damaged shipment;</li><li>a defective product;</li>",
+    cgv_s10_p2: 'please contact us within 7 days of delivery. Each request will be reviewed individually. Approved refunds or replacements remain at the sole discretion of PurePep Labs, except where consumer protection laws require otherwise. See also our <a href="politique-remboursement.html">refund policy</a>.',
+    cgv_s11_h: "11. Limitation of Liability",
+    cgv_s11_p: "To the maximum extent permitted by applicable law, PurePep Labs shall not be liable for any direct, indirect, incidental, consequential or special damages arising from:",
+    cgv_s11_list: "<li>the use of this website;</li><li>the purchase of products;</li><li>improper storage;</li><li>improper handling;</li><li>misuse of Research Use Only products.</li>",
+    cgv_s11_p2: "Customers assume all responsibility for the handling and use of purchased products.",
+    cgv_s12_h: "12. Intellectual Property",
+    cgv_s12_p: "All website content, including but not limited to:",
+    cgv_s12_list: "<li>logos;</li><li>trademarks;</li><li>product descriptions;</li><li>technical documents;</li><li>graphics;</li><li>photographs;</li><li>software;</li><li>source code;</li><li>design;</li>",
+    cgv_s12_p2: "remains the exclusive property of PurePep Labs or its licensors. No content may be reproduced without prior written authorization.",
+    cgv_s13_h: "13. Privacy",
+    cgv_s13_p: 'Personal information is collected and processed in accordance with our <a href="politique-confidentialite.html">Privacy Policy</a>. By using this website, you consent to the collection and processing of your information as described therein.',
+    cgv_s14_h: "14. Force Majeure",
+    cgv_s14_p: "PurePep Labs shall not be held responsible for delays or failure to perform resulting from circumstances beyond its reasonable control, including but not limited to:",
+    cgv_s14_list: "<li>natural disasters;</li><li>pandemics;</li><li>government actions;</li><li>transportation disruptions;</li><li>cyberattacks;</li><li>labor disputes.</li>",
+    cgv_s15_h: "15. Governing Law",
+    cgv_s15_p: "These Terms & Conditions shall be governed by the laws of the Province of Québec and the applicable federal laws of Canada. Any dispute arising out of these Terms shall be submitted to the competent courts of Québec, unless otherwise required by applicable law.",
+    cgv_s16_h: "16. Changes to these Terms",
+    cgv_s16_p: "PurePep Labs reserves the right to modify these Terms & Conditions at any time. Updated versions become effective immediately upon publication on this website. Customers are encouraged to review these Terms periodically.",
+    cgv_s17_h: "17. Contact",
+    cgv_s17_p: "For any questions regarding these Terms & Conditions, please contact us:",
     age_gate_title: "Just a moment before entering",
-    age_gate_desc: "PurePep offers research peptides intended for laboratory use only. Access to this site is restricted to adults.",
+    age_gate_desc: "PurePep Labs offers research peptides intended for laboratory use only. Access to this site is restricted to adults.",
     age_gate_yes: "I am over 18, Enter",
     age_gate_no: "I am under 18",
     age_gate_legal: "By continuing, you confirm you are of legal age and accept our terms of use.",
@@ -1877,8 +2028,8 @@ const I18N = {
     catb5: "Recovery", catb6: "Muscle Growth",
     catb7: "Anti-Aging", catb8: "Recovery",
     catb9: "Recovery", faqa1: "Use bacteriostatic water (available on our site). Gently inject the water along the wall of the vial without aiming directly at the powder. Do not shake, swirl gently. Let sit for 2-3 minutes. Storage: 2-4°C after reconstitution, use within 4 weeks.",
-    faqa2: "The COA (Certificate of Analysis) is the purity report produced by Freedom Diagnostics, a recognized independent laboratory in the sector, via HPLC chromatography. Every PurePep batch has its own COA downloadable on the product page. You can check the batch number on the vial and compare it to the provided PDF. Our guaranteed minimum purity is ≥99%.", faqa3: "Orders are shipped within 24 business hours. Delivery across Canada within 2-5 business days (Canada Post), free from \$160 of purchase (otherwise \$4.90). International delivery to the US and abroad within 5-10 days, free from \$200 of purchase (otherwise a flat rate of \$15). Every order is tracked and you receive a confirmation email with a tracking number. Neutral, discreet packaging with no indication of contents.",
-    faqa4: "You have 14 days after receipt to return an unopened product. In case of a quality issue (batch not matching the COA), we offer a full replacement or refund at no cost. Contact us via WhatsApp or email for any return.", faqa5: "Our peptides are sold exclusively for scientific research purposes (Research Use Only). They are not intended for human or animal consumption. It is your responsibility to comply with local legislation. PurePep provides no medical advice.",
+    faqa2: "The COA (Certificate of Analysis) is the purity report produced by Freedom Diagnostics, a recognized independent laboratory in the sector, via HPLC chromatography. Every PurePep Labs batch has its own COA downloadable on the product page. You can check the batch number on the vial and compare it to the provided PDF. Our guaranteed minimum purity is ≥99%.", faqa3: "Orders are shipped within 24 business hours. Delivery across Canada within 2-5 business days (Canada Post), free from \$160 of purchase (otherwise \$4.90). International delivery to the US and abroad within 5-10 days, free from \$200 of purchase (otherwise a flat rate of \$15). Every order is tracked and you receive a confirmation email with a tracking number. Neutral, discreet packaging with no indication of contents.",
+    faqa4: "You have 14 days after receipt to return an unopened product. In case of a quality issue (batch not matching the COA), we offer a full replacement or refund at no cost. Contact us via WhatsApp or email for any return.", faqa5: "Our peptides are sold exclusively for scientific research purposes (Research Use Only). They are not intended for human or animal consumption. It is your responsibility to comply with local legislation. PurePep Labs provides no medical advice.",
     faqa6: "Lyophilized peptides (powder): stable at room temperature for 12-24 months, ideally refrigerated. After reconstitution: store at 2-4°C, use within 4 weeks. For long-term storage: freezer at -20°C in powder form. Avoid repeated freeze/thaw cycles.", faqq1: "How do I reconstitute a lyophilized peptide?",
     faqq2: "What is a COA and how do I check it?", faqq3: "What are your delivery times?",
     faqq4: "What is your return policy?", faqq5: "Are your peptides legal in Canada?",
@@ -1886,7 +2037,7 @@ const I18N = {
     footer_accessories: "Accessories", footer_calculator: "Dosage calculator",
     footer_categories: "Categories", footer_cgv: "Terms of Sale",
     footer_contact: "Contact", footer_cookies: "Cookie Policy",
-    footer_copyright: "© 2026 PurePep. All rights reserved.", footer_guides: "Guides & Protocols",
+    footer_copyright: "© 2026 PurePep Labs. All rights reserved.", footer_guides: "Guides & Protocols",
     footer_info: "Information", footer_legal: "Legal",
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
@@ -1932,7 +2083,7 @@ const I18N = {
     qb5_t: "14-day return", rev1: "Order received in 48h, products impeccably packaged. Excellent quality BPC-157, COA PDF matching the listing. I recommend without hesitation.",
     rev2: "3rd order, always as reliable. Verified HPLC purity, ultra-fast delivery. The best peptide supplier in Canada, period.", rev3: "Flawless quality on the GHK-Cu, very visible results after 3 weeks of protocol. Support response in under 2h. Loyal customer.",
     rev4: "Wolverine Pack received in 36h. Sealed vials, professional labels, COA included. Quality far above other suppliers I've tried.", rev5: "The Brain Stack is impressive. Sharp, stable focus with no jitteriness. Discreet, careful packaging. Coming back as soon as I run out.",
-    rev6: "Tirzepatide received as described, HPLC COA ≥99%. Careful delivery, cold pack in the parcel. Very responsive customer service. Perfect.", reviews_count: "287 verified reviews",
+    rev6: "Tirzepatide received as described, HPLC COA ≥99%. Careful delivery, cold pack in the parcel. Very responsive customer service. Perfect.", reviews_count: "287 verified reviews", nav_reviews: "Customer reviews", mobile_lang_label: "Language",
     see_all_reviews: "See all Google reviews →", st_1: "The references labs keep reordering",
     st_2: "They received it. They rated it.", st_3: "Frequently asked questions",
     st_4: "Preparation Guide", st_5: "Guides & Protocols",
@@ -1964,6 +2115,8 @@ function applyLang(lang){
     labelEl.textContent = labels[lang] || 'FR';
     btnEl.title = titles[lang] || titles.fr;
   }
+  const labelElM = document.getElementById('lang-toggle-label-m');
+  if(labelElM) labelElM.textContent = labels[lang] || 'FR';
   localStorage.setItem('purepep_lang', lang);
   const helpBtn = document.getElementById('help-widget-btn-el');
   if(helpBtn){
@@ -2223,7 +2376,7 @@ window.addEventListener('pageshow', function(e){
   <div data-i18n="help_default"><h4>Questions fréquentes ici</h4>
     <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Dois-je créer un compte pour commander ?</button>
     <p class="help-a">Non, la commande en tant qu'invité est possible sans création de compte.</p>
-    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Comment contacter le support PurePep ?</button>
+    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Comment contacter le support PurePep Labs ?</button>
     <p class="help-a">Via notre canal Telegram, ou par email, nous répondons généralement sous 24 à 48h ouvrées.</p>
     <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Combien de peptides proposez-vous ?</button>
     <p class="help-a">26 peptides de recherche répartis en 7 domaines, plus 4 accessoires.</p>

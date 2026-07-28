@@ -7,16 +7,16 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Politique de Confidentialité · PurePep</title>
+  <title>Politique de Confidentialité · PurePep Labs</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Politique de confidentialité PurePep : données collectées, finalités, durée de conservation, droits prévus par la LPRPDE."/>
+  <meta name="description" content="Politique de confidentialité PurePep Labs : données collectées, finalités, durée de conservation, droits prévus par la LPRPDE."/>
   <meta name="keywords" content="peptides recherche, BPC-157, retatrutide, tirzepatide, HPLC, COA, Canada"/>
-  <meta property="og:title" content="Politique de Confidentialité · PurePep"/>
-  <meta property="og:description" content="Politique de confidentialité PurePep : données collectées, finalités, durée de conservation, droits prévus par la LPRPDE."/>
+  <meta property="og:title" content="Politique de Confidentialité · PurePep Labs"/>
+  <meta property="og:description" content="Politique de confidentialité PurePep Labs : données collectées, finalités, durée de conservation, droits prévus par la LPRPDE."/>
   <meta property="og:image" content="https://purepep.ca/images/logo-purepep.png"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -171,12 +171,18 @@
     .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;cursor:pointer}
     .hamburger span{width:22px;height:2px;background:var(--muted);border-radius:2px;transition:.3s}
     .mobile-menu{
-      display:none;position:fixed;inset:62px 0 0 0;
-      background:var(--bg);z-index:190;padding:2rem;
+      display:none;position:fixed;inset:74px 0 0 0;
+      background:var(--bg);z-index:190;padding:1.4rem 2rem 2rem;
       flex-direction:column;gap:1.2rem;font-size:1.1rem;font-weight:600;
+      overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;
+      padding-bottom:calc(2rem + env(safe-area-inset-bottom));
     }
     .mobile-menu.open{display:flex}
-    .mobile-menu a{color:var(--text);padding:.6rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem}
+    .mobile-menu a{color:var(--text);padding:.6rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem;flex-shrink:0}
+    .mobile-lang-switch{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;border-bottom:1px solid var(--border);flex-shrink:0}
+    .mobile-lang-switch-label{font-size:.95rem;font-weight:700;display:flex;align-items:center;gap:.5rem}
+    .mobile-lang-btn{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:.5rem 1.1rem;border-radius:99px;font-weight:800;font-size:.85rem;letter-spacing:.02em}
+    .mobile-lang-btn:active{transform:scale(.96)}
 
     /* ── HERO ── */
     .hero{
@@ -701,7 +707,7 @@
 
 
     /* ═══════════════════════════════════════════
-       DESIGN UPGRADE, PurePep v2
+       DESIGN UPGRADE, PurePep Labs v2
     ═══════════════════════════════════════════ */
 
     /* Scroll progress bar */
@@ -1129,9 +1135,9 @@
 <!-- ── AGE VERIFICATION GATE ── -->
 <div class="age-gate" id="age-gate">
   <div class="age-gate-card">
-    <div class="age-gate-icon"><img src="images/logo-purepep.png" alt="PurePep" style="height:2.4rem;width:auto"/></div>
+    <div class="age-gate-icon"><img src="images/logo-purepep.png" alt="PurePep Labs" style="height:2.4rem;width:auto"/></div>
     <h3 data-i18n="age_gate_title">Un instant avant d'entrer</h3>
-    <p data-i18n="age_gate_desc">PurePep propose des peptides de recherche réservés à un usage en laboratoire. L'accès à ce site est limité aux personnes majeures.</p>
+    <p data-i18n="age_gate_desc">PurePep Labs propose des peptides de recherche réservés à un usage en laboratoire. L'accès à ce site est limité aux personnes majeures.</p>
     <div class="age-gate-actions">
       <button class="age-yes" onclick="confirmAgeGate(true)" data-i18n="age_gate_yes">J'ai plus de 18 ans, Entrer</button>
       <button class="age-no" onclick="confirmAgeGate(false)" data-i18n="age_gate_no">J'ai moins de 18 ans</button>
@@ -1154,7 +1160,7 @@
 <nav>
   <div class="nav-left">
     <a href="index.html" class="logo">
-      <img src="images/logo-purepep.png" alt="PurePep" class="logo-img"/>
+      <img src="images/logo-purepep.png" alt="PurePep Labs" class="logo-img"/>
     </a>
             <ul class="nav-links">
       <li><a href="c-est-quoi.html" class="nav-newcomer"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg><span data-i18n="nav_newcomer">Nouveau ici ?</span></a></li>
@@ -1193,18 +1199,22 @@
 
 <!-- ── MOBILE MENU ── -->
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-lang-switch">
+    <span class="mobile-lang-switch-label">🌐 <span data-i18n="mobile_lang_label">Langue</span></span>
+    <button class="mobile-lang-btn" onclick="cycleLang()" id="lang-toggle-btn-m" title="Français / English"><span id="lang-toggle-label-m">FR</span></button>
+  </div>
   <a href="c-est-quoi.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg> <span data-i18n="nav_newcomer2">Nouveau ici ?</span></a>
-  <a href="index.html#produits" onclick="toggleMenu()">Nos peptides</a>
-  <a href="packs.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Packs</a>
-  <a href="coa.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> COA</a>
-  <a href="partner-program.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Partenaires</a>
-  <a href="why-us.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> Pourquoi nous</a>
-  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
-  <a href="contact.html" onclick="toggleMenu()">Contact</a>
-  <a href="calculateur.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="8" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r=".6" fill="currentColor" stroke="none"/></svg> Calculateur de dosage</a>
-  <a href="guides.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Guides</a>
+  <a href="index.html#produits" onclick="toggleMenu()" data-i18n="nav_products">Nos peptides</a>
+  <a href="packs.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> <span data-i18n="footer_packs">Packs</span></a>
+  <a href="coa.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> <span data-i18n="nav_quality">COA</span></a>
+  <a href="partner-program.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <span data-i18n="nav_partner">Partenaires</span></a>
+  <a href="why-us.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> <span data-i18n="nav_whyus">Pourquoi nous</span></a>
+  <a href="faq.html" onclick="toggleMenu()" data-i18n="nav_faq">FAQ</a>
+  <a href="contact.html" onclick="toggleMenu()" data-i18n="footer_contact">Contact</a>
+  <a href="calculateur.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="8" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r=".6" fill="currentColor" stroke="none"/></svg> <span data-i18n="footer_calculator">Calculateur de dosage</span></a>
+  <a href="guides.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> <span data-i18n="footer_guides">Guides</span></a>
   <a href="blog.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> Blog</a>
-  <a href="index.html#avis" onclick="toggleMenu()">Avis clients</a>
+  <a href="index.html#avis" onclick="toggleMenu()" data-i18n="nav_reviews">Avis clients</a>
 </div>
 
 <!-- ── CART OVERLAY + DRAWER ── -->
@@ -1237,7 +1247,18 @@
   .breadcrumb a:hover{color:var(--accent-l)}
   .breadcrumb .sep{margin:0 .4rem;opacity:.5}
   .breadcrumb .current{color:var(--text);font-weight:600}
-  .article-wrap{max-width:900px;margin:0 auto;padding:1.5rem 2rem 4rem}
+  .article-wrap{max-width:900px;margin:0 auto;padding:1.5rem 2rem 4rem;position:relative}
+  .pc-glow-bg{position:absolute;top:-4rem;left:50%;transform:translateX(-50%);width:900px;max-width:140vw;height:380px;background:radial-gradient(ellipse at 30% 20%,rgba(45,212,191,.16),transparent 60%),radial-gradient(ellipse at 75% 10%,rgba(96,165,250,.14),transparent 55%);filter:blur(10px);pointer-events:none;z-index:0}
+  .pc-eyebrow-glow{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(120deg,rgba(45,212,191,.14),rgba(96,165,250,.14));border:1px solid rgba(96,165,250,.35);color:#1a8f84;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .9rem;border-radius:99px;margin-bottom:1rem;position:relative;z-index:1}
+  .pc-gradient-text{background:linear-gradient(120deg,#159a8e,#3b7de0 60%,#8257e5);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .pc-section-head{display:flex;align-items:center;gap:.85rem;margin:2.5rem 0 .9rem}
+  .pc-section-head:first-of-type{margin-top:0}
+  .pc-section-head h2{margin:0}
+  .pc-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(96,165,250,.14);color:#3b7de0}
+  .pc-icon svg{width:19px;height:19px}
+  .pc-contact-card{background:linear-gradient(135deg,var(--card2),var(--card));border:1px solid var(--border);border-left:3px solid #2dd4bf;border-radius:0 14px 14px 0;padding:1.3rem 1.6rem;margin-top:.6rem;font-size:.98rem;line-height:1.9}
+  .pc-contact-card strong{display:block;font-size:1.05rem;margin-bottom:.2rem}
+  .pc-h3{font-size:1rem;font-weight:700;margin:1.4rem 0 .5rem}
   .article-eyebrow{display:inline-flex;align-items:center;gap:.5rem;color:var(--accent-l);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem}
   .article-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.4rem;font-weight:600;line-height:1.1;margin-bottom:.7rem}
   .article-meta{font-size:.8rem;color:var(--muted);margin-bottom:2rem}
@@ -1274,56 +1295,148 @@
 <div class="back-to-catalog"><a href="index.html#produits" class="back-to-catalog-inner" data-i18n="back_to_catalog">← Voir tous les peptides</a></div>
 <div class="article-wrap reveal">
 
-  <div class="article-eyebrow" data-i18n="pc_eyebrow">Vie privée</div>
-  <h1 class="article-title" data-i18n="pc_h1">Politique de confidentialité</h1>
+  <div class="pc-glow-bg"></div>
+  <div class="article-eyebrow pc-eyebrow-glow" data-i18n="pc_eyebrow">Vie privée</div>
+  <h1 class="article-title"><span class="pc-gradient-text" data-i18n="pc_h1">Politique de confidentialité</span></h1>
   <p class="article-meta" data-i18n="pc_updated">Dernière mise à jour : Juillet 2026</p>
 
-  <div class="placeholder-banner">
-    <div data-i18n="pc_banner"><strong><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M12 2 2 20h20z"/><path d="M12 9v5M12 17h.01"/></svg>Modèle à valider juridiquement</strong>
-    Base de travail conforme à la LPRPDE (Loi sur la protection des renseignements personnels et les documents électroniques) à faire relire, en particulier pour désigner un responsable identifié de la protection des renseignements personnels et vérifier la cohérence avec les outils réellement utilisés (emailing, paiement, hébergement).</div>
-  </div>
-
   <div class="article-body">
-    <h2 data-i18n="pc_s1_h">1. Responsable de traitement</h2>
-    <p data-i18n="pc_s1_p">Le responsable du traitement des données collectées sur purepep.ca est [NOM DE LA SOCIÉTÉ], [ADRESSE]. Contact : [EMAIL DPO / CONTACT].</p>
+    <p data-i18n="pc_intro">Chez PurePep Labs, nous nous engageons à protéger ta vie privée et à traiter tes informations personnelles de manière responsable. Cette politique de confidentialité explique quelles informations nous collectons, comment nous les utilisons, comment nous les protégeons, et quels sont tes droits concernant tes informations personnelles. En utilisant purepep.com, tu acceptes les pratiques décrites dans cette politique de confidentialité.</p>
 
-    <h2 data-i18n="pc_s2_h">2. Données collectées</h2>
-    <p data-i18n="pc_s2_p">Selon votre usage du site, nous pouvons collecter&nbsp;:</p>
+    <div class="pc-section-head"><span class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg></span><h2 data-i18n="pc_s1_h">1. Informations que nous collectons</h2></div>
+    <p data-i18n="pc_s1_intro">Selon la manière dont tu interagis avec notre site, nous pouvons collecter les informations suivantes&nbsp;:</p>
+    <h3 class="pc-h3" data-i18n="pc_s1_h3a">Informations personnelles</h3>
+    <ul data-i18n="pc_s1_lista">
+      <li>Nom complet</li>
+      <li>Adresse de facturation</li>
+      <li>Adresse de livraison</li>
+      <li>Adresse email</li>
+      <li>Numéro de téléphone</li>
+    </ul>
+    <p data-i18n="pc_s1_pa">Ces informations ne sont collectées que lorsque cela est nécessaire pour traiter une commande ou répondre à tes demandes.</p>
+    <h3 class="pc-h3" data-i18n="pc_s1_h3b">Informations de commande</h3>
+    <p data-i18n="pc_s1_pb">Lorsque tu passes une commande, nous pouvons collecter&nbsp;:</p>
+    <ul data-i18n="pc_s1_listb">
+      <li>Produits achetés</li>
+      <li>Historique de commandes</li>
+      <li>Statut de paiement</li>
+      <li>Informations de livraison</li>
+    </ul>
+    <div class="article-callout" data-i18n="pc_s1_note"><strong>Paiement</strong>Les informations de carte bancaire sont traitées par notre prestataire de paiement et ne sont jamais stockées par PurePep Labs.</div>
+    <h3 class="pc-h3" data-i18n="pc_s1_h3c">Informations techniques</h3>
+    <p data-i18n="pc_s1_pc">Lorsque tu visites notre site, certaines informations techniques peuvent être collectées automatiquement, notamment&nbsp;:</p>
+    <ul data-i18n="pc_s1_listc">
+      <li>Adresse IP</li>
+      <li>Type de navigateur</li>
+      <li>Système d'exploitation</li>
+      <li>Informations sur l'appareil</li>
+      <li>Pages visitées</li>
+      <li>Source de référence</li>
+      <li>Localisation approximative (pays/région)</li>
+    </ul>
+    <p data-i18n="pc_s1_close">Ces informations nous aident à améliorer la performance et la sécurité du site.</p>
+
+    <div class="pc-section-head"><span class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><circle cx="9" cy="6" r="2"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="15" cy="12" r="2"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="11" cy="18" r="2"/></svg></span><h2 data-i18n="pc_s2_h">2. Comment nous utilisons tes informations</h2></div>
+    <p data-i18n="pc_s2_intro">Nous utilisons tes informations pour&nbsp;:</p>
     <ul data-i18n="pc_s2_list">
-      <li>Données de commande : nom, adresse, email, téléphone (nécessaires à la livraison)</li>
-      <li>Données de navigation : panier, préférences de langue (stockées localement dans votre navigateur)</li>
-      <li>Email, si vous vous inscrivez à la newsletter</li>
+      <li>traiter et exécuter les commandes&nbsp;;</li>
+      <li>communiquer avec toi au sujet de tes achats&nbsp;;</li>
+      <li>fournir un support client&nbsp;;</li>
+      <li>améliorer notre site et nos services&nbsp;;</li>
+      <li>prévenir la fraude et les transactions non autorisées&nbsp;;</li>
+      <li>respecter nos obligations légales&nbsp;;</li>
+      <li>envoyer des communications marketing uniquement lorsque cela est autorisé ou avec ton consentement.</li>
     </ul>
 
-    <h2 data-i18n="pc_s3_h">3. Finalités</h2>
-    <p data-i18n="pc_s3_p">Ces données sont utilisées pour : traiter vos commandes, vous contacter en cas de besoin, vous envoyer notre newsletter si vous y êtes inscrit, et améliorer le site.</p>
+    <div class="pc-section-head"><span class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><line x1="5" y1="7" x2="19" y2="7"/><path d="M5 7l-3 6a3 3 0 0 0 6 0z"/><path d="M19 7l-3 6a3 3 0 0 0 6 0z"/></svg></span><h2 data-i18n="pc_s3_h">3. Base légale du traitement</h2></div>
+    <p data-i18n="pc_s3_intro">Lorsque cela est applicable, nous traitons les informations personnelles sur la base de&nbsp;:</p>
+    <ul data-i18n="pc_s3_list">
+      <li>ton consentement&nbsp;;</li>
+      <li>l'exécution d'un contrat d'achat&nbsp;;</li>
+      <li>le respect d'obligations légales&nbsp;;</li>
+      <li>nos intérêts commerciaux légitimes, à condition qu'ils ne prévalent pas sur tes droits en matière de vie privée.</li>
+    </ul>
 
-    <h2 data-i18n="pc_s4_h">4. Base légale</h2>
-    <p data-i18n="pc_s4_p">Le traitement repose sur l'exécution du contrat de vente (commandes), votre consentement (newsletter, cookies non essentiels), et notre intérêt légitime (amélioration du site).</p>
+    <div class="pc-section-head"><span class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.2"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><line x1="8" y1="11" x2="16" y2="7"/><line x1="8" y1="13" x2="16" y2="17"/></svg></span><h2 data-i18n="pc_s4_h">4. Partage des informations personnelles</h2></div>
+    <p data-i18n="pc_s4_pa">PurePep Labs ne vend pas tes informations personnelles.</p>
+    <p data-i18n="pc_s4_pb">Nous pouvons partager certaines informations uniquement avec des prestataires de services tiers de confiance, nécessaires au fonctionnement de notre activité, notamment&nbsp;:</p>
+    <ul data-i18n="pc_s4_list">
+      <li>prestataires de paiement&nbsp;;</li>
+      <li>transporteurs&nbsp;;</li>
+      <li>hébergeurs du site&nbsp;;</li>
+      <li>prestataires d'envoi d'emails&nbsp;;</li>
+      <li>services de prévention de la fraude et de sécurité.</li>
+    </ul>
+    <p data-i18n="pc_s4_close">Ces prestataires ne reçoivent que les informations strictement nécessaires à l'exécution de leurs services.</p>
 
-    <h2 data-i18n="pc_s5_h">5. Durée de conservation</h2>
-    <p data-i18n="pc_s5_p">Les données de commande sont conservées pendant la durée nécessaire à la gestion de la relation commerciale et aux obligations légales de conservation (comptabilité). Les données de navigation stockées localement sont sous votre contrôle direct (effaçables via les paramètres de votre navigateur).</p>
+    <div class="pc-section-head"><span class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg></span><h2 data-i18n="pc_s5_h">5. Transferts internationaux de données</h2></div>
+    <p data-i18n="pc_s5_pa">Certains de nos prestataires de services peuvent traiter des informations personnelles en dehors du Canada.</p>
+    <p data-i18n="pc_s5_pb">Lorsque des informations personnelles sont transférées à l'international, des garanties raisonnables sont mises en place pour les protéger conformément aux lois applicables en matière de protection des données.</p>
 
-    <h2 data-i18n="pc_s6_h">6. Vos droits</h2>
-    <p data-i18n="pc_s6_p">Conformément à la LPRPDE (Loi sur la protection des renseignements personnels et les documents électroniques), vous disposez d'un droit d'accès, de rectification et de retrait de votre consentement concernant vos données personnelles. Pour exercer ces droits : [EMAIL DE CONTACT].</p>
+    <div class="pc-section-head"><span class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1"/><rect x="5" y="9" width="14" height="11" rx="1"/><line x1="10" y1="13" x2="14" y2="13"/></svg></span><h2 data-i18n="pc_s6_h">6. Conservation des données</h2></div>
+    <p data-i18n="pc_s6_intro">Nous conservons les informations personnelles uniquement le temps nécessaire pour&nbsp;:</p>
+    <ul data-i18n="pc_s6_list">
+      <li>exécuter les commandes&nbsp;;</li>
+      <li>respecter nos obligations fiscales et comptables&nbsp;;</li>
+      <li>résoudre les litiges&nbsp;;</li>
+      <li>faire respecter nos accords&nbsp;;</li>
+      <li>satisfaire aux exigences légales applicables.</li>
+    </ul>
+    <p data-i18n="pc_s6_close">Lorsque les informations ne sont plus nécessaires, elles sont supprimées de manière sécurisée ou anonymisées.</p>
 
-    <h2 data-i18n="pc_s7_h">7. Partage des données</h2>
-    <p data-i18n="pc_s7_p">Vos données ne sont jamais vendues à des tiers. Elles peuvent être partagées avec nos prestataires strictement nécessaires (transporteur pour la livraison, prestataire de paiement) dans le seul cadre du traitement de votre commande.</p>
+    <div class="pc-section-head"><span class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V6z"/><path d="m9 12 2 2 4-4"/></svg></span><h2 data-i18n="pc_s7_h">7. Tes droits en matière de vie privée</h2></div>
+    <p data-i18n="pc_s7_intro">Sous réserve du droit applicable, tu peux disposer du droit de&nbsp;:</p>
+    <ul data-i18n="pc_s7_list">
+      <li>accéder à tes informations personnelles&nbsp;;</li>
+      <li>demander des corrections&nbsp;;</li>
+      <li>retirer ton consentement lorsque cela est applicable&nbsp;;</li>
+      <li>demander la suppression de certaines informations&nbsp;;</li>
+      <li>demander des informations sur la manière dont tes données sont traitées.</li>
+    </ul>
+    <p data-i18n="pc_s7_close">Les demandes peuvent être adressées à&nbsp;: <a href="mailto:support@purepep.com">support@purepep.com</a></p>
 
-    <h2 data-i18n="pc_s8_h">8. Cookies</h2>
-    <p data-i18n="pc_s8_p">Voir notre <a href="politique-cookies.html">politique cookies</a> dédiée pour le détail des cookies utilisés sur le site.</p>
+    <div class="pc-section-head"><span class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="9" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="10" cy="15" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="15" r="1" fill="currentColor" stroke="none"/></svg></span><h2 data-i18n="pc_s8_h">8. Cookies</h2></div>
+    <p data-i18n="pc_s8_intro">Notre site utilise des cookies et technologies similaires pour améliorer ton expérience de navigation.</p>
+    <p data-i18n="pc_s8_pb">Les cookies peuvent être utilisés pour&nbsp;:</p>
+    <ul data-i18n="pc_s8_list">
+      <li>conserver ton panier&nbsp;;</li>
+      <li>mémoriser tes préférences&nbsp;;</li>
+      <li>améliorer les performances du site&nbsp;;</li>
+      <li>analyser le trafic du site&nbsp;;</li>
+      <li>renforcer la sécurité.</li>
+    </ul>
+    <p data-i18n="pc_s8_close">Pour en savoir plus, consulte notre <a href="politique-cookies.html">politique de cookies</a>.</p>
 
-    <h2 data-i18n="pc_s9_h">9. Contact</h2>
-    <p data-i18n="pc_s9_p">Pour toute question relative à vos données personnelles : [EMAIL DE CONTACT]. Vous pouvez également déposer une plainte auprès du Commissariat à la protection de la vie privée du Canada (priv.gc.ca).</p>
+    <div class="pc-section-head"><span class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><h2 data-i18n="pc_s9_h">9. Sécurité</h2></div>
+    <p data-i18n="pc_s9_pa">PurePep Labs met en œuvre des mesures de sauvegarde administratives, techniques et organisationnelles raisonnables, conçues pour protéger les informations personnelles contre tout accès non autorisé, divulgation, altération ou destruction.</p>
+    <p data-i18n="pc_s9_pb">Cependant, aucune méthode de transmission ou de stockage électronique n'est totalement sécurisée.</p>
+
+    <div class="pc-section-head"><span class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/><line x1="4" y1="4" x2="20" y2="20"/></svg></span><h2 data-i18n="pc_s10_h">10. Confidentialité des mineurs</h2></div>
+    <p data-i18n="pc_s10_pa">Nos produits et services ne sont pas destinés aux personnes âgées de moins de 18 ans.</p>
+    <p data-i18n="pc_s10_pb">Nous ne collectons pas sciemment d'informations personnelles auprès de mineurs.</p>
+
+    <div class="pc-section-head"><span class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M21 3 10 14"/><path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/></svg></span><h2 data-i18n="pc_s11_h">11. Sites web tiers</h2></div>
+    <p data-i18n="pc_s11_pa">Notre site peut contenir des liens vers des sites web tiers.</p>
+    <p data-i18n="pc_s11_pb">PurePep Labs n'est pas responsable des pratiques de confidentialité ni du contenu de ces sites.</p>
+    <p data-i18n="pc_s11_pc">Nous t'encourageons à consulter séparément leurs politiques de confidentialité respectives.</p>
+
+    <div class="pc-section-head"><span class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span><h2 data-i18n="pc_s12_h">12. Modifications de cette politique de confidentialité</h2></div>
+    <p data-i18n="pc_s12_pa">Nous pouvons mettre à jour cette politique de confidentialité de temps à autre.</p>
+    <p data-i18n="pc_s12_pb">La version mise à jour prend effet immédiatement dès sa publication sur ce site.</p>
+    <p data-i18n="pc_s12_pc">La date de « Dernière mise à jour » indiquera toujours la révision la plus récente.</p>
+
+    <div class="pc-section-head"><span class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></span><h2 data-i18n="pc_s13_h">13. Contact</h2></div>
+    <p data-i18n="pc_s13_intro">Si tu as des questions concernant cette politique de confidentialité ou tes informations personnelles, contacte-nous&nbsp;:</p>
+    <div class="pc-contact-card"><strong>PurePep Labs</strong><svg style="width:12px;height:12px;vertical-align:-1px;margin-right:2px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg><a href="mailto:support@purepep.com">support@purepep.com</a></div>
   </div>
-  
+
 </div>
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="logo">
-        <img src="images/logo-purepep.png" alt="PurePep" class="logo-img"/>
+        <img src="images/logo-purepep.png" alt="PurePep Labs" class="logo-img"/>
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
@@ -1338,7 +1451,7 @@
     <div class="footer-col"><h4 data-i18n="footer_legal">Légal</h4><ul><li><a href="research-use-only.html">Research Use Only</a></li><li><a href="mentions-legales.html" data-i18n="footer_notices">Mentions légales</a></li><li><a href="cgv.html" data-i18n="footer_cgv">CGV</a></li><li><a href="politique-confidentialite.html" data-i18n="footer_privacy">Politique de confidentialité</a></li><li><a href="politique-cookies.html" data-i18n="footer_cookies">Politique cookies</a></li><li><a href="politique-expedition.html" data-i18n="footer_shipping">Politique d'expédition</a></li><li><a href="politique-remboursement.html" data-i18n="footer_refund">Politique de remboursement</a></li></ul></div>
   </div>
   <div class="footer-bottom">
-    <span data-i18n="footer_copyright">© 2026 PurePep. Tous droits réservés.</span>
+    <span data-i18n="footer_copyright">© 2026 PurePep Labs. Tous droits réservés.</span>
     <span data-i18n="footer_ruo">Research Use Only · Pour usage en laboratoire uniquement</span>
   </div>
 </footer>
@@ -1352,7 +1465,7 @@
     <span>Telegram</span>
   </a>
   <!-- TODO: remplacer 33743781232 par le vrai numéro WhatsApp Business (format international sans le +, ex: 33612345678) -->
-  <a href="https://wa.me/33743781232?text=Bonjour%20PurePep%2C%20je%20voudrais%20des%20informations%20sur%20vos%20peptides."
+  <a href="https://wa.me/33743781232?text=Bonjour%20PurePep Labs%2C%20je%20voudrais%20des%20informations%20sur%20vos%20peptides."
      target="_blank" rel="noopener" class="whatsapp-btn" title="Nous contacter sur WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span>WhatsApp</span>
@@ -1507,8 +1620,9 @@ const CART_IMAGES = {
   'Seringue 100U 31G': 'images/syringe.jpg',
   'Lingettes alcool 70%': 'images/wipes.jpg',
   'Kit de reconstitution': 'images/kit-reconstitution.jpg',
-  'Pack Wolverine': 'images/bpc-157-5mg-wolverine.jpg',
-  'Pack Phénix': 'images/nad-500mg.jpg',
+  'Pack Wolverine Elite': 'images/bpc-157-5mg-wolverine.jpg',
+  'Pack Wolverine': 'images/bpc157-tb500.jpg',
+  'Pack Renaissance': 'images/nad-500mg.jpg',
   'Pack Clarté Mentale': 'images/semax-10mg.jpg',
   'Pack Peau & Cheveux': 'images/ghk-cu-100mg.jpg',
   'Pack Perte de Poids Extrême': 'images/retatrutide-10mg.jpg',
@@ -1520,13 +1634,14 @@ const CART_NAMES_EN = {
   'Seringue 100U 31G': 'Syringe 100U 31G',
   'Lingettes alcool 70%': 'Alcohol Wipes 70%',
   'Kit de reconstitution': 'Reconstitution Kit',
-  'Pack Wolverine': 'Pack Wolverine',
-  'Pack Phénix': 'Pack Phoenix',
-  'Pack Clarté Mentale': 'Pack Mental Clarity',
-  'Pack Peau & Cheveux': 'Pack Skin & Hair',
-  'Pack Perte de Poids Extrême': 'Pack Extreme Weight Loss',
-  'Pack Titan': 'Pack Titan',
-  'Pack KLOW Elite Bundle': 'Pack KLOW Elite Bundle'
+  'Pack Wolverine Elite': 'Wolverine Elite Bundle',
+  'Pack Wolverine': 'Wolverine Bundle',
+  'Pack Renaissance': 'Renaissance Bundle',
+  'Pack Clarté Mentale': 'Mental Clarity Bundle',
+  'Pack Peau & Cheveux': 'Skin & Hair Bundle',
+  'Pack Perte de Poids Extrême': 'Extreme Weight Loss Bundle',
+  'Pack Titan': 'Titan Bundle',
+  'Pack KLOW Elite Bundle': 'KLOW Elite Bundle'
 };
 function cartDisplayName(name){
   if(localStorage.getItem('purepep_lang') === 'en' && CART_NAMES_EN[name]) return CART_NAMES_EN[name];
@@ -1840,7 +1955,7 @@ const I18N = {
     nav_contact: "Contact",
     ship_msg_prefix: "Only",
     ship_msg_suffix: "left for free shipping",
-    help_default: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Do I need to create an account to order?</button><p class="help-a">No, guest checkout is possible without creating an account.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">How do I contact PurePep support?</button><p class="help-a">Via our Telegram channel, or by email, we typically reply within 24 to 48 business hours.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">How many peptides do you offer?</button><p class="help-a">26 research peptides across 7 categories, plus 4 accessories.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
+    help_default: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Do I need to create an account to order?</button><p class="help-a">No, guest checkout is possible without creating an account.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">How do I contact PurePep Labs support?</button><p class="help-a">Via our Telegram channel, or by email, we typically reply within 24 to 48 business hours.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">How many peptides do you offer?</button><p class="help-a">26 research peptides across 7 categories, plus 4 accessories.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
     breadcrumb_home: "Home",
     back_to_catalog: "← See all peptides",
     cart_checkout_btn: "Checkout →",
@@ -1855,19 +1970,65 @@ const I18N = {
     pc_eyebrow: "Privacy",
     pc_h1: "Privacy Policy",
     pc_updated: "Last updated: July 2026",
-    pc_banner: '<strong><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M12 2 2 20h20z"/><path d="M12 9v5M12 17h.01"/></svg>Template to be legally validated</strong>Working draft compliant with PIPEDA (Personal Information Protection and Electronic Documents Act) to be reviewed, particularly to designate an identified person responsible for personal information protection and to verify consistency with the tools actually used (emailing, payment, hosting).',
-    pc_s1_h: "1. Data Controller", pc_s1_p: "The party responsible for processing data collected on purepep.ca is [COMPANY NAME], [ADDRESS]. Contact: [DPO EMAIL / CONTACT].",
-    pc_s2_h: "2. Data Collected", pc_s2_p: "Depending on your use of the site, we may collect:",
-    pc_s2_list: "<li>Order data: name, address, email, phone number (necessary for delivery)</li><li>Browsing data: cart, language preferences (stored locally in your browser)</li><li>Email, if you sign up for the newsletter</li>",
-    pc_s3_h: "3. Purposes", pc_s3_p: "This data is used to: process your orders, contact you when needed, send you our newsletter if you're subscribed, and improve the site.",
-    pc_s4_h: "4. Legal Basis", pc_s4_p: "Processing is based on the performance of the sales contract (orders), your consent (newsletter, non-essential cookies), and our legitimate interest (site improvement).",
-    pc_s5_h: "5. Retention Period", pc_s5_p: "Order data is retained for as long as necessary to manage the business relationship and meet legal retention obligations (accounting). Locally stored browsing data is under your direct control (erasable via your browser settings).",
-    pc_s6_h: "6. Your Rights", pc_s6_p: "In accordance with PIPEDA (Personal Information Protection and Electronic Documents Act), you have a right of access, correction, and withdrawal of consent regarding your personal data. To exercise these rights: [CONTACT EMAIL].",
-    pc_s7_h: "7. Data Sharing", pc_s7_p: "Your data is never sold to third parties. It may be shared with our strictly necessary service providers (carrier for delivery, payment provider) solely for the purpose of processing your order.",
-    pc_s8_h: "8. Cookies", pc_s8_p: 'See our dedicated <a href="politique-cookies.html">cookie policy</a> for details on the cookies used on the site.',
-    pc_s9_h: "9. Contact", pc_s9_p: "For any question regarding your personal data: [CONTACT EMAIL]. You may also file a complaint with the Office of the Privacy Commissioner of Canada (priv.gc.ca).",
+    pc_intro: "At PurePep Labs, we are committed to protecting your privacy and handling your personal information responsibly. This Privacy Policy explains what information we collect, how we use it, how we protect it, and your rights regarding your personal information. By using purepep.com, you agree to the practices described in this Privacy Policy.",
+    pc_s1_h: "1. Information We Collect",
+    pc_s1_intro: "Depending on how you interact with our website, we may collect the following information:",
+    pc_s1_h3a: "Personal Information",
+    pc_s1_lista: "<li>Full name</li><li>Billing address</li><li>Shipping address</li><li>Email address</li><li>Telephone number</li>",
+    pc_s1_pa: "This information is collected only when necessary to process an order or respond to your inquiries.",
+    pc_s1_h3b: "Order Information",
+    pc_s1_pb: "When you place an order, we may collect:",
+    pc_s1_listb: "<li>Purchased products</li><li>Order history</li><li>Payment status</li><li>Shipping information</li>",
+    pc_s1_note: "<strong>Payment</strong>Payment card information is processed by our payment provider and is never stored by PurePep Labs.",
+    pc_s1_h3c: "Technical Information",
+    pc_s1_pc: "When you visit our website, certain technical information may be collected automatically, including:",
+    pc_s1_listc: "<li>IP address</li><li>Browser type</li><li>Operating system</li><li>Device information</li><li>Pages visited</li><li>Referral source</li><li>Approximate location (country/region)</li>",
+    pc_s1_close: "This information helps us improve website performance and security.",
+    pc_s2_h: "2. How We Use Your Information",
+    pc_s2_intro: "We use your information to:",
+    pc_s2_list: "<li>process and fulfill orders;</li><li>communicate with you regarding your purchases;</li><li>provide customer support;</li><li>improve our website and services;</li><li>prevent fraud and unauthorized transactions;</li><li>comply with legal obligations;</li><li>send marketing communications only where permitted or with your consent.</li>",
+    pc_s3_h: "3. Legal Basis for Processing",
+    pc_s3_intro: "Where applicable, we process personal information based on:",
+    pc_s3_list: "<li>your consent;</li><li>the performance of a purchase contract;</li><li>compliance with legal obligations;</li><li>our legitimate business interests, provided they do not override your privacy rights.</li>",
+    pc_s4_h: "4. Sharing of Personal Information",
+    pc_s4_pa: "PurePep Labs does not sell your personal information.",
+    pc_s4_pb: "We may share information only with trusted third-party service providers necessary to operate our business, including:",
+    pc_s4_list: "<li>payment processors;</li><li>shipping carriers;</li><li>website hosting providers;</li><li>email service providers;</li><li>fraud prevention and security services.</li>",
+    pc_s4_close: "These providers receive only the information necessary to perform their services.",
+    pc_s5_h: "5. International Data Transfers",
+    pc_s5_pa: "Some of our service providers may process personal information outside Canada.",
+    pc_s5_pb: "Where personal information is transferred internationally, reasonable safeguards are implemented to protect it in accordance with applicable privacy laws.",
+    pc_s6_h: "6. Data Retention",
+    pc_s6_intro: "We retain personal information only for as long as necessary to:",
+    pc_s6_list: "<li>fulfill orders;</li><li>comply with tax and accounting obligations;</li><li>resolve disputes;</li><li>enforce our agreements;</li><li>satisfy applicable legal requirements.</li>",
+    pc_s6_close: "When information is no longer required, it is securely deleted or anonymized.",
+    pc_s7_h: "7. Your Privacy Rights",
+    pc_s7_intro: "Subject to applicable law, you may have the right to:",
+    pc_s7_list: "<li>access your personal information;</li><li>request corrections;</li><li>withdraw consent where applicable;</li><li>request deletion of certain information;</li><li>request information about how your data is processed.</li>",
+    pc_s7_close: 'Requests may be submitted to: <a href="mailto:support@purepep.com">support@purepep.com</a>',
+    pc_s8_h: "8. Cookies",
+    pc_s8_intro: "Our website uses cookies and similar technologies to improve your browsing experience.",
+    pc_s8_pb: "Cookies may be used to:",
+    pc_s8_list: "<li>maintain your shopping cart;</li><li>remember preferences;</li><li>improve website performance;</li><li>analyze website traffic;</li><li>enhance security.</li>",
+    pc_s8_close: 'For more information, please consult our <a href="politique-cookies.html">Cookie Policy</a>.',
+    pc_s9_h: "9. Security",
+    pc_s9_pa: "PurePep Labs implements reasonable administrative, technical and organizational safeguards designed to protect personal information against unauthorized access, disclosure, alteration or destruction.",
+    pc_s9_pb: "However, no method of electronic transmission or storage is completely secure.",
+    pc_s10_h: "10. Children's Privacy",
+    pc_s10_pa: "Our products and services are not intended for individuals under the age of 18.",
+    pc_s10_pb: "We do not knowingly collect personal information from minors.",
+    pc_s11_h: "11. Third-Party Websites",
+    pc_s11_pa: "Our website may contain links to third-party websites.",
+    pc_s11_pb: "PurePep Labs is not responsible for the privacy practices or content of those websites.",
+    pc_s11_pc: "We encourage users to review their privacy policies separately.",
+    pc_s12_h: "12. Changes to this Privacy Policy",
+    pc_s12_pa: "We may update this Privacy Policy from time to time.",
+    pc_s12_pb: "The updated version becomes effective immediately upon publication on this website.",
+    pc_s12_pc: 'The "Last Updated" date will always indicate the latest revision.',
+    pc_s13_h: "13. Contact",
+    pc_s13_intro: "If you have any questions regarding this Privacy Policy or your personal information, please contact us:",
     age_gate_title: "Just a moment before entering",
-    age_gate_desc: "PurePep offers research peptides intended for laboratory use only. Access to this site is restricted to adults.",
+    age_gate_desc: "PurePep Labs offers research peptides intended for laboratory use only. Access to this site is restricted to adults.",
     age_gate_yes: "I am over 18, Enter",
     age_gate_no: "I am under 18",
     age_gate_legal: "By continuing, you confirm you are of legal age and accept our terms of use.",
@@ -1882,8 +2043,8 @@ const I18N = {
     catb5: "Recovery", catb6: "Muscle Growth",
     catb7: "Anti-Aging", catb8: "Recovery",
     catb9: "Recovery", faqa1: "Use bacteriostatic water (available on our site). Gently inject the water along the wall of the vial without aiming directly at the powder. Do not shake, swirl gently. Let sit for 2-3 minutes. Storage: 2-4°C after reconstitution, use within 4 weeks.",
-    faqa2: "The COA (Certificate of Analysis) is the purity report produced by Freedom Diagnostics, a recognized independent laboratory in the sector, via HPLC chromatography. Every PurePep batch has its own COA downloadable on the product page. You can check the batch number on the vial and compare it to the provided PDF. Our guaranteed minimum purity is ≥99%.", faqa3: "Orders are shipped within 24 business hours. Delivery across Canada within 2-5 business days (Canada Post), free from \$160 of purchase (otherwise \$4.90). International delivery to the US and abroad within 5-10 days, free from \$200 of purchase (otherwise a flat rate of \$15). Every order is tracked and you receive a confirmation email with a tracking number. Neutral, discreet packaging with no indication of contents.",
-    faqa4: "You have 14 days after receipt to return an unopened product. In case of a quality issue (batch not matching the COA), we offer a full replacement or refund at no cost. Contact us via WhatsApp or email for any return.", faqa5: "Our peptides are sold exclusively for scientific research purposes (Research Use Only). They are not intended for human or animal consumption. It is your responsibility to comply with local legislation. PurePep provides no medical advice.",
+    faqa2: "The COA (Certificate of Analysis) is the purity report produced by Freedom Diagnostics, a recognized independent laboratory in the sector, via HPLC chromatography. Every PurePep Labs batch has its own COA downloadable on the product page. You can check the batch number on the vial and compare it to the provided PDF. Our guaranteed minimum purity is ≥99%.", faqa3: "Orders are shipped within 24 business hours. Delivery across Canada within 2-5 business days (Canada Post), free from \$160 of purchase (otherwise \$4.90). International delivery to the US and abroad within 5-10 days, free from \$200 of purchase (otherwise a flat rate of \$15). Every order is tracked and you receive a confirmation email with a tracking number. Neutral, discreet packaging with no indication of contents.",
+    faqa4: "You have 14 days after receipt to return an unopened product. In case of a quality issue (batch not matching the COA), we offer a full replacement or refund at no cost. Contact us via WhatsApp or email for any return.", faqa5: "Our peptides are sold exclusively for scientific research purposes (Research Use Only). They are not intended for human or animal consumption. It is your responsibility to comply with local legislation. PurePep Labs provides no medical advice.",
     faqa6: "Lyophilized peptides (powder): stable at room temperature for 12-24 months, ideally refrigerated. After reconstitution: store at 2-4°C, use within 4 weeks. For long-term storage: freezer at -20°C in powder form. Avoid repeated freeze/thaw cycles.", faqq1: "How do I reconstitute a lyophilized peptide?",
     faqq2: "What is a COA and how do I check it?", faqq3: "What are your delivery times?",
     faqq4: "What is your return policy?", faqq5: "Are your peptides legal in Canada?",
@@ -1891,7 +2052,7 @@ const I18N = {
     footer_accessories: "Accessories", footer_calculator: "Dosage calculator",
     footer_categories: "Categories", footer_cgv: "Terms of Sale",
     footer_contact: "Contact", footer_cookies: "Cookie Policy",
-    footer_copyright: "© 2026 PurePep. All rights reserved.", footer_guides: "Guides & Protocols",
+    footer_copyright: "© 2026 PurePep Labs. All rights reserved.", footer_guides: "Guides & Protocols",
     footer_info: "Information", footer_legal: "Legal",
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
@@ -1937,7 +2098,7 @@ const I18N = {
     qb5_t: "14-day return", rev1: "Order received in 48h, products impeccably packaged. Excellent quality BPC-157, COA PDF matching the listing. I recommend without hesitation.",
     rev2: "3rd order, always as reliable. Verified HPLC purity, ultra-fast delivery. The best peptide supplier in Canada, period.", rev3: "Flawless quality on the GHK-Cu, very visible results after 3 weeks of protocol. Support response in under 2h. Loyal customer.",
     rev4: "Wolverine Pack received in 36h. Sealed vials, professional labels, COA included. Quality far above other suppliers I've tried.", rev5: "The Brain Stack is impressive. Sharp, stable focus with no jitteriness. Discreet, careful packaging. Coming back as soon as I run out.",
-    rev6: "Tirzepatide received as described, HPLC COA ≥99%. Careful delivery, cold pack in the parcel. Very responsive customer service. Perfect.", reviews_count: "287 verified reviews",
+    rev6: "Tirzepatide received as described, HPLC COA ≥99%. Careful delivery, cold pack in the parcel. Very responsive customer service. Perfect.", reviews_count: "287 verified reviews", nav_reviews: "Customer reviews", mobile_lang_label: "Language",
     see_all_reviews: "See all Google reviews →", st_1: "The references labs keep reordering",
     st_2: "They received it. They rated it.", st_3: "Frequently asked questions",
     st_4: "Preparation Guide", st_5: "Guides & Protocols",
@@ -1969,6 +2130,8 @@ function applyLang(lang){
     labelEl.textContent = labels[lang] || 'FR';
     btnEl.title = titles[lang] || titles.fr;
   }
+  const labelElM = document.getElementById('lang-toggle-label-m');
+  if(labelElM) labelElM.textContent = labels[lang] || 'FR';
   localStorage.setItem('purepep_lang', lang);
   const helpBtn = document.getElementById('help-widget-btn-el');
   if(helpBtn){
@@ -2228,7 +2391,7 @@ window.addEventListener('pageshow', function(e){
   <div data-i18n="help_default"><h4>Questions fréquentes ici</h4>
     <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Dois-je créer un compte pour commander ?</button>
     <p class="help-a">Non, la commande en tant qu'invité est possible sans création de compte.</p>
-    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Comment contacter le support PurePep ?</button>
+    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Comment contacter le support PurePep Labs ?</button>
     <p class="help-a">Via notre canal Telegram, ou par email, nous répondons généralement sous 24 à 48h ouvrées.</p>
     <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Combien de peptides proposez-vous ?</button>
     <p class="help-a">26 peptides de recherche répartis en 7 domaines, plus 4 accessoires.</p>

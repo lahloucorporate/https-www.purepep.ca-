@@ -6,16 +6,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   <link rel="canonical" href="https://purepep.ca/packs"/>
-  <title>Packs de Peptides, Combinaisons de Recherche · PurePep</title>
+  <title>Packs de Peptides, Combinaisons de Recherche · PurePep Labs</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Découvrez les packs PurePep : associations de peptides de recherche pensées pour leurs mécanismes complémentaires, avec kit de reconstitution inclus."/>
+  <meta name="description" content="Découvrez les packs PurePep Labs : associations de peptides de recherche pensées pour leurs mécanismes complémentaires, avec kit de reconstitution inclus."/>
   <meta name="keywords" content="peptides recherche, BPC-157, retatrutide, tirzepatide, HPLC, COA, Canada"/>
-  <meta property="og:title" content="Packs de Peptides, Combinaisons de Recherche · PurePep"/>
-  <meta property="og:description" content="Découvrez les packs PurePep : associations de peptides de recherche pensées pour leurs mécanismes complémentaires, avec kit de reconstitution inclus."/>
+  <meta property="og:title" content="Packs de Peptides, Combinaisons de Recherche · PurePep Labs"/>
+  <meta property="og:description" content="Découvrez les packs PurePep Labs : associations de peptides de recherche pensées pour leurs mécanismes complémentaires, avec kit de reconstitution inclus."/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     /* ── AIDE CONTEXTUELLE ── */
@@ -169,12 +169,18 @@
     .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;cursor:pointer}
     .hamburger span{width:22px;height:2px;background:var(--muted);border-radius:2px;transition:.3s}
     .mobile-menu{
-      display:none;position:fixed;inset:62px 0 0 0;
-      background:var(--bg);z-index:190;padding:2rem;
+      display:none;position:fixed;inset:74px 0 0 0;
+      background:var(--bg);z-index:190;padding:1.4rem 2rem 2rem;
       flex-direction:column;gap:1.2rem;font-size:1.1rem;font-weight:600;
+      overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;
+      padding-bottom:calc(2rem + env(safe-area-inset-bottom));
     }
     .mobile-menu.open{display:flex}
-    .mobile-menu a{color:var(--text);padding:.6rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem}
+    .mobile-menu a{color:var(--text);padding:.6rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem;flex-shrink:0}
+    .mobile-lang-switch{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;border-bottom:1px solid var(--border);flex-shrink:0}
+    .mobile-lang-switch-label{font-size:.95rem;font-weight:700;display:flex;align-items:center;gap:.5rem}
+    .mobile-lang-btn{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:.5rem 1.1rem;border-radius:99px;font-weight:800;font-size:.85rem;letter-spacing:.02em}
+    .mobile-lang-btn:active{transform:scale(.96)}
 
     /* ── HERO ── */
     .hero{
@@ -712,7 +718,7 @@
 
 
     /* ═══════════════════════════════════════════
-       DESIGN UPGRADE, PurePep v2
+       DESIGN UPGRADE, PurePep Labs v2
     ═══════════════════════════════════════════ */
 
     /* Scroll progress bar */
@@ -1129,9 +1135,9 @@
 <!-- ── AGE VERIFICATION GATE ── -->
 <div class="age-gate" id="age-gate">
   <div class="age-gate-card">
-    <div class="age-gate-icon"><img src="images/logo-purepep.png" alt="PurePep" style="height:2.4rem;width:auto"/></div>
+    <div class="age-gate-icon"><img src="images/logo-purepep.png" alt="PurePep Labs" style="height:2.4rem;width:auto"/></div>
     <h3 data-i18n="age_gate_title">Un instant avant d'entrer</h3>
-    <p data-i18n="age_gate_desc">PurePep propose des peptides de recherche réservés à un usage en laboratoire. L'accès à ce site est limité aux personnes majeures.</p>
+    <p data-i18n="age_gate_desc">PurePep Labs propose des peptides de recherche réservés à un usage en laboratoire. L'accès à ce site est limité aux personnes majeures.</p>
     <div class="age-gate-actions">
       <button class="age-yes" onclick="confirmAgeGate(true)" data-i18n="age_gate_yes">J'ai plus de 18 ans, Entrer</button>
       <button class="age-no" onclick="confirmAgeGate(false)" data-i18n="age_gate_no">J'ai moins de 18 ans</button>
@@ -1154,7 +1160,7 @@
 <nav>
   <div class="nav-left">
     <a href="index.html" class="logo">
-      <img src="images/logo-purepep.png" alt="PurePep" class="logo-img"/>
+      <img src="images/logo-purepep.png" alt="PurePep Labs" class="logo-img"/>
     </a>
             <ul class="nav-links">
       <li><a href="c-est-quoi.html" class="nav-newcomer"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg><span data-i18n="nav_newcomer">Nouveau ici ?</span></a></li>
@@ -1193,18 +1199,22 @@
 
 <!-- ── MOBILE MENU ── -->
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-lang-switch">
+    <span class="mobile-lang-switch-label">🌐 <span data-i18n="mobile_lang_label">Langue</span></span>
+    <button class="mobile-lang-btn" onclick="cycleLang()" id="lang-toggle-btn-m" title="Français / English"><span id="lang-toggle-label-m">FR</span></button>
+  </div>
   <a href="c-est-quoi.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg> <span data-i18n="nav_newcomer2">Nouveau ici ?</span></a>
-  <a href="index.html#produits" onclick="toggleMenu()">Nos peptides</a>
-  <a href="packs.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Packs</a>
-  <a href="coa.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> COA</a>
-  <a href="partner-program.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Partenaires</a>
-  <a href="why-us.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> Pourquoi nous</a>
-  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
-  <a href="contact.html" onclick="toggleMenu()">Contact</a>
-  <a href="calculateur.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="8" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r=".6" fill="currentColor" stroke="none"/></svg> Calculateur de dosage</a>
-  <a href="guides.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Guides</a>
+  <a href="index.html#produits" onclick="toggleMenu()" data-i18n="nav_products">Nos peptides</a>
+  <a href="packs.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> <span data-i18n="footer_packs">Packs</span></a>
+  <a href="coa.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> <span data-i18n="nav_quality">COA</span></a>
+  <a href="partner-program.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <span data-i18n="nav_partner">Partenaires</span></a>
+  <a href="why-us.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> <span data-i18n="nav_whyus">Pourquoi nous</span></a>
+  <a href="faq.html" onclick="toggleMenu()" data-i18n="nav_faq">FAQ</a>
+  <a href="contact.html" onclick="toggleMenu()" data-i18n="footer_contact">Contact</a>
+  <a href="calculateur.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="8" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r=".6" fill="currentColor" stroke="none"/></svg> <span data-i18n="footer_calculator">Calculateur de dosage</span></a>
+  <a href="guides.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> <span data-i18n="footer_guides">Guides</span></a>
   <a href="blog.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> Blog</a>
-  <a href="index.html#avis" onclick="toggleMenu()">Avis clients</a>
+  <a href="index.html#avis" onclick="toggleMenu()" data-i18n="nav_reviews">Avis clients</a>
 </div>
 
 <!-- ── CART OVERLAY + DRAWER ── -->
@@ -1238,15 +1248,21 @@
   .breadcrumb .sep{margin:0 .4rem;opacity:.5}
   .breadcrumb .current{color:var(--text);font-weight:600}
 
-  .pk-hero{max-width:820px;margin:0 auto;padding:2.2rem 2rem 1rem;text-align:center}
-  .pk-hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;color:var(--accent-l);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.9rem}
-  .pk-hero h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.6rem;font-weight:600;line-height:1.1;margin-bottom:1rem}
-  .pk-hero p{color:var(--muted);font-size:1rem;line-height:1.7}
+  .pk-hero{max-width:820px;margin:0 auto;padding:2.2rem 2rem 1rem;text-align:center;position:relative}
+  .pk-glow-bg{position:absolute;top:-3rem;left:50%;transform:translateX(-50%);width:900px;max-width:140vw;height:380px;background:radial-gradient(ellipse at 30% 20%,rgba(244,63,94,.15),transparent 60%),radial-gradient(ellipse at 75% 10%,rgba(244,114,182,.15),transparent 55%);filter:blur(10px);pointer-events:none;z-index:0}
+  .pk-hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(120deg,rgba(244,63,94,.13),rgba(244,114,182,.13));border:1px solid rgba(244,114,182,.35);color:#c0265a;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .9rem;border-radius:99px;margin-bottom:1rem;position:relative;z-index:1}
+  .pk-hero h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.6rem;font-weight:600;line-height:1.1;margin-bottom:1rem;position:relative;z-index:1}
+  .pk-hero p{color:var(--muted);font-size:1rem;line-height:1.7;position:relative;z-index:1}
+  .pk-gradient-text{background:linear-gradient(120deg,#e11d48,#f43f5e 55%,#f472b6);-webkit-background-clip:text;background-clip:text;color:transparent}
 
   .pk-why{max-width:1100px;margin:2.5rem auto;padding:0 2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
-  .pk-why-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:1.6rem}
-  .pk-why-icon{width:44px;height:44px;border-radius:12px;background:rgba(85,85,85,.1);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:.9rem}
+  .pk-why-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:1.6rem;transition:transform .2s,box-shadow .2s,border-color .2s}
+  .pk-why-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(244,63,94,.14);border-color:rgba(244,114,182,.4)}
+  .pk-why-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:.9rem}
   .pk-why-icon svg{width:20px;height:20px}
+  .pk-why-card:nth-child(1) .pk-why-icon{background:rgba(244,63,94,.14);color:#c0265a}
+  .pk-why-card:nth-child(2) .pk-why-icon{background:rgba(244,114,182,.16);color:#c2438a}
+  .pk-why-card:nth-child(3) .pk-why-icon{background:rgba(251,113,133,.16);color:#c23b52}
   .pk-why-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:.5rem}
   .pk-why-card p{font-size:.85rem;color:var(--muted);line-height:1.6}
 
@@ -1254,28 +1270,34 @@
   .pk-explain h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.7rem;font-weight:700;margin-bottom:1rem;text-align:center}
   .pk-explain p{font-size:.92rem;line-height:1.75;color:var(--text);margin-bottom:1rem}
   .pk-explain-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
-  .pk-explain-col h4{font-size:.9rem;font-weight:800;margin-bottom:.6rem;color:var(--accent-d)}
+  .pk-explain-col{background:linear-gradient(135deg,var(--card2),var(--card));border:1px solid var(--border);border-radius:14px;padding:1.2rem 1.4rem}
+  .pk-explain-col:first-child{border-left:3px solid #f43f5e}
+  .pk-explain-col:last-child{border-left:3px solid #f472b6}
+  .pk-explain-col h4{font-size:.9rem;font-weight:800;margin-bottom:.6rem;color:#c0265a}
   .pk-explain-col ul{margin:0 0 0 1.2rem}
   .pk-explain-col li{font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:.4rem}
 
   .pk-grid-section{max-width:1280px;margin:3rem auto;padding:0 2rem 4rem}
   .pk-grid-header{text-align:center;margin-bottom:2rem}
-  .pk-grid-header h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:2rem;font-weight:600}
+  .pk-grid-header h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:2rem;font-weight:600;display:flex;align-items:center;justify-content:center;gap:.5rem;flex-wrap:wrap}
+  .pk-logo-inline{height:2.3rem;width:auto;display:inline-block;vertical-align:middle}
   .pk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.3rem}
   .pk-card{
-    background:linear-gradient(160deg,rgba(176,180,188,.1),#fff 55%);border:1px solid rgba(176,180,188,.35);
-    border-radius:18px;padding:1.6rem;transition:all .25s;display:flex;flex-direction:column;align-items:center;text-align:center;
+    background:linear-gradient(160deg,rgba(244,114,182,.06),#fff 55%);border:1px solid rgba(244,114,182,.25);
+    border-radius:18px;padding:1.6rem;transition:all .25s;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden;
   }
-  .pk-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(176,180,188,.2)}
-  .pk-card-icon{width:44px;height:44px;border-radius:12px;background:rgba(85,85,85,.1);display:flex;align-items:center;justify-content:center;margin-bottom:.9rem}
+  .pk-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#e11d48,#f43f5e,#f472b6);opacity:0;transition:opacity .25s}
+  .pk-card:hover::before{opacity:1}
+  .pk-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(244,63,94,.18);border-color:rgba(244,114,182,.5)}
+  .pk-card-icon{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(244,63,94,.14),rgba(244,114,182,.14));color:#c0265a;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem}
   .pk-card-icon svg{width:20px;height:20px}
   .pk-card-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.35rem;font-weight:700;color:var(--accent-d);margin-bottom:.3rem}
   .pk-card-combo{font-size:.8rem;font-weight:700;color:var(--text);margin-bottom:.4rem}
   .pk-card-tagline{font-size:.78rem;color:var(--muted);font-weight:600;margin-bottom:.5rem;letter-spacing:.01em}
   .pk-card-desc{font-size:.82rem;color:var(--muted);line-height:1.5;flex:1;margin-bottom:1rem}
-  .pk-card-footer{display:flex;align-items:center;justify-content:center;gap:.9rem;padding-top:.9rem;border-top:1px solid rgba(176,180,188,.25);width:100%}
-  .pk-card-price{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:var(--accent-d)}
-  .pk-card-cta{font-size:.78rem;font-weight:700;color:var(--accent-l)}
+  .pk-card-footer{display:flex;align-items:center;justify-content:center;gap:.9rem;padding-top:.9rem;border-top:1px solid rgba(244,114,182,.2);width:100%}
+  .pk-card-price{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:#c0265a}
+  .pk-card-cta{font-size:.78rem;font-weight:700;color:#e11d48}
 
   @media(max-width:900px){.pk-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:640px){.pk-grid{grid-template-columns:1fr}}
@@ -1293,8 +1315,9 @@
 </div>
 
 <div class="pk-hero reveal">
-  <div class="pk-hero-eyebrow" data-i18n="pk_eyebrow">Packs PurePep</div>
-  <h1 data-i18n="pk_h1">Deux mécanismes complémentaires valent mieux qu'un</h1>
+  <div class="pk-glow-bg"></div>
+  <div class="pk-hero-eyebrow" data-i18n="pk_eyebrow">Packs PurePep Labs</div>
+  <h1 data-i18n="pk_h1">Deux mécanismes <span class="pk-gradient-text">complémentaires</span> valent mieux qu'un</h1>
   <p data-i18n="pk_lead">Nos packs associent des peptides dont les mécanismes d'action se complètent, plutôt que de se superposer, pensés pour une exploration de recherche plus complète, avec le kit de reconstitution déjà inclus.</p>
 </div>
 
@@ -1341,27 +1364,9 @@
 
 <div class="pk-grid-section reveal">
   <div class="pk-grid-header">
-    <h2 data-i18n="pk_grid_h2">Les 5 packs PurePep</h2>
+    <h2 data-i18n="pk_grid_h2">Les 6 packs <img src="images/logo-purepep.png" alt="PurePep Labs" class="pk-logo-inline"/></h2>
   </div>
   <div class="pk-grid">
-    <a href="stack-wolverine.html" class="pk-card">
-      <div class="pk-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
-      <h3 class="pk-card-name" data-i18n="wolv_name">Pack Wolverine</h3>
-      <p class="pk-card-tagline" data-i18n="wolv_tag">Récupération</p>
-      <p class="pk-card-combo">BPC-157 5mg + TB-500 10mg + Ipamorelin 5mg</p>
-      <p class="pk-card-desc" data-i18n="wolv_desc">Récupération tissulaire renforcée par un axe de croissance additionnel</p>
-      <div class="pk-card-footer"><span class="pk-card-price">$120.00</span><span class="pk-card-cta" data-i18n="pk_discover">Découvrir →</span></div>
-    </a>
-    <!-- PACK MASQUÉ (désactivé, conservé pour réactivation future) :
-    <a href="#" class="pk-card">
-      <div class="pk-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg></div>
-      <h3 class="pk-card-name">Pack KLOW Elite Bundle</h3>
-      <p class="pk-card-tagline">Peptide de recherche · Pureté 99%+ · Certifié COA</p>
-      <p class="pk-card-combo">Klow Blend 80mg + BPC-157 5mg + GHK-Cu 100mg</p>
-      <p class="pk-card-desc">Le trio le plus complet pour la peau, les cheveux et la récupération</p>
-      <div class="pk-card-footer"><span class="pk-card-price">$189.90</span><span class="pk-card-cta" data-i18n="pk_discover">Découvrir →</span></div>
-    </a>
-    -->
     <a href="stack-perte-de-poids.html" class="pk-card">
       <div class="pk-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
       <h3 class="pk-card-name" data-i18n="wl_name">Pack Perte de Poids Extrême</h3>
@@ -1370,31 +1375,21 @@
       <p class="pk-card-desc" data-i18n="wl_desc">Régulation de l'appétit & métabolisme, double action</p>
       <div class="pk-card-footer"><span class="pk-card-price">$120.00</span><span class="pk-card-cta" data-i18n="pk_discover">Découvrir →</span></div>
     </a>
-    <!-- PACK MASQUÉ (désactivé, conservé pour réactivation future) :
-    <a href="stack-prise-de-muscle.html" class="pk-card">
-      <div class="pk-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="9" width="3.5" height="6" rx="1"/><rect x="19" y="9" width="3.5" height="6" rx="1"/><path d="M6 12h12"/><rect x="7.5" y="6.5" width="2.2" height="11" rx="1"/><rect x="14.3" y="6.5" width="2.2" height="11" rx="1"/></svg></div>
-      <h3 class="pk-card-name">Pack Titan</h3>
-      <p class="pk-card-tagline">Croissance musculaire</p>
-      <p class="pk-card-combo">Ipamorelin + Tesamorelin</p>
-      <p class="pk-card-desc">Voies somatotropes, croissance & masse maigre</p>
-      <div class="pk-card-footer"><span class="pk-card-price">$121.79</span><span class="pk-card-cta" data-i18n="pk_discover">Découvrir →</span></div>
+    <a href="pack-wolverine.html" class="pk-card">
+      <div class="pk-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <h3 class="pk-card-name" data-i18n="wolvbase_name">Pack Wolverine</h3>
+      <p class="pk-card-tagline" data-i18n="wolvbase_tag">Récupération</p>
+      <p class="pk-card-combo">BPC-157 5mg + TB-500 10mg</p>
+      <p class="pk-card-desc" data-i18n="wolvbase_desc">Réparation tissulaire locale et systémique, la base de la récupération</p>
+      <div class="pk-card-footer"><span class="pk-card-price">$90.00</span><span class="pk-card-cta" data-i18n="pk_discover">Découvrir →</span></div>
     </a>
-    -->
-    <a href="stack-regeneration-cellulaire.html" class="pk-card">
-      <div class="pk-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 2.64-6.36"/><path d="M3 4v5h5"/></svg></div>
-      <h3 class="pk-card-name" data-i18n="phenix_name">Pack Phénix</h3>
-      <p class="pk-card-tagline" data-i18n="phenix_tag">Énergie cellulaire</p>
-      <p class="pk-card-combo">NAD+ + MOTS-c</p>
-      <p class="pk-card-desc" data-i18n="phenix_desc">Énergie mitochondriale & métabolisme cellulaire</p>
-      <div class="pk-card-footer"><span class="pk-card-price">$110.00</span><span class="pk-card-cta" data-i18n="pk_discover">Découvrir →</span></div>
-    </a>
-    <a href="stack-performance-cognitive.html" class="pk-card">
-      <div class="pk-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3a2.5 2.5 0 0 1 2.5 2.5v13a2.5 2.5 0 0 1-4.9.7 2.3 2.3 0 0 1-2.6-3 2.7 2.7 0 0 1-.3-5 2.3 2.3 0 0 1 1.2-3.9A2.5 2.5 0 0 1 7.2 3.7 2.5 2.5 0 0 1 9.5 3Z"/><path d="M14.5 3A2.5 2.5 0 0 0 12 5.5v13a2.5 2.5 0 0 0 4.9.7 2.3 2.3 0 0 0 2.6-3 2.7 2.7 0 0 0 .3-5 2.3 2.3 0 0 0-1.2-3.9A2.5 2.5 0 0 0 16.8 3.7 2.5 2.5 0 0 0 14.5 3Z"/></svg></div>
-      <h3 class="pk-card-name" data-i18n="clarte_name">Pack Clarté Mentale</h3>
-      <p class="pk-card-tagline" data-i18n="clarte_tag">Focus & mémoire</p>
-      <p class="pk-card-combo">Semax + Selank</p>
-      <p class="pk-card-desc" data-i18n="clarte_desc">Focus, mémoire & équilibre émotionnel</p>
-      <div class="pk-card-footer"><span class="pk-card-price">$100.00</span><span class="pk-card-cta" data-i18n="pk_discover">Découvrir →</span></div>
+    <a href="stack-wolverine.html" class="pk-card">
+      <div class="pk-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <h3 class="pk-card-name" data-i18n="wolv_name">Pack Wolverine Elite</h3>
+      <p class="pk-card-tagline" data-i18n="wolv_tag">Récupération</p>
+      <p class="pk-card-combo">BPC-157 5mg + TB-500 10mg + Ipamorelin 5mg</p>
+      <p class="pk-card-desc" data-i18n="wolv_desc">Récupération tissulaire renforcée par un axe de croissance additionnel</p>
+      <div class="pk-card-footer"><span class="pk-card-price">$120.00</span><span class="pk-card-cta" data-i18n="pk_discover">Découvrir →</span></div>
     </a>
     <a href="stack-peau-cheveux.html" class="pk-card">
       <div class="pk-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.29 1.29L3 12l5.8 1.9a2 2 0 0 1 1.29 1.29L12 21l1.9-5.8a2 2 0 0 1 1.29-1.29L21 12l-5.8-1.9a2 2 0 0 1-1.29-1.29Z"/></svg></div>
@@ -1404,7 +1399,40 @@
       <p class="pk-card-desc" data-i18n="skin_desc">Régénération cutanée & densité capillaire</p>
       <div class="pk-card-footer"><span class="pk-card-price">$180.00</span><span class="pk-card-cta" data-i18n="pk_discover">Découvrir →</span></div>
     </a>
-    
+    <a href="stack-performance-cognitive.html" class="pk-card">
+      <div class="pk-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3a2.5 2.5 0 0 1 2.5 2.5v13a2.5 2.5 0 0 1-4.9.7 2.3 2.3 0 0 1-2.6-3 2.7 2.7 0 0 1-.3-5 2.3 2.3 0 0 1 1.2-3.9A2.5 2.5 0 0 1 7.2 3.7 2.5 2.5 0 0 1 9.5 3Z"/><path d="M14.5 3A2.5 2.5 0 0 0 12 5.5v13a2.5 2.5 0 0 0 4.9.7 2.3 2.3 0 0 0 2.6-3 2.7 2.7 0 0 0 .3-5 2.3 2.3 0 0 0-1.2-3.9A2.5 2.5 0 0 0 16.8 3.7 2.5 2.5 0 0 0 14.5 3Z"/></svg></div>
+      <h3 class="pk-card-name" data-i18n="clarte_name">Pack Clarté Mentale</h3>
+      <p class="pk-card-tagline" data-i18n="clarte_tag">Focus & mémoire</p>
+      <p class="pk-card-combo">Semax + Selank</p>
+      <p class="pk-card-desc" data-i18n="clarte_desc">Focus, mémoire & équilibre émotionnel</p>
+      <div class="pk-card-footer"><span class="pk-card-price">$100.00</span><span class="pk-card-cta" data-i18n="pk_discover">Découvrir →</span></div>
+    </a>
+    <a href="stack-regeneration-cellulaire.html" class="pk-card">
+      <div class="pk-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 2.64-6.36"/><path d="M3 4v5h5"/></svg></div>
+      <h3 class="pk-card-name" data-i18n="phenix_name">Pack Renaissance</h3>
+      <p class="pk-card-tagline" data-i18n="phenix_tag">Énergie cellulaire</p>
+      <p class="pk-card-combo">NAD+ + MOTS-c</p>
+      <p class="pk-card-desc" data-i18n="phenix_desc">Énergie mitochondriale & métabolisme cellulaire</p>
+      <div class="pk-card-footer"><span class="pk-card-price">$110.00</span><span class="pk-card-cta" data-i18n="pk_discover">Découvrir →</span></div>
+    </a>
+    <!-- PACKS MASQUÉS (désactivés, conservés pour réactivation future) :
+    <a href="#" class="pk-card">
+      <div class="pk-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg></div>
+      <h3 class="pk-card-name">Pack KLOW Elite Bundle</h3>
+      <p class="pk-card-tagline">Peptide de recherche · Pureté 99%+ · Certifié COA</p>
+      <p class="pk-card-combo">Klow Blend 80mg + BPC-157 5mg + GHK-Cu 100mg</p>
+      <p class="pk-card-desc">Le trio le plus complet pour la peau, les cheveux et la récupération</p>
+      <div class="pk-card-footer"><span class="pk-card-price">$189.90</span><span class="pk-card-cta" data-i18n="pk_discover">Découvrir →</span></div>
+    </a>
+    <a href="stack-prise-de-muscle.html" class="pk-card">
+      <div class="pk-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="9" width="3.5" height="6" rx="1"/><rect x="19" y="9" width="3.5" height="6" rx="1"/><path d="M6 12h12"/><rect x="7.5" y="6.5" width="2.2" height="11" rx="1"/><rect x="14.3" y="6.5" width="2.2" height="11" rx="1"/></svg></div>
+      <h3 class="pk-card-name">Pack Titan</h3>
+      <p class="pk-card-tagline">Croissance musculaire</p>
+      <p class="pk-card-combo">Ipamorelin + Tesamorelin</p>
+      <p class="pk-card-desc">Voies somatotropes, croissance & masse maigre</p>
+      <div class="pk-card-footer"><span class="pk-card-price">$121.79</span><span class="pk-card-cta" data-i18n="pk_discover">Découvrir →</span></div>
+    </a>
+    -->
   </div>
 </div>
 <!-- ── FOOTER ── -->
@@ -1412,7 +1440,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="logo">
-        <img src="images/logo-purepep.png" alt="PurePep" class="logo-img"/>
+        <img src="images/logo-purepep.png" alt="PurePep Labs" class="logo-img"/>
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
@@ -1427,14 +1455,14 @@
     <div class="footer-col"><h4 data-i18n="footer_legal">Légal</h4><ul><li><a href="research-use-only.html">Research Use Only</a></li><li><a href="mentions-legales.html" data-i18n="footer_notices">Mentions légales</a></li><li><a href="cgv.html" data-i18n="footer_cgv">CGV</a></li><li><a href="politique-confidentialite.html" data-i18n="footer_privacy">Politique de confidentialité</a></li><li><a href="politique-cookies.html" data-i18n="footer_cookies">Politique cookies</a></li><li><a href="politique-expedition.html" data-i18n="footer_shipping">Politique d'expédition</a></li><li><a href="politique-remboursement.html" data-i18n="footer_refund">Politique de remboursement</a></li></ul></div>
   </div>
   <div class="footer-bottom">
-    <span data-i18n="footer_copyright">© 2026 PurePep. Tous droits réservés.</span>
+    <span data-i18n="footer_copyright">© 2026 PurePep Labs. Tous droits réservés.</span>
     <span data-i18n="footer_ruo">Research Use Only · Pour usage en laboratoire uniquement</span>
   </div>
 </footer>
 
 <!-- ── WHATSAPP ── -->
 <!-- TODO: remplacer 33743781232 par le vrai numéro WhatsApp Business (format international sans le +, ex: 33612345678) -->
-<a href="https://wa.me/33743781232?text=Bonjour%20PurePep%2C%20je%20voudrais%20des%20informations%20sur%20vos%20peptides."
+<a href="https://wa.me/33743781232?text=Bonjour%20PurePep Labs%2C%20je%20voudrais%20des%20informations%20sur%20vos%20peptides."
    target="_blank" rel="noopener" class="whatsapp-btn" title="Nous contacter sur WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   <span>WhatsApp</span>
@@ -1449,7 +1477,7 @@
     <span>Telegram</span>
   </a>
   <!-- TODO: remplacer 33743781232 par le vrai numéro WhatsApp Business (format international sans le +, ex: 33612345678) -->
-  <a href="https://wa.me/33743781232?text=Bonjour%20PurePep%2C%20je%20voudrais%20des%20informations%20sur%20vos%20peptides."
+  <a href="https://wa.me/33743781232?text=Bonjour%20PurePep Labs%2C%20je%20voudrais%20des%20informations%20sur%20vos%20peptides."
      target="_blank" rel="noopener" class="whatsapp-btn" title="Nous contacter sur WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span>WhatsApp</span>
@@ -1604,8 +1632,9 @@ const CART_IMAGES = {
   'Seringue 100U 31G': 'images/syringe.jpg',
   'Lingettes alcool 70%': 'images/wipes.jpg',
   'Kit de reconstitution': 'images/kit-reconstitution.jpg',
-  'Pack Wolverine': 'images/bpc-157-5mg-wolverine.jpg',
-  'Pack Phénix': 'images/nad-500mg.jpg',
+  'Pack Wolverine Elite': 'images/bpc-157-5mg-wolverine.jpg',
+  'Pack Wolverine': 'images/bpc157-tb500.jpg',
+  'Pack Renaissance': 'images/nad-500mg.jpg',
   'Pack Clarté Mentale': 'images/semax-10mg.jpg',
   'Pack Peau & Cheveux': 'images/ghk-cu-100mg.jpg',
   'Pack Perte de Poids Extrême': 'images/retatrutide-10mg.jpg',
@@ -1617,13 +1646,14 @@ const CART_NAMES_EN = {
   'Seringue 100U 31G': 'Syringe 100U 31G',
   'Lingettes alcool 70%': 'Alcohol Wipes 70%',
   'Kit de reconstitution': 'Reconstitution Kit',
-  'Pack Wolverine': 'Pack Wolverine',
-  'Pack Phénix': 'Pack Phoenix',
-  'Pack Clarté Mentale': 'Pack Mental Clarity',
-  'Pack Peau & Cheveux': 'Pack Skin & Hair',
-  'Pack Perte de Poids Extrême': 'Pack Extreme Weight Loss',
-  'Pack Titan': 'Pack Titan',
-  'Pack KLOW Elite Bundle': 'Pack KLOW Elite Bundle'
+  'Pack Wolverine Elite': 'Wolverine Elite Bundle',
+  'Pack Wolverine': 'Wolverine Bundle',
+  'Pack Renaissance': 'Renaissance Bundle',
+  'Pack Clarté Mentale': 'Mental Clarity Bundle',
+  'Pack Peau & Cheveux': 'Skin & Hair Bundle',
+  'Pack Perte de Poids Extrême': 'Extreme Weight Loss Bundle',
+  'Pack Titan': 'Titan Bundle',
+  'Pack KLOW Elite Bundle': 'KLOW Elite Bundle'
 };
 function cartDisplayName(name){
   if(localStorage.getItem('purepep_lang') === 'en' && CART_NAMES_EN[name]) return CART_NAMES_EN[name];
@@ -1935,7 +1965,7 @@ const I18N = {
     nav_contact: "Contact",
     ship_msg_prefix: "Only",
     ship_msg_suffix: "left for free shipping",
-    help_packs: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What is a PurePep pack?</button><p class="help-a">A combination of peptides whose mechanisms of action complement each other, with the reconstitution kit included, at a bundled price.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Is the reconstitution kit included in all packs?</button><p class="help-a">Yes, always. Bacteriostatic water, syringes, and alcohol swabs are provided with every pack.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Can I buy a pack's peptides separately?</button><p class="help-a">Yes, each component remains available individually on its own product page.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
+    help_packs: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What is a PurePep Labs pack?</button><p class="help-a">A combination of peptides whose mechanisms of action complement each other, with the reconstitution kit included, at a bundled price.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Is the reconstitution kit included in all packs?</button><p class="help-a">Yes, always. Bacteriostatic water, syringes, and alcohol swabs are provided with every pack.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Can I buy a pack's peptides separately?</button><p class="help-a">Yes, each component remains available individually on its own product page.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
     breadcrumb_home: "Home",
     back_to_catalog: "← See all peptides",
     cart_checkout_btn: "Checkout →",
@@ -1947,8 +1977,8 @@ const I18N = {
     cart_title_prefix: "My cart (",
     cart_title_article: " item",
     cart_title_suffix: ")",
-    pk_eyebrow: "PurePep Packs",
-    pk_h1: "Two complementary mechanisms are better than one",
+    pk_eyebrow: "PurePep Labs Bundles",
+    pk_h1: 'Two <span class="pk-gradient-text">complementary</span> mechanisms are better than one',
     pk_lead: "Our packs combine peptides whose mechanisms of action complement rather than overlap each other, designed for more complete research exploration, with the reconstitution kit already included.",
     pk_why1_t: "A logic of mechanism, not chance",
     pk_why1_d: "Each pack pairs two compounds whose pathways complement each other. Not just two popular products bundled for the sake of it. The rationale behind each pairing is explained in detail on its dedicated page.",
@@ -1960,15 +1990,16 @@ const I18N = {
     pk_explain_lead: "In research, a single compound generally acts on a single biological mechanism. Combining several peptides with distinct pathways allows exploration of the interaction between complementary mechanisms, rather than being limited to one axis at a time. This is the principle guiding the composition of each of our packs.",
     pk_col1: "<h4>What actually changes</h4><ul><li>Two mechanisms studied in parallel, in a single purchase</li><li>The reconstitution kit already sized for both vials</li><li>One order, one shipment, one tracking number</li></ul>",
     pk_col2: "<h4>What doesn't change</h4><ul><li>Each peptide is still sold at its own ≥99% HPLC purity level</li><li>Each compound's COA remains available individually</li><li>You can always buy each peptide separately if you prefer</li></ul>",
-    pk_grid_h2: "The 5 PurePep packs",
+    pk_grid_h2: 'The 6 bundles <img src="images/logo-purepep.png" alt="PurePep Labs" class="pk-logo-inline"/>',
     pk_discover: "Discover →",
-    wolv_name: "Pack Wolverine", wolv_tag: "Recovery", wolv_desc: "Enhanced tissue repair with an additional growth axis",
-    wl_name: "Pack Extreme Weight Loss", wl_tag: "Appetite & metabolism", wl_desc: "Appetite and metabolism regulation, dual action",
-    phenix_name: "Pack Phoenix", phenix_tag: "Cellular energy", phenix_desc: "Mitochondrial energy & cellular metabolism",
-    clarte_name: "Pack Mental Clarity", clarte_tag: "Focus & memory", clarte_desc: "Focus, memory & emotional balance",
-    skin_name: "Pack Skin & Hair", skin_tag: "Skin regeneration", skin_desc: "Skin regeneration & hair density",
+    wolv_name: "Wolverine Elite Bundle", wolv_tag: "Recovery", wolv_desc: "Enhanced tissue repair with an additional growth axis",
+    wolvbase_name: "Wolverine Bundle", wolvbase_tag: "Recovery", wolvbase_desc: "Local and systemic tissue repair, the foundation of recovery",
+    wl_name: "Extreme Weight Loss Bundle", wl_tag: "Appetite & metabolism", wl_desc: "Appetite and metabolism regulation, dual action",
+    phenix_name: "Renaissance Bundle", phenix_tag: "Cellular energy", phenix_desc: "Mitochondrial energy & cellular metabolism",
+    clarte_name: "Mental Clarity Bundle", clarte_tag: "Focus & memory", clarte_desc: "Focus, memory & emotional balance",
+    skin_name: "Skin & Hair Bundle", skin_tag: "Skin regeneration", skin_desc: "Skin regeneration & hair density",
     age_gate_title: "Just a moment before entering",
-    age_gate_desc: "PurePep offers research peptides intended for laboratory use only. Access to this site is restricted to adults.",
+    age_gate_desc: "PurePep Labs offers research peptides intended for laboratory use only. Access to this site is restricted to adults.",
     age_gate_yes: "I am over 18, Enter",
     age_gate_no: "I am under 18",
     age_gate_legal: "By continuing, you confirm you are of legal age and accept our terms of use.",
@@ -1983,8 +2014,8 @@ const I18N = {
     catb5: "Recovery", catb6: "Muscle Growth",
     catb7: "Anti-Aging", catb8: "Recovery",
     catb9: "Recovery", faqa1: "Use bacteriostatic water (available on our site). Gently inject the water along the wall of the vial without aiming directly at the powder. Do not shake, swirl gently. Let sit for 2-3 minutes. Storage: 2-4°C after reconstitution, use within 4 weeks.",
-    faqa2: "The COA (Certificate of Analysis) is the purity report produced by Freedom Diagnostics, a recognized independent laboratory in the sector, via HPLC chromatography. Every PurePep batch has its own COA downloadable on the product page. You can check the batch number on the vial and compare it to the provided PDF. Our guaranteed minimum purity is ≥99%.", faqa3: "Orders are shipped within 24 business hours. Delivery across Canada within 2-5 business days (Canada Post), free from \$160 of purchase (otherwise \$4.90). International delivery to the US and abroad within 5-10 days, free from \$200 of purchase (otherwise a flat rate of \$15). Every order is tracked and you receive a confirmation email with a tracking number. Neutral, discreet packaging with no indication of contents.",
-    faqa4: "You have 14 days after receipt to return an unopened product. In case of a quality issue (batch not matching the COA), we offer a full replacement or refund at no cost. Contact us via WhatsApp or email for any return.", faqa5: "Our peptides are sold exclusively for scientific research purposes (Research Use Only). They are not intended for human or animal consumption. It is your responsibility to comply with local legislation. PurePep provides no medical advice.",
+    faqa2: "The COA (Certificate of Analysis) is the purity report produced by Freedom Diagnostics, a recognized independent laboratory in the sector, via HPLC chromatography. Every PurePep Labs batch has its own COA downloadable on the product page. You can check the batch number on the vial and compare it to the provided PDF. Our guaranteed minimum purity is ≥99%.", faqa3: "Orders are shipped within 24 business hours. Delivery across Canada within 2-5 business days (Canada Post), free from \$160 of purchase (otherwise \$4.90). International delivery to the US and abroad within 5-10 days, free from \$200 of purchase (otherwise a flat rate of \$15). Every order is tracked and you receive a confirmation email with a tracking number. Neutral, discreet packaging with no indication of contents.",
+    faqa4: "You have 14 days after receipt to return an unopened product. In case of a quality issue (batch not matching the COA), we offer a full replacement or refund at no cost. Contact us via WhatsApp or email for any return.", faqa5: "Our peptides are sold exclusively for scientific research purposes (Research Use Only). They are not intended for human or animal consumption. It is your responsibility to comply with local legislation. PurePep Labs provides no medical advice.",
     faqa6: "Lyophilized peptides (powder): stable at room temperature for 12-24 months, ideally refrigerated. After reconstitution: store at 2-4°C, use within 4 weeks. For long-term storage: freezer at -20°C in powder form. Avoid repeated freeze/thaw cycles.", faqq1: "How do I reconstitute a lyophilized peptide?",
     faqq2: "What is a COA and how do I check it?", faqq3: "What are your delivery times?",
     faqq4: "What is your return policy?", faqq5: "Are your peptides legal in Canada?",
@@ -1992,7 +2023,7 @@ const I18N = {
     footer_accessories: "Accessories", footer_calculator: "Dosage calculator",
     footer_categories: "Categories", footer_cgv: "Terms of Sale",
     footer_contact: "Contact", footer_cookies: "Cookie Policy",
-    footer_copyright: "© 2026 PurePep. All rights reserved.", footer_guides: "Guides & Protocols",
+    footer_copyright: "© 2026 PurePep Labs. All rights reserved.", footer_guides: "Guides & Protocols",
     footer_info: "Information", footer_legal: "Legal",
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
@@ -2038,7 +2069,7 @@ const I18N = {
     qb5_t: "14-day return", rev1: "Order received in 48h, products impeccably packaged. Excellent quality BPC-157, COA PDF matching the listing. I recommend without hesitation.",
     rev2: "3rd order, always as reliable. Verified HPLC purity, ultra-fast delivery. The best peptide supplier in Canada, period.", rev3: "Flawless quality on the GHK-Cu, very visible results after 3 weeks of protocol. Support response in under 2h. Loyal customer.",
     rev4: "Wolverine Pack received in 36h. Sealed vials, professional labels, COA included. Quality far above other suppliers I've tried.", rev5: "The Brain Stack is impressive. Sharp, stable focus with no jitteriness. Discreet, careful packaging. Coming back as soon as I run out.",
-    rev6: "Tirzepatide received as described, HPLC COA ≥99%. Careful delivery, cold pack in the parcel. Very responsive customer service. Perfect.", reviews_count: "287 verified reviews",
+    rev6: "Tirzepatide received as described, HPLC COA ≥99%. Careful delivery, cold pack in the parcel. Very responsive customer service. Perfect.", reviews_count: "287 verified reviews", nav_reviews: "Customer reviews", mobile_lang_label: "Language",
     see_all_reviews: "See all Google reviews →", st_1: "The references labs keep reordering",
     st_2: "They received it. They rated it.", st_3: "Frequently asked questions",
     st_4: "Preparation Guide", st_5: "Guides & Protocols",
@@ -2070,6 +2101,8 @@ function applyLang(lang){
     labelEl.textContent = labels[lang] || 'FR';
     btnEl.title = titles[lang] || titles.fr;
   }
+  const labelElM = document.getElementById('lang-toggle-label-m');
+  if(labelElM) labelElM.textContent = labels[lang] || 'FR';
   localStorage.setItem('purepep_lang', lang);
   const helpBtn = document.getElementById('help-widget-btn-el');
   if(helpBtn){
@@ -2311,7 +2344,7 @@ window.addEventListener('pageshow', function(e){
 </button>
 <div class="help-panel" id="help-panel">
   <div data-i18n="help_packs"><h4>Questions fréquentes ici</h4>
-    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Qu'est-ce qu'un pack PurePep ?</button>
+    <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Qu'est-ce qu'un pack PurePep Labs ?</button>
     <p class="help-a">Une association de peptides dont les mécanismes d'action se complètent, avec le kit de reconstitution inclus, à un tarif groupé.</p>
     <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Le kit de reconstitution est-il inclus dans tous les packs ?</button>
     <p class="help-a">Oui, systématiquement, eau bactériostatique, seringues et tampons d'alcool sont fournis avec chaque pack.</p>

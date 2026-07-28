@@ -7,7 +7,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Comment lire un COA de peptide de recherche · PurePep</title>
+  <title>Comment lire un COA de peptide de recherche · PurePep Labs</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
   <meta name="description" content="Guide pour comprendre un certificat d'analyse (COA) de peptide de recherche : pureté HPLC, masse molaire, numéro de lot."/>
   <meta name="keywords" content="peptides recherche, BPC-157, retatrutide, tirzepatide, HPLC, COA, Canada"/>
-  <meta property="og:title" content="Comment lire un COA de peptide de recherche · PurePep"/>
+  <meta property="og:title" content="Comment lire un COA de peptide de recherche · PurePep Labs"/>
   <meta property="og:description" content="Guide pour comprendre un certificat d'analyse (COA) de peptide de recherche : pureté HPLC, masse molaire, numéro de lot."/>
   <meta property="og:image" content="https://purepep.ca/images/logo-purepep.png"/>
   <style>
@@ -171,12 +171,18 @@
     .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;cursor:pointer}
     .hamburger span{width:22px;height:2px;background:var(--muted);border-radius:2px;transition:.3s}
     .mobile-menu{
-      display:none;position:fixed;inset:62px 0 0 0;
-      background:var(--bg);z-index:190;padding:2rem;
+      display:none;position:fixed;inset:74px 0 0 0;
+      background:var(--bg);z-index:190;padding:1.4rem 2rem 2rem;
       flex-direction:column;gap:1.2rem;font-size:1.1rem;font-weight:600;
+      overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;
+      padding-bottom:calc(2rem + env(safe-area-inset-bottom));
     }
     .mobile-menu.open{display:flex}
-    .mobile-menu a{color:var(--text);padding:.6rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem}
+    .mobile-menu a{color:var(--text);padding:.6rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem;flex-shrink:0}
+    .mobile-lang-switch{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;border-bottom:1px solid var(--border);flex-shrink:0}
+    .mobile-lang-switch-label{font-size:.95rem;font-weight:700;display:flex;align-items:center;gap:.5rem}
+    .mobile-lang-btn{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:.5rem 1.1rem;border-radius:99px;font-weight:800;font-size:.85rem;letter-spacing:.02em}
+    .mobile-lang-btn:active{transform:scale(.96)}
 
     /* ── HERO ── */
     .hero{
@@ -701,7 +707,7 @@
 
 
     /* ═══════════════════════════════════════════
-       DESIGN UPGRADE, PurePep v2
+       DESIGN UPGRADE, PurePep Labs v2
     ═══════════════════════════════════════════ */
 
     /* Scroll progress bar */
@@ -1129,9 +1135,9 @@
 <!-- ── AGE VERIFICATION GATE ── -->
 <div class="age-gate" id="age-gate">
   <div class="age-gate-card">
-    <div class="age-gate-icon"><img src="images/logo-purepep.png" alt="PurePep" style="height:2.4rem;width:auto"/></div>
+    <div class="age-gate-icon"><img src="images/logo-purepep.png" alt="PurePep Labs" style="height:2.4rem;width:auto"/></div>
     <h3 data-i18n="age_gate_title">Un instant avant d'entrer</h3>
-    <p data-i18n="age_gate_desc">PurePep propose des peptides de recherche réservés à un usage en laboratoire. L'accès à ce site est limité aux personnes majeures.</p>
+    <p data-i18n="age_gate_desc">PurePep Labs propose des peptides de recherche réservés à un usage en laboratoire. L'accès à ce site est limité aux personnes majeures.</p>
     <div class="age-gate-actions">
       <button class="age-yes" onclick="confirmAgeGate(true)" data-i18n="age_gate_yes">J'ai plus de 18 ans, Entrer</button>
       <button class="age-no" onclick="confirmAgeGate(false)" data-i18n="age_gate_no">J'ai moins de 18 ans</button>
@@ -1154,7 +1160,7 @@
 <nav>
   <div class="nav-left">
     <a href="index.html" class="logo">
-      <img src="images/logo-purepep.png" alt="PurePep" class="logo-img"/>
+      <img src="images/logo-purepep.png" alt="PurePep Labs" class="logo-img"/>
     </a>
             <ul class="nav-links">
       <li><a href="c-est-quoi.html" class="nav-newcomer"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg><span data-i18n="nav_newcomer">Nouveau ici ?</span></a></li>
@@ -1193,18 +1199,22 @@
 
 <!-- ── MOBILE MENU ── -->
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-lang-switch">
+    <span class="mobile-lang-switch-label">🌐 <span data-i18n="mobile_lang_label">Langue</span></span>
+    <button class="mobile-lang-btn" onclick="cycleLang()" id="lang-toggle-btn-m" title="Français / English"><span id="lang-toggle-label-m">FR</span></button>
+  </div>
   <a href="c-est-quoi.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg> <span data-i18n="nav_newcomer2">Nouveau ici ?</span></a>
-  <a href="index.html#produits" onclick="toggleMenu()">Nos peptides</a>
-  <a href="packs.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Packs</a>
-  <a href="coa.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> COA</a>
-  <a href="partner-program.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Partenaires</a>
-  <a href="why-us.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> Pourquoi nous</a>
-  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
-  <a href="contact.html" onclick="toggleMenu()">Contact</a>
-  <a href="calculateur.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="8" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r=".6" fill="currentColor" stroke="none"/></svg> Calculateur de dosage</a>
-  <a href="guides.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Guides</a>
+  <a href="index.html#produits" onclick="toggleMenu()" data-i18n="nav_products">Nos peptides</a>
+  <a href="packs.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> <span data-i18n="footer_packs">Packs</span></a>
+  <a href="coa.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> <span data-i18n="nav_quality">COA</span></a>
+  <a href="partner-program.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <span data-i18n="nav_partner">Partenaires</span></a>
+  <a href="why-us.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> <span data-i18n="nav_whyus">Pourquoi nous</span></a>
+  <a href="faq.html" onclick="toggleMenu()" data-i18n="nav_faq">FAQ</a>
+  <a href="contact.html" onclick="toggleMenu()" data-i18n="footer_contact">Contact</a>
+  <a href="calculateur.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r=".6" fill="currentColor" stroke="none"/><circle cx="8" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r=".6" fill="currentColor" stroke="none"/></svg> <span data-i18n="footer_calculator">Calculateur de dosage</span></a>
+  <a href="guides.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> <span data-i18n="footer_guides">Guides</span></a>
   <a href="blog.html" onclick="toggleMenu()"><svg class="nav-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> Blog</a>
-  <a href="index.html#avis" onclick="toggleMenu()">Avis clients</a>
+  <a href="index.html#avis" onclick="toggleMenu()" data-i18n="nav_reviews">Avis clients</a>
 </div>
 
 <!-- ── CART OVERLAY + DRAWER ── -->
@@ -1252,6 +1262,8 @@
   .article-callout{background:var(--card2);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:1rem 1.3rem;margin:1.3rem 0;font-size:.85rem;line-height:1.6;color:var(--muted)}
   .article-callout strong{color:var(--text);display:block;margin-bottom:.3rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.03em}
   .article-callout-warn{border-left-color:#4a4a4a;background:rgba(251,146,60,.08)}
+  .article-callout-warn strong{color:#c2703d}
+  .lc-highlight{background:linear-gradient(120deg,rgba(45,212,191,.18),rgba(96,165,250,.16));padding:.05rem .4rem;border-radius:5px;font-weight:700;color:#141414}
   .article-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.85rem}
   .article-table th,.article-table td{padding:.6rem .8rem;border:1px solid var(--border);text-align:left}
   .article-table th{background:var(--card2);font-weight:700}
@@ -1274,41 +1286,101 @@
 <div class="back-to-catalog"><a href="index.html#produits" class="back-to-catalog-inner" data-i18n="back_to_catalog">← Voir tous les peptides</a></div>
 <div class="article-wrap reveal">
 
-  <div class="article-eyebrow" data-i18n="lc_eyebrow">COA · 7 min de lecture</div>
+  <div class="article-eyebrow" data-i18n="lc_eyebrow">COA · 6 min de lecture</div>
   <h1 class="article-title" data-i18n="lc_h1">Comment lire un COA de peptide de recherche</h1>
   <p class="article-meta" data-i18n="lc_date">Mai 2026</p>
 
   <div class="article-body" data-i18n="lc_body">
     <h2>Qu'est-ce qu'un COA&nbsp;?</h2>
-    <p>Le <strong>Certificate of Analysis (COA)</strong>, ou certificat d'analyse, est le document qu'émet un laboratoire indépendant après avoir testé un échantillon d'un lot de peptide. C'est la pièce la plus importante pour vérifier qu'un produit correspond réellement à ce qu'il prétend être.</p>
+    <p>Le <strong>Certificate of Analysis (COA)</strong>, ou certificat d'analyse, est le rapport qu'émet un laboratoire après avoir testé un échantillon prélevé sur un lot précis de peptide. Il résume les résultats des analyses effectuées&nbsp;: identité de la molécule, pureté mesurée, méthode utilisée, et référence du lot concerné. C'est la pièce la plus importante pour vérifier qu'un produit correspond réellement à ce qu'il prétend être, plutôt que de se fier uniquement à la description du vendeur.</p>
+
+    <div class="article-callout">
+      <strong>À retenir</strong>
+      Un COA documente les résultats d'analyse d'un lot précis, pas d'un produit en général.<br>
+      Il permet de vérifier trois choses&nbsp;: l'identité de la molécule, sa pureté, et le laboratoire qui a réalisé le test.<br>
+      Les méthodes les plus courantes sont la chromatographie (HPLC) et la spectrométrie de masse (LC-MS).<br>
+      Un COA émis par un laboratoire indépendant du vendeur offre un niveau de confiance supplémentaire.
+    </div>
+
+    <h2>Pourquoi le COA compte en recherche peptidique</h2>
+    <p>La reproductibilité d'un protocole de recherche dépend directement des matériaux utilisés. Sans documentation analytique, impossible de savoir si un composé correspond réellement à ce qu'il prétend être. Le COA répond à ce besoin de plusieurs façons&nbsp;:</p>
+    <h3>Transparence analytique</h3>
+    <p>Le COA fournit des données mesurables plutôt qu'une simple description marketing. Le chercheur peut consulter directement les résultats de test et juger par lui-même.</p>
+    <h3>Traçabilité par lot</h3>
+    <p>Chaque COA est lié à un numéro de lot précis. Cela permet de savoir exactement quel lot a été testé, et de faire le lien avec le flacon physiquement reçu.</p>
+    <h3>Transparence méthodologique</h3>
+    <p>Un COA sérieux précise la méthode utilisée (HPLC, LC-MS...), ce qui permet de comprendre comment les résultats ont été obtenus, et pas seulement de lire un chiffre isolé.</p>
+    <h3>Standard de documentation</h3>
+    <p>Publier systématiquement des COA par lot, plutôt qu'un seul document générique pour toute une gamme, est un signe de rigueur du fournisseur.</p>
+
+    <h2>Les sections d'un COA</h2>
+    <p>La mise en page varie d'un laboratoire à l'autre, mais la plupart des certificats reprennent les mêmes éléments&nbsp;:</p>
+    <table class="article-table">
+      <tr><th>Section</th><th>Ce qu'elle indique</th></tr>
+      <tr><td>Identification du composé</td><td>Nom, séquence peptidique, masse moléculaire attendue</td></tr>
+      <tr><td>Numéro de lot</td><td>Référence unique qui relie le test au flacon reçu</td></tr>
+      <tr><td>Méthode d'analyse</td><td>Technique utilisée (HPLC, LC-MS...)</td></tr>
+      <tr><td>Résultat de pureté</td><td>Pourcentage du composé principal détecté dans l'échantillon</td></tr>
+      <tr><td>Laboratoire</td><td>Nom de l'organisme ayant réalisé le test, idéalement indépendant du vendeur</td></tr>
+      <tr><td>Date d'analyse</td><td>Date à laquelle le test a été effectué</td></tr>
+    </table>
 
     <h2>Les informations clés à vérifier</h2>
     <h3>1. Le numéro de lot</h3>
-    <p>Il doit correspondre exactement à celui inscrit sur l'étiquette du flacon que tu as reçu. Si les numéros ne correspondent pas, le COA ne prouve rien sur ton flacon précis.</p>
+    <p>Il doit correspondre <span class="lc-highlight">exactement</span> à celui inscrit sur l'étiquette du flacon que tu as reçu. Si les numéros ne correspondent pas, le COA ne prouve rien sur ton flacon précis, même s'il concerne le même produit.</p>
+    <div class="article-callout article-callout-warn">
+      <strong>Point de vigilance</strong>
+      Si le numéro de lot du COA ne correspond pas à celui de ton flacon, arrête-toi&nbsp;: ce document ne documente pas ton produit. Contacte le vendeur avec des photos du flacon et de l'étiquette.
+    </div>
 
     <h3>2. Le taux de pureté HPLC</h3>
-    <p>Exprimé en pourcentage, il indique la proportion du composé principal dans l'échantillon testé, mesurée par chromatographie liquide haute performance. Un peptide de recherche sérieux affiche généralement une pureté ≥99%. Un taux plus bas n'est pas forcément dangereux, mais doit être cohérent avec le prix et les allégations du vendeur.</p>
+    <p>Exprimé en pourcentage, il indique la proportion du composé principal dans l'échantillon testé, mesurée par chromatographie liquide haute performance. Un peptide de recherche sérieux affiche généralement une pureté <span class="lc-highlight">≥99%</span>. Un taux plus bas n'est pas forcément dangereux, mais doit être cohérent avec le prix et les allégations du vendeur.</p>
 
     <h3>3. La confirmation de masse (LC-MS)</h3>
-    <p>La spectrométrie de masse couplée à la chromatographie liquide (LC-MS) permet de confirmer que la molécule présente a bien la masse moléculaire attendue pour le peptide annoncé, une vérification d'identité, en plus de la pureté.</p>
+    <p>La spectrométrie de masse couplée à la chromatographie liquide (LC-MS) permet de confirmer que la molécule présente a bien la masse moléculaire attendue pour le peptide annoncé, une <span class="lc-highlight">vérification d'identité</span>, en plus de la pureté.</p>
 
     <h3>4. La date d'analyse et le laboratoire</h3>
-    <p>Un COA récent, émis par un laboratoire identifiable et indépendant (non affilié au vendeur), est un gage de sérieux. PurePep travaille avec Freedom Diagnostics pour l'ensemble de ses lots.</p>
+    <p>Un COA récent, émis par un <span class="lc-highlight">laboratoire indépendant</span> (non affilié au vendeur), est un gage de sérieux. PurePep Labs travaille avec Freedom Diagnostics pour l'ensemble de ses lots.</p>
+
+    <h2>Comprendre un chromatogramme HPLC</h2>
+    <p>La chromatographie liquide haute performance (HPLC) sépare les différents composés présents dans un échantillon. La solution passe à travers une colonne qui retient chaque molécule un temps différent selon ses propriétés chimiques&nbsp;; à la sortie, un détecteur enregistre le passage de chaque composé sous forme de pic sur un graphique appelé chromatogramme.</p>
+    <p>Sur ce graphique, le pic principal correspond normalement au peptide recherché. D'éventuels petits pics secondaires représentent d'autres composés détectables, souvent des résidus de synthèse. La pureté rapportée correspond à la proportion que représente le pic principal par rapport à l'ensemble des pics détectés. Un chromatogramme propre, avec un pic principal net et peu de bruit autour, est un bon signe visuel, même sans être expert.</p>
+
+    <h2>La spectrométrie de masse et la confirmation d'identité</h2>
+    <p>La chromatographie dit "combien c'est pur", mais pas forcément "de quelle molécule il s'agit exactement". C'est le rôle de la spectrométrie de masse (LC-MS)&nbsp;: les molécules de l'échantillon sont ionisées puis séparées selon leur rapport masse/charge, ce qui produit un spectre avec un pic correspondant à la masse mesurée.</p>
+    <p>Si cette masse mesurée correspond à la masse moléculaire théorique du peptide annoncé, cela confirme l'identité du composé, indépendamment de sa pureté. Les deux techniques sont complémentaires&nbsp;: l'HPLC pour la pureté, le LC-MS pour l'identité.</p>
+
+    <h2>Pourquoi un laboratoire tiers indépendant change la donne</h2>
+    <p>Certains fournisseurs testent leurs propres produits en interne. D'autres font appel à un laboratoire externe, sans lien avec l'entreprise qui vend le peptide&nbsp;: on parle alors de test par un <span class="lc-highlight">tiers indépendant</span>. Cette indépendance retire un conflit d'intérêt évident&nbsp;: le laboratoire n'a aucun intérêt commercial à publier un bon résultat.</p>
+    <p>Que le test soit interne ou externe, l'élément essentiel reste la disponibilité d'un COA vérifiable, lot par lot. PurePep Labs fait analyser l'ensemble de ses lots par Freedom Diagnostics, un laboratoire indépendant spécialisé dans le contrôle des peptides de recherche.</p>
 
     <h2>Ce qu'un COA ne garantit pas</h2>
-    <p>Un COA atteste de la composition chimique du lot testé au moment du test. Il ne remplace pas les bonnes pratiques de conservation après réception (voir notre <a href="calculateur.html">guide de préparation et conservation</a>), qui restent de la responsabilité de l'acheteur.</p>
+    <div class="article-callout article-callout-warn">
+      <strong>Important</strong>
+      Un COA atteste de la composition chimique du lot testé au moment du test. Il ne remplace pas les bonnes pratiques de conservation après réception (voir notre <a href="calculateur.html">guide de préparation et conservation</a>), qui restent de la responsabilité de l'acheteur. Un flacon mal conservé (chaleur, lumière, reconstitution trop précoce) peut se dégrader même si son COA d'origine était excellent.
+    </div>
 
-    <h2>Comment obtenir un COA chez PurePep</h2>
-    <p>Le numéro de lot indiqué sur ton flacon te permet de faire la demande du COA correspondant. Contacte-nous avec cette référence.</p>
+    <h2>Comment obtenir un COA chez PurePep Labs</h2>
+    <p>Le numéro de lot indiqué sur ton flacon te permet de faire la demande du COA correspondant. Retrouve aussi les certificats déjà publiés sur notre <a href="coa.html">page COA</a>, ou contacte-nous avec cette référence.</p>
+
+    <h2>Questions fréquentes</h2>
+    <h3>Un COA garantit-il l'efficacité d'un peptide en recherche&nbsp;?</h3>
+    <p>Non. Il atteste uniquement de l'identité et de la pureté chimique du lot testé, pas d'un effet biologique particulier.</p>
+    <h3>Pourquoi deux flacons du même peptide peuvent-ils avoir des COA différents&nbsp;?</h3>
+    <p>Parce que chaque COA correspond à un lot de production précis. Deux lots différents du même peptide peuvent avoir des résultats légèrement différents.</p>
+    <h3>Que faire si le numéro de lot ne correspond pas&nbsp;?</h3>
+    <p>Contacte immédiatement le vendeur avec des photos du flacon et de l'étiquette&nbsp;: le COA fourni ne documente pas ton produit.</p>
+    <h3>Un taux de pureté inférieur à 99% est-il un problème&nbsp;?</h3>
+    <p>Pas nécessairement, mais le prix et les allégations doivent rester cohérents avec ce taux. À vérifier au cas par cas.</p>
   </div>
-  
+
 </div>
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="logo">
-        <img src="images/logo-purepep.png" alt="PurePep" class="logo-img"/>
+        <img src="images/logo-purepep.png" alt="PurePep Labs" class="logo-img"/>
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
@@ -1323,7 +1395,7 @@
     <div class="footer-col"><h4 data-i18n="footer_legal">Légal</h4><ul><li><a href="research-use-only.html">Research Use Only</a></li><li><a href="mentions-legales.html" data-i18n="footer_notices">Mentions légales</a></li><li><a href="cgv.html" data-i18n="footer_cgv">CGV</a></li><li><a href="politique-confidentialite.html" data-i18n="footer_privacy">Politique de confidentialité</a></li><li><a href="politique-cookies.html" data-i18n="footer_cookies">Politique cookies</a></li><li><a href="politique-expedition.html" data-i18n="footer_shipping">Politique d'expédition</a></li><li><a href="politique-remboursement.html" data-i18n="footer_refund">Politique de remboursement</a></li></ul></div>
   </div>
   <div class="footer-bottom">
-    <span data-i18n="footer_copyright">© 2026 PurePep. Tous droits réservés.</span>
+    <span data-i18n="footer_copyright">© 2026 PurePep Labs. Tous droits réservés.</span>
     <span data-i18n="footer_ruo">Research Use Only · Pour usage en laboratoire uniquement</span>
   </div>
 </footer>
@@ -1337,7 +1409,7 @@
     <span>Telegram</span>
   </a>
   <!-- TODO: remplacer 33743781232 par le vrai numéro WhatsApp Business (format international sans le +, ex: 33612345678) -->
-  <a href="https://wa.me/33743781232?text=Bonjour%20PurePep%2C%20je%20voudrais%20des%20informations%20sur%20vos%20peptides."
+  <a href="https://wa.me/33743781232?text=Bonjour%20PurePep Labs%2C%20je%20voudrais%20des%20informations%20sur%20vos%20peptides."
      target="_blank" rel="noopener" class="whatsapp-btn" title="Nous contacter sur WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span>WhatsApp</span>
@@ -1492,8 +1564,9 @@ const CART_IMAGES = {
   'Seringue 100U 31G': 'images/syringe.jpg',
   'Lingettes alcool 70%': 'images/wipes.jpg',
   'Kit de reconstitution': 'images/kit-reconstitution.jpg',
-  'Pack Wolverine': 'images/bpc-157-5mg-wolverine.jpg',
-  'Pack Phénix': 'images/nad-500mg.jpg',
+  'Pack Wolverine Elite': 'images/bpc-157-5mg-wolverine.jpg',
+  'Pack Wolverine': 'images/bpc157-tb500.jpg',
+  'Pack Renaissance': 'images/nad-500mg.jpg',
   'Pack Clarté Mentale': 'images/semax-10mg.jpg',
   'Pack Peau & Cheveux': 'images/ghk-cu-100mg.jpg',
   'Pack Perte de Poids Extrême': 'images/retatrutide-10mg.jpg',
@@ -1505,13 +1578,14 @@ const CART_NAMES_EN = {
   'Seringue 100U 31G': 'Syringe 100U 31G',
   'Lingettes alcool 70%': 'Alcohol Wipes 70%',
   'Kit de reconstitution': 'Reconstitution Kit',
-  'Pack Wolverine': 'Pack Wolverine',
-  'Pack Phénix': 'Pack Phoenix',
-  'Pack Clarté Mentale': 'Pack Mental Clarity',
-  'Pack Peau & Cheveux': 'Pack Skin & Hair',
-  'Pack Perte de Poids Extrême': 'Pack Extreme Weight Loss',
-  'Pack Titan': 'Pack Titan',
-  'Pack KLOW Elite Bundle': 'Pack KLOW Elite Bundle'
+  'Pack Wolverine Elite': 'Wolverine Elite Bundle',
+  'Pack Wolverine': 'Wolverine Bundle',
+  'Pack Renaissance': 'Renaissance Bundle',
+  'Pack Clarté Mentale': 'Mental Clarity Bundle',
+  'Pack Peau & Cheveux': 'Skin & Hair Bundle',
+  'Pack Perte de Poids Extrême': 'Extreme Weight Loss Bundle',
+  'Pack Titan': 'Titan Bundle',
+  'Pack KLOW Elite Bundle': 'KLOW Elite Bundle'
 };
 function cartDisplayName(name){
   if(localStorage.getItem('purepep_lang') === 'en' && CART_NAMES_EN[name]) return CART_NAMES_EN[name];
@@ -1837,12 +1911,12 @@ const I18N = {
     cart_title_prefix: "My cart (",
     cart_title_article: " item",
     cart_title_suffix: ")",
-    lc_eyebrow: "COA · 7 min read",
+    lc_eyebrow: "COA · 6 min read",
     lc_h1: "How to read a research peptide COA",
     lc_date: "May 2026",
-    lc_body: '<h2>What is a COA?</h2><p>The <strong>Certificate of Analysis (COA)</strong> is the document issued by an independent laboratory after testing a sample from a peptide batch. It is the most important piece of evidence to verify that a product truly matches what it claims to be.</p><h2>Key information to check</h2><h3>1. The batch number</h3><p>It must exactly match the one printed on the label of the vial you received. If the numbers don&#39;t match, the COA proves nothing about your specific vial.</p><h3>2. The HPLC purity level</h3><p>Expressed as a percentage, it indicates the proportion of the main compound in the tested sample, measured by high-performance liquid chromatography. A serious research peptide typically shows ≥99% purity. A lower rate isn&#39;t necessarily dangerous, but should be consistent with the price and the seller&#39;s claims.</p><h3>3. Mass confirmation (LC-MS)</h3><p>Mass spectrometry coupled with liquid chromatography (LC-MS) confirms that the molecule present actually has the expected molecular mass for the stated peptide. An identity check, in addition to purity.</p><h3>4. The test date and laboratory</h3><p>A recent COA, issued by an identifiable, independent laboratory (not affiliated with the seller), is a sign of seriousness. PurePep works with Freedom Diagnostics for all its batches.</p><h2>What a COA does not guarantee</h2><p>A COA attests to the chemical composition of the tested batch at the time of testing. It does not replace good storage practices after receipt (see our <a href="calculateur.html">preparation and storage guide</a>), which remain the buyer&#39;s responsibility.</p><h2>How to get a COA from PurePep</h2><p>The batch number shown on your vial lets you request the corresponding COA. Contact us with this reference.</p>',
+    lc_body: '<h2>What is a COA?</h2><p>The <strong>Certificate of Analysis (COA)</strong> is the report issued by a laboratory after testing a sample taken from a specific peptide batch. It summarizes the results of the analysis: molecule identity, measured purity, method used, and the batch reference concerned. It is the single most important piece of evidence to verify that a product truly matches what it claims to be, rather than relying only on the seller&#39;s description.</p><div class="article-callout"><strong>Key takeaways</strong>A COA documents the test results for one specific batch, not a product in general.<br>It lets you verify three things: molecule identity, purity, and which lab performed the test.<br>The most common methods are chromatography (HPLC) and mass spectrometry (LC-MS).<br>A COA issued by a lab independent from the seller adds an extra layer of trust.</div><h2>Why COAs matter in peptide research</h2><p>The reproducibility of a research protocol depends directly on the materials used. Without analytical documentation, there is no way to know whether a compound truly matches what it claims to be. A COA addresses this need in several ways:</p><h3>Analytical transparency</h3><p>A COA provides measurable data rather than a marketing description. Researchers can review the test results directly and judge for themselves.</p><h3>Batch traceability</h3><p>Every COA is tied to a specific batch number, so you can identify exactly which batch was tested and link it to the vial physically received.</p><h3>Methodological transparency</h3><p>A serious COA states the method used (HPLC, LC-MS...), which helps you understand how the results were obtained rather than reading an isolated number.</p><h3>Documentation standard</h3><p>Consistently publishing a COA per batch, rather than a single generic document for an entire product line, is a sign of a supplier&#39;s rigor.</p><h2>The sections of a COA</h2><p>Layout varies between laboratories, but most certificates include the same core elements:</p><table class="article-table"><tr><th>Section</th><th>What it shows</th></tr><tr><td>Compound identification</td><td>Name, peptide sequence, expected molecular weight</td></tr><tr><td>Batch number</td><td>Unique reference linking the test to the vial received</td></tr><tr><td>Testing method</td><td>Technique used (HPLC, LC-MS...)</td></tr><tr><td>Purity result</td><td>Percentage of the main compound detected in the sample</td></tr><tr><td>Laboratory</td><td>Name of the organization that performed the test, ideally independent from the seller</td></tr><tr><td>Test date</td><td>Date the analysis was performed</td></tr></table><h2>Key information to check</h2><h3>1. The batch number</h3><p>It must <span class="lc-highlight">exactly</span> match the one printed on the label of the vial you received. If the numbers don&#39;t match, the COA proves nothing about your specific vial, even if it concerns the same product.</p><div class="article-callout article-callout-warn"><strong>Watch out</strong>If the COA&#39;s batch number doesn&#39;t match your vial&#39;s, stop: this document does not document your product. Contact the seller with photos of the vial and label.</div><h3>2. The HPLC purity level</h3><p>Expressed as a percentage, it indicates the proportion of the main compound in the tested sample, measured by high-performance liquid chromatography. A serious research peptide typically shows <span class="lc-highlight">≥99%</span> purity. A lower rate isn&#39;t necessarily dangerous, but should be consistent with the price and the seller&#39;s claims.</p><h3>3. Mass confirmation (LC-MS)</h3><p>Mass spectrometry coupled with liquid chromatography (LC-MS) confirms that the molecule present actually has the expected molecular mass for the stated peptide. An <span class="lc-highlight">identity check</span>, in addition to purity.</p><h3>4. The test date and laboratory</h3><p>A recent COA, issued by an identifiable, <span class="lc-highlight">independent laboratory</span> (not affiliated with the seller), is a sign of seriousness. PurePep Labs works with Freedom Diagnostics for all its batches.</p><h2>Understanding an HPLC chromatogram</h2><p>High-performance liquid chromatography (HPLC) separates the different compounds present in a sample. The solution passes through a column that retains each molecule for a different amount of time depending on its chemical properties; as compounds exit, a detector records each one as a peak on a graph called a chromatogram.</p><p>On this graph, the main peak normally corresponds to the target peptide. Any small secondary peaks represent other detectable compounds, often synthesis residues. The reported purity corresponds to the proportion the main peak represents relative to all detected peaks. A clean chromatogram, with a sharp main peak and little noise around it, is a good visual sign, even without expert knowledge.</p><h2>Mass spectrometry and identity confirmation</h2><p>Chromatography tells you "how pure it is," but not necessarily "which exact molecule this is." That is the role of mass spectrometry (LC-MS): the molecules in the sample are ionized and then separated according to their mass-to-charge ratio, producing a spectrum with a peak corresponding to the measured mass.</p><p>If this measured mass matches the theoretical molecular weight of the stated peptide, it confirms the compound&#39;s identity, independent of its purity. The two techniques are complementary: HPLC for purity, LC-MS for identity.</p><h2>Why an independent third-party lab matters</h2><p>Some suppliers test their own products in-house. Others use an external laboratory with no ties to the company selling the peptide: this is referred to as <span class="lc-highlight">independent third-party testing</span>. This independence removes an obvious conflict of interest: the lab has no commercial incentive to publish a favorable result.</p><p>Whether testing is internal or external, the key element remains the availability of a verifiable COA, batch by batch. PurePep Labs has every batch analyzed by Freedom Diagnostics, an independent laboratory specialized in testing research peptides.</p><h2>What a COA does not guarantee</h2><div class="article-callout article-callout-warn"><strong>Important</strong>A COA attests to the chemical composition of the tested batch at the time of testing. It does not replace good storage practices after receipt (see our <a href="calculateur.html">preparation and storage guide</a>), which remain the buyer&#39;s responsibility. A poorly stored vial (heat, light, premature reconstitution) can degrade even if its original COA was excellent.</div><h2>How to get a COA from PurePep Labs</h2><p>The batch number shown on your vial lets you request the corresponding COA. You can also find certificates already published on our <a href="coa.html">COA page</a>, or contact us with this reference.</p><h2>Frequently asked questions</h2><h3>Does a COA guarantee a peptide&#39;s effectiveness in research?</h3><p>No. It only attests to the identity and chemical purity of the tested batch, not to any particular biological effect.</p><h3>Why can two vials of the same peptide have different COAs?</h3><p>Because each COA corresponds to a specific production batch. Two different batches of the same peptide can have slightly different results.</p><h3>What should I do if the batch number doesn&#39;t match?</h3><p>Contact the seller immediately with photos of the vial and label: the COA provided does not document your product.</p><h3>Is a purity level below 99% a problem?</h3><p>Not necessarily, but the price and claims should remain consistent with that level. Check on a case-by-case basis.</p>',
     age_gate_title: "Just a moment before entering",
-    age_gate_desc: "PurePep offers research peptides intended for laboratory use only. Access to this site is restricted to adults.",
+    age_gate_desc: "PurePep Labs offers research peptides intended for laboratory use only. Access to this site is restricted to adults.",
     age_gate_yes: "I am over 18, Enter",
     age_gate_no: "I am under 18",
     age_gate_legal: "By continuing, you confirm you are of legal age and accept our terms of use.",
@@ -1857,8 +1931,8 @@ const I18N = {
     catb5: "Recovery", catb6: "Muscle Growth",
     catb7: "Anti-Aging", catb8: "Recovery",
     catb9: "Recovery", faqa1: "Use bacteriostatic water (available on our site). Gently inject the water along the wall of the vial without aiming directly at the powder. Do not shake, swirl gently. Let sit for 2-3 minutes. Storage: 2-4°C after reconstitution, use within 4 weeks.",
-    faqa2: "The COA (Certificate of Analysis) is the purity report produced by Freedom Diagnostics, a recognized independent laboratory in the sector, via HPLC chromatography. Every PurePep batch has its own COA downloadable on the product page. You can check the batch number on the vial and compare it to the provided PDF. Our guaranteed minimum purity is ≥99%.", faqa3: "Orders are shipped within 24 business hours. Delivery across Canada within 2-5 business days (Canada Post), free from \$160 of purchase (otherwise \$4.90). International delivery to the US and abroad within 5-10 days, free from \$200 of purchase (otherwise a flat rate of \$15). Every order is tracked and you receive a confirmation email with a tracking number. Neutral, discreet packaging with no indication of contents.",
-    faqa4: "You have 14 days after receipt to return an unopened product. In case of a quality issue (batch not matching the COA), we offer a full replacement or refund at no cost. Contact us via WhatsApp or email for any return.", faqa5: "Our peptides are sold exclusively for scientific research purposes (Research Use Only). They are not intended for human or animal consumption. It is your responsibility to comply with local legislation. PurePep provides no medical advice.",
+    faqa2: "The COA (Certificate of Analysis) is the purity report produced by Freedom Diagnostics, a recognized independent laboratory in the sector, via HPLC chromatography. Every PurePep Labs batch has its own COA downloadable on the product page. You can check the batch number on the vial and compare it to the provided PDF. Our guaranteed minimum purity is ≥99%.", faqa3: "Orders are shipped within 24 business hours. Delivery across Canada within 2-5 business days (Canada Post), free from \$160 of purchase (otherwise \$4.90). International delivery to the US and abroad within 5-10 days, free from \$200 of purchase (otherwise a flat rate of \$15). Every order is tracked and you receive a confirmation email with a tracking number. Neutral, discreet packaging with no indication of contents.",
+    faqa4: "You have 14 days after receipt to return an unopened product. In case of a quality issue (batch not matching the COA), we offer a full replacement or refund at no cost. Contact us via WhatsApp or email for any return.", faqa5: "Our peptides are sold exclusively for scientific research purposes (Research Use Only). They are not intended for human or animal consumption. It is your responsibility to comply with local legislation. PurePep Labs provides no medical advice.",
     faqa6: "Lyophilized peptides (powder): stable at room temperature for 12-24 months, ideally refrigerated. After reconstitution: store at 2-4°C, use within 4 weeks. For long-term storage: freezer at -20°C in powder form. Avoid repeated freeze/thaw cycles.", faqq1: "How do I reconstitute a lyophilized peptide?",
     faqq2: "What is a COA and how do I check it?", faqq3: "What are your delivery times?",
     faqq4: "What is your return policy?", faqq5: "Are your peptides legal in Canada?",
@@ -1866,7 +1940,7 @@ const I18N = {
     footer_accessories: "Accessories", footer_calculator: "Dosage calculator",
     footer_categories: "Categories", footer_cgv: "Terms of Sale",
     footer_contact: "Contact", footer_cookies: "Cookie Policy",
-    footer_copyright: "© 2026 PurePep. All rights reserved.", footer_guides: "Guides & Protocols",
+    footer_copyright: "© 2026 PurePep Labs. All rights reserved.", footer_guides: "Guides & Protocols",
     footer_info: "Information", footer_legal: "Legal",
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
@@ -1912,7 +1986,7 @@ const I18N = {
     qb5_t: "14-day return", rev1: "Order received in 48h, products impeccably packaged. Excellent quality BPC-157, COA PDF matching the listing. I recommend without hesitation.",
     rev2: "3rd order, always as reliable. Verified HPLC purity, ultra-fast delivery. The best peptide supplier in Canada, period.", rev3: "Flawless quality on the GHK-Cu, very visible results after 3 weeks of protocol. Support response in under 2h. Loyal customer.",
     rev4: "Wolverine Pack received in 36h. Sealed vials, professional labels, COA included. Quality far above other suppliers I've tried.", rev5: "The Brain Stack is impressive. Sharp, stable focus with no jitteriness. Discreet, careful packaging. Coming back as soon as I run out.",
-    rev6: "Tirzepatide received as described, HPLC COA ≥99%. Careful delivery, cold pack in the parcel. Very responsive customer service. Perfect.", reviews_count: "287 verified reviews",
+    rev6: "Tirzepatide received as described, HPLC COA ≥99%. Careful delivery, cold pack in the parcel. Very responsive customer service. Perfect.", reviews_count: "287 verified reviews", nav_reviews: "Customer reviews", mobile_lang_label: "Language",
     see_all_reviews: "See all Google reviews →", st_1: "The references labs keep reordering",
     st_2: "They received it. They rated it.", st_3: "Frequently asked questions",
     st_4: "Preparation Guide", st_5: "Guides & Protocols",
@@ -1944,6 +2018,8 @@ function applyLang(lang){
     labelEl.textContent = labels[lang] || 'FR';
     btnEl.title = titles[lang] || titles.fr;
   }
+  const labelElM = document.getElementById('lang-toggle-label-m');
+  if(labelElM) labelElM.textContent = labels[lang] || 'FR';
   localStorage.setItem('purepep_lang', lang);
   const helpBtn = document.getElementById('help-widget-btn-el');
   if(helpBtn){
