@@ -44,7 +44,7 @@
     .help-a.open{display:block}
     .help-panel-footer{text-align:center;margin-top:.5rem;padding-top:.7rem;border-top:1px solid var(--border)}
     .help-panel-footer a{font-size:.78rem;font-weight:700;color:var(--accent-l)}
-    @media(max-width:640px){.help-widget-btn{left:1rem}.help-panel{left:1rem}}
+    @media(max-width:640px){.help-widget-btn{left:1rem;display:none}.help-panel{left:1rem;display:none}}
 
     /* Rendu équilibré : évite qu'un seul mot (ou juste "?"/"!") se retrouve
        orphelin sur sa propre ligne, surtout sur mobile où les titres sont étroits. */
@@ -135,6 +135,7 @@
     .nav-left{display:flex;align-items:center;gap:1.8rem}
     .logo{display:flex;align-items:center;gap:.45rem;font-size:1.15rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
     .logo-img{height:56px;width:auto;display:block}
+    @media(max-width:900px){.logo-img{height:38px}}
     .logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center}
     .logo-icon svg{width:28px;height:28px}
     .logo .bio{color:var(--text);font-weight:700;font-size:1.2rem;letter-spacing:-.01em}
@@ -2148,6 +2149,7 @@ function applyLang(lang){
     helpBtn.setAttribute('aria-label', helpLabel);
     helpBtn.setAttribute('title', helpLabel);
   }
+  if(typeof updateCartUI === 'function') updateCartUI();
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){

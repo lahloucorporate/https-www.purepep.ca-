@@ -44,7 +44,7 @@
     .help-a.open{display:block}
     .help-panel-footer{text-align:center;margin-top:.5rem;padding-top:.7rem;border-top:1px solid var(--border)}
     .help-panel-footer a{font-size:.78rem;font-weight:700;color:var(--accent-l)}
-    @media(max-width:640px){.help-widget-btn{left:1rem}.help-panel{left:1rem}}
+    @media(max-width:640px){.help-widget-btn{left:1rem;display:none}.help-panel{left:1rem;display:none}}
 
     /* Rendu équilibré : évite qu'un seul mot (ou juste "?"/"!") se retrouve
        orphelin sur sa propre ligne, surtout sur mobile où les titres sont étroits. */
@@ -1643,14 +1643,14 @@
     <div class="product-card" data-cat="perte">
       <div class="product-img-wrap">
         <div class="featured-badge"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 6h3a2 2 0 0 1-2 4M7 6H4a2 2 0 0 0 2 4"/></svg><span data-i18n="badge_bestseller">#1 des ventes</span></div>
-        <a href="retatrutide-10mg.html"><video class="reta-color-img product-video pv-reta" src="images/video/retatrutide-10mg.mp4" autoplay muted playsinline></video></a>
+        <a href="retatrutide-10mg.html"><img class="reta-color-img" loading="lazy" src="images/retatrutide-10mg.jpg" alt="Retatrutide"/></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-perte"><span data-i18n="catb1">Perte de Poids</span></span>
         <p class="product-name" data-i18n="p1_name"><a href="retatrutide-10mg.html" style="color:inherit">Retatrutide</a></p>
         <select class="product-select" onchange="updateDosePrice(this);swapProductVisual(this,'reta-color-img')">
           <option value="5mg" data-price="60.00" data-img="images/retatrutide-5mg.jpg">5 mg</option>
-        <option value="10mg" data-price="80.00" data-img="images/video/retatrutide-10mg.mp4" selected>10 mg</option>
+        <option value="10mg" data-price="80.00" data-img="images/retatrutide-10mg.jpg" selected>10 mg</option>
           <option value="15mg" data-price="110.00" data-img="images/retatrutide-15mg.jpg">15 mg</option>
           <option value="20mg" data-price="140.00" data-img="images/retatrutide-20mg.jpg">20 mg</option>
           <option value="30mg" data-price="160.00" data-img="images/retatrutide-30mg.jpg">30 mg</option>
@@ -1671,13 +1671,13 @@
     <div class="product-card" data-cat="peau">
       <div class="product-img-wrap">
         <div class="featured-badge" data-i18n="badge_skinstar">Star Peau & Beauté</div>
-        <a href="ghk-cu-50mg.html"><video class="ghkcu-color-img product-video pv-ghkcu" src="images/video/ghk-cu-50mg.mp4" autoplay muted playsinline></video></a>
+        <a href="ghk-cu-50mg.html"><img class="ghkcu-color-img" loading="lazy" src="images/ghk-cu-50mg.jpg" alt="GHK-Cu"/></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-peau"><span data-i18n="catb2">Peau & Beauté</span></span>
         <p class="product-name" data-i18n="p2_name"><a href="ghk-cu-50mg.html" style="color:inherit">GHK-Cu</a></p>
         <select class="product-select" onchange="updateDosePrice(this);swapProductVisual(this,'ghkcu-color-img')">
-          <option value="50mg" data-price="50.00" data-img="images/video/ghk-cu-50mg.mp4" selected>50 mg</option>
+          <option value="50mg" data-price="50.00" data-img="images/ghk-cu-50mg.jpg" selected>50 mg</option>
           <option value="100mg" data-price="70.00" data-img="images/ghk-cu-100mg.jpg">100 mg</option>
         </select>
         <div class="product-price-row">
@@ -1696,7 +1696,7 @@
     <!-- #3 Melanotan 2 -->
     <div class="product-card" data-cat="bienetre">
       <div class="product-img-wrap">
-        <a href="melanotan-2-10mg.html"><video class="product-video pv-m2" src="images/video/melanotan-2-10mg.mp4" autoplay muted playsinline></video></a>
+        <a href="melanotan-2-10mg.html"><img loading="lazy" src="images/melanotan-2-10mg.jpg" alt="Melanotan 2"/></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-bienetre"><span data-i18n="catb3">Bien-Être</span></span>
@@ -1715,13 +1715,13 @@
     <!-- #4 Tesamorelin -->
     <div class="product-card" data-cat="perte">
       <div class="product-img-wrap">
-        <a href="tesamorelin-10mg.html"><video class="tesa-color-img product-video product-video--portrait pv-tesa" src="images/video/tesamorelin-5mg.mp4" autoplay muted playsinline></video></a>
+        <a href="tesamorelin-10mg.html"><img class="tesa-color-img" loading="lazy" src="images/tesamorelin-5mg.jpg" alt="Tesamorelin"/></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-perte"><span data-i18n="catb4">Perte de Poids</span></span>
         <p class="product-name" data-i18n="p4_name"><a href="tesamorelin-10mg.html" style="color:inherit">Tesamorelin</a></p>
         <select class="product-select" onchange="updateDosePrice(this);swapProductVisual(this,'tesa-color-img')">
-          <option value="5mg" data-price="90.00" data-img="images/video/tesamorelin-5mg.mp4" selected>5 mg</option>
+          <option value="5mg" data-price="90.00" data-img="images/tesamorelin-5mg.jpg" selected>5 mg</option>
           <option value="10mg" data-price="130.00" data-img="images/tesamorelin-10mg.jpg">10 mg</option>
         </select>
         <div class="product-price-row">
@@ -1738,14 +1738,14 @@
     <!-- #5 BPC-157 -->
     <div class="product-card" data-cat="recuperation">
       <div class="product-img-wrap">
-        <a href="bpc-157-10mg.html"><video class="bpc157-color-img product-video product-video--portrait pv-bpc" src="images/video/bpc-157-10mg.mp4" autoplay muted playsinline></video></a>
+        <a href="bpc-157-10mg.html"><img class="bpc157-color-img" loading="lazy" src="images/bpc-157-10mg.jpg" alt="BPC-157"/></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-recuperation"><span data-i18n="catb5">Récupération</span></span>
         <p class="product-name" data-i18n="p5_name"><a href="bpc-157-10mg.html" style="color:inherit">BPC-157</a></p>
         <select class="product-select" onchange="updateDosePrice(this);swapProductVisual(this,'bpc157-color-img')">
           <option value="5mg" data-price="50.00" data-img="images/bpc-157-5mg.jpg">5 mg</option>
-          <option value="10mg" data-price="70.00" data-img="images/video/bpc-157-10mg.mp4" selected>10 mg</option>
+          <option value="10mg" data-price="70.00" data-img="images/bpc-157-10mg.jpg" selected>10 mg</option>
         </select>
         <div class="product-price-row">
           <span class="product-price" id="p-bpc157">$70.00</span>
@@ -1761,7 +1761,7 @@
     <!-- #6 Ipamorelin -->
     <div class="product-card" data-cat="muscle">
       <div class="product-img-wrap">
-        <a href="ipamorelin-10mg.html"><video class="product-video product-video--portrait pv-ipam" src="images/video/ipamorelin-5mg.mp4" autoplay muted playsinline></video></a>
+        <a href="ipamorelin-10mg.html"><img loading="lazy" src="images/ipamorelin-5mg.jpg" alt="Ipamorelin"/></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-muscle"><span data-i18n="catb6">Croissance Musculaire</span></span>
@@ -1780,7 +1780,7 @@
     <!-- #7 NAD+ -->
     <div class="product-card" data-cat="antiage">
       <div class="product-img-wrap">
-        <a href="nad-500mg.html"><video class="product-video product-video--portrait pv-nad" src="images/video/nad-500mg.mp4" autoplay muted playsinline></video></a>
+        <a href="nad-500mg.html"><img loading="lazy" src="images/nad-500mg.jpg" alt="NAD+"/></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-antiage"><span data-i18n="catb7">Anti-Âge</span></span>
@@ -3064,6 +3064,7 @@ function applyLang(lang){
   const activeTab = document.querySelector('.filter-tab.active');
   const currentCat = activeTab ? activeTab.dataset.cat : 'tous';
   if(typeof renderProductsPage === 'function') renderProductsPage(currentCat || 'tous', false);
+  if(typeof updateCartUI === 'function') updateCartUI();
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){

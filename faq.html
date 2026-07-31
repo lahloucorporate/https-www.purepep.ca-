@@ -110,6 +110,7 @@
     .nav-left{display:flex;align-items:center;gap:1.8rem}
     .logo{display:flex;align-items:center;gap:.45rem;font-size:1.15rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
     .logo-img{height:56px;width:auto;display:block}
+    @media(max-width:900px){.logo-img{height:38px}}
     .logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center}
     .logo-icon svg{width:28px;height:28px}
     .logo .bio{color:var(--text);font-weight:700;font-size:1.2rem;letter-spacing:-.01em}
@@ -2191,6 +2192,7 @@ function applyLang(lang){
     const searchInput = document.getElementById('faq-search-input');
     if(searchInput && searchInput.value) filterFaq(searchInput.value);
   }
+  if(typeof updateCartUI === 'function') updateCartUI();
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){

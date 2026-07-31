@@ -44,7 +44,7 @@
     .help-a.open{display:block}
     .help-panel-footer{text-align:center;margin-top:.5rem;padding-top:.7rem;border-top:1px solid var(--border)}
     .help-panel-footer a{font-size:.78rem;font-weight:700;color:var(--accent-l)}
-    @media(max-width:640px){.help-widget-btn{left:1rem}.help-panel{left:1rem}}
+    @media(max-width:640px){.help-widget-btn{left:1rem;display:none}.help-panel{left:1rem;display:none}}
 
     /* Rendu équilibré : évite qu'un seul mot (ou juste "?"/"!") se retrouve
        orphelin sur sa propre ligne, surtout sur mobile où les titres sont étroits. */
@@ -135,6 +135,7 @@
     .nav-left{display:flex;align-items:center;gap:1.8rem}
     .logo{display:flex;align-items:center;gap:.45rem;font-size:1.15rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
     .logo-img{height:56px;width:auto;display:block}
+    @media(max-width:900px){.logo-img{height:38px}}
     .logo-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center}
     .logo-icon svg{width:28px;height:28px}
     .logo .bio{color:var(--text);font-weight:700;font-size:1.2rem;letter-spacing:-.01em}
@@ -1224,6 +1225,9 @@
   .ph-gallery{position:sticky;top:90px}
   .ph-main-img{background:#ffffff;border-radius:22px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--border)}
   .ph-main-img img{width:100%;height:112%;object-fit:contain}
+  .ph-main-img video{width:100%;height:100%;object-fit:cover;display:block}
+  .ph-main-img video.product-video--portrait{transform:scale(1.06)}
+  .pv-tesa{filter:brightness(1.02)}
   .ph-trust-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
   .ph-trust-item{display:flex;align-items:center;gap:.4rem;background:var(--card);border:1px solid var(--border);border-radius:99px;padding:.4rem .85rem;font-size:.72rem;font-weight:600;color:var(--muted)}
   .ph-cat-badge{display:inline-block;text-align:left;margin:0 0 .7rem;padding:2px 9px;border-radius:99px;background:var(--card2);border:1px solid var(--border)}
@@ -1280,7 +1284,7 @@
 <div class="product-hero reveal">
   <div class="ph-gallery">
     <div class="ph-main-img">
-      <img id="ph-main-img-el" src="images/tesamorelin-5mg.jpg" alt="Flacon Tesamorelin PurePep Labs, étiquette verte, pureté HPLC ≥99%"/>
+      <video id="ph-main-img-el" class="product-video product-video--portrait pv-tesa" src="images/video/tesamorelin-5mg.mp4" autoplay muted playsinline></video>
     </div>
     <div class="ph-trust-row">
       <span class="ph-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;vertical-align:-2px;margin-right:2px"><path d="M9 2v6.5L4 18a2 2 0 0 0 1.8 3h12.4a2 2 0 0 0 1.8-3l-5-9.5V2"/><path d="M8.5 2h7"/><path d="M7.5 15h9"/></svg><span data-i18n="trust_coa">COA par lot</span></span>
@@ -1307,7 +1311,7 @@
     <div class="ph-buybox">
       <div class="ph-dose-label" data-i18n="dose_label">Dosage</div>
       <select class="ph-dose-select" id="ph-dose-select" onchange="updateHeroPrice()">
-        <option value="5mg" data-price="90.00" data-img="images/tesamorelin-5mg.jpg" selected>5 mg</option>
+        <option value="5mg" data-price="90.00" data-img="images/video/tesamorelin-5mg.mp4" selected>5 mg</option>
         <option value="10mg" data-price="130.00" data-img="images/tesamorelin-10mg.jpg">10 mg</option>
       </select>
       <div class="ph-price-row"><div><span class="ph-price" id="ph-price">$90.00</span><span class="ph-price-unit">CAD</span></div></div>
@@ -1411,13 +1415,64 @@
 </div>
 
 <script>
+function setupBoomerangVideo(v){
+  const SPEED = 0.6;
+  v.loop = false;
+  v.playbackRate = SPEED;
+  function playForward(){
+    v.playbackRate = SPEED;
+    const p = v.play();
+    if(p && p.catch) p.catch(()=>{});
+  }
+  function reversePlay(){
+    v.pause();
+    let last = null;
+    function frame(ts){
+      if(last === null) last = ts;
+      const dt = (ts - last) / 1000; last = ts;
+      v.currentTime = Math.max(0, v.currentTime - dt * SPEED);
+      if(v.currentTime > 0.02){
+        requestAnimationFrame(frame);
+      } else {
+        v.currentTime = 0;
+        playForward();
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+  v.addEventListener('ended', reversePlay);
+  if(v.readyState >= 1){ playForward(); } else { v.addEventListener('loadedmetadata', playForward, {once:true}); }
+}
+function swapHeroVisual(newSrc, alt){
+  const current = document.getElementById('ph-main-img-el');
+  if(!current || !newSrc) return;
+  const isVideo = /\.mp4(\?|$)/i.test(newSrc);
+  if(isVideo && current.tagName !== 'VIDEO'){
+    const v = document.createElement('video');
+    v.id = 'ph-main-img-el'; v.className = current.className;
+    v.src = newSrc; v.autoplay = true; v.muted = true; v.playsInline = true;
+    current.replaceWith(v);
+    setupBoomerangVideo(v);
+  } else if(!isVideo && current.tagName === 'VIDEO'){
+    const im = document.createElement('img');
+    im.id = 'ph-main-img-el'; im.className = current.className;
+    im.src = newSrc; im.alt = alt || '';
+    current.replaceWith(im);
+  } else {
+    current.src = newSrc;
+  }
+}
 function updateHeroPrice(){
   const sel = document.getElementById('ph-dose-select');
   const price = parseFloat(sel.selectedOptions[0].dataset.price);
   document.getElementById('ph-price').textContent = '$' + price.toFixed(2);
   const img = sel.selectedOptions[0].dataset.img;
-  if(img) document.getElementById('ph-main-img-el').src = img;
+  if(img) swapHeroVisual(img);
 }
+document.addEventListener('DOMContentLoaded', function(){
+  const el = document.getElementById('ph-main-img-el');
+  if(el && el.tagName === 'VIDEO') setupBoomerangVideo(el);
+});
 
 function addHeroToCartFixed(btn){
   const sel = document.getElementById('ph-dose-select');
@@ -2146,6 +2201,7 @@ function applyLang(lang){
     helpBtn.setAttribute('aria-label', helpLabel);
     helpBtn.setAttribute('title', helpLabel);
   }
+  if(typeof updateCartUI === 'function') updateCartUI();
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){
