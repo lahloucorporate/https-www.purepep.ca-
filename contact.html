@@ -557,6 +557,10 @@
     .payment-badge{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:.72rem;color:var(--muted);font-weight:600}
     .payment-badge-soon{opacity:.4;filter:grayscale(1)}
     .payment-badge-soon-label{font-size:.68rem;color:var(--muted);width:100%;margin-top:.3rem}
+    .footer-interac-badge{background:none;border:none;padding:0;border-radius:6px;overflow:hidden;display:inline-flex}
+    .footer-interac-badge .gold{background:#d4a017;color:#141414;padding:4px 8px;font-weight:800}
+    .footer-interac-badge .dark{background:#2b2b2b;color:#fff;padding:4px 8px;font-weight:800}
+    .payment-badge-hide{display:none}
     .footer-bottom{max-width:1280px;margin:0 auto;border-top:1px solid var(--border);padding-top:1.1rem;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted);flex-wrap:wrap;gap:.5rem}
 
     /* ── CART DRAWER ── */
@@ -1130,6 +1134,7 @@
   <link rel="canonical" href="https://purepep.ca/contact"/>
 </head>
 <body>
+<div class="ct-page-bg"></div>
 <div id="scroll-progress"></div>
 <div id="toast-container"></div>
 <button id="back-to-top" onclick="smoothScrollTo(0)" title="Haut de page">↑</button>
@@ -1250,9 +1255,16 @@
   .breadcrumb a:hover{color:var(--accent-l)}
   .breadcrumb .sep{margin:0 .4rem;opacity:.5}
   .breadcrumb .current{color:var(--text);font-weight:600}
-  .article-wrap{max-width:900px;margin:0 auto;padding:1.5rem 2rem 4rem}
+  .article-wrap{max-width:900px;margin:0 auto;padding:1.5rem 2rem 4rem;position:relative}
   .article-eyebrow{display:inline-flex;align-items:center;gap:.5rem;color:var(--accent-l);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem}
   .article-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.4rem;font-weight:600;line-height:1.1;margin-bottom:.7rem}
+  .ct-page-bg{position:fixed;inset:0;z-index:-1;background-image:url('images/contact-storefront.png');background-size:cover;background-position:center 30%;background-repeat:no-repeat;opacity:.13;pointer-events:none}
+  .ct-eyebrow-glow{position:relative;z-index:1;background:linear-gradient(135deg,rgba(96,165,250,.15),rgba(37,99,235,.1));border:1px solid rgba(59,130,246,.3);color:#1d4ed8}
+  .ct-gradient-text{background:linear-gradient(90deg,#60a5fa,#3b82f6,#2563eb);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .ct-icon{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:9px;margin-right:.5rem;vertical-align:-9px}
+  .ct-icon-mail{background:rgba(37,99,235,.12);color:#2563eb}
+  .ct-icon-clock{background:rgba(5,150,105,.12);color:#059669}
+  .ct-icon-help{background:rgba(124,58,237,.12);color:#7c3aed}
   .article-meta{font-size:.8rem;color:var(--muted);margin-bottom:2rem}
   .article-body h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.5rem;font-weight:700;margin:2rem 0 .8rem}
   .article-body h2:first-child{margin-top:0}
@@ -1268,7 +1280,7 @@
   .article-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.85rem}
   .article-table th,.article-table td{padding:.6rem .8rem;border:1px solid var(--border);text-align:left}
   .article-table th{background:var(--card2);font-weight:700}
-  .placeholder-banner{background:rgba(251,146,60,.12);border:1px solid rgba(251,146,60,.35);border-radius:12px;padding:1rem 1.3rem;margin-bottom:2rem;font-size:.82rem;color:#4a4a4a;line-height:1.6}
+  .placeholder-banner{position:relative;z-index:1;background:rgba(251,146,60,.12);border:1px solid rgba(251,146,60,.35);border-radius:12px;padding:1rem 1.3rem;margin-bottom:2rem;font-size:.82rem;color:#4a4a4a;line-height:1.6}
   .placeholder-banner strong{display:block;margin-bottom:.3rem}
   .glossary-term{margin-bottom:1.3rem;padding-bottom:1.3rem;border-bottom:1px solid var(--border)}
   .glossary-term:last-child{border-bottom:none}
@@ -1287,25 +1299,20 @@
 <div class="back-to-catalog"><a href="index.html#produits" class="back-to-catalog-inner" data-i18n="back_to_catalog">← Voir tous les peptides</a></div>
 <div class="article-wrap reveal">
 
-  <div class="article-eyebrow" data-i18n="ct_eyebrow">On est là</div>
-  <h1 class="article-title" data-i18n="ct_h1">Contact</h1>
-
-  <div class="placeholder-banner">
-    <div data-i18n="ct_banner"><strong><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M12 2 2 20h20z"/><path d="M12 9v5M12 17h.01"/></svg>Coordonnées à compléter</strong>
-    Remplace les champs ci-dessous par tes vrais moyens de contact une fois définis (email, éventuel formulaire connecté à un service réel).</div>
-  </div>
+  <div class="article-eyebrow ct-eyebrow-glow" data-i18n="ct_eyebrow">On est là</div>
+  <h1 class="article-title"><span class="ct-gradient-text" data-i18n="ct_h1">Contact</span></h1>
 
   <div class="article-body">
-    <h2 data-i18n="ct_s1_h">Par email</h2>
-    <p data-i18n="ct_s1_p">Pour toute question sur un produit, une commande, un certificat d'analyse (COA) ou notre catalogue : <strong>[EMAIL DE CONTACT]</strong></p>
+    <h2><span class="ct-icon ct-icon-mail"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span><span data-i18n="ct_s1_h">Par email</span></h2>
+    <p data-i18n="ct_s1_p">Pour toute question sur un produit, une commande, un certificat d'analyse (COA) ou notre catalogue : <strong><a href="mailto:support@purepep.ca" style="color:inherit">support@purepep.ca</a></strong></p>
 
-    <h2 data-i18n="ct_s2_h">Délai de réponse</h2>
+    <h2><span class="ct-icon ct-icon-clock"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><span data-i18n="ct_s2_h">Délai de réponse</span></h2>
     <p data-i18n="ct_s2_p">Nous répondons généralement sous 24 à 48h ouvrées.</p>
 
-    <h2 data-i18n="ct_s3_h">Question fréquente&nbsp;?</h2>
+    <h2><span class="ct-icon ct-icon-help"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5"/><path d="M12 17h.01"/></svg></span><span data-i18n="ct_s3_h">Question fréquente&nbsp;?</span></h2>
     <p data-i18n="ct_s3_p">Avant de nous écrire, un tour par notre <a href="faq.html">FAQ</a> ou nos <a href="guides.html">guides</a> répond peut-être déjà à ta question.</p>
   </div>
-  
+
 </div>
 <!-- ── FOOTER ── -->
 <footer>
@@ -1316,12 +1323,12 @@
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
-        <span class="payment-badge payment-badge-logo" title="Interac e-Transfer"><img src="images/interac.png" alt="Interac e-Transfer" style="height:16px;width:auto;display:block" onerror="this.parentElement.outerHTML=&quot;<span class=&#39;payment-badge&#39;>Interac e-Transfer</span>&quot;"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
+        <span class="payment-badge footer-interac-badge" title="Interac e-Transfer"><span class="gold">Interac</span><span class="dark">e-Transfer</span></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Apple Pay — bientôt disponible"><img src="images/applepay.png" alt="Apple Pay" style="height:16px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Google Pay — bientôt disponible"><img src="images/googlepay.png" alt="Google Pay" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte, Apple Pay, Google Pay</span>
+        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte de crédit, Apple Pay, Google Pay</span>
       </div>
     </div>
     <div class="footer-col"><h4 data-i18n="footer_products">Produits</h4><ul><li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li><li><a href="index.html#produits" data-i18n="footer_categories">Catégories</a></li><li><a href="packs.html" data-i18n="footer_packs">Packs</a></li><li><a href="calculateur.html" data-i18n="footer_calculator">Calculateur de dosage</a></li><li><a href="index.html#produits" data-i18n="footer_accessories">Accessoires</a></li><li><a href="index.html#produits" data-i18n="footer_new">Nouveautés</a></li></ul></div>
@@ -1850,7 +1857,7 @@ const I18N = {
     ct_eyebrow: "We're here",
     ct_h1: "Contact",
     ct_banner: '<strong><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M12 2 2 20h20z"/><path d="M12 9v5M12 17h.01"/></svg>Contact details to complete</strong>Replace the fields below with your real contact methods once defined (email, possibly a form connected to a real service).',
-    ct_s1_h: "By email", ct_s1_p: "For any question about a product, an order, a certificate of analysis (COA), or our catalog: <strong>[CONTACT EMAIL]</strong>",
+    ct_s1_h: "By email", ct_s1_p: "For any question about a product, an order, a certificate of analysis (COA), or our catalog: <strong><a href=\"mailto:support@purepep.ca\" style=\"color:inherit\">support@purepep.ca</a></strong>",
     ct_s2_h: "Response time", ct_s2_p: "We typically reply within 24 to 48 business hours.",
     ct_s3_h: "Frequent question?", ct_s3_p: 'Before writing to us, a look at our <a href="faq.html">FAQ</a> or our <a href="guides.html">guides</a> may already answer your question.',
     age_gate_title: "Just a moment before entering",
@@ -1883,7 +1890,7 @@ const I18N = {
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
     footer_privacy: "Privacy Policy", footer_products: "Products", footer_shipping: "Shipping Policy", footer_refund: "Refund Policy",
-    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: card, Apple Pay, Google Pay",
+    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: credit card, Apple Pay, Google Pay",
     gtcat1: "Protocol", gtcat2: "Comparison",
     gtcat3: "Science", gtcat4: "Legal framework",
     gtcat5: "Quality", gtcat6: "Glossary",

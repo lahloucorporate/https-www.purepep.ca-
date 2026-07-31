@@ -556,6 +556,10 @@
     .payment-badge{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:.72rem;color:var(--muted);font-weight:600}
     .payment-badge-soon{opacity:.4;filter:grayscale(1)}
     .payment-badge-soon-label{font-size:.68rem;color:var(--muted);width:100%;margin-top:.3rem}
+    .footer-interac-badge{background:none;border:none;padding:0;border-radius:6px;overflow:hidden;display:inline-flex}
+    .footer-interac-badge .gold{background:#d4a017;color:#141414;padding:4px 8px;font-weight:800}
+    .footer-interac-badge .dark{background:#2b2b2b;color:#fff;padding:4px 8px;font-weight:800}
+    .payment-badge-hide{display:none}
     .footer-bottom{max-width:1280px;margin:0 auto;border-top:1px solid var(--border);padding-top:1.1rem;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted);flex-wrap:wrap;gap:.5rem}
 
     /* ── CART DRAWER ── */
@@ -1250,6 +1254,7 @@
   @media(max-width:640px){.back-to-catalog{padding:0 1.3rem}}
 
   .checkout-header{text-align:center;max-width:640px;margin:0 auto;padding:1.8rem 2rem 1rem}
+  .ck-eyebrow-glow{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(120deg,rgba(45,212,191,.14),rgba(96,165,250,.14));border:1px solid rgba(96,165,250,.35);color:#1a5fbf;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .9rem;border-radius:99px;margin-bottom:.9rem}
   .checkout-header h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.2rem;font-weight:600;margin-bottom:.5rem}
   .checkout-header p{color:var(--muted);font-size:.88rem}
 
@@ -1300,7 +1305,8 @@
   .pay-method-logos{display:flex;align-items:center;justify-content:center;gap:.4rem;height:24px}
   .pay-method-logos img{height:20px;width:auto;object-fit:contain;display:block}
   .pay-method span{font-size:.72rem;font-weight:700;color:var(--muted)}
-  .pay-secure-note{display:flex;align-items:center;gap:.4rem;font-size:.74rem;color:var(--muted);margin-top:-.6rem;margin-bottom:1rem}
+  .pay-secure-note{display:flex;align-items:flex-start;gap:.5rem;font-size:.74rem;color:var(--muted);margin-top:-.6rem;margin-bottom:1rem;line-height:1.5}
+  .pay-secure-note svg{flex-shrink:0;margin-top:.1rem}
 
   .mobile-pay-panel{
     display:flex;align-items:center;gap:1.2rem;background:var(--card2);border:1px solid var(--border);
@@ -1312,11 +1318,32 @@
   .mobile-pay-text p{font-size:.76rem;color:var(--muted);line-height:1.5;margin:0}
 
   .pay-methods-single{grid-template-columns:1fr}
-  .interac-instructions{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:1.1rem 1.3rem;display:flex;flex-direction:column;gap:.6rem}
+  .step-icon-payment{background:rgba(59,130,246,.14) !important;color:#2563eb}
+  .pay-method.selected.interac-badge{
+    border:2px solid rgba(212,160,23,.5);background:linear-gradient(135deg,rgba(212,160,23,.08),rgba(43,43,43,.04));
+    box-shadow:0 0 0 2px rgba(212,160,23,.12);
+  }
+  .interac-logo-badge{display:flex;align-items:center;border-radius:6px;overflow:hidden;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:.78rem;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+  .interac-logo-badge span{padding:.3rem .55rem;display:inline-block}
+  .interac-logo-badge .gold{background:#d4a017;color:#141414}
+  .interac-logo-badge .dark{background:#2b2b2b;color:#fff}
+  .interac-instructions{background:linear-gradient(135deg,rgba(59,130,246,.05),rgba(59,130,246,.01));border:2px solid rgba(59,130,246,.3);border-radius:14px;padding:1.2rem 1.4rem;display:flex;flex-direction:column;gap:.5rem}
   .interac-instructions-row{display:flex;justify-content:space-between;align-items:baseline;gap:.8rem;font-size:.82rem;flex-wrap:wrap}
   .interac-instructions-row span{color:var(--muted)}
   .interac-instructions-row strong{color:var(--text);font-weight:700}
   .interac-instructions-note{font-size:.76rem;color:var(--muted);line-height:1.5;margin:0;border-top:1px solid var(--border);padding-top:.6rem}
+  .interac-business-note{font-size:.75rem;color:var(--muted);font-style:italic;line-height:1.5;margin:0}
+  .interac-warning-box{background:rgba(245,158,11,.1);border:1.5px solid rgba(245,158,11,.4);border-radius:10px;padding:.8rem 1rem;margin-top:.4rem}
+  .interac-warning-box strong{display:block;color:#b45309;font-size:.8rem;margin-bottom:.25rem}
+  .interac-warning-box p{color:#92400e;font-size:.76rem;line-height:1.5;margin:0}
+  .interac-trust-grid{display:flex;flex-direction:column;gap:.7rem;margin-top:.7rem}
+  .interac-trust-item{display:flex;gap:.7rem;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.7rem .9rem}
+  .interac-trust-icon{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+  .interac-trust-item:nth-child(1) .interac-trust-icon{background:rgba(34,197,94,.14);color:#16a34a}
+  .interac-trust-item:nth-child(2) .interac-trust-icon{background:rgba(59,130,246,.14);color:#2563eb}
+  .interac-trust-item:nth-child(3) .interac-trust-icon{background:rgba(168,85,247,.14);color:#9333ea}
+  .interac-trust-item strong{display:block;font-size:.8rem;margin-bottom:.15rem}
+  .interac-trust-item p{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
 
   .checkout-sidebar{position:sticky;top:90px}
   .recap-items{display:flex;flex-direction:column;gap:.7rem;margin-bottom:1rem;max-height:280px;overflow-y:auto}
@@ -1330,6 +1357,17 @@
   .ship-saved{color:var(--accent-l);font-weight:700;font-size:.72rem}
   .recap-row.total{border-top:1px solid var(--border);margin-top:.6rem;padding-top:.9rem;font-size:1.1rem;font-weight:800;color:var(--text)}
   .recap-row.total .val{color:var(--accent-l);font-family:'Plus Jakarta Sans',sans-serif;font-size:1.5rem}
+  #recap-promo-row{color:#16a34a;font-weight:700}
+  .promo-code-box{margin:.7rem 0;padding-top:.6rem;border-top:1px solid var(--border)}
+  .promo-code-box label{display:block;font-size:.76rem;font-weight:700;color:var(--muted);margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.03em}
+  .promo-code-row{display:flex;gap:.5rem}
+  .promo-code-row input{flex:1;min-width:0;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:.55rem .7rem;border-radius:8px;font-size:.85rem;text-transform:uppercase}
+  .promo-code-row input:focus{outline:none;border-color:var(--accent)}
+  .promo-code-row button{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:.55rem 1rem;border-radius:8px;font-size:.82rem;font-weight:700;white-space:nowrap;transition:all .2s}
+  .promo-code-row button:hover{border-color:var(--accent);background:var(--card)}
+  .promo-msg{font-size:.76rem;margin-top:.45rem;min-height:1em}
+  .promo-msg-ok{color:#16a34a;font-weight:600}
+  .promo-msg-err{color:#dc2626;font-weight:600}
   .btn-confirm-order{
     width:100%;background:var(--accent-d);color:#fff;padding:.95rem;border-radius:10px;font-weight:700;
     font-size:.92rem;margin-top:1rem;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:.5rem;
@@ -1365,6 +1403,7 @@
 <div class="back-to-catalog"><a href="index.html#produits" class="back-to-catalog-inner" data-i18n="back_to_catalog">← Voir tous les peptides</a></div>
 
 <div class="checkout-header">
+  <div class="ck-eyebrow-glow"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span data-i18n="ck_eyebrow">Commande sécurisée</span></div>
   <h1 data-i18n="checkout_title">Finaliser ma commande</h1>
   <p data-i18n="checkout_subtitle">Paiement sécurisé · Expédié le jour même avant 14h, sinon sous 24h</p>
 </div>
@@ -1431,25 +1470,59 @@
     </div>
 
     <div class="checkout-card">
-      <h2><span class="step-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span> <span data-i18n="ck_h2_payment">Moyen de paiement</span></h2>
+      <h2><span class="step-icon step-icon-payment"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span> <span data-i18n="ck_h2_payment">Moyen de paiement</span></h2>
       <div class="pay-methods pay-methods-single">
-        <div class="pay-method selected" onclick="selectPayMethod(this)" data-method="interac">
-          <div class="pay-method-logos"><img src="images/interac.png" alt="Interac" onerror="this.style.display='none'"/></div>
+        <div class="pay-method selected interac-badge" onclick="selectPayMethod(this)" data-method="interac">
+          <div class="pay-method-logos">
+            <div class="interac-logo-badge"><span class="gold">Interac</span><span class="dark">e-Transfer</span></div>
+          </div>
           <span data-i18n="ck_pay_interac">Virement Interac</span>
         </div>
       </div>
-      <p class="pay-secure-note"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span data-i18n="ck_secure_note_interac">D'autres moyens de paiement (crypto, carte) seront ajoutés prochainement. Pour l'instant, la commande se finalise par virement Interac.</span></p>
+      <p class="pay-secure-note"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span data-i18n="ck_secure_note_interac">D'autres moyens de paiement (crypto, carte de crédit) seront ajoutés prochainement. Pour l'instant, la commande se finalise par virement Interac.</span></p>
 
       <div class="interac-instructions">
         <div class="interac-instructions-row">
-          <span data-i18n="ck_interac_email_label">Envoyer le virement à :</span>
-          <strong id="interac-email-display">paiements@purepeplabs.com</strong>
+          <span data-i18n="ck_etf_email">1. Courriel :</span>
+          <strong id="interac-email-display">orders@purepep.ca</strong>
         </div>
         <div class="interac-instructions-row">
-          <span data-i18n="ck_interac_ref_label">Référence à indiquer :</span>
+          <span data-i18n="ck_etf_business">2. Nom de l'entreprise :</span>
+          <strong>9572-6683 Québec inc.</strong>
+        </div>
+        <div class="interac-instructions-row">
+          <span data-i18n="ck_etf_amount">3. Montant :</span>
+          <strong id="interac-amount-display">$0.00</strong>
+        </div>
+        <div class="interac-instructions-row">
+          <span data-i18n="ck_interac_ref_label">4. Message :</span>
           <strong data-i18n="ck_interac_ref_note">le numéro de commande (généré à la prochaine étape)</strong>
         </div>
+        <div class="interac-instructions-row">
+          <span data-i18n="ck_etf_security">5. Question de sécurité :</span>
+          <strong data-i18n="ck_etf_security_val">Non requise (dépôt automatique)</strong>
+        </div>
+        <p class="interac-business-note" data-i18n="ck_business_note">Le nom "9572-6683 Québec inc." est notre entité légale enregistrée — c'est bien nous, pas d'inquiétude si ce nom apparaît lors du virement.</p>
         <p class="interac-instructions-note" data-i18n="ck_interac_note">Votre commande est réservée dès sa réception. Elle est préparée et expédiée dès que le virement est confirmé (habituellement sous quelques heures).</p>
+        <div class="interac-warning-box">
+          <strong data-i18n="ck_warning_title">⚠️ Important</strong>
+          <p data-i18n="ck_warning_text">N'incluez pas de noms de produits dans le champ message. Si un nom de produit y est indiqué, le paiement devra être retourné et la commande annulée.</p>
+        </div>
+      </div>
+
+      <div class="interac-trust-grid">
+        <div class="interac-trust-item">
+          <div class="interac-trust-icon"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <div><strong data-i18n="ck_trust1_t">Compte d'affaires vérifié</strong><p data-i18n="ck_trust1_p">Traitement sécurisé et instantané grâce au dépôt automatique.</p></div>
+        </div>
+        <div class="interac-trust-item">
+          <div class="interac-trust-icon"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="14" height="11"/><path d="M15 8h4l3 3v4h-7z"/><circle cx="5.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></div>
+          <div><strong data-i18n="ck_trust2_t">Expédition rapide</strong><p data-i18n="ck_trust2_p">Commandes traitées et expédiées depuis notre installation de Montréal, Québec, sous 1 jour ouvrable (si reçues avant 14h).</p></div>
+        </div>
+        <div class="interac-trust-item">
+          <div class="interac-trust-icon"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></div>
+          <div><strong data-i18n="ck_trust3_t">Suivi de commande</strong><p data-i18n="ck_trust3_p">Vous recevrez un numéro de suivi par courriel sous 4 à 24h. Vérifiez vos courriels indésirables — certains fournisseurs filtrent le mot "peptide".</p></div>
+        </div>
       </div>
     </div>
 
@@ -1461,6 +1534,15 @@
       <div class="recap-items" id="recap-items"></div>
       <div class="recap-row"><span data-i18n="ck_recap_subtotal">Sous-total</span><span id="recap-subtotal">$0.00</span></div>
       <div class="recap-row"><span data-i18n="ck_recap_shipping">Livraison</span><span id="recap-shipping">$4.90</span></div>
+      <div class="recap-row" id="recap-promo-row" style="display:none"><span data-i18n="ck_recap_promo">Réduction</span><span id="recap-promo-value">-$0.00</span></div>
+      <div class="promo-code-box">
+        <label for="promo-input" data-i18n="ck_promo_label">Code promo</label>
+        <div class="promo-code-row">
+          <input type="text" id="promo-input" data-i18n-placeholder="ck_promo_placeholder" placeholder="Entrer le code" onkeydown="if(event.key==='Enter'){event.preventDefault();applyPromoCode();}"/>
+          <button type="button" onclick="applyPromoCode()" data-i18n="ck_promo_apply">Appliquer</button>
+        </div>
+        <p id="promo-msg" class="promo-msg"></p>
+      </div>
       <div class="recap-row total"><span data-i18n="ck_recap_total">Total</span><span class="val" id="recap-total">$0.00</span></div>
       <button class="btn-confirm-order" onclick="confirmOrder()"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span data-i18n="confirm_pay_btn">Confirmer et payer</span></button>
       <div class="trust-badges-row">
@@ -1856,10 +1938,12 @@ function confirmOrder(){
   document.getElementById('step-3').classList.add('active');
   document.getElementById('sep-2').classList.add('filled');
   const orderNumber = 'BP-' + Date.now().toString().slice(-8);
+  const preDiscountTotal = getCartTotal() + getShippingCost();
   const orderData = {
     number: orderNumber,
     items: cart,
-    total: getCartTotal() + getShippingCost(),
+    total: Math.max(0, preDiscountTotal - getPromoDiscount(getCartTotal())),
+    promoCode: appliedPromo ? appliedPromo.code : null,
     email: document.getElementById('ck-email').value,
     firstname: document.getElementById('ck-firstname').value,
     date: new Date().toISOString(),
@@ -1882,12 +1966,12 @@ function confirmOrder(){
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
-        <span class="payment-badge payment-badge-logo" title="Interac e-Transfer"><img src="images/interac.png" alt="Interac e-Transfer" style="height:16px;width:auto;display:block" onerror="this.parentElement.outerHTML=&quot;<span class=&#39;payment-badge&#39;>Interac e-Transfer</span>&quot;"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
+        <span class="payment-badge footer-interac-badge" title="Interac e-Transfer"><span class="gold">Interac</span><span class="dark">e-Transfer</span></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Apple Pay — bientôt disponible"><img src="images/applepay.png" alt="Apple Pay" style="height:16px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Google Pay — bientôt disponible"><img src="images/googlepay.png" alt="Google Pay" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte, Apple Pay, Google Pay</span>
+        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte de crédit, Apple Pay, Google Pay</span>
       </div>
     </div>
     <div class="footer-col"><h4 data-i18n="footer_products">Produits</h4><ul><li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li><li><a href="index.html#produits" data-i18n="footer_categories">Catégories</a></li><li><a href="packs.html" data-i18n="footer_packs">Packs</a></li><li><a href="calculateur.html" data-i18n="footer_calculator">Calculateur de dosage</a></li><li><a href="index.html#produits" data-i18n="footer_accessories">Accessoires</a></li><li><a href="index.html#produits" data-i18n="footer_new">Nouveautés</a></li></ul></div>
@@ -2143,8 +2227,60 @@ function renderRecap(){
   } else {
     shipMsgEl.textContent = '$' + shipping.toFixed(2);
   }
-  document.getElementById('recap-total').textContent = '$' + (subtotal + shipping).toFixed(2);
+  const discount = getPromoDiscount(subtotal);
+  const promoRowEl = document.getElementById('recap-promo-row');
+  if(discount > 0){
+    promoRowEl.style.display = 'flex';
+    document.getElementById('recap-promo-value').textContent = '-$' + discount.toFixed(2);
+  } else {
+    promoRowEl.style.display = 'none';
+  }
+  const finalTotal = Math.max(0, subtotal + shipping - discount);
+  document.getElementById('recap-total').textContent = '$' + finalTotal.toFixed(2);
+  const interacAmountEl = document.getElementById('interac-amount-display');
+  if(interacAmountEl) interacAmountEl.textContent = '$' + finalTotal.toFixed(2);
 }
+
+// ── CODES PROMO ──
+// Ajoute ici les vrais codes une fois qu'on les aura décidés ensemble.
+// Format: 'CODE': { type: 'percent', value: 10 }  ou  { type: 'fixed', value: 5 }
+const PROMO_CODES = {
+  // 'BIENVENUE10': { type: 'percent', value: 10 },
+};
+let appliedPromo = null;
+
+function getPromoDiscount(subtotal){
+  if(!appliedPromo) return 0;
+  if(appliedPromo.type === 'percent') return subtotal * (appliedPromo.value / 100);
+  if(appliedPromo.type === 'fixed') return Math.min(appliedPromo.value, subtotal);
+  return 0;
+}
+
+function applyPromoCode(){
+  const input = document.getElementById('promo-input');
+  const code = input.value.trim().toUpperCase();
+  const msgEl = document.getElementById('promo-msg');
+  const isEn = localStorage.getItem('purepep_lang') === 'en';
+  if(!code){
+    appliedPromo = null;
+    msgEl.textContent = '';
+    msgEl.className = 'promo-msg';
+    renderRecap();
+    return;
+  }
+  const promo = PROMO_CODES[code];
+  if(promo){
+    appliedPromo = Object.assign({code}, promo);
+    msgEl.textContent = isEn ? `Code "${code}" applied!` : `Code « ${code} » appliqué !`;
+    msgEl.className = 'promo-msg promo-msg-ok';
+  } else {
+    appliedPromo = null;
+    msgEl.textContent = isEn ? 'Invalid code.' : 'Code invalide.';
+    msgEl.className = 'promo-msg promo-msg-err';
+  }
+  renderRecap();
+}
+
 renderRecap();
 
 function updateCartUI(){
@@ -2472,14 +2608,32 @@ const I18N = {
     ck_pay_interac: "Interac e-Transfer",
     ck_ship_msg_prefix: "Only", ck_ship_msg_suffix: "left for free shipping",
     ck_secure_note: "Your payment information is encrypted and never passes through our servers.",
-    ck_secure_note_interac: "Other payment methods (crypto, card) will be added soon. For now, orders are finalized by Interac e-Transfer.",
+    ck_secure_note_interac: "Other payment methods (crypto, credit card) will be added soon. For now, orders are finalized by Interac e-Transfer.",
     ck_interac_email_label: "Send the transfer to:",
-    ck_interac_ref_label: "Reference to include:",
+    ck_interac_ref_label: "4. Message:",
     ck_interac_ref_note: "your order number (generated on the next step)",
     ck_interac_note: "Your order is reserved as soon as it's received. It's prepared and shipped as soon as the transfer is confirmed (usually within a few hours).",
+    ck_etf_email: "1. Email:",
+    ck_etf_business: "2. Business Name:",
+    ck_etf_amount: "3. Amount:",
+    ck_etf_security: "5. Security Question:",
+    ck_etf_security_val: "Not required (Auto-Deposit)",
+    ck_business_note: "The name \"9572-6683 Québec inc.\" is our registered legal entity — that's really us, no need to worry if this name appears during the transfer.",
+    ck_warning_title: "⚠️ Important",
+    ck_warning_text: "Do not include product names in the message field. If a product name is included, the payment must be returned and the order cancelled.",
+    ck_trust1_t: "Verified Business Account",
+    ck_trust1_p: "Secure, instant processing via Auto-Deposit.",
+    ck_trust2_t: "Fast Dispatch",
+    ck_trust2_p: "Orders are processed and shipped from our Montreal, Quebec facility within 1 business day (if received before 2pm).",
+    ck_trust3_t: "Tracking",
+    ck_trust3_p: "You'll receive a tracking number via email within 4-24 hours. Check your spam folder if you don't see it, as some providers filter the word \"peptide\".",
     ck_mobile_pay_t: "Pay directly from your phone",
     ck_mobile_pay_p: "Scan this code with your phone's camera to complete your purchase with Apple Pay or Google Pay, without re-entering your information.",
     ck_recap_subtotal: "Subtotal", ck_recap_shipping: "Shipping", ck_recap_total: "Total",
+    ck_recap_promo: "Discount",
+    ck_promo_label: "Promo code",
+    ck_promo_placeholder: "Enter code",
+    ck_promo_apply: "Apply",
     ck_discreet_packaging: "Discreet packaging",
     ck_empty_h2: "Your cart is empty",
     ck_empty_p: "Add products to your cart before checking out.",
@@ -2498,6 +2652,7 @@ const I18N = {
     age_gate_legal: "By continuing, you confirm you are of legal age and accept our terms of use.",
     checkout_title: "Complete my order",
     checkout_subtitle: "Secure payment · Shipped same day before 2pm, otherwise within 24h",
+    ck_eyebrow: "Secure order",
     ship_ca_name: "Canada Post Expedited", ship_ca_desc: "2-5 business days",
     ship_xpress_name: "Canada Post Xpresspost", ship_xpress_desc: "1-2 business days",
     ship_us_name: "US Shipping", ship_us_desc: "3-5 business days",
@@ -2527,7 +2682,7 @@ const I18N = {
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
     footer_privacy: "Privacy Policy", footer_products: "Products", footer_shipping: "Shipping Policy", footer_refund: "Refund Policy",
-    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: card, Apple Pay, Google Pay",
+    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: credit card, Apple Pay, Google Pay",
     gtcat1: "Protocol", gtcat2: "Comparison",
     gtcat3: "Science", gtcat4: "Legal framework",
     gtcat5: "Quality", gtcat6: "Glossary",

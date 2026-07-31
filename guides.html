@@ -557,6 +557,10 @@
     .payment-badge{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:.72rem;color:var(--muted);font-weight:600}
     .payment-badge-soon{opacity:.4;filter:grayscale(1)}
     .payment-badge-soon-label{font-size:.68rem;color:var(--muted);width:100%;margin-top:.3rem}
+    .footer-interac-badge{background:none;border:none;padding:0;border-radius:6px;overflow:hidden;display:inline-flex}
+    .footer-interac-badge .gold{background:#d4a017;color:#141414;padding:4px 8px;font-weight:800}
+    .footer-interac-badge .dark{background:#2b2b2b;color:#fff;padding:4px 8px;font-weight:800}
+    .payment-badge-hide{display:none}
     .footer-bottom{max-width:1280px;margin:0 auto;border-top:1px solid var(--border);padding-top:1.1rem;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted);flex-wrap:wrap;gap:.5rem}
 
     /* ── CART DRAWER ── */
@@ -1279,15 +1283,24 @@
     .article-wrap{padding:1.2rem 1.3rem 3rem}
     .breadcrumb{padding:1rem 1.3rem 0}
   }
+  .gd-glow-bg{position:absolute;top:-3rem;left:50%;transform:translateX(-50%);width:900px;max-width:140vw;height:340px;background:radial-gradient(ellipse at 30% 20%,rgba(96,165,250,.16),transparent 60%),radial-gradient(ellipse at 75% 10%,rgba(59,130,246,.14),transparent 55%);filter:blur(10px);pointer-events:none;z-index:0}
+  .gd-eyebrow-glow{background:linear-gradient(120deg,rgba(96,165,250,.14),rgba(59,130,246,.14));border:1px solid rgba(59,130,246,.35);color:#1d4ed8;padding:.4rem .9rem;border-radius:99px;position:relative;z-index:1}
+  .gd-gradient-text{background:linear-gradient(120deg,#60a5fa,#3b82f6 50%,#2563eb);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .guide-card{border-color:rgba(59,130,246,.15)}
+  .guide-card:hover{border-color:rgba(59,130,246,.35)}
+  .guide-img{background:linear-gradient(135deg,rgba(96,165,250,.18),rgba(37,99,235,.08))}
+  .guide-img svg{stroke:#2563eb}
+  .guide-cat{background:rgba(37,99,235,.12);color:#1d4ed8;display:inline-block;padding:.2rem .6rem;border-radius:99px}
 </style>
 
 <div class="breadcrumb">
   <a href="index.html" data-i18n="breadcrumb_home">Accueil</a><span class="sep">/</span><span class="current">Guides & Protocoles</span>
 </div>
 <div class="back-to-catalog"><a href="index.html#produits" class="back-to-catalog-inner" data-i18n="back_to_catalog">← Voir tous les peptides</a></div>
-<div class="section reveal" style="max-width:1280px;margin:0 auto;padding:1.5rem 2rem 4rem">
-  <div class="article-eyebrow" data-i18n="gd_eyebrow">Ressources · L'essentiel à savoir</div>
-  <h1 class="article-title" style="margin-bottom:.6rem" data-i18n="gd_h1">Guides & Protocoles</h1>
+<div class="section reveal" style="max-width:1280px;margin:0 auto;padding:1.5rem 2rem 4rem;position:relative">
+  <div class="gd-glow-bg"></div>
+  <div class="article-eyebrow gd-eyebrow-glow" data-i18n="gd_eyebrow">Ressources · L'essentiel à savoir</div>
+  <h1 class="article-title" style="margin-bottom:.6rem;position:relative;z-index:1"><span class="gd-gradient-text" data-i18n="gd_h1">Guides & Protocoles</span></h1>
   <p data-i18n="gd_lead" style="color:var(--muted);font-size:.92rem;margin:0 0 1.8rem;max-width:640px">Dosage, qualité, cadre légal, glossaire, la référence pratique à garder sous la main. Pour l'actualité et les mécanismes d'action détaillés, direction le <a href="blog.html">Blog</a>.</p>
   <div class="guides-grid">
     <a href="calculateur.html" class="guide-card"><div class="guide-img"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="var(--accent-d)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r=".6" fill="var(--accent-d)" stroke="none"/><circle cx="12" cy="11" r=".6" fill="var(--accent-d)" stroke="none"/><circle cx="16" cy="11" r=".6" fill="var(--accent-d)" stroke="none"/><circle cx="8" cy="15" r=".6" fill="var(--accent-d)" stroke="none"/><circle cx="12" cy="15" r=".6" fill="var(--accent-d)" stroke="none"/><circle cx="16" cy="15" r=".6" fill="var(--accent-d)" stroke="none"/></svg></div><div class="guide-body"><p class="guide-cat" data-i18n="gd1_cat">Protocole</p><p class="guide-title" data-i18n="gd1_title">Calculateur de dosage et guide de reconstitution</p><p class="guide-date" data-i18n="gd1_date">Outil interactif</p></div></a>
@@ -1308,12 +1321,12 @@
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
-        <span class="payment-badge payment-badge-logo" title="Interac e-Transfer"><img src="images/interac.png" alt="Interac e-Transfer" style="height:16px;width:auto;display:block" onerror="this.parentElement.outerHTML=&quot;<span class=&#39;payment-badge&#39;>Interac e-Transfer</span>&quot;"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
+        <span class="payment-badge footer-interac-badge" title="Interac e-Transfer"><span class="gold">Interac</span><span class="dark">e-Transfer</span></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Apple Pay — bientôt disponible"><img src="images/applepay.png" alt="Apple Pay" style="height:16px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Google Pay — bientôt disponible"><img src="images/googlepay.png" alt="Google Pay" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte, Apple Pay, Google Pay</span>
+        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte de crédit, Apple Pay, Google Pay</span>
       </div>
     </div>
     <div class="footer-col"><h4 data-i18n="footer_products">Produits</h4><ul><li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li><li><a href="index.html#produits" data-i18n="footer_categories">Catégories</a></li><li><a href="packs.html" data-i18n="footer_packs">Packs</a></li><li><a href="calculateur.html" data-i18n="footer_calculator">Calculateur de dosage</a></li><li><a href="index.html#produits" data-i18n="footer_accessories">Accessoires</a></li><li><a href="index.html#produits" data-i18n="footer_new">Nouveautés</a></li></ul></div>
@@ -1879,7 +1892,7 @@ const I18N = {
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
     footer_privacy: "Privacy Policy", footer_products: "Products", footer_shipping: "Shipping Policy", footer_refund: "Refund Policy",
-    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: card, Apple Pay, Google Pay",
+    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: credit card, Apple Pay, Google Pay",
     gtcat1: "Protocol", gtcat2: "Comparison",
     gtcat3: "Science", gtcat4: "Legal framework",
     gtcat5: "Quality", gtcat6: "Glossary",

@@ -555,6 +555,10 @@
     .payment-badge{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:.72rem;color:var(--muted);font-weight:600}
     .payment-badge-soon{opacity:.4;filter:grayscale(1)}
     .payment-badge-soon-label{font-size:.68rem;color:var(--muted);width:100%;margin-top:.3rem}
+    .footer-interac-badge{background:none;border:none;padding:0;border-radius:6px;overflow:hidden;display:inline-flex}
+    .footer-interac-badge .gold{background:#d4a017;color:#141414;padding:4px 8px;font-weight:800}
+    .footer-interac-badge .dark{background:#2b2b2b;color:#fff;padding:4px 8px;font-weight:800}
+    .payment-badge-hide{display:none}
     .footer-bottom{max-width:1280px;margin:0 auto;border-top:1px solid var(--border);padding-top:1.1rem;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted);flex-wrap:wrap;gap:.5rem}
 
     /* ── CART DRAWER ── */
@@ -1234,24 +1238,28 @@
 <style>
   .confirm-wrap{max-width:640px;margin:0 auto;padding:3.5rem 2rem 4rem;text-align:center}
   .confirm-icon{
-    width:72px;height:72px;border-radius:50%;background:rgba(85,85,85,.12);color:var(--accent-d);
+    width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;
     display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.3rem;
+    box-shadow:0 8px 20px rgba(34,197,94,.3);
   }
   .confirm-wrap h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.1rem;font-weight:600;margin-bottom:.6rem}
   .confirm-wrap p{color:var(--muted);font-size:.92rem;line-height:1.6}
   .confirm-order-num{
-    display:inline-block;background:var(--card2);border:1px solid var(--border);border-radius:99px;
-    padding:.5rem 1.3rem;font-weight:800;color:var(--accent-d);margin:1.2rem 0 1.8rem;font-size:.9rem;
+    display:inline-block;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.35);border-radius:99px;
+    padding:.5rem 1.3rem;font-weight:800;color:#15803d;margin:1.2rem 0 1.8rem;font-size:.9rem;
   }
   .confirm-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:1.6rem;margin:1.5rem 0;text-align:left}
   .confirm-items{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1rem}
   .confirm-item{display:flex;justify-content:space-between;font-size:.86rem}
   .confirm-item-dose{font-size:.72rem;color:var(--muted);display:block}
   .confirm-total-row{display:flex;justify-content:space-between;border-top:1px solid var(--border);padding-top:.9rem;margin-top:.6rem;font-weight:800;font-size:1.05rem}
-  .confirm-total-row .val{color:var(--accent-l);font-family:'Plus Jakarta Sans',sans-serif;font-size:1.4rem}
+  .confirm-total-row .val{color:#15803d;font-family:'Plus Jakarta Sans',sans-serif;font-size:1.4rem}
   .confirm-next-steps{display:flex;flex-direction:column;gap:.9rem;text-align:left;margin:1.8rem 0}
   .confirm-step{display:flex;gap:.8rem;align-items:flex-start}
   .confirm-step-icon{width:32px;height:32px;border-radius:50%;background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+  .confirm-step:nth-child(1) .confirm-step-icon{background:rgba(59,130,246,.14);color:#2563eb}
+  .confirm-step:nth-child(2) .confirm-step-icon{background:rgba(34,197,94,.14);color:#16a34a}
+  .confirm-step:nth-child(3) .confirm-step-icon{background:rgba(168,85,247,.14);color:#9333ea}
   .confirm-step-text strong{display:block;font-size:.85rem;margin-bottom:.15rem}
   .confirm-step-text p{font-size:.78rem;color:var(--muted);margin:0;line-height:1.5}
   .confirm-actions{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem}
@@ -1266,12 +1274,26 @@
   .confirm-telegram-text p{font-size:.8rem;color:var(--muted);margin:0;line-height:1.5}
   .confirm-telegram-btn{background:#26A5E4;color:#fff;padding:.65rem 1.4rem;border-radius:99px;font-weight:700;font-size:.82rem;transition:all .2s}
   .confirm-telegram-btn:hover{background:#1e8fc9}
-  .confirm-pay-box{background:var(--card2);border:2px solid var(--accent);border-radius:16px;padding:1.4rem 1.6rem;margin:1.5rem 0;text-align:left}
-  .confirm-pay-box h3{font-size:.95rem;margin-bottom:.8rem}
+  .confirm-pay-box{background:linear-gradient(135deg,rgba(59,130,246,.06),rgba(59,130,246,.02));border:2px solid rgba(59,130,246,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.5rem 0;text-align:left}
+  .confirm-pay-box h3{font-size:.95rem;margin-bottom:.8rem;color:#1d4ed8}
   .confirm-pay-row{display:flex;justify-content:space-between;align-items:baseline;gap:.8rem;font-size:.86rem;flex-wrap:wrap;margin-bottom:.5rem}
   .confirm-pay-row span{color:var(--muted)}
   .confirm-pay-row strong{color:var(--text);font-weight:800}
   .confirm-pay-note{font-size:.78rem;color:var(--muted);line-height:1.5;margin-top:.6rem;border-top:1px solid var(--border);padding-top:.7rem}
+  .confirm-business-note{font-size:.76rem;color:var(--muted);line-height:1.5;font-style:italic;margin-top:.5rem}
+  .confirm-warning-box{background:rgba(245,158,11,.1);border:1.5px solid rgba(245,158,11,.4);border-radius:12px;padding:.9rem 1.1rem;margin-top:1rem}
+  .confirm-warning-box strong{display:block;color:#b45309;font-size:.85rem;margin-bottom:.3rem}
+  .confirm-warning-box p{color:#92400e;font-size:.8rem;line-height:1.5;margin:0}
+  .confirm-trust-section{margin:2rem 0;text-align:left}
+  .confirm-trust-section h3{font-size:1rem;margin-bottom:1rem;text-align:center}
+  .confirm-trust-grid{display:flex;flex-direction:column;gap:1rem}
+  .confirm-trust-item{display:flex;gap:.9rem;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1rem 1.2rem}
+  .confirm-trust-icon{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+  .confirm-trust-item:nth-child(1) .confirm-trust-icon{background:rgba(34,197,94,.14);color:#16a34a}
+  .confirm-trust-item:nth-child(2) .confirm-trust-icon{background:rgba(59,130,246,.14);color:#2563eb}
+  .confirm-trust-item:nth-child(3) .confirm-trust-icon{background:rgba(168,85,247,.14);color:#9333ea}
+  .confirm-trust-item strong{display:block;font-size:.88rem;margin-bottom:.2rem}
+  .confirm-trust-item p{font-size:.8rem;color:var(--muted);margin:0;line-height:1.5}
 </style>
 
 <div class="confirm-wrap reveal">
@@ -1287,9 +1309,35 @@
 
   <div class="confirm-pay-box">
     <h3 data-i18n="cc_pay_h3">Comment payer par virement Interac</h3>
-    <div class="confirm-pay-row"><span data-i18n="ck_interac_email_label">Envoyer le virement à :</span><strong id="confirm-interac-email">orders@purepep.ca</strong></div>
-    <div class="confirm-pay-row"><span data-i18n="cc_pay_ref_label">Référence à indiquer :</span><strong id="confirm-order-ref">BP-00000000</strong></div>
+    <div class="confirm-pay-row"><span data-i18n="cc_etf_email">1. Courriel :</span><strong id="confirm-interac-email">orders@purepep.ca</strong></div>
+    <div class="confirm-pay-row"><span data-i18n="cc_etf_business">2. Nom de l'entreprise :</span><strong>9572-6683 Québec inc.</strong></div>
+    <div class="confirm-pay-row"><span data-i18n="cc_etf_amount">3. Montant :</span><strong id="confirm-total-2">$0.00</strong></div>
+    <div class="confirm-pay-row"><span data-i18n="cc_etf_message">4. Message :</span><strong id="confirm-order-ref">BP-00000000</strong></div>
+    <div class="confirm-pay-row"><span data-i18n="cc_etf_security">5. Question de sécurité :</span><strong data-i18n="cc_etf_security_val">Non requise (dépôt automatique)</strong></div>
+    <p class="confirm-business-note" data-i18n="cc_business_note">Le nom "9572-6683 Québec inc." est notre entité légale enregistrée — c'est bien nous, pas d'inquiétude si ce nom apparaît lors du virement.</p>
     <p class="confirm-pay-note" data-i18n="cc_pay_note">Votre commande est réservée dès maintenant. Elle est préparée et expédiée dès que le virement est reçu et confirmé — habituellement sous quelques heures.</p>
+    <div class="confirm-warning-box">
+      <strong data-i18n="cc_warning_title">⚠️ Important</strong>
+      <p data-i18n="cc_warning_text">N'incluez pas de noms de produits dans le champ message. Si un nom de produit y est indiqué, le paiement devra être retourné et la commande annulée.</p>
+    </div>
+  </div>
+
+  <div class="confirm-trust-section">
+    <h3 data-i18n="cc_trust_h3">Pourquoi les chercheurs nous choisissent</h3>
+    <div class="confirm-trust-grid">
+      <div class="confirm-trust-item">
+        <div class="confirm-trust-icon"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div><strong data-i18n="cc_trust1_t">Compte d'affaires vérifié</strong><p data-i18n="cc_trust1_p">Traitement sécurisé et instantané grâce au dépôt automatique.</p></div>
+      </div>
+      <div class="confirm-trust-item">
+        <div class="confirm-trust-icon"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="14" height="11"/><path d="M15 8h4l3 3v4h-7z"/><circle cx="5.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></div>
+        <div><strong data-i18n="cc_trust2_t">Expédition rapide</strong><p data-i18n="cc_trust2_p">Commandes traitées et expédiées depuis notre installation de Montréal, Québec, sous 1 jour ouvrable (si reçues avant 14h).</p></div>
+      </div>
+      <div class="confirm-trust-item">
+        <div class="confirm-trust-icon"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></div>
+        <div><strong data-i18n="cc_trust3_t">Suivi de commande</strong><p data-i18n="cc_trust3_p">Vous recevrez un numéro de suivi par courriel sous 4 à 24h. Vérifiez vos courriels indésirables — certains fournisseurs filtrent le mot "peptide".</p></div>
+      </div>
+    </div>
   </div>
 
   <div class="confirm-next-steps">
@@ -1343,6 +1391,8 @@
     </div>
   `).join('');
   document.getElementById('confirm-total').textContent = '$' + order.total.toFixed(2);
+  const total2El = document.getElementById('confirm-total-2');
+  if(total2El) total2El.textContent = '$' + order.total.toFixed(2);
   const refEl = document.getElementById('confirm-order-ref');
   if(refEl) refEl.textContent = order.number;
   const emailEl = document.getElementById('confirm-interac-email');
@@ -1358,12 +1408,12 @@
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
-        <span class="payment-badge payment-badge-logo" title="Interac e-Transfer"><img src="images/interac.png" alt="Interac e-Transfer" style="height:16px;width:auto;display:block" onerror="this.parentElement.outerHTML=&quot;<span class=&#39;payment-badge&#39;>Interac e-Transfer</span>&quot;"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
+        <span class="payment-badge footer-interac-badge" title="Interac e-Transfer"><span class="gold">Interac</span><span class="dark">e-Transfer</span></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Apple Pay — bientôt disponible"><img src="images/applepay.png" alt="Apple Pay" style="height:16px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Google Pay — bientôt disponible"><img src="images/googlepay.png" alt="Google Pay" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte, Apple Pay, Google Pay</span>
+        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte de crédit, Apple Pay, Google Pay</span>
       </div>
     </div>
     <div class="footer-col"><h4 data-i18n="footer_products">Produits</h4><ul><li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li><li><a href="index.html#produits" data-i18n="footer_categories">Catégories</a></li><li><a href="packs.html" data-i18n="footer_packs">Packs</a></li><li><a href="calculateur.html" data-i18n="footer_calculator">Calculateur de dosage</a></li><li><a href="index.html#produits" data-i18n="footer_accessories">Accessoires</a></li><li><a href="index.html#produits" data-i18n="footer_new">Nouveautés</a></li></ul></div>
@@ -1891,6 +1941,22 @@ const I18N = {
     cc_pay_h3: "How to pay by Interac e-Transfer",
     ck_interac_email_label: "Send the transfer to:",
     cc_pay_ref_label: "Reference to include:",
+    cc_etf_email: "1. Email:",
+    cc_etf_business: "2. Business Name:",
+    cc_etf_amount: "3. Amount:",
+    cc_etf_message: "4. Message:",
+    cc_etf_security: "5. Security Question:",
+    cc_etf_security_val: "Not required (Auto-Deposit)",
+    cc_business_note: "The name \"9572-6683 Québec inc.\" is our registered legal entity — that's really us, no need to worry if this name appears during the transfer.",
+    cc_warning_title: "⚠️ Important",
+    cc_warning_text: "Do not include product names in the message field. If a product name is included, the payment must be returned and the order cancelled.",
+    cc_trust_h3: "Why researchers choose us",
+    cc_trust1_t: "Verified Business Account",
+    cc_trust1_p: "Secure, instant processing via Auto-Deposit.",
+    cc_trust2_t: "Fast Dispatch",
+    cc_trust2_p: "Orders are processed and shipped from our Montreal, Quebec facility within 1 business day (if received before 2pm).",
+    cc_trust3_t: "Tracking",
+    cc_trust3_p: "You'll receive a tracking number via email within 4-24 hours. Check your spam folder if you don't see it, as some providers filter the word \"peptide\".",
     cc_pay_note: "Your order is reserved right now. It's prepared and shipped as soon as the transfer is received and confirmed — usually within a few hours.",
     cc_step1_t: "Confirmation email", cc_step1_p: "A summary has just been sent to your email address, along with the link to join our Telegram community.",
     cc_step1_p_v2: "An order summary and payment instructions have just been sent to your email address.",
@@ -1933,7 +1999,7 @@ const I18N = {
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
     footer_privacy: "Privacy Policy", footer_products: "Products", footer_shipping: "Shipping Policy", footer_refund: "Refund Policy",
-    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: card, Apple Pay, Google Pay",
+    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: credit card, Apple Pay, Google Pay",
     gtcat1: "Protocol", gtcat2: "Comparison",
     gtcat3: "Science", gtcat4: "Legal framework",
     gtcat5: "Quality", gtcat6: "Glossary",

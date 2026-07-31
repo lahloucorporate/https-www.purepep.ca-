@@ -557,6 +557,10 @@
     .payment-badge{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:.72rem;color:var(--muted);font-weight:600}
     .payment-badge-soon{opacity:.4;filter:grayscale(1)}
     .payment-badge-soon-label{font-size:.68rem;color:var(--muted);width:100%;margin-top:.3rem}
+    .footer-interac-badge{background:none;border:none;padding:0;border-radius:6px;overflow:hidden;display:inline-flex}
+    .footer-interac-badge .gold{background:#d4a017;color:#141414;padding:4px 8px;font-weight:800}
+    .footer-interac-badge .dark{background:#2b2b2b;color:#fff;padding:4px 8px;font-weight:800}
+    .payment-badge-hide{display:none}
     .footer-bottom{max-width:1280px;margin:0 auto;border-top:1px solid var(--border);padding-top:1.1rem;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted);flex-wrap:wrap;gap:.5rem}
 
     /* ── CART DRAWER ── */
@@ -1297,13 +1301,37 @@
   .breadcrumb a:hover{color:var(--accent-l)}
   .breadcrumb .sep{margin:0 .4rem;opacity:.5}
   .breadcrumb .current{color:var(--text);font-weight:600}
+  .calc-glow-bg{position:absolute;top:-2rem;left:50%;transform:translateX(-50%);width:900px;max-width:140vw;height:320px;background:radial-gradient(ellipse at 30% 20%,rgba(167,139,250,.18),transparent 60%),radial-gradient(ellipse at 75% 10%,rgba(192,132,252,.16),transparent 55%);filter:blur(10px);pointer-events:none;z-index:0}
+  .calc-eyebrow-glow{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(120deg,rgba(167,139,250,.14),rgba(192,132,252,.14));border:1px solid rgba(167,139,250,.35);color:#7c3aed;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .9rem;border-radius:99px;margin-bottom:.7rem;position:relative;z-index:1}
+  .calc-gradient-text{background:linear-gradient(120deg,#a78bfa,#8257e5 50%,#c084fc);-webkit-background-clip:text;background-clip:text;color:transparent;position:relative;z-index:1}
+  .guide-col-num{color:#7c3aed;background:rgba(167,139,250,.15)}
+  .guide-col-card-accent{background:linear-gradient(160deg,rgba(167,139,250,.06),rgba(192,132,252,.12));border-color:rgba(167,139,250,.3)}
+  .need-row-icon{background:rgba(139,92,246,.12);color:#8257e5}
+  .step-row-num{background:linear-gradient(135deg,#a78bfa,#8257e5)}
+  .formula-plus,.formula-result-item .formula-qty{color:#8257e5}
+  .formula-box{border-color:rgba(167,139,250,.2)}
+  .dosage-highlight{border-color:rgba(167,139,250,.4);background:rgba(167,139,250,.08)}
+  .dosage-val em{color:#7c3aed}
+  .guide-sub-title::before,.guide-sub-title::after{background:linear-gradient(90deg,#a78bfa,#c084fc)}
+  .syringe-opt:hover{border-color:#a78bfa}
+  .syringe-opt.active{background:linear-gradient(135deg,#a78bfa,#8257e5);border-color:#8257e5}
+  .calc-field input:focus{border-color:#a78bfa}
+  .calc-result{background:rgba(167,139,250,.08);border-color:rgba(167,139,250,.3)}
+  .calc-result-main{color:#8257e5}
+  .calc-explain{border-color:rgba(167,139,250,.2)}
+  .calculator-card{border-color:rgba(167,139,250,.15)}
+  .storage-card{border-color:rgba(167,139,250,.2)}
+  .storage-icon{color:#8257e5}
+  .storage-val{color:#7c3aed}
 </style>
 <div class="breadcrumb">
   <a href="index.html" data-i18n="breadcrumb_home">Accueil</a><span class="sep">/</span><span class="current">Calculateur de dosage</span>
 </div>
 <div class="back-to-catalog"><a href="index.html#produits" class="back-to-catalog-inner" data-i18n="back_to_catalog">← Voir tous les peptides</a></div>
-<div class="section" style="max-width:900px;padding-left:.55rem;padding-right:.55rem;padding-top:.8rem;padding-bottom:1rem">
-<h1 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:2.3rem;font-weight:600;text-align:center;margin:0 0 .6rem" data-i18n="calc_h1">Calculateur de dosage et guide de reconstitution</h1>
+<div class="section" style="max-width:900px;padding-left:.55rem;padding-right:.55rem;padding-top:.8rem;padding-bottom:1rem;position:relative">
+<div class="calc-glow-bg"></div>
+<div class="calc-eyebrow-glow" style="display:flex;width:fit-content;margin:0 auto .7rem" data-i18n="calc_eyebrow">Outil gratuit</div>
+<h1 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:2.3rem;font-weight:600;text-align:center;margin:0 0 .6rem;position:relative;z-index:1"><span class="calc-gradient-text" data-i18n="calc_h1">Calculateur de dosage et guide de reconstitution</span></h1>
 <!-- ── GUIDE PRÉPARATION ── -->
 <div class="section reveal" id="guide-prep" style="padding-top:.5rem">
   <div class="domaines-header">
@@ -1499,12 +1527,12 @@
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
-        <span class="payment-badge payment-badge-logo" title="Interac e-Transfer"><img src="images/interac.png" alt="Interac e-Transfer" style="height:16px;width:auto;display:block" onerror="this.parentElement.outerHTML=&quot;<span class=&#39;payment-badge&#39;>Interac e-Transfer</span>&quot;"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
+        <span class="payment-badge footer-interac-badge" title="Interac e-Transfer"><span class="gold">Interac</span><span class="dark">e-Transfer</span></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Apple Pay — bientôt disponible"><img src="images/applepay.png" alt="Apple Pay" style="height:16px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Google Pay — bientôt disponible"><img src="images/googlepay.png" alt="Google Pay" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte, Apple Pay, Google Pay</span>
+        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte de crédit, Apple Pay, Google Pay</span>
       </div>
     </div>
     <div class="footer-col"><h4 data-i18n="footer_products">Produits</h4><ul><li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li><li><a href="index.html#produits" data-i18n="footer_categories">Catégories</a></li><li><a href="packs.html" data-i18n="footer_packs">Packs</a></li><li><a href="calculateur.html" data-i18n="footer_calculator">Calculateur de dosage</a></li><li><a href="index.html#produits" data-i18n="footer_accessories">Accessoires</a></li><li><a href="index.html#produits" data-i18n="footer_new">Nouveautés</a></li></ul></div>
@@ -2052,6 +2080,7 @@ const I18N = {
     cart_title_prefix: "My cart (",
     cart_title_article: " item",
     cart_title_suffix: ")",
+    calc_eyebrow: "Free tool",
     calc_h1: "Dosage calculator and reconstitution guide",
     calc_need: '<h3 class="guide-col-title"><span class="guide-col-num">01</span>What you need</h3><div class="need-list"><div class="need-row"><div class="need-row-icon">🧪</div><div><div class="need-row-label">Your vial</div><div class="need-row-desc">Contains the pure lyophilized active ingredient (e.g., 10mg of Retatrutide).</div></div></div><div class="need-row"><div class="need-row-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/></svg></div><div><div class="need-row-label">Bacteriostatic water</div><div class="need-row-desc">Sterile solvent essential for reconstitution. Available in our shop.</div></div></div><div class="need-row"><div class="need-row-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="m18 2 4 4M13 7l4-4M7 13l4 4M6 12l6 6M3 21l3-3M15 5l4 4L9 19l-4-4z"/></svg></div><div><div class="need-row-label">U-100 syringe</div><div class="need-row-desc">Not included. Available over the counter at pharmacies (100U 31G insulin syringe).</div></div></div></div>',
     calc_steps: '<h3 class="guide-col-title"><span class="guide-col-num">02</span>The 3 steps</h3><div class="step-list"><div class="step-row"><div class="step-row-num">1</div><div><div class="step-row-title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="M4 20 14 10M14 4l6 6-4 4-6-6z"/><path d="M9 9 4 4"/></svg>Cleaning</div><div class="step-row-desc">Lay everything flat on a clean surface. Wipe the vial&#39;s grey stopper with an alcohol swab.</div></div></div><div class="step-row"><div class="step-row-num">2</div><div><div class="step-row-title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/></svg>The gentle mix</div><div class="step-row-desc">Draw the bacteriostatic water, inject <strong>slowly down the glass wall</strong>, without aiming directly at the powder.</div></div></div><div class="step-row"><div class="step-row-num">3</div><div><div class="step-row-title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="M17 2 21 6l-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22 3 18l4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Dissolving</div><div class="step-row-desc"><strong>Do not shake.</strong> Gently roll the vial between your hands until the liquid becomes clear.</div></div></div></div>',
@@ -2105,7 +2134,7 @@ const I18N = {
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
     footer_privacy: "Privacy Policy", footer_products: "Products", footer_shipping: "Shipping Policy", footer_refund: "Refund Policy",
-    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: card, Apple Pay, Google Pay",
+    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: credit card, Apple Pay, Google Pay",
     gtcat1: "Protocol", gtcat2: "Comparison",
     gtcat3: "Science", gtcat4: "Legal framework",
     gtcat5: "Quality", gtcat6: "Glossary",

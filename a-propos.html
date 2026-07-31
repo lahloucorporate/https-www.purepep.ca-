@@ -557,6 +557,10 @@
     .payment-badge{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:.72rem;color:var(--muted);font-weight:600}
     .payment-badge-soon{opacity:.4;filter:grayscale(1)}
     .payment-badge-soon-label{font-size:.68rem;color:var(--muted);width:100%;margin-top:.3rem}
+    .footer-interac-badge{background:none;border:none;padding:0;border-radius:6px;overflow:hidden;display:inline-flex}
+    .footer-interac-badge .gold{background:#d4a017;color:#141414;padding:4px 8px;font-weight:800}
+    .footer-interac-badge .dark{background:#2b2b2b;color:#fff;padding:4px 8px;font-weight:800}
+    .payment-badge-hide{display:none}
     .footer-bottom{max-width:1280px;margin:0 auto;border-top:1px solid var(--border);padding-top:1.1rem;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted);flex-wrap:wrap;gap:.5rem}
 
     /* ── CART DRAWER ── */
@@ -1250,9 +1254,45 @@
   .breadcrumb a:hover{color:var(--accent-l)}
   .breadcrumb .sep{margin:0 .4rem;opacity:.5}
   .breadcrumb .current{color:var(--text);font-weight:600}
-  .article-wrap{max-width:900px;margin:0 auto;padding:1.5rem 2rem 4rem}
+  .article-wrap{max-width:900px;margin:0 auto;padding:1.5rem 2rem 4rem;position:relative}
   .article-eyebrow{display:inline-flex;align-items:center;gap:.5rem;color:var(--accent-l);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem}
   .article-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.4rem;font-weight:600;line-height:1.1;margin-bottom:.7rem}
+  .ap-glow-bg{position:absolute;top:-2.2rem;left:50%;transform:translateX(-50%);width:900px;max-width:140vw;height:320px;background:radial-gradient(ellipse at 30% 20%,rgba(45,212,191,.16),transparent 60%),radial-gradient(ellipse at 75% 10%,rgba(96,165,250,.14),transparent 55%);filter:blur(10px);pointer-events:none;z-index:0}
+  .ap-eyebrow-glow{background:linear-gradient(120deg,rgba(45,212,191,.14),rgba(96,165,250,.14));border:1px solid rgba(96,165,250,.35);color:#1a8f84;padding:.4rem .9rem;border-radius:99px;position:relative;z-index:1}
+  .ap-gradient-text{background:linear-gradient(120deg,#159a8e,#3b7de0 60%,#8257e5);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .ap-title-logo{height:2.3rem;width:auto;vertical-align:-.45rem;margin-left:.5rem}
+  .ap-hero-visual{position:relative;z-index:1;margin:1.5rem 0 1.7rem}
+  .ap-hero-visual img{
+    display:block;width:100%;height:340px;object-fit:cover;object-position:center 40%;
+    -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 12%, black 78%, transparent 100%),
+                        linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to bottom, transparent 0%, black 12%, black 78%, transparent 100%),
+               linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-composite:intersect;
+  }
+  .ap-trust-strip{position:relative;z-index:1;display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;background:var(--card);border:1px solid var(--border);border-radius:18px;padding:1.1rem 1.3rem;margin-bottom:2.2rem;box-shadow:var(--shadow-card)}
+  .ap-trust-pill{display:inline-flex;align-items:center;gap:.45rem;padding:.55rem 1.05rem;border-radius:99px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.01em;white-space:nowrap}
+  .ap-trust-pill svg{width:14px;height:14px;flex-shrink:0}
+  .ap-trust-green{background:rgba(16,185,129,.1);color:#059669}
+  .ap-trust-blue{background:rgba(96,165,250,.14);color:#1d4ed8}
+  .ap-trust-gold{background:rgba(45,212,191,.14);color:#0f766e}
+  .ap-trust-grey{background:rgba(85,85,85,.09);color:#4a4a4a}
+  .ap-diff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;margin:1rem 0 1.8rem}
+  .ap-diff-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.4rem 1.3rem;transition:transform .2s,border-color .2s,box-shadow .2s}
+  .ap-diff-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+  .ap-diff-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:.8rem}
+  .ap-diff-icon svg{width:20px;height:20px}
+  .ap-diff-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;margin-bottom:.4rem;color:var(--text)}
+  .ap-diff-desc{font-size:.85rem;color:var(--muted);line-height:1.6;margin:0}
+  .ap-diff-green .ap-diff-icon{background:rgba(16,185,129,.12);color:#059669}
+  .ap-diff-blue .ap-diff-icon{background:rgba(96,165,250,.16);color:#1d4ed8}
+  .ap-diff-gold .ap-diff-icon{background:rgba(45,212,191,.16);color:#0f766e}
+  .ap-diff-violet .ap-diff-icon{background:rgba(130,87,229,.14);color:#8257e5}
+  .ap-closing{position:relative;z-index:1;text-align:center;background:linear-gradient(135deg,var(--card2),var(--card));border:1px solid rgba(96,165,250,.3);border-radius:18px;padding:2.1rem 1.8rem;margin-top:2.2rem}
+  .ap-closing p{font-size:.95rem;color:var(--text);margin-bottom:.7rem}
+  .ap-closing-mail{display:inline-flex;align-items:center;gap:.5rem;background:rgba(96,165,250,.14);border:1px solid rgba(96,165,250,.4);color:#1d4ed8;font-weight:800;padding:.6rem 1.2rem;border-radius:99px;font-size:.9rem}
+  .ap-closing-mail svg{width:16px;height:16px}
   .article-meta{font-size:.8rem;color:var(--muted);margin-bottom:2rem}
   .article-body h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.5rem;font-weight:700;margin:2rem 0 .8rem}
   .article-body h2:first-child{margin-top:0}
@@ -1287,33 +1327,78 @@
 <div class="back-to-catalog"><a href="index.html#produits" class="back-to-catalog-inner" data-i18n="back_to_catalog">← Voir tous les peptides</a></div>
 <div class="article-wrap reveal">
 
-  <div class="article-eyebrow" data-i18n="ap_eyebrow">Notre histoire</div>
-  <h1 class="article-title" data-i18n="ap_h1">À propos de PurePep Labs</h1>
+  <div class="ap-glow-bg"></div>
+  <div class="article-eyebrow ap-eyebrow-glow" data-i18n="ap_eyebrow">Notre histoire</div>
+  <h1 class="article-title"><span class="ap-gradient-text" data-i18n="ap_h1_prefix">À propos de</span> <img src="images/logo-purepep.png" alt="PurePep Labs" class="ap-title-logo"/></h1>
 
-  <div class="placeholder-banner">
-    <div data-i18n="ap_banner"><strong><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M12 2 2 20h20z"/><path d="M12 9v5M12 17h.01"/></svg>Texte à personnaliser</strong>
-    Voici une base à adapter avec ton vrai parcours, tes valeurs, et l'histoire réelle de PurePep Labs.</div>
+  <div class="ap-hero-visual">
+    <img src="images/apropos-lab-vials.jpg" alt="Fioles PurePep Labs en laboratoire" loading="lazy"/>
+  </div>
+
+  <div class="ap-trust-strip">
+    <span class="ap-trust-pill ap-trust-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="ap_trust1">Tests indépendants</span></span>
+    <span class="ap-trust-pill ap-trust-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span data-i18n="ap_trust2">COA disponible</span></span>
+    <span class="ap-trust-pill ap-trust-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h13l4 4V8a2 2 0 0 0-2-2H3z"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg><span data-i18n="ap_trust3">Expédition rapide (<strong>Canada</strong>)</span></span>
+    <span class="ap-trust-pill ap-trust-grey"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg><span data-i18n="ap_trust4">Emballage discret</span></span>
   </div>
 
   <div class="article-body">
-    <h2 data-i18n="ap_mission_h2">Notre mission</h2>
-    <p data-i18n="ap_mission_p">PurePep Labs a été fondé avec un objectif simple : rendre les peptides de recherche accessibles aux laboratoires et chercheurs indépendants, avec une exigence de traçabilité et de pureté qui ne transige pas. Chaque lot est testé par un laboratoire tiers indépendant avant d'être proposé à la vente.</p>
+    <h2 data-i18n="ap_story_h2">Notre histoire</h2>
+    <p data-i18n="ap_story_p1">PurePep Labs est né d'un constat simple : l'accès à des peptides de recherche de <strong>haute qualité</strong> est souvent inutilement compliqué.</p>
+    <p data-i18n="ap_story_p2">Chercheurs et laboratoires indépendants se heurtent régulièrement aux mêmes frustrations : <strong>transparence limitée</strong>, standards de qualité inconstants, présentations produit génériques et incertitude quant aux <strong>tests de lot</strong>. Nous étions convaincus qu'il existait une meilleure façon de faire.</p>
+    <p data-i18n="ap_story_p3">Dès le départ, notre objectif n'était pas de devenir une boutique de peptides parmi d'autres. Nous avons voulu bâtir une entreprise centrée sur la <strong>qualité</strong>, la <strong>traçabilité</strong> et la <strong>confiance</strong>.</p>
+    <p data-i18n="ap_story_p4">Chaque produit proposé par PurePep Labs est sélectionné selon des exigences de qualité strictes. Lorsque disponible, chaque lot est <strong>testé de façon indépendante</strong> avant sa mise en vente, et le <strong>Certificat d'Analyse (COA)</strong> correspondant est rendu accessible afin que les chercheurs puissent vérifier les données par eux-mêmes.</p>
+    <p data-i18n="ap_story_p5">Nous avons choisi de bâtir PurePep Labs au <strong>Canada</strong> avec une philosophie claire : les produits scientifiques doivent être présentés avec une <strong>transparence scientifique</strong>.</p>
 
-    <h2 data-i18n="ap_distinct_h2">Ce qui nous distingue</h2>
-    <ul data-i18n="ap_distinct_list">
-      <li><strong>Pureté vérifiée</strong>, HPLC ≥99% sur chaque lot, COA disponible</li>
-      <li><strong>Transparence</strong>, photos produits réelles, pas de visuels génériques</li>
-      <li><strong>Réactivité</strong>, expédition sous 48h depuis le Canada</li>
-      <li><strong>Discrétion</strong>, emballage neutre, sans mention du contenu</li>
+    <h2 data-i18n="ap_mission_h2">Notre mission</h2>
+    <p data-i18n="ap_mission_p">Notre mission est de rendre les peptides de recherche plus accessibles, tout en maintenant des standards intransigeants de <strong>pureté</strong>, de <strong>documentation</strong> et de <strong>service client</strong>.</p>
+    <p data-i18n="ap_mission_p2">Nous nous engageons à fournir aux chercheurs des produits qu'ils peuvent évaluer en toute confiance, grâce à :</p>
+    <ul data-i18n="ap_mission_list">
+      <li><strong>Tests en laboratoire indépendant</strong></li>
+      <li><strong>Traçabilité des lots</strong></li>
+      <li><strong>Informations produit détaillées</strong></li>
+      <li><strong>Documentation légale et scientifique claire</strong></li>
+      <li><strong>Service client réactif</strong></li>
     </ul>
 
-    <h2 data-i18n="ap_quality_h2">Notre engagement qualité</h2>
-    <p data-i18n="ap_quality_p">Nous travaillons avec Freedom Diagnostics pour le contrôle HPLC/LC-MS de nos lots. Voir notre page <a href="coa.html">COA</a> pour le détail de notre process.</p>
+    <h2 data-i18n="ap_distinct_h2">Ce qui nous distingue</h2>
+    <div class="ap-diff-grid">
+      <div class="ap-diff-card ap-diff-green">
+        <div class="ap-diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div class="ap-diff-title" data-i18n="ap_diff1_t">Pureté vérifiée</div>
+        <p class="ap-diff-desc" data-i18n="ap_diff1_p">Lorsque disponible, chaque lot fait l'objet d'un test analytique indépendant, incluant une <strong>analyse HPLC</strong>, avec les résultats de pureté documentés dans le <strong>COA</strong> correspondant.</p>
+      </div>
+      <div class="ap-diff-card ap-diff-blue">
+        <div class="ap-diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div>
+        <div class="ap-diff-title" data-i18n="ap_diff2_t">Transparence réelle</div>
+        <p class="ap-diff-desc" data-i18n="ap_diff2_p">Nous privilégions une <strong>information produit exacte</strong>, l'identification des lots et une documentation accessible, plutôt que de nous appuyer uniquement sur des arguments marketing.</p>
+      </div>
+      <div class="ap-diff-card ap-diff-gold">
+        <div class="ap-diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h13l4 4V8a2 2 0 0 0-2-2H3z"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg></div>
+        <div class="ap-diff-title" data-i18n="ap_diff3_t">Expédition rapide depuis le <strong>Canada</strong></div>
+        <p class="ap-diff-desc" data-i18n="ap_diff3_p">Les commandes sont traitées rapidement depuis le <strong>Canada</strong> et expédiées avec suivi, pour une livraison fluide et fiable.</p>
+      </div>
+      <div class="ap-diff-card ap-diff-violet">
+        <div class="ap-diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg></div>
+        <div class="ap-diff-title" data-i18n="ap_diff4_t">Emballage discret</div>
+        <p class="ap-diff-desc" data-i18n="ap_diff4_p">Tous les envois sont expédiés dans un <strong>emballage neutre et discret</strong>, sans indication extérieure du contenu.</p>
+      </div>
+    </div>
 
-    <h2 data-i18n="ap_contact_h2">Nous contacter</h2>
-    <p data-i18n="ap_contact_p">Une question ? Rendez-vous sur notre page <a href="contact.html">Contact</a>.</p>
+    <h2 data-i18n="ap_quality_h2">Notre engagement qualité</h2>
+    <p data-i18n="ap_quality_p">La qualité n'est pas un slogan pour nous, c'est <strong>un processus</strong>.</p>
+    <p data-i18n="ap_quality_p2">Nous travaillons avec des <strong>laboratoires tiers qualifiés</strong> pour la vérification analytique, et maintenons des <strong>standards internes stricts</strong> pour la manipulation, le stockage et la préparation des expéditions.</p>
+    <p data-i18n="ap_quality_p3">Notre objectif est simple : fournir des produits de recherche qui répondent aux attentes des <strong>chercheurs sérieux</strong>. Pour en savoir plus sur notre processus de test et les <strong>Certificats d'Analyse</strong> disponibles, visite notre page <a href="coa.html">COA</a>.</p>
+
+    <h2 data-i18n="ap_future_h2">Vers l'avenir</h2>
+    <p data-i18n="ap_future_p">PurePep Labs continue de grandir, mais notre vision reste la même qu'au premier jour : bâtir une entreprise d'approvisionnement en recherche de <strong>confiance</strong>, où la <strong>transparence</strong> passe en premier et où chaque client est traité avec professionnalisme et respect.</p>
   </div>
-  
+
+  <div class="ap-closing">
+    <p data-i18n="ap_closing_p">Merci de faire partie de l'aventure <strong>PurePep Labs</strong>.</p>
+    <a class="ap-closing-mail" href="mailto:support@purepep.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>support@purepep.ca</a>
+  </div>
+
 </div>
 <!-- ── FOOTER ── -->
 <footer>
@@ -1324,12 +1409,12 @@
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
-        <span class="payment-badge payment-badge-logo" title="Interac e-Transfer"><img src="images/interac.png" alt="Interac e-Transfer" style="height:16px;width:auto;display:block" onerror="this.parentElement.outerHTML=&quot;<span class=&#39;payment-badge&#39;>Interac e-Transfer</span>&quot;"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
+        <span class="payment-badge footer-interac-badge" title="Interac e-Transfer"><span class="gold">Interac</span><span class="dark">e-Transfer</span></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Apple Pay — bientôt disponible"><img src="images/applepay.png" alt="Apple Pay" style="height:16px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Google Pay — bientôt disponible"><img src="images/googlepay.png" alt="Google Pay" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte, Apple Pay, Google Pay</span>
+        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte de crédit, Apple Pay, Google Pay</span>
       </div>
     </div>
     <div class="footer-col"><h4 data-i18n="footer_products">Produits</h4><ul><li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li><li><a href="index.html#produits" data-i18n="footer_categories">Catégories</a></li><li><a href="packs.html" data-i18n="footer_packs">Packs</a></li><li><a href="calculateur.html" data-i18n="footer_calculator">Calculateur de dosage</a></li><li><a href="index.html#produits" data-i18n="footer_accessories">Accessoires</a></li><li><a href="index.html#produits" data-i18n="footer_new">Nouveautés</a></li></ul></div>
@@ -1856,16 +1941,37 @@ const I18N = {
     cart_title_article: " item",
     cart_title_suffix: ")",
     ap_eyebrow: "Our story",
-    ap_h1: "About PurePep Labs",
-    ap_banner: '<strong><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M12 2 2 20h20z"/><path d="M12 9v5M12 17h.01"/></svg>Text to customize</strong>Here is a base to adapt with your real journey, your values, and PurePep Labs&#39;s actual story.',
-    ap_mission_h2: "Our mission",
-    ap_mission_p: "PurePep Labs was founded with a simple goal: making research peptides accessible to independent labs and researchers, with an uncompromising standard for traceability and purity. Every batch is tested by an independent third-party laboratory before being offered for sale.",
-    ap_distinct_h2: "What sets us apart",
-    ap_distinct_list: '<li><strong>Verified purity</strong>, ≥99% HPLC on every batch, COA available</li><li><strong>Transparency</strong>, real product photos, no generic visuals</li><li><strong>Responsiveness</strong>, shipped within 48h from Canada</li><li><strong>Discretion</strong>, neutral packaging, no mention of contents</li>',
-    ap_quality_h2: "Our quality commitment",
-    ap_quality_p: 'We work with Freedom Diagnostics for HPLC/LC-MS testing of our batches. See our <a href="coa.html">COA</a> page for details on our process.',
-    ap_contact_h2: "Contact us",
-    ap_contact_p: 'Have a question? Visit our <a href="contact.html">Contact</a> page.',
+    ap_h1_prefix: "About",
+    ap_trust1: "Independent Testing",
+    ap_trust2: "COA Available",
+    ap_trust3: "Fast <strong>Canadian</strong> Shipping",
+    ap_trust4: "Discreet Packaging",
+    ap_story_h2: "Our Story",
+    ap_story_p1: "PurePep Labs was born from a simple observation: access to <strong>high-quality</strong> research peptides is often unnecessarily complicated.",
+    ap_story_p2: "Researchers and independent laboratories frequently face the same frustrations — <strong>limited transparency</strong>, inconsistent quality standards, generic product presentations, and uncertainty regarding <strong>batch testing</strong>. We believed there had to be a better way.",
+    ap_story_p3: "From the beginning, our goal was not to become just another peptide store. We set out to build a company focused on <strong>quality</strong>, <strong>traceability</strong>, and <strong>trust</strong>.",
+    ap_story_p4: "Every product offered by PurePep Labs is selected with strict quality requirements in mind. Whenever available, each batch is <strong>independently tested</strong> before being released, and the corresponding <strong>Certificate of Analysis</strong> is made accessible so researchers can verify the data themselves.",
+    ap_story_p5: "We chose to build PurePep Labs in <strong>Canada</strong> with a clear philosophy: scientific products should be presented with <strong>scientific transparency</strong>.",
+    ap_mission_h2: "Our Mission",
+    ap_mission_p: "Our mission is to make research peptides more accessible while maintaining uncompromising standards of <strong>purity</strong>, <strong>documentation</strong>, and <strong>customer support</strong>.",
+    ap_mission_p2: "We are committed to providing researchers with products they can evaluate confidently through:",
+    ap_mission_list: '<li><strong>Independent laboratory testing</strong></li><li><strong>Batch traceability</strong></li><li><strong>Detailed product information</strong></li><li><strong>Clear legal and scientific documentation</strong></li><li><strong>Responsive customer service</strong></li>',
+    ap_distinct_h2: "What Makes Us Different",
+    ap_diff1_t: "Verified Purity",
+    ap_diff1_p: "Whenever available, each batch undergoes independent analytical testing, including <strong>HPLC analysis</strong>, with purity results documented in the corresponding <strong>COA</strong>.",
+    ap_diff2_t: "Real Transparency",
+    ap_diff2_p: "We prioritize <strong>accurate product information</strong>, batch identification, and accessible documentation rather than relying solely on marketing claims.",
+    ap_diff3_t: "Fast <strong>Canadian</strong> Fulfillment",
+    ap_diff3_p: "Orders are processed quickly from <strong>Canada</strong> and shipped with tracking to ensure a smooth and reliable delivery experience.",
+    ap_diff4_t: "Discreet Packaging",
+    ap_diff4_p: "All shipments are sent in <strong>plain, discreet packaging</strong> without external indication of the contents.",
+    ap_quality_h2: "Our Commitment to Quality",
+    ap_quality_p: "Quality is not a slogan for us — it is <strong>a process</strong>.",
+    ap_quality_p2: "We work with <strong>qualified third-party laboratories</strong> for analytical verification and maintain <strong>strict internal standards</strong> for product handling, storage, and shipment preparation.",
+    ap_quality_p3: 'Our objective is simple: provide research products that meet the expectations of <strong>serious researchers</strong>. For more information about our testing process and available <strong>Certificates of Analysis</strong>, please visit our <a href="coa.html">COA</a> page.',
+    ap_future_h2: "Looking Ahead",
+    ap_future_p: "PurePep Labs is still growing, but our vision remains the same as on day one: build a <strong>trusted</strong> research supply company where <strong>transparency</strong> comes first and every customer is treated with professionalism and respect.",
+    ap_closing_p: "Thank you for being part of the <strong>PurePep Labs</strong> journey.",
     age_gate_title: "Just a moment before entering",
     age_gate_desc: "PurePep Labs offers research peptides intended for laboratory use only. Access to this site is restricted to adults.",
     age_gate_yes: "I am over 18, Enter",
@@ -1896,7 +2002,7 @@ const I18N = {
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
     footer_privacy: "Privacy Policy", footer_products: "Products", footer_shipping: "Shipping Policy", footer_refund: "Refund Policy",
-    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: card, Apple Pay, Google Pay",
+    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: credit card, Apple Pay, Google Pay",
     gtcat1: "Protocol", gtcat2: "Comparison",
     gtcat3: "Science", gtcat4: "Legal framework",
     gtcat5: "Quality", gtcat6: "Glossary",

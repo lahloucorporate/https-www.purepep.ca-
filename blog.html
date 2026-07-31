@@ -553,6 +553,10 @@
     .payment-badge{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:.72rem;color:var(--muted);font-weight:600}
     .payment-badge-soon{opacity:.4;filter:grayscale(1)}
     .payment-badge-soon-label{font-size:.68rem;color:var(--muted);width:100%;margin-top:.3rem}
+    .footer-interac-badge{background:none;border:none;padding:0;border-radius:6px;overflow:hidden;display:inline-flex}
+    .footer-interac-badge .gold{background:#d4a017;color:#141414;padding:4px 8px;font-weight:800}
+    .footer-interac-badge .dark{background:#2b2b2b;color:#fff;padding:4px 8px;font-weight:800}
+    .payment-badge-hide{display:none}
     .footer-bottom{max-width:1280px;margin:0 auto;border-top:1px solid var(--border);padding-top:1.1rem;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted);flex-wrap:wrap;gap:.5rem}
 
     /* ── CART DRAWER ── */
@@ -1254,14 +1258,19 @@
   .blog-eyebrow{display:inline-flex;align-items:center;gap:.5rem;color:var(--accent-l);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem}
   .blog-header h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.5rem;font-weight:600;margin-bottom:.6rem}
   .blog-header p{color:var(--muted);font-size:.92rem}
+  .blog-glow-bg{position:absolute;top:-3rem;left:50%;transform:translateX(-50%);width:900px;max-width:140vw;height:340px;background:radial-gradient(ellipse at 30% 20%,rgba(244,114,182,.16),transparent 60%),radial-gradient(ellipse at 75% 10%,rgba(236,72,153,.14),transparent 55%);filter:blur(10px);pointer-events:none;z-index:0}
+  .blog-eyebrow-glow{background:linear-gradient(120deg,rgba(244,114,182,.14),rgba(236,72,153,.14));border:1px solid rgba(236,72,153,.35);color:#be185d;padding:.4rem .9rem;border-radius:99px;position:relative;z-index:1}
+  .blog-gradient-text{background:linear-gradient(120deg,#f472b6,#ec4899 50%,#db2777);-webkit-background-clip:text;background-clip:text;color:transparent}
   .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;max-width:1280px;margin:0 auto;padding:0 2rem 4rem}
   .blog-card{
     display:flex;flex-direction:column;gap:.8rem;background:var(--card);border:1px solid var(--border);
     border-radius:18px;padding:1.5rem;transition:all .2s;
   }
-  .blog-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow-hover)}
-  .blog-card-icon{font-size:1.8rem}
-  .blog-card-cat{font-size:.68rem;font-weight:700;color:var(--accent-l);text-transform:uppercase;letter-spacing:.04em}
+  .blog-card:hover{border-color:rgba(236,72,153,.4);transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+  .blog-card{border-color:rgba(236,72,153,.14)}
+  .blog-card-icon{font-size:1.8rem;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(244,114,182,.16),rgba(219,39,119,.08))}
+  .blog-card-icon svg{stroke:#db2777}
+  .blog-card-cat{font-size:.68rem;font-weight:700;color:#be185d;background:rgba(236,72,153,.1);text-transform:uppercase;letter-spacing:.04em;display:inline-block;padding:.2rem .6rem;border-radius:99px}
   .blog-card-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:700;color:var(--text);margin:.4rem 0 .5rem;line-height:1.25}
   .blog-card-desc{font-size:.82rem;color:var(--muted);line-height:1.55;margin-bottom:.7rem}
   .blog-card-date{font-size:.72rem;color:var(--muted);font-weight:600}
@@ -1272,9 +1281,10 @@
   <a href="index.html" data-i18n="breadcrumb_home">Accueil</a><span class="sep">/</span><span class="current">Blog</span>
 </div>
 
-<div class="blog-header reveal">
-  <div class="blog-eyebrow" data-i18n="blog_eyebrow">Le Blog PurePep Labs · Actus & science</div>
-  <h1 data-i18n="blog_h1">Mécanismes, actualités et science</h1>
+<div class="blog-header reveal" style="position:relative">
+  <div class="blog-glow-bg"></div>
+  <div class="blog-eyebrow blog-eyebrow-glow" data-i18n="blog_eyebrow">Le Blog PurePep Labs · Actus & science</div>
+  <h1 style="position:relative;z-index:1"><span class="blog-gradient-text" data-i18n="blog_h1">Mécanismes, actualités et science</span></h1>
   <p data-i18n="blog_lead">Actualité du secteur, mécanismes d'action, comparatifs, sans protocole de dosage, sans allégation santé, juste ce que dit la science. Tu cherches une référence pratique (dosage, glossaire, cadre légal) ? C'est plutôt du côté des <a href="guides.html">Guides & Protocoles</a>.</p>
 </div>
 
@@ -1336,7 +1346,7 @@
     
 </div>
 
-<div class="blog-guides-pointer reveal" style="margin:2.5rem auto 0;max-width:700px;padding:1.4rem 1.6rem;border:1px solid var(--border);border-radius:14px;text-align:center">
+<div class="blog-guides-pointer reveal" style="margin:2.5rem auto 0;max-width:700px;padding:1.4rem 1.6rem;border:1px solid rgba(236,72,153,.25);border-radius:14px;text-align:center;background:linear-gradient(135deg,rgba(244,114,182,.06),rgba(219,39,119,.03))">
   <p data-i18n="blog_pointer" style="margin:0 0 .6rem;color:var(--muted);font-size:.92rem">Tu cherches plutôt le calculateur de dosage, le glossaire, le cadre légal ou comment lire un COA&nbsp;?</p>
   <a href="guides.html" class="btn-outline" style="display:inline-block" data-i18n="blog_pointer_btn">Voir les Guides & Protocoles →</a>
 </div>
@@ -1349,12 +1359,12 @@
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
-        <span class="payment-badge payment-badge-logo" title="Interac e-Transfer"><img src="images/interac.png" alt="Interac e-Transfer" style="height:16px;width:auto;display:block" onerror="this.parentElement.outerHTML=&quot;<span class=&#39;payment-badge&#39;>Interac e-Transfer</span>&quot;"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
+        <span class="payment-badge footer-interac-badge" title="Interac e-Transfer"><span class="gold">Interac</span><span class="dark">e-Transfer</span></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Apple Pay — bientôt disponible"><img src="images/applepay.png" alt="Apple Pay" style="height:16px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Google Pay — bientôt disponible"><img src="images/googlepay.png" alt="Google Pay" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte, Apple Pay, Google Pay</span>
+        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte de crédit, Apple Pay, Google Pay</span>
       </div>
     </div>
     <div class="footer-col"><h4 data-i18n="footer_products">Produits</h4><ul><li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li><li><a href="index.html#produits" data-i18n="footer_categories">Catégories</a></li><li><a href="packs.html" data-i18n="footer_packs">Packs</a></li><li><a href="calculateur.html" data-i18n="footer_calculator">Calculateur de dosage</a></li><li><a href="index.html#produits" data-i18n="footer_accessories">Accessoires</a></li><li><a href="index.html#produits" data-i18n="footer_new">Nouveautés</a></li></ul></div>
@@ -1927,7 +1937,7 @@ const I18N = {
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
     footer_privacy: "Privacy Policy", footer_products: "Products", footer_shipping: "Shipping Policy", footer_refund: "Refund Policy",
-    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: card, Apple Pay, Google Pay",
+    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: credit card, Apple Pay, Google Pay",
     gtcat1: "Protocol", gtcat2: "Comparison",
     gtcat3: "Science", gtcat4: "Legal framework",
     gtcat5: "Quality", gtcat6: "Glossary",

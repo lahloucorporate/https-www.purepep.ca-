@@ -557,6 +557,10 @@
     .payment-badge{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:.72rem;color:var(--muted);font-weight:600}
     .payment-badge-soon{opacity:.4;filter:grayscale(1)}
     .payment-badge-soon-label{font-size:.68rem;color:var(--muted);width:100%;margin-top:.3rem}
+    .footer-interac-badge{background:none;border:none;padding:0;border-radius:6px;overflow:hidden;display:inline-flex}
+    .footer-interac-badge .gold{background:#d4a017;color:#141414;padding:4px 8px;font-weight:800}
+    .footer-interac-badge .dark{background:#2b2b2b;color:#fff;padding:4px 8px;font-weight:800}
+    .payment-badge-hide{display:none}
     .footer-bottom{max-width:1280px;margin:0 auto;border-top:1px solid var(--border);padding-top:1.1rem;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted);flex-wrap:wrap;gap:.5rem}
 
     /* ── CART DRAWER ── */
@@ -1273,6 +1277,7 @@
   .article-body strong{color:var(--text)}
   .article-body a{color:var(--accent-l);font-weight:600}
   .article-callout{background:var(--card2);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:1rem 1.3rem;margin:1.3rem 0;font-size:.85rem;line-height:1.6;color:var(--muted)}
+  .pr-highlight{background:linear-gradient(120deg,rgba(45,212,191,.12),rgba(96,165,250,.1));border:1px solid rgba(96,165,250,.3);border-radius:10px;padding:.9rem 1.2rem;font-weight:700;color:var(--text)}
   .article-callout strong{color:var(--text);display:block;margin-bottom:.3rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.03em}
   .article-callout-warn{border-left-color:#4a4a4a;background:rgba(251,146,60,.08)}
   .article-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.85rem}
@@ -1313,12 +1318,9 @@
     <p data-i18n="pr_s2_intro">Nous pouvons approuver un remboursement ou un remplacement si&nbsp;:</p>
     <ul data-i18n="pr_s2_list">
       <li>tu reçois le mauvais produit&nbsp;;</li>
-      <li>ta commande arrive endommagée pendant le transport&nbsp;;</li>
-      <li>un article est manquant dans ton envoi&nbsp;;</li>
-      <li>ton colis est confirmé perdu par le transporteur&nbsp;;</li>
       <li>un défaut de fabrication ou d'emballage vérifié est identifié.</li>
     </ul>
-    <p data-i18n="pr_s2_close">Chaque demande est examinée individuellement pour déterminer la solution la plus appropriée.</p>
+    <p class="pr-highlight" data-i18n="pr_s2_close">Chaque demande est examinée individuellement pour déterminer la solution la plus appropriée.</p>
 
     <div class="pr-section-head"><span class="pr-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/><line x1="15.5" y1="8.5" x2="8.5" y2="15.5"/></svg></span><h2 data-i18n="pr_s3_h">3. Situations non éligibles à un remboursement</h2></div>
     <p data-i18n="pr_s3_intro">Les remboursements ou remplacements ne sont généralement pas accordés pour&nbsp;:</p>
@@ -1400,12 +1402,12 @@
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
-        <span class="payment-badge payment-badge-logo" title="Interac e-Transfer"><img src="images/interac.png" alt="Interac e-Transfer" style="height:16px;width:auto;display:block" onerror="this.parentElement.outerHTML=&quot;<span class=&#39;payment-badge&#39;>Interac e-Transfer</span>&quot;"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
+        <span class="payment-badge footer-interac-badge" title="Interac e-Transfer"><span class="gold">Interac</span><span class="dark">e-Transfer</span></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Apple Pay — bientôt disponible"><img src="images/applepay.png" alt="Apple Pay" style="height:16px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Google Pay — bientôt disponible"><img src="images/googlepay.png" alt="Google Pay" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte, Apple Pay, Google Pay</span>
+        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte de crédit, Apple Pay, Google Pay</span>
       </div>
     </div>
     <div class="footer-col"><h4 data-i18n="footer_products">Produits</h4><ul><li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li><li><a href="index.html#produits" data-i18n="footer_categories">Catégories</a></li><li><a href="packs.html" data-i18n="footer_packs">Packs</a></li><li><a href="calculateur.html" data-i18n="footer_calculator">Calculateur de dosage</a></li><li><a href="index.html#produits" data-i18n="footer_accessories">Accessoires</a></li><li><a href="index.html#produits" data-i18n="footer_new">Nouveautés</a></li></ul></div>
@@ -1940,7 +1942,7 @@ const I18N = {
     pr_s1_pb: "Returns are not accepted unless required by applicable law or expressly authorized by PurePep Labs under the conditions described below.",
     pr_s2_h: "2. Eligible Refunds or Replacements",
     pr_s2_intro: "We may approve a refund or replacement if:",
-    pr_s2_list: "<li>you receive the wrong product;</li><li>your order arrives damaged in transit;</li><li>an item is missing from your shipment;</li><li>your package is confirmed lost by the carrier;</li><li>a verified manufacturing or packaging defect is identified.</li>",
+    pr_s2_list: "<li>you receive the wrong product;</li><li>a verified manufacturing or packaging defect is identified.</li>",
     pr_s2_close: "Each request is reviewed individually to determine the most appropriate solution.",
     pr_s3_h: "3. Situations Not Eligible for Refund",
     pr_s3_intro: "Refunds or replacements are generally not granted for:",
@@ -2011,7 +2013,7 @@ const I18N = {
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
     footer_privacy: "Privacy Policy", footer_products: "Products", footer_shipping: "Shipping Policy", footer_refund: "Refund Policy",
-    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: card, Apple Pay, Google Pay",
+    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: credit card, Apple Pay, Google Pay",
     gtcat1: "Protocol", gtcat2: "Comparison",
     gtcat3: "Science", gtcat4: "Legal framework",
     gtcat5: "Quality", gtcat6: "Glossary",

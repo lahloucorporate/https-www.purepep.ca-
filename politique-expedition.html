@@ -557,6 +557,10 @@
     .payment-badge{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:.72rem;color:var(--muted);font-weight:600}
     .payment-badge-soon{opacity:.4;filter:grayscale(1)}
     .payment-badge-soon-label{font-size:.68rem;color:var(--muted);width:100%;margin-top:.3rem}
+    .footer-interac-badge{background:none;border:none;padding:0;border-radius:6px;overflow:hidden;display:inline-flex}
+    .footer-interac-badge .gold{background:#d4a017;color:#141414;padding:4px 8px;font-weight:800}
+    .footer-interac-badge .dark{background:#2b2b2b;color:#fff;padding:4px 8px;font-weight:800}
+    .payment-badge-hide{display:none}
     .footer-bottom{max-width:1280px;margin:0 auto;border-top:1px solid var(--border);padding-top:1.1rem;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted);flex-wrap:wrap;gap:.5rem}
 
     /* ── CART DRAWER ── */
@@ -1279,6 +1283,16 @@
     .article-wrap{padding:1.2rem 1.3rem 3rem}
     .breadcrumb{padding:1rem 1.3rem 0}
   }
+
+  /* ── PE, habillage futuriste (style why-us) ── */
+  .pe-glow-bg{position:absolute;top:-4rem;left:50%;transform:translateX(-50%);width:900px;max-width:140vw;height:380px;background:radial-gradient(ellipse at 30% 20%,rgba(45,212,191,.16),transparent 60%),radial-gradient(ellipse at 75% 10%,rgba(96,165,250,.14),transparent 55%);filter:blur(10px);pointer-events:none;z-index:0}
+  .pe-eyebrow-glow{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(120deg,rgba(45,212,191,.14),rgba(96,165,250,.14));border:1px solid rgba(96,165,250,.35);color:#1a8f84;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .9rem;border-radius:99px;margin-bottom:1rem;position:relative;z-index:1}
+  .pe-gradient-text{background:linear-gradient(120deg,#159a8e,#3b7de0 60%,#8257e5);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .pe-section-head{display:flex;align-items:center;gap:.85rem;margin:2.5rem 0 .9rem}
+  .pe-section-head h2{margin:0}
+  .pe-section-head:first-child,.article-body>.pe-section-head:first-child{margin-top:0}
+  .pe-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(96,165,250,.14);color:#3b7de0}
+  .pe-icon svg{width:20px;height:20px}
 </style>
 
 <div class="breadcrumb">
@@ -1287,31 +1301,33 @@
 <div class="back-to-catalog"><a href="index.html#produits" class="back-to-catalog-inner" data-i18n="back_to_catalog">← Voir tous les peptides</a></div>
 <div class="article-wrap reveal">
 
-  <div class="article-eyebrow" data-i18n="pe_eyebrow">Livraison</div>
-  <h1 class="article-title" data-i18n="pe_h1">Politique d'expédition</h1>
+  <div class="pe-glow-bg"></div>
+  <div class="article-eyebrow pe-eyebrow-glow" data-i18n="pe_eyebrow">Livraison</div>
+  <h1 class="article-title"><span class="pe-gradient-text" data-i18n="pe_h1">Politique d'expédition</span></h1>
   <p class="article-meta" data-i18n="pe_updated">Dernière mise à jour : Juillet 2026</p>
 
   <div class="article-body">
-    <h2 data-i18n="pe_s1_h">Traitement des commandes</h2>
+    <div class="pe-section-head"><span class="pe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span><h2 data-i18n="pe_s1_h">Traitement des commandes</h2></div>
     <p data-i18n="pe_s1_p">Chaque commande est expédiée sous 24h ouvrées, dans un emballage neutre et discret, sans logo ni mention du contenu. Une confirmation d'expédition avec numéro de suivi vous est envoyée par courriel dès que le colis part de notre entrepôt.</p>
 
-    <h2 data-i18n="pe_s2_h">Délais et frais de livraison</h2>
+    <div class="pe-section-head"><span class="pe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="14" height="11"/><path d="M15 8h4l3 3v4h-7z"/><circle cx="5.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></span><h2 data-i18n="pe_s2_h">Délais et frais de livraison</h2></div>
     <div data-i18n="pe_s2_p"><table class="article-table">
       <tr><th>Zone</th><th>Délai</th><th>Frais</th></tr>
-      <tr><td>Canada</td><td>2 à 5 jours ouvrés (Postes Canada)</td><td>Offerts dès $160 d'achat, sinon $4.90</td></tr>
+      <tr><td>Canada (Postes Canada)</td><td>2 à 5 jours ouvrés</td><td>Offerts dès $160 d'achat, sinon $15</td></tr>
+      <tr><td>Canada Post Xpresspost</td><td>1 à 2 jours ouvrables</td><td>$25.00</td></tr>
       <tr><td>États-Unis et international</td><td>5 à 10 jours ouvrés</td><td>Offerts dès $200 d'achat, sinon forfait $15</td></tr>
     </table></div>
 
-    <h2 data-i18n="pe_s3_h">Suivi de commande</h2>
+    <div class="pe-section-head"><span class="pe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/></svg></span><h2 data-i18n="pe_s3_h">Suivi de commande</h2></div>
     <p data-i18n="pe_s3_p">Chaque envoi est tracé. Le numéro de suivi transmis par courriel permet de suivre l'acheminement du colis jusqu'à sa livraison.</p>
 
-    <h2 data-i18n="pe_s4_h">Emballage discret</h2>
+    <div class="pe-section-head"><span class="pe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><h2 data-i18n="pe_s4_h">Emballage discret</h2></div>
     <p data-i18n="pe_s4_p">Tous nos colis sont expédiés dans un emballage neutre, sans indication du contenu ni de la marque, pour préserver votre confidentialité.</p>
 
-    <h2 data-i18n="pe_s5_h">Retards et colis perdus</h2>
+    <div class="pe-section-head"><span class="pe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/></svg></span><h2 data-i18n="pe_s5_h">Retards et colis perdus</h2></div>
     <p data-i18n="pe_s5_p">En cas de retard important ou de colis manquant, contacte-nous avec ton numéro de suivi : nous ferons le nécessaire auprès du transporteur et, si besoin, procéderons à un renvoi ou un remboursement conformément à notre <a href="politique-remboursement.html">politique de remboursement</a>.</p>
 
-    <h2 data-i18n="pe_s6_h">Contact</h2>
+    <div class="pe-section-head"><span class="pe-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span><h2 data-i18n="pe_s6_h">Contact</h2></div>
     <p data-i18n="pe_s6_p">Pour toute question sur ta livraison, contacte-nous par courriel à <a href="mailto:support@purepep.com">support@purepep.com</a> ou via notre <a href="contact.html">page contact</a>.</p>
   </div>
 
@@ -1325,12 +1341,12 @@
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
-        <span class="payment-badge payment-badge-logo" title="Interac e-Transfer"><img src="images/interac.png" alt="Interac e-Transfer" style="height:16px;width:auto;display:block" onerror="this.parentElement.outerHTML=&quot;<span class=&#39;payment-badge&#39;>Interac e-Transfer</span>&quot;"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
+        <span class="payment-badge footer-interac-badge" title="Interac e-Transfer"><span class="gold">Interac</span><span class="dark">e-Transfer</span></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon payment-badge-hide" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Apple Pay — bientôt disponible"><img src="images/applepay.png" alt="Apple Pay" style="height:16px;width:auto;display:block"/></span>
         <span class="payment-badge payment-badge-logo payment-badge-soon" title="Google Pay — bientôt disponible"><img src="images/googlepay.png" alt="Google Pay" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte, Apple Pay, Google Pay</span>
+        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte de crédit, Apple Pay, Google Pay</span>
       </div>
     </div>
     <div class="footer-col"><h4 data-i18n="footer_products">Produits</h4><ul><li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li><li><a href="index.html#produits" data-i18n="footer_categories">Catégories</a></li><li><a href="packs.html" data-i18n="footer_packs">Packs</a></li><li><a href="calculateur.html" data-i18n="footer_calculator">Calculateur de dosage</a></li><li><a href="index.html#produits" data-i18n="footer_accessories">Accessoires</a></li><li><a href="index.html#produits" data-i18n="footer_new">Nouveautés</a></li></ul></div>
@@ -1861,7 +1877,7 @@ const I18N = {
     pe_updated: "Last updated: July 2026",
     pe_s1_h: "Order processing", pe_s1_p: "Every order is shipped within 24 business hours, in neutral, discreet packaging with no logo or indication of contents. A shipping confirmation with a tracking number is emailed to you as soon as the parcel leaves our warehouse.",
     pe_s2_h: "Delivery times and fees",
-    pe_s2_p: "<table class=\"article-table\"><tr><th>Zone</th><th>Delivery time</th><th>Fee</th></tr><tr><td>Canada</td><td>2 to 5 business days (Canada Post)</td><td>Free from $160 of purchase, otherwise $4.90</td></tr><tr><td>United States and international</td><td>5 to 10 business days</td><td>Free from $200 of purchase, otherwise a flat $15</td></tr></table>",
+    pe_s2_p: "<table class=\"article-table\"><tr><th>Zone</th><th>Delivery time</th><th>Fee</th></tr><tr><td>Canada (Canada Post)</td><td>2 to 5 business days</td><td>Free from $160 of purchase, otherwise $15</td></tr><tr><td>Canada Post Xpresspost</td><td>1 to 2 business days</td><td>$25.00</td></tr><tr><td>United States and international</td><td>5 to 10 business days</td><td>Free from $200 of purchase, otherwise a flat $15</td></tr></table>",
     pe_s3_h: "Order tracking", pe_s3_p: "Every shipment is tracked. The tracking number sent by email lets you follow your parcel until delivery.",
     pe_s4_h: "Discreet packaging", pe_s4_p: "All our parcels are shipped in neutral packaging, with no indication of contents or brand, to protect your privacy.",
     pe_s5_h: "Delays and lost parcels", pe_s5_p: 'In case of a significant delay or a missing parcel, contact us with your tracking number: we will follow up with the carrier and, if needed, arrange a reshipment or refund in accordance with our <a href="politique-remboursement.html">refund policy</a>.',
@@ -1902,7 +1918,7 @@ const I18N = {
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
     footer_privacy: "Privacy Policy", footer_products: "Products", footer_shipping: "Shipping Policy", footer_refund: "Refund Policy",
-    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: card, Apple Pay, Google Pay",
+    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: credit card, Apple Pay, Google Pay",
     gtcat1: "Protocol", gtcat2: "Comparison",
     gtcat3: "Science", gtcat4: "Legal framework",
     gtcat5: "Quality", gtcat6: "Glossary",
