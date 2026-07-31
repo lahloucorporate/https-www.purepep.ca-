@@ -11,7 +11,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Finalisez votre commande PurePep Labs : informations de livraison et paiement sécurisé (carte, Apple Pay, Google Pay)."/>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <meta name="description" content="Finalisez votre commande PurePep Labs : informations de livraison et paiement sécurisé par virement Interac."/>
   <meta name="keywords" content="peptides recherche, BPC-157, retatrutide, tirzepatide, HPLC, COA, Canada"/>
   <meta property="og:title" content="PurePep Labs · Peptides de Recherche HPLC ≥99%"/>
   <meta property="og:description" content="27 peptides de recherche certifiés, expédiés sous 24h. COA vérifiable sur chaque lot."/>
@@ -553,6 +554,8 @@
     .footer-col a:hover{color:var(--text)}
     .footer-payment{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
     .payment-badge{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:.72rem;color:var(--muted);font-weight:600}
+    .payment-badge-soon{opacity:.4;filter:grayscale(1)}
+    .payment-badge-soon-label{font-size:.68rem;color:var(--muted);width:100%;margin-top:.3rem}
     .footer-bottom{max-width:1280px;margin:0 auto;border-top:1px solid var(--border);padding-top:1.1rem;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted);flex-wrap:wrap;gap:.5rem}
 
     /* ── CART DRAWER ── */
@@ -1308,6 +1311,13 @@
   .mobile-pay-text strong{display:block;font-size:.86rem;margin-bottom:.25rem}
   .mobile-pay-text p{font-size:.76rem;color:var(--muted);line-height:1.5;margin:0}
 
+  .pay-methods-single{grid-template-columns:1fr}
+  .interac-instructions{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:1.1rem 1.3rem;display:flex;flex-direction:column;gap:.6rem}
+  .interac-instructions-row{display:flex;justify-content:space-between;align-items:baseline;gap:.8rem;font-size:.82rem;flex-wrap:wrap}
+  .interac-instructions-row span{color:var(--muted)}
+  .interac-instructions-row strong{color:var(--text);font-weight:700}
+  .interac-instructions-note{font-size:.76rem;color:var(--muted);line-height:1.5;margin:0;border-top:1px solid var(--border);padding-top:.6rem}
+
   .checkout-sidebar{position:sticky;top:90px}
   .recap-items{display:flex;flex-direction:column;gap:.7rem;margin-bottom:1rem;max-height:280px;overflow-y:auto}
   .recap-item{display:flex;align-items:center;gap:.7rem;font-size:.84rem}
@@ -1422,33 +1432,24 @@
 
     <div class="checkout-card">
       <h2><span class="step-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span> <span data-i18n="ck_h2_payment">Moyen de paiement</span></h2>
-      <div class="pay-methods">
-        <div class="pay-method selected" onclick="selectPayMethod(this)">
-          <div class="pay-method-logos">
-            <img src="images/visa.png" alt="Visa"/>
-            <img src="images/mastercard.png" alt="Mastercard"/>
-          </div>
-          <span data-i18n="ck_pay_card">Carte bancaire</span>
-        </div>
-        <div class="pay-method" onclick="selectPayMethod(this)">
-          <div class="pay-method-logos"><img src="images/applepay.png" alt="Apple Pay"/></div>
-          <span>Apple Pay</span>
-        </div>
-        <div class="pay-method" onclick="selectPayMethod(this)">
-          <div class="pay-method-logos"><img src="images/googlepay.png" alt="Google Pay"/></div>
-          <span>Google Pay</span>
+      <div class="pay-methods pay-methods-single">
+        <div class="pay-method selected" onclick="selectPayMethod(this)" data-method="interac">
+          <div class="pay-method-logos"><img src="images/interac.png" alt="Interac" onerror="this.style.display='none'"/></div>
+          <span data-i18n="ck_pay_interac">Virement Interac</span>
         </div>
       </div>
-      <p class="pay-secure-note"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span data-i18n="ck_secure_note">Vos informations de paiement sont chiffrées et ne transitent jamais par nos serveurs.</span></p>
+      <p class="pay-secure-note"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span data-i18n="ck_secure_note_interac">D'autres moyens de paiement (crypto, carte) seront ajoutés prochainement. Pour l'instant, la commande se finalise par virement Interac.</span></p>
 
-      <div class="mobile-pay-panel">
-        <div class="mobile-pay-qr">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://purepep.ca/checkout.html" alt="QR code pour payer sur mobile"/>
+      <div class="interac-instructions">
+        <div class="interac-instructions-row">
+          <span data-i18n="ck_interac_email_label">Envoyer le virement à :</span>
+          <strong id="interac-email-display">paiements@purepeplabs.com</strong>
         </div>
-        <div class="mobile-pay-text">
-          <strong><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg><span data-i18n="ck_mobile_pay_t">Payer directement depuis votre mobile</span></strong>
-          <p data-i18n="ck_mobile_pay_p">Scannez ce code avec l'appareil photo de votre téléphone pour finaliser l'achat avec Apple Pay ou Google Pay, sans ressaisir vos informations.</p>
+        <div class="interac-instructions-row">
+          <span data-i18n="ck_interac_ref_label">Référence à indiquer :</span>
+          <strong data-i18n="ck_interac_ref_note">le numéro de commande (généré à la prochaine étape)</strong>
         </div>
+        <p class="interac-instructions-note" data-i18n="ck_interac_note">Votre commande est réservée dès sa réception. Elle est préparée et expédiée dès que le virement est confirmé (habituellement sous quelques heures).</p>
       </div>
     </div>
 
@@ -1732,6 +1733,113 @@ function onCountryChange(){
 }
 onCountryChange();
 
+// ── COURRIELS AUTOMATIQUES (EmailJS) ──
+// À REMPLACER: crée un compte gratuit sur emailjs.com, connecte ta boîte courriel,
+// et remplace les 4 valeurs ci-dessous par tes vrais identifiants EmailJS.
+const EMAILJS_PUBLIC_KEY = 'SdNXYcklPH6JRtOMc';
+const EMAILJS_SERVICE_ID = 'service_0m1z06n';
+const EMAILJS_TEMPLATE_CUSTOMER_FR = 'template_fgor9e8';
+const EMAILJS_TEMPLATE_CUSTOMER_EN = 'template_iw22xo7';
+const INTERAC_EMAIL = 'orders@purepep.ca';
+
+function emailjsReady(){
+  return typeof emailjs !== 'undefined'
+    && EMAILJS_PUBLIC_KEY.indexOf('REMPLACER') === -1
+    && EMAILJS_SERVICE_ID.indexOf('REMPLACER') === -1;
+}
+if(emailjsReady()) emailjs.init(EMAILJS_PUBLIC_KEY);
+document.addEventListener('DOMContentLoaded', function(){
+  const el = document.getElementById('interac-email-display');
+  if(el) el.textContent = INTERAC_EMAIL;
+});
+
+function sendOrderEmails(orderData){
+  if(!emailjsReady()){
+    console.warn('EmailJS non configuré — courriels automatiques désactivés pour l\'instant (voir EMAILJS_* en haut de confirmOrder).');
+    return;
+  }
+  const itemsText = orderData.items.map(it => `${it.name}${it.dose ? ' ('+it.dose+')' : ''} — $${it.price.toFixed(2)}`).join('\n');
+  const itemsHtml = orderData.items.map(it => {
+    const imgPath = CART_IMAGES[it.name] || 'images/kit-reconstitution.jpg';
+    const imgUrl = 'https://purepep.ca/' + imgPath;
+    const doseText = it.dose ? ` (${it.dose})` : '';
+    return `<table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;margin-bottom:12px;">
+      <tr>
+        <td style="width:56px;vertical-align:top;padding-right:12px;">
+          <img src="${imgUrl}" alt="${it.name}" style="width:50px;height:50px;object-fit:cover;border-radius:6px;display:block;"/>
+        </td>
+        <td style="vertical-align:middle;font-size:14px;color:#141414;">
+          ${it.name}${doseText}<br/><span style="color:#6b6b6b;">$${it.price.toFixed(2)}</span>
+        </td>
+      </tr>
+    </table>`;
+  }).join('');
+  const customerLang = localStorage.getItem('purepep_lang') === 'en' ? 'en' : 'fr';
+  const customerTemplate = customerLang === 'en' ? EMAILJS_TEMPLATE_CUSTOMER_EN : EMAILJS_TEMPLATE_CUSTOMER_FR;
+  const emailSubject = customerLang === 'en'
+    ? `Order confirmation ${orderData.number} — PurePep Labs`
+    : `Confirmation de commande ${orderData.number} — PurePep Labs`;
+  const emailBody = customerLang === 'en' ? `
+    <p style="font-size:16px;margin:0 0 15px;">Hi ${orderData.firstname},</p>
+    <p style="font-size:15px;line-height:1.6;margin:0 0 20px;">Thank you for your order with PurePep Labs! Here's your summary:</p>
+    <div style="background:#f5f5f4;border-radius:10px;padding:20px 25px;margin-bottom:20px;">
+      <p style="margin:0 0 10px;font-size:14px;color:#6b6b6b;">ORDER NUMBER</p>
+      <p style="margin:0 0 20px;font-size:18px;font-weight:700;">${orderData.number}</p>
+      <p style="margin:0 0 10px;font-size:14px;color:#6b6b6b;">ITEMS ORDERED</p>
+      <div style="margin-bottom:20px;">${itemsHtml}</div>
+      <p style="margin:0 0 5px;font-size:14px;color:#6b6b6b;">TOTAL</p>
+      <p style="margin:0;font-size:20px;font-weight:700;">$${orderData.total.toFixed(2)}</p>
+    </div>
+    <div style="border:2px solid #141414;border-radius:10px;padding:22px 25px;margin-bottom:25px;">
+      <div style="display:flex;align-items:center;margin-bottom:12px;">
+        <span style="display:inline-block;width:34px;height:34px;line-height:34px;text-align:center;background:#141414;color:#fff;border-radius:50%;font-size:16px;margin-right:10px;">🏦</span>
+        <span style="font-size:16px;font-weight:700;">Interac e-Transfer</span>
+      </div>
+      <p style="margin:0 0 12px;font-size:14px;line-height:1.6;">To complete your order, please send an Interac e-Transfer for the full amount to:</p>
+      <p style="margin:0 0 12px;font-size:17px;font-weight:700;background:#f5f5f4;padding:10px 14px;border-radius:6px;display:inline-block;">${INTERAC_EMAIL}</p>
+      <p style="margin:0;font-size:13px;color:#6b6b6b;line-height:1.6;"><strong>Important:</strong> include your order number (${orderData.number}) as the transfer message/reference, so we can match your payment quickly.</p>
+    </div>
+    <p style="font-size:14px;line-height:1.6;margin:0 0 20px;">Your order will be prepared and shipped as soon as payment is received.</p>
+    <p style="font-size:14px;line-height:1.6;margin:0 0 30px;">Questions? Just reply to this email.</p>
+    <p style="font-size:14px;line-height:1.6;margin:0;">Thank you for your trust,<br/><strong>The PurePep Labs Team</strong></p>
+  ` : `
+    <p style="font-size:16px;margin:0 0 15px;">Bonjour ${orderData.firstname},</p>
+    <p style="font-size:15px;line-height:1.6;margin:0 0 20px;">Merci pour votre commande chez PurePep Labs! Voici le résumé:</p>
+    <div style="background:#f5f5f4;border-radius:10px;padding:20px 25px;margin-bottom:20px;">
+      <p style="margin:0 0 10px;font-size:14px;color:#6b6b6b;">NUMÉRO DE COMMANDE</p>
+      <p style="margin:0 0 20px;font-size:18px;font-weight:700;">${orderData.number}</p>
+      <p style="margin:0 0 10px;font-size:14px;color:#6b6b6b;">ARTICLES COMMANDÉS</p>
+      <div style="margin-bottom:20px;">${itemsHtml}</div>
+      <p style="margin:0 0 5px;font-size:14px;color:#6b6b6b;">TOTAL</p>
+      <p style="margin:0;font-size:20px;font-weight:700;">$${orderData.total.toFixed(2)}</p>
+    </div>
+    <div style="border:2px solid #141414;border-radius:10px;padding:22px 25px;margin-bottom:25px;">
+      <div style="display:flex;align-items:center;margin-bottom:12px;">
+        <span style="display:inline-block;width:34px;height:34px;line-height:34px;text-align:center;background:#141414;color:#fff;border-radius:50%;font-size:16px;margin-right:10px;">🏦</span>
+        <span style="font-size:16px;font-weight:700;">Virement Interac</span>
+      </div>
+      <p style="margin:0 0 12px;font-size:14px;line-height:1.6;">Pour finaliser votre commande, veuillez effectuer un virement Interac au montant total à l'adresse suivante:</p>
+      <p style="margin:0 0 12px;font-size:17px;font-weight:700;background:#f5f5f4;padding:10px 14px;border-radius:6px;display:inline-block;">${INTERAC_EMAIL}</p>
+      <p style="margin:0;font-size:13px;color:#6b6b6b;line-height:1.6;"><strong>Important:</strong> indiquez votre numéro de commande (${orderData.number}) comme message/référence du virement, pour qu'on puisse l'associer rapidement à votre commande.</p>
+    </div>
+    <p style="font-size:14px;line-height:1.6;margin:0 0 20px;">Votre commande sera préparée et expédiée dès réception du paiement.</p>
+    <p style="font-size:14px;line-height:1.6;margin:0 0 30px;">Des questions? Répondez simplement à ce courriel.</p>
+    <p style="font-size:14px;line-height:1.6;margin:0;">Merci de votre confiance,<br/><strong>L'équipe PurePep Labs</strong></p>
+  `;
+  const commonParams = {
+    customer_name: orderData.firstname,
+    customer_email: orderData.email,
+    email_subject: emailSubject,
+    email_body: emailBody
+  };
+  if(customerTemplate.indexOf('REMPLACER') === -1){
+    emailjs.send(EMAILJS_SERVICE_ID, customerTemplate, commonParams)
+      .catch(err => console.error('Erreur envoi courriel client:', err));
+  }
+  // Note: la notification propriétaire se fait via le champ Bcc configuré
+  // directement sur les templates EmailJS (FR + EN), pas besoin d'un envoi séparé ici.
+}
+
 function confirmOrder(){
   const required = ['ck-firstname','ck-lastname','ck-email','ck-address','ck-zip','ck-city'];
   let firstInvalid = null;
@@ -1754,8 +1862,10 @@ function confirmOrder(){
     total: getCartTotal() + getShippingCost(),
     email: document.getElementById('ck-email').value,
     firstname: document.getElementById('ck-firstname').value,
-    date: new Date().toISOString()
+    date: new Date().toISOString(),
+    paymentMethod: 'interac'
   };
+  sendOrderEmails(orderData);
   sessionStorage.setItem('purepep_last_order', JSON.stringify(orderData));
   localStorage.removeItem('purepep_checkout_draft');
   cart.length = 0;
@@ -1772,10 +1882,12 @@ function confirmOrder(){
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
-        <span class="payment-badge payment-badge-logo" title="Visa"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo" title="Mastercard"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo" title="Apple Pay"><img src="images/applepay.png" alt="Apple Pay" style="height:16px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo" title="Google Pay"><img src="images/googlepay.png" alt="Google Pay" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo" title="Interac e-Transfer"><img src="images/interac.png" alt="Interac e-Transfer" style="height:16px;width:auto;display:block" onerror="this.parentElement.outerHTML=&quot;<span class=&#39;payment-badge&#39;>Interac e-Transfer</span>&quot;"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Apple Pay — bientôt disponible"><img src="images/applepay.png" alt="Apple Pay" style="height:16px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Google Pay — bientôt disponible"><img src="images/googlepay.png" alt="Google Pay" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte, Apple Pay, Google Pay</span>
       </div>
     </div>
     <div class="footer-col"><h4 data-i18n="footer_products">Produits</h4><ul><li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li><li><a href="index.html#produits" data-i18n="footer_categories">Catégories</a></li><li><a href="packs.html" data-i18n="footer_packs">Packs</a></li><li><a href="calculateur.html" data-i18n="footer_calculator">Calculateur de dosage</a></li><li><a href="index.html#produits" data-i18n="footer_accessories">Accessoires</a></li><li><a href="index.html#produits" data-i18n="footer_new">Nouveautés</a></li></ul></div>
@@ -2335,7 +2447,7 @@ const I18N = {
     nav_whyus: "Why Us",
     nav_more: "More",
     nav_contact: "Contact",
-    help_checkout: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What payment methods do you accept?</button><p class="help-a">Credit card (Visa, Mastercard), Apple Pay, and Google Pay, with SSL-encrypted payment.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Is shipping really discreet?</button><p class="help-a">Yes. The package is shipped in neutral packaging, with no logo or mention of contents.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What are the delivery times?</button><p class="help-a">2-3 business days in major Canadian cities, 3-5 days for remote regions.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
+    help_checkout: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What payment methods do you accept?</button><p class="help-a">Interac e-Transfer (available now). Credit card, Apple Pay, and Google Pay are coming soon.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Is shipping really discreet?</button><p class="help-a">Yes. The package is shipped in neutral packaging, with no logo or mention of contents.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What are the delivery times?</button><p class="help-a">2-3 business days in major Canadian cities, 3-5 days for remote regions.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
     trust_packaging: "Discreet packaging",
     breadcrumb_home: "Home",
     back_to_catalog: "← See all peptides",
@@ -2357,7 +2469,14 @@ const I18N = {
     ck_opt_canada: "Canada", ck_opt_us: "United States",
     ck_ph_address: "Start typing, e.g.: 1250 Sainte-Catherine St",
     ck_pay_card: "Credit Card",
+    ck_pay_interac: "Interac e-Transfer",
+    ck_ship_msg_prefix: "Only", ck_ship_msg_suffix: "left for free shipping",
     ck_secure_note: "Your payment information is encrypted and never passes through our servers.",
+    ck_secure_note_interac: "Other payment methods (crypto, card) will be added soon. For now, orders are finalized by Interac e-Transfer.",
+    ck_interac_email_label: "Send the transfer to:",
+    ck_interac_ref_label: "Reference to include:",
+    ck_interac_ref_note: "your order number (generated on the next step)",
+    ck_interac_note: "Your order is reserved as soon as it's received. It's prepared and shipped as soon as the transfer is confirmed (usually within a few hours).",
     ck_mobile_pay_t: "Pay directly from your phone",
     ck_mobile_pay_p: "Scan this code with your phone's camera to complete your purchase with Apple Pay or Google Pay, without re-entering your information.",
     ck_recap_subtotal: "Subtotal", ck_recap_shipping: "Shipping", ck_recap_total: "Total",
@@ -2408,7 +2527,7 @@ const I18N = {
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
     footer_privacy: "Privacy Policy", footer_products: "Products", footer_shipping: "Shipping Policy", footer_refund: "Refund Policy",
-    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.",
+    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: card, Apple Pay, Google Pay",
     gtcat1: "Protocol", gtcat2: "Comparison",
     gtcat3: "Science", gtcat4: "Legal framework",
     gtcat5: "Quality", gtcat6: "Glossary",
@@ -2751,7 +2870,7 @@ window.addEventListener('pageshow', function(e){
 <div class="help-panel" id="help-panel">
   <div data-i18n="help_checkout"><h4>Questions fréquentes ici</h4>
     <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Quels moyens de paiement acceptez-vous ?</button>
-    <p class="help-a">Carte bancaire (Visa, Mastercard), Apple Pay et Google Pay, en paiement chiffré SSL.</p>
+    <p class="help-a">Virement Interac (disponible dès maintenant). Carte bancaire, Apple Pay et Google Pay arrivent bientôt.</p>
     <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">La livraison est-elle vraiment discrète ?</button>
     <p class="help-a">Oui. Le colis est expédié dans un emballage neutre, sans logo ni mention du contenu.</p>
     <button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Quels sont les délais de livraison ?</button>

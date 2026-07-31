@@ -558,6 +558,8 @@
     .footer-col a:hover{color:var(--text)}
     .footer-payment{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
     .payment-badge{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:.72rem;color:var(--muted);font-weight:600}
+    .payment-badge-soon{opacity:.4;filter:grayscale(1)}
+    .payment-badge-soon-label{font-size:.68rem;color:var(--muted);width:100%;margin-top:.3rem}
     .footer-bottom{max-width:1280px;margin:0 auto;border-top:1px solid var(--border);padding-top:1.1rem;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted);flex-wrap:wrap;gap:.5rem}
 
     /* ── CART DRAWER ── */
@@ -1463,10 +1465,12 @@ saveCart(); updateCartUI();
       </div>
       <p data-i18n="footer_tagline">Peptides de recherche HPLC ≥99%.<br>COA vérifiable sur chaque lot.<br>Livraison partout au Canada, 2-5 jours ouvrés.</p>
       <div class="footer-payment">
-        <span class="payment-badge payment-badge-logo" title="Visa"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo" title="Mastercard"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo" title="Apple Pay"><img src="images/applepay.png" alt="Apple Pay" style="height:16px;width:auto;display:block"/></span>
-        <span class="payment-badge payment-badge-logo" title="Google Pay"><img src="images/googlepay.png" alt="Google Pay" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo" title="Interac e-Transfer"><img src="images/interac.png" alt="Interac e-Transfer" style="height:16px;width:auto;display:block" onerror="this.parentElement.outerHTML=&quot;<span class=&#39;payment-badge&#39;>Interac e-Transfer</span>&quot;"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Visa — bientôt disponible"><img src="images/visa.png" alt="Visa" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Mastercard — bientôt disponible"><img src="images/mastercard.png" alt="Mastercard" style="height:18px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Apple Pay — bientôt disponible"><img src="images/applepay.png" alt="Apple Pay" style="height:16px;width:auto;display:block"/></span>
+        <span class="payment-badge payment-badge-logo payment-badge-soon" title="Google Pay — bientôt disponible"><img src="images/googlepay.png" alt="Google Pay" style="height:14px;width:auto;display:block"/></span>
+        <span class="payment-badge-soon-label" data-i18n="payment_soon_label">Bientôt : carte, Apple Pay, Google Pay</span>
       </div>
     </div>
     <div class="footer-col"><h4 data-i18n="footer_products">Produits</h4><ul><li><a href="index.html#produits" data-i18n="nav_products">Nos peptides</a></li><li><a href="index.html#produits" data-i18n="footer_categories">Catégories</a></li><li><a href="packs.html" data-i18n="footer_packs">Packs</a></li><li><a href="calculateur.html" data-i18n="footer_calculator">Calculateur de dosage</a></li><li><a href="index.html#produits" data-i18n="footer_accessories">Accessoires</a></li><li><a href="index.html#produits" data-i18n="footer_new">Nouveautés</a></li></ul></div>
@@ -2045,7 +2049,7 @@ const I18N = {
     footer_loyalty: "Loyalty Program", footer_new: "New arrivals",
     footer_notices: "Legal Notice", footer_packs: "Packs",
     footer_privacy: "Privacy Policy", footer_products: "Products", footer_shipping: "Shipping Policy", footer_refund: "Refund Policy",
-    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.",
+    footer_ruo: "Research Use Only · For laboratory use only", footer_tagline: "Research peptides, HPLC ≥99%.", payment_soon_label: "Coming soon: card, Apple Pay, Google Pay",
     gtcat1: "Protocol", gtcat2: "Comparison",
     gtcat3: "Science", gtcat4: "Legal framework",
     gtcat5: "Quality", gtcat6: "Glossary",
