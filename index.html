@@ -140,9 +140,9 @@
     .logo .bio{color:var(--text);font-weight:700;font-size:1.2rem;letter-spacing:-.01em}
     .logo .pep{color:var(--accent-l);font-weight:700;font-size:1.2rem;letter-spacing:-.01em}
     .nav-links{display:flex;align-items:center;gap:1.4rem;list-style:none;font-size:.88rem;font-weight:500}
-    .nav-links a{color:var(--muted);transition:color .2s;display:inline-flex;align-items:center;gap:.35rem}.nav-links a:hover{color:var(--text)}
+    .nav-links a{color:var(--text);transition:color .2s;display:inline-flex;align-items:center;gap:.35rem}.nav-links a:hover{color:var(--accent-l)}
     .nav-dropdown{position:relative}
-    .nav-dropdown-btn{background:none;border:none;color:var(--muted);font-size:.88rem;font-weight:500;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;transition:color .2s}
+    .nav-dropdown-btn{background:none;border:none;color:var(--text);font-size:.875rem;font-weight:600;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;transition:color .2s}
     .nav-dropdown-btn:hover{color:var(--text)}
     .nav-dropdown-caret{width:9px;height:9px;transition:transform .2s}
     .nav-dropdown.open .nav-dropdown-caret{transform:rotate(180deg)}
@@ -249,6 +249,22 @@
     .hero-video-full img{width:100%;height:auto;max-height:70vh;object-fit:cover;display:block}
     .hero-video-full video{width:100%;height:70vh;object-fit:cover;display:block;background:var(--bg)}
     .intro-video-section{position:relative;overflow:hidden;background:var(--bg)}
+
+    /* ── TRUST TICKER (bandeau défilant) ── */
+    .trust-ticker{background:var(--card);border-bottom:1px solid var(--border);overflow:hidden}
+    .trust-ticker-track{display:flex;width:max-content;animation:trustTickerScroll 28s linear infinite}
+    .trust-ticker-group{display:flex;align-items:center;flex-shrink:0}
+    .trust-ticker-item{display:inline-flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:700;color:var(--text);white-space:nowrap;padding:.65rem 1.6rem}
+    .trust-ticker-icon{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .trust-ticker-icon svg{width:13px;height:13px}
+    .tt-teal .trust-ticker-icon{background:rgba(45,212,191,.15);color:#159a8e}
+    .tt-blue .trust-ticker-icon{background:rgba(96,165,250,.15);color:#3b7de0}
+    .tt-purple .trust-ticker-icon{background:rgba(167,139,250,.15);color:#8257e5}
+    .tt-pink .trust-ticker-icon{background:rgba(244,114,182,.15);color:#c0265a}
+    .trust-ticker-sep{color:var(--border);font-size:.9rem}
+    @keyframes trustTickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    @media(prefers-reduced-motion:reduce){.trust-ticker-track{animation:none;flex-wrap:wrap}.trust-ticker-group:last-child{display:none}}
+    @media(max-width:640px){.trust-ticker-item{font-size:.76rem;padding:.55rem 1.1rem}}
     .intro-video-mute{
       position:absolute;bottom:1.1rem;right:1.1rem;z-index:4;
       width:42px;height:42px;border-radius:50%;border:none;cursor:pointer;
@@ -325,11 +341,8 @@
     .payment-item .icon{font-size:1.1rem;display:flex;align-items:center}
     .payment-item .icon svg{width:17px;height:17px}
     .payment-item-logos{gap:.6rem}
-    .payment-item-highlight{
-      background:rgba(85,85,85,.1);border:1px solid rgba(85,85,85,.25);
-      border-radius:99px;padding:.35rem .9rem;color:var(--accent-d);font-weight:700;
-    }
-    .payment-item-highlight .icon{color:var(--accent-d)}
+    .payment-item-highlight{color:var(--text);font-weight:600}
+    .payment-item-highlight .icon{color:var(--text)}
     .payment-sep{width:1px;height:18px;background:var(--border)}
 
     /* ── SHIPPING PROGRESS ── */
@@ -343,7 +356,7 @@
     .shipping-bar-fill{height:100%;background:var(--accent-l);border-radius:99px;transition:width .4s}
 
     /* ── SECTION ── */
-    .section{padding:4rem 2rem;max-width:1280px;margin:0 auto}
+    .section{padding:2.5rem 2rem;max-width:1280px;margin:0 auto}
     .section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:1rem}
     .section-title{font-size:1.55rem;font-weight:700}
     .btn-ghost{
@@ -356,7 +369,7 @@
     .filter-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-bottom:1.9rem;max-width:800px;margin-left:auto;margin-right:auto}
     .filter-tab{
       background:var(--card2);border:1px solid var(--border);color:var(--text);
-      padding:.6rem 1.1rem;border-radius:99px;font-size:.82rem;font-weight:600;
+      padding:.62rem 1.15rem;border-radius:99px;font-size:.84rem;font-weight:600;
       letter-spacing:0;transition:all .2s cubic-bezier(.4,0,.2,1);cursor:pointer;
       display:inline-flex;align-items:center;justify-content:center;gap:.5rem;white-space:nowrap;
       text-align:center;
@@ -364,7 +377,7 @@
     .filter-tab .tab-icon{width:15px;height:15px;flex-shrink:0;opacity:.75}
     .filter-tab.active .tab-icon{opacity:1}
     .filter-tab .count{
-      color:var(--accent-d);font-weight:700;font-size:.68rem;background:rgba(85,85,85,.12);
+      color:var(--accent-d);font-weight:700;font-size:.7rem;background:rgba(85,85,85,.12);
       border-radius:99px;padding:1px 7px;
     }
     .filter-tab:hover{border-color:var(--accent);background:var(--card)}
@@ -384,6 +397,16 @@
       display:flex;align-items:center;justify-content:center;overflow:hidden;
     }
     .product-img-wrap img{width:100%;height:112%;object-fit:contain;will-change:transform}
+    .product-img-wrap video.product-video{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+    .product-img-wrap video.product-video--portrait{transform:scale(1.06)}
+    /* Harmonisation du blanc de fond, chaque vidéo ayant une teinte de blanc légèrement différente */
+    .pv-reta{filter:brightness(1.045)}
+    .pv-nad{filter:brightness(1.015)}
+    .pv-ipam{filter:brightness(1.005)}
+    .pv-bpc{filter:brightness(1.01) saturate(.9)}
+    .pv-tesa{filter:brightness(1.02)}
+    .pv-ghkcu{filter:brightness(1.01) saturate(.92)}
+    .pv-m2{filter:brightness(1.035) saturate(.9)}
     .rank-badge{
       position:absolute;top:10px;left:10px;
       background:rgba(245,240,225,.85);border:1px solid var(--border);
@@ -648,7 +671,7 @@
     .newsletter-section{
       background:linear-gradient(135deg,var(--card2),var(--card));
       border:1px solid rgba(85,85,85,.25);border-radius:20px;
-      padding:3rem;text-align:center;margin:0 2rem 4rem;
+      padding:3rem;text-align:center;margin:0 2rem 2.5rem;
     }
     .newsletter-section h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.8rem;font-weight:600;margin-bottom:.4rem}
     .newsletter-section p{color:var(--muted);margin-bottom:1.5rem;font-size:.9rem}
@@ -685,7 +708,7 @@
     .guide-date{font-size:.72rem;color:var(--muted)}
 
     /* ── FOOTER ── */
-    footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2rem 1.5rem;margin-top:4rem}
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2rem 1.5rem;margin-top:2.5rem}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;max-width:1280px;margin:0 auto 2rem}
     .footer-brand p{color:var(--muted);font-size:.83rem;margin-top:.7rem;line-height:1.65}
     .footer-col h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.9rem;color:var(--muted)}
@@ -771,6 +794,7 @@
       .nav-links{display:none}
       .hamburger{display:flex}
       nav{padding:0 1rem}
+      .logo-img{height:38px}
       .footer-grid{grid-template-columns:1fr 1fr}
       .quality-section,.upsell-section,.newsletter-section,.telegram-promo{margin:0 1rem}
       .payment-bar{gap:1rem}
@@ -885,8 +909,8 @@
       transition:box-shadow .3s ease,padding .3s ease;
     }
     nav.scrolled{box-shadow:0 6px 24px rgba(20,20,20,.08);border-bottom-color:rgba(85,85,85,.14)}
-    .nav-links a{font-weight:500;font-size:.875rem;letter-spacing:.01em;color:rgba(20,20,20,.55);transition:color .2s}
-    .nav-links a:hover,.nav-links a.active{color:var(--text)}
+    .nav-links a{font-weight:600;font-size:.875rem;letter-spacing:.01em;color:var(--text);transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--accent-l)}
     .nav-icon-btn{border-radius:10px;border-color:rgba(85,85,85,.15);background:rgba(85,85,85,.05);transition:all .2s}
     .nav-icon-btn:hover{background:rgba(85,85,85,.12);border-color:rgba(85,85,85,.3);color:var(--accent-l)}
 
@@ -934,7 +958,6 @@
     /* Payment bar */
     .payment-bar{background:#e3e3e1;border-top:1px solid rgba(85,85,85,.07);border-bottom:1px solid rgba(85,85,85,.07);padding:.9rem 2rem}
     .payment-item{color:var(--text);font-size:.85rem;font-weight:600;letter-spacing:.02em}
-    .payment-item-highlight{color:var(--accent-d);font-weight:700}
     .payment-sep{background:rgba(85,85,85,.12)}
 
     /* Section titles */
@@ -943,15 +966,15 @@
     /* Filter tabs */
     .filter-bar{gap:.6rem;padding:.2rem 0;justify-content:center;max-width:800px;margin-left:auto;margin-right:auto}
     .filter-tab{
-      border-radius:99px;font-size:.82rem;font-weight:600;letter-spacing:0;
+      border-radius:99px;font-size:.84rem;font-weight:600;letter-spacing:0;
       background:rgba(240,240,238,.9);border:1px solid rgba(20,20,20,.12);
-      color:var(--text);transition:all .2s cubic-bezier(.4,0,.2,1);padding:.6rem 1.1rem;
+      color:var(--text);transition:all .2s cubic-bezier(.4,0,.2,1);padding:.62rem 1.15rem;
     }
     .filter-tab:hover{background:#c7c7cc;border-color:#a8a8ae;color:#2a2a2e}
     .filter-tab:hover .tab-icon{opacity:1}
     .filter-tab:hover .count{background:rgba(20,20,20,.14);color:#2a2a2e}
     .filter-tab.active{background:var(--accent-d);border-color:var(--accent-d);color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.25)}
-    .filter-tab .count{color:var(--accent-d);font-weight:700;font-size:.68rem;background:rgba(85,85,85,.12);border-radius:99px;padding:1px 7px}
+    .filter-tab .count{color:var(--accent-d);font-weight:700;font-size:.7rem;background:rgba(85,85,85,.12);border-radius:99px;padding:1px 7px}
     .filter-tab.active .count{background:rgba(255,255,255,.2);color:#fff}
 
     /* Lueur LED pastel au survol, par catégorie (base grise inchangée, juste un halo doux qui sort) */
@@ -1175,14 +1198,14 @@
 
     /* Mobile menu, improved */
     .mobile-menu{
-      background:rgba(22,22,22,.97);backdrop-filter:blur(20px);
+      background:rgba(250,250,249,.98);backdrop-filter:blur(20px);
       transform:translateX(-100%);opacity:0;
       transition:transform .3s cubic-bezier(.4,0,.2,1),opacity .3s;
       display:flex!important;
     }
     .mobile-menu.open{transform:translateX(0);opacity:1}
-    .mobile-menu a{border-bottom-color:rgba(255,255,255,.12);font-size:1rem;color:rgba(255,255,255,.85);transition:color .15s,padding-left .15s}
-    .mobile-menu a:hover{color:#fff;padding-left:.4rem}
+    .mobile-menu a{border-bottom-color:var(--border);font-size:1rem;color:var(--text);transition:color .15s,padding-left .15s}
+    .mobile-menu a:hover{color:var(--accent-l);padding-left:.4rem}
 
     /* Packs header banner */
     .packs-header-banner{background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(240,240,238,.9));border-color:rgba(85,85,85,.12)}
@@ -1247,9 +1270,12 @@
     .spotlight-stat .num{font-family:'Plus Jakarta Sans',sans-serif;font-size:2rem;font-weight:700;color:#fff;line-height:1}
     .spotlight-stat .lbl{font-size:.72rem;color:rgba(255,255,255,.6);margin-top:.35rem;letter-spacing:.02em}
     .spotlight-body{
-      display:grid;grid-template-columns:1fr 1.15fr;gap:2.5rem;align-items:center;
-      padding:3rem clamp(1.5rem,6vw,6rem) 3.2rem;max-width:1280px;margin:0 auto;position:relative;z-index:1;
+      display:grid;grid-template-columns:1fr 1.15fr;gap:2.5rem;align-items:start;
+      padding:1.6rem clamp(1.5rem,6vw,6rem) 2rem;max-width:1280px;margin:0 auto;position:relative;z-index:1;
     }
+    .spotlight-amber .sp-vial-main{max-height:390px}
+    .spotlight-content{padding-top:.4rem}
+    @media(max-width:820px){.spotlight-body{align-items:center}}
     /* Par défaut (Retatrutide) : image à gauche, texte à droite, ordre HTML naturel.
        Le bandeau ambre (GHK-Cu) inverse : texte à gauche, image à droite (cf. règles .spotlight-amber ci-dessous). */
     .spotlight-amber .spotlight-body{grid-template-columns:1.15fr 1fr}
@@ -1454,6 +1480,32 @@
   </div>
 </div>
 
+<!-- ── BANDEAU DE CONFIANCE DÉFILANT ── -->
+<div class="trust-ticker" aria-hidden="false">
+  <div class="trust-ticker-track">
+    <div class="trust-ticker-group">
+      <span class="trust-ticker-item tt-teal"><span class="trust-ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><span data-i18n="ticker_same_day">Expédié le jour même pour toute commande avant 14h</span></span>
+      <span class="trust-ticker-sep">✦</span>
+      <span class="trust-ticker-item tt-blue"><span class="trust-ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span><span data-i18n="ticker_free_shipping">Livraison offerte dès $160 au Canada, $200 aux États-Unis</span></span>
+      <span class="trust-ticker-sep">✦</span>
+      <span class="trust-ticker-item tt-purple"><span class="trust-ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></span><span data-i18n="ticker_purity">Pureté ≥99% garantie</span></span>
+      <span class="trust-ticker-sep">✦</span>
+      <span class="trust-ticker-item tt-pink"><span class="trust-ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5L4 18a2 2 0 0 0 1.8 3h12.4a2 2 0 0 0 1.8-3l-5-9.5V2"/><path d="M8.5 2h7"/><path d="M7.5 15h9"/></svg></span><span data-i18n="ticker_coa">COA certifié, chaque lot testé</span></span>
+      <span class="trust-ticker-sep">✦</span>
+    </div>
+    <div class="trust-ticker-group" aria-hidden="true">
+      <span class="trust-ticker-item tt-teal"><span class="trust-ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><span data-i18n="ticker_same_day">Expédié le jour même pour toute commande avant 14h</span></span>
+      <span class="trust-ticker-sep">✦</span>
+      <span class="trust-ticker-item tt-blue"><span class="trust-ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span><span data-i18n="ticker_free_shipping">Livraison offerte dès $160 au Canada, $200 aux États-Unis</span></span>
+      <span class="trust-ticker-sep">✦</span>
+      <span class="trust-ticker-item tt-purple"><span class="trust-ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></span><span data-i18n="ticker_purity">Pureté ≥99% garantie</span></span>
+      <span class="trust-ticker-sep">✦</span>
+      <span class="trust-ticker-item tt-pink"><span class="trust-ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5L4 18a2 2 0 0 0 1.8 3h12.4a2 2 0 0 0 1.8-3l-5-9.5V2"/><path d="M8.5 2h7"/><path d="M7.5 15h9"/></svg></span><span data-i18n="ticker_coa">COA certifié, chaque lot testé</span></span>
+      <span class="trust-ticker-sep">✦</span>
+    </div>
+  </div>
+</div>
+
 <!-- ── VIDÉO D'INTRODUCTION ── -->
 <section class="intro-video-section">
   <div class="hero-video-full">
@@ -1474,7 +1526,7 @@
   <div class="hero-grid hero-grid-centered">
     <div class="hero-content hero-content-centered">
       <h1 data-i18n="hero_tagline">Commandez aujourd'hui, reconstituez demain.</h1>
-      <p class="hero-subtagline" data-i18n="hero_title">Peptides de recherche, pureté vérifiée, <span style="background:#d6d6d3;color:#3a3a3a;padding:.15em .4em;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone">expédiés le jour même pour toute commande avant 14h HNE</span></p>
+      <p class="hero-subtagline" data-i18n="hero_title">Peptides de recherche, pureté vérifiée, expédiés le jour même pour toute commande avant 14h HNE</p>
       <a href="c-est-quoi.html" class="hero-newcomer-btn" data-i18n="hero_newcomer_btn">Nouveau ici ? Commencez par ce guide →</a>
     </div>
   </div>
@@ -1512,7 +1564,7 @@
       <div class="spotlight-stat"><div class="num">COA</div><div class="lbl" data-i18n="sp_stat3">Certifié, chaque lot testé</div></div>
       <div class="spotlight-stat"><div class="num">4.9★</div><div class="lbl" data-i18n="sp_stat4">Note moyenne clients</div></div>
     </div>
-    <div style="text-align:center;max-width:700px;margin:2.2rem auto 0;position:relative;z-index:1">
+    <div style="text-align:center;max-width:700px;margin:1.6rem auto 0;position:relative;z-index:1">
       <span style="display:inline-block;background:#fff;color:#141414;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.35em .9em;border-radius:99px;margin-bottom:.9rem" data-i18n="sp_pill">Les plus populaires</span>
       <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:.6rem;color:#fff" data-i18n="sp_h2">Les favoris des chercheurs</h2>
       <p style="color:rgba(255,255,255,.65);font-size:1rem" data-i18n="sp_lead">Les peptides que des milliers de chercheurs recommandent chaque mois, COA à l'appui, expédiés rapidement.</p>
@@ -1591,14 +1643,14 @@
     <div class="product-card" data-cat="perte">
       <div class="product-img-wrap">
         <div class="featured-badge"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 6h3a2 2 0 0 1-2 4M7 6H4a2 2 0 0 0 2 4"/></svg><span data-i18n="badge_bestseller">#1 des ventes</span></div>
-        <a href="retatrutide-10mg.html"><img loading="lazy" class="reta-color-img" src="images/retatrutide-10mg.jpg" alt="Flacon Retatrutide PurePep Labs, étiquette verte, pureté HPLC ≥99%"/></a>
+        <a href="retatrutide-10mg.html"><video class="reta-color-img product-video pv-reta" src="images/video/retatrutide-10mg.mp4" autoplay muted playsinline></video></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-perte"><span data-i18n="catb1">Perte de Poids</span></span>
         <p class="product-name" data-i18n="p1_name"><a href="retatrutide-10mg.html" style="color:inherit">Retatrutide</a></p>
-        <select class="product-select" onchange="updateDosePrice(this);this.closest('.product-card').querySelector('.reta-color-img').src=this.selectedOptions[0].dataset.img">
+        <select class="product-select" onchange="updateDosePrice(this);swapProductVisual(this,'reta-color-img')">
           <option value="5mg" data-price="60.00" data-img="images/retatrutide-5mg.jpg">5 mg</option>
-        <option value="10mg" data-price="80.00" data-img="images/retatrutide-10mg.jpg" selected>10 mg</option>
+        <option value="10mg" data-price="80.00" data-img="images/video/retatrutide-10mg.mp4" selected>10 mg</option>
           <option value="15mg" data-price="110.00" data-img="images/retatrutide-15mg.jpg">15 mg</option>
           <option value="20mg" data-price="140.00" data-img="images/retatrutide-20mg.jpg">20 mg</option>
           <option value="30mg" data-price="160.00" data-img="images/retatrutide-30mg.jpg">30 mg</option>
@@ -1619,13 +1671,13 @@
     <div class="product-card" data-cat="peau">
       <div class="product-img-wrap">
         <div class="featured-badge" data-i18n="badge_skinstar">Star Peau & Beauté</div>
-        <a href="ghk-cu-50mg.html"><img loading="lazy" class="ghkcu-color-img" src="images/ghk-cu-50mg.jpg" onerror="this.src='https://placehold.co/160x160/f0f0ee/f472b6?text=GHK-Cu'" alt="Flacon GHK-Cu PurePep Labs, étiquette verte, pureté HPLC ≥99%"/></a>
+        <a href="ghk-cu-50mg.html"><video class="ghkcu-color-img product-video pv-ghkcu" src="images/video/ghk-cu-50mg.mp4" autoplay muted playsinline></video></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-peau"><span data-i18n="catb2">Peau & Beauté</span></span>
         <p class="product-name" data-i18n="p2_name"><a href="ghk-cu-50mg.html" style="color:inherit">GHK-Cu</a></p>
-        <select class="product-select" onchange="updateDosePrice(this);this.closest('.product-card').querySelector('.ghkcu-color-img').src=this.selectedOptions[0].dataset.img">
-          <option value="50mg" data-price="50.00" data-img="images/ghk-cu-50mg.jpg" selected>50 mg</option>
+        <select class="product-select" onchange="updateDosePrice(this);swapProductVisual(this,'ghkcu-color-img')">
+          <option value="50mg" data-price="50.00" data-img="images/video/ghk-cu-50mg.mp4" selected>50 mg</option>
           <option value="100mg" data-price="70.00" data-img="images/ghk-cu-100mg.jpg">100 mg</option>
         </select>
         <div class="product-price-row">
@@ -1644,7 +1696,7 @@
     <!-- #3 Melanotan 2 -->
     <div class="product-card" data-cat="bienetre">
       <div class="product-img-wrap">
-        <a href="melanotan-2-10mg.html"><img loading="lazy" src="images/melanotan-2-10mg.jpg" onerror="this.src='https://placehold.co/160x160/f0f0ee/34d399?text=Melanotan+2'" alt="Flacon Melanotan 2 10mg PurePep Labs, étiquette verte, pureté HPLC ≥99%"/></a>
+        <a href="melanotan-2-10mg.html"><video class="product-video pv-m2" src="images/video/melanotan-2-10mg.mp4" autoplay muted playsinline></video></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-bienetre"><span data-i18n="catb3">Bien-Être</span></span>
@@ -1663,13 +1715,13 @@
     <!-- #4 Tesamorelin -->
     <div class="product-card" data-cat="perte">
       <div class="product-img-wrap">
-        <a href="tesamorelin-10mg.html"><img loading="lazy" class="tesa-color-img" src="images/tesamorelin-5mg.jpg" onerror="this.src='https://placehold.co/160x160/f0f0ee/fb923c?text=Tesamorelin'" alt="Flacon Tesamorelin PurePep Labs, étiquette verte, pureté HPLC ≥99%"/></a>
+        <a href="tesamorelin-10mg.html"><video class="tesa-color-img product-video product-video--portrait pv-tesa" src="images/video/tesamorelin-5mg.mp4" autoplay muted playsinline></video></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-perte"><span data-i18n="catb4">Perte de Poids</span></span>
         <p class="product-name" data-i18n="p4_name"><a href="tesamorelin-10mg.html" style="color:inherit">Tesamorelin</a></p>
-        <select class="product-select" onchange="updateDosePrice(this);this.closest('.product-card').querySelector('.tesa-color-img').src=this.selectedOptions[0].dataset.img">
-          <option value="5mg" data-price="90.00" data-img="images/tesamorelin-5mg.jpg" selected>5 mg</option>
+        <select class="product-select" onchange="updateDosePrice(this);swapProductVisual(this,'tesa-color-img')">
+          <option value="5mg" data-price="90.00" data-img="images/video/tesamorelin-5mg.mp4" selected>5 mg</option>
           <option value="10mg" data-price="130.00" data-img="images/tesamorelin-10mg.jpg">10 mg</option>
         </select>
         <div class="product-price-row">
@@ -1686,14 +1738,14 @@
     <!-- #5 BPC-157 -->
     <div class="product-card" data-cat="recuperation">
       <div class="product-img-wrap">
-        <a href="bpc-157-10mg.html"><img loading="lazy" class="bpc157-color-img" src="images/bpc-157-10mg.jpg" onerror="this.src='https://placehold.co/160x160/f0f0ee/60a5fa?text=BPC-157'" alt="Flacon BPC-157 PurePep Labs, étiquette verte, pureté HPLC ≥99%"/></a>
+        <a href="bpc-157-10mg.html"><video class="bpc157-color-img product-video product-video--portrait pv-bpc" src="images/video/bpc-157-10mg.mp4" autoplay muted playsinline></video></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-recuperation"><span data-i18n="catb5">Récupération</span></span>
         <p class="product-name" data-i18n="p5_name"><a href="bpc-157-10mg.html" style="color:inherit">BPC-157</a></p>
-        <select class="product-select" onchange="updateDosePrice(this);this.closest('.product-card').querySelector('.bpc157-color-img').src=this.selectedOptions[0].dataset.img">
+        <select class="product-select" onchange="updateDosePrice(this);swapProductVisual(this,'bpc157-color-img')">
           <option value="5mg" data-price="50.00" data-img="images/bpc-157-5mg.jpg">5 mg</option>
-          <option value="10mg" data-price="70.00" data-img="images/bpc-157-10mg.jpg" selected>10 mg</option>
+          <option value="10mg" data-price="70.00" data-img="images/video/bpc-157-10mg.mp4" selected>10 mg</option>
         </select>
         <div class="product-price-row">
           <span class="product-price" id="p-bpc157">$70.00</span>
@@ -1709,7 +1761,7 @@
     <!-- #6 Ipamorelin -->
     <div class="product-card" data-cat="muscle">
       <div class="product-img-wrap">
-        <a href="ipamorelin-10mg.html"><img loading="lazy" src="images/ipamorelin-5mg.jpg" onerror="this.src='https://placehold.co/160x160/f0f0ee/f87171?text=Ipamorelin'" alt="Flacon Ipamorelin PurePep Labs, étiquette verte, pureté HPLC ≥99%"/></a>
+        <a href="ipamorelin-10mg.html"><video class="product-video product-video--portrait pv-ipam" src="images/video/ipamorelin-5mg.mp4" autoplay muted playsinline></video></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-muscle"><span data-i18n="catb6">Croissance Musculaire</span></span>
@@ -1728,7 +1780,7 @@
     <!-- #7 NAD+ -->
     <div class="product-card" data-cat="antiage">
       <div class="product-img-wrap">
-        <a href="nad-500mg.html"><img loading="lazy" src="images/nad-500mg.jpg" onerror="this.src='https://placehold.co/160x160/f0f0ee/a78bfa?text=NAD%2B'" alt="Flacon NAD+ 500mg PurePep Labs, étiquette verte, pureté HPLC ≥99%"/></a>
+        <a href="nad-500mg.html"><video class="product-video product-video--portrait pv-nad" src="images/video/nad-500mg.mp4" autoplay muted playsinline></video></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-antiage"><span data-i18n="catb7">Anti-Âge</span></span>
@@ -2449,6 +2501,63 @@ function updateDosePrice(select){
   if(priceEl) priceEl.textContent = '$' + price.toFixed(2);
 }
 
+/* Effet "boomerang" : la vidéo se joue à l'endroit puis à l'envers en boucle,
+   plutôt qu'un cut brutal retour au début. playbackRate négatif n'étant pas
+   supporté par les navigateurs, la lecture arrière est simulée via rAF. */
+function setupBoomerangVideo(v){
+  const SPEED = 0.6;
+  v.loop = false;
+  v.playbackRate = SPEED;
+  function playForward(){
+    v.playbackRate = SPEED;
+    const p = v.play();
+    if(p && p.catch) p.catch(()=>{});
+  }
+  function reversePlay(){
+    v.pause();
+    let last = null;
+    function frame(ts){
+      if(last === null) last = ts;
+      const dt = (ts - last) / 1000; last = ts;
+      v.currentTime = Math.max(0, v.currentTime - dt * SPEED);
+      if(v.currentTime > 0.02){
+        requestAnimationFrame(frame);
+      } else {
+        v.currentTime = 0;
+        playForward();
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+  v.addEventListener('ended', reversePlay);
+  if(v.readyState >= 1){ playForward(); } else { v.addEventListener('loadedmetadata', playForward, {once:true}); }
+}
+document.querySelectorAll('.product-video').forEach(setupBoomerangVideo);
+
+/* Bascule le visuel produit (img <-> video) selon l'extension du fichier choisi,
+   pour permettre le test des mini-vidéos produit sans casser le sélecteur de dose. */
+function swapProductVisual(select, className){
+  const newSrc = select.selectedOptions[0].dataset.img;
+  const card = select.closest('.product-card');
+  const current = card ? card.querySelector('.' + className) : null;
+  if(!current || !newSrc) return;
+  const isVideo = /\.mp4(\?|$)/i.test(newSrc);
+  if(isVideo && current.tagName !== 'VIDEO'){
+    const v = document.createElement('video');
+    v.className = current.className;
+    v.src = newSrc; v.autoplay = true; v.muted = true; v.playsInline = true;
+    current.replaceWith(v);
+    setupBoomerangVideo(v);
+  } else if(!isVideo && current.tagName === 'VIDEO'){
+    const im = document.createElement('img');
+    im.className = current.className;
+    im.loading = 'lazy'; im.src = newSrc; im.alt = current.alt || '';
+    current.replaceWith(im);
+  } else {
+    current.src = newSrc;
+  }
+}
+
 function getUpsellCheckboxes(){
   return Array.from(document.querySelectorAll('#upsell input[type="checkbox"]'));
 }
@@ -2788,6 +2897,10 @@ const I18N = {
     help_default: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Do I need to create an account to order?</button><p class="help-a">No, guest checkout is possible without creating an account.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">How do I contact PurePep Labs support?</button><p class="help-a">Via our Telegram channel, or by email, we typically reply within 24 to 48 business hours.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">How many peptides do you offer?</button><p class="help-a">26 research peptides across 7 categories, plus 4 accessories.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
     cart_checkout_btn: "Checkout →",
     cart_secure_note: "100% secure payment",
+    ticker_same_day: "Same-day shipping for all orders placed before 2pm",
+    ticker_free_shipping: "Free shipping from $160 in Canada, $200 in the US",
+    ticker_purity: "≥99% purity guaranteed",
+    ticker_coa: "Certified COA, every batch tested",
     price_per10_wrapped: "Individually packaged · Price for 10 units",
     price_per10: "Price for 10 units",
     tab_all: "All products",
@@ -2879,7 +2992,7 @@ const I18N = {
     hero_cta_primary: "Order now →", hero_cta_secondary: "Protocol guides",
     hero_eyebrow: "🔬 HPLC ≥99% · Verifiable COA", hero_social_num: "+500 people",
     hero_social_text: "supplied since 2024", hero_subtitle: "Certified batch by batch · Purity ≥99%",
-    hero_tagline: "Order today, reconstitute tomorrow.", hero_title: "Research peptides, verified purity, <span style=\"background:#d6d6d3;color:#3a3a3a;padding:.15em .4em;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone\">shipped same day for any order before 2pm EST</span>",
+    hero_tagline: "Order today, reconstitute tomorrow.", hero_title: "Research peptides, verified purity, shipped same day for any order before 2pm EST",
     nav_calculator: "Calculator", nav_faq: "FAQ",
     nav_guides: "Guides", nav_packs: "Bundles",
     nav_products: "Our peptides", nav_quality: "COA",
