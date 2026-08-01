@@ -1350,7 +1350,7 @@
       .sp-vial{transform:none !important}
     }
   </style>
-  <link rel="canonical" href="https://purepep.ca/index"/>
+  <link rel="canonical" href="https://purepep.ca/"/>
 </head>
 <body>
 <div id="scroll-progress"></div>
@@ -1464,8 +1464,8 @@
           <div class="upsell-single-desc" data-i18n="upsell_kit_desc">1 eau bactériostatique 10 ml, 10 seringues et 10 tampons d'alcool</div>
           <div class="upsell-single-price">$20.00</div>
           <select class="upsell-kit-color" id="upsell-kit-color" onchange="document.getElementById('upsell-kit-img').src = this.value === 'Rose' ? 'images/kit-reconstitution-rose.jpg' : 'images/kit-reconstitution.jpg'">
-            <option value="Orange" data-i18n="color_orange">Orange</option>
-            <option value="Rose" data-i18n="color_rose">Rose</option>
+            <option value="Orange" selected data-i18n="color_orange">Orange</option>
+            <option value="Rose" disabled data-i18n="kit_color_rose_oos">Rose (rupture de stock)</option>
           </select>
         </div>
       </div>
@@ -1588,7 +1588,7 @@
           <span class="spotlight-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path d="M12 7v5l3 3"/><path d="M9 3.5c1-.7 2-.7 3 0"/></svg> Effet coupe-faim</span>
           <span class="spotlight-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 9 11l4 4 8-8"/><path d="M15 6h6v6"/></svg> Perte de poids</span></div>
         </div>
-        <p class="spotlight-desc" data-i18n="sp_reta_desc">Le peptide de recherche le plus commandé sur la gestion du poids : il agit sur trois récepteurs métaboliques à la fois, ce qui en fait l'un des axes d'étude les plus prometteurs sur l'appétit et la perte de graisse.</p>
+        <p class="spotlight-desc" data-i18n="sp_reta_desc">Le peptide de recherche le plus commandé sur la gestion du poids&nbsp;: il agit sur trois récepteurs métaboliques à la fois, ce qui en fait l'un des axes d'étude les plus prometteurs sur l'appétit et la perte de graisse.</p>
         <div class="spotlight-price"><span data-i18n="sp_from">à partir de</span>$60.00</div>
         <div class="spotlight-actions">
           <a href="#produits" class="spotlight-btn-primary" onclick="goToCategory('perte')" data-i18n="sp_reta_btn1">Voir Retatrutide →</a>
@@ -1988,8 +1988,8 @@
         <span class="cat-badge cat-accessoires"><span data-i18n="catb23">Accessoires</span></span>
         <p class="product-name" data-i18n="p23_name"><a href="seringue-100u-31g.html" style="color:inherit">Seringue 100U 31G · 6mm</a></p>
         <select class="product-select" onchange="this.closest('.product-card').querySelector('.syringe-color-img').src = this.value">
-          <option value="images/syringe.jpg" selected data-i18n="color_orange">Orange</option>
-          <option value="images/syringe-rose.jpg" data-i18n="color_rose">Rose</option>
+          <option value="images/syringe.jpg" data-color="Orange" selected data-i18n="color_orange">Orange</option>
+          <option value="images/syringe-rose.jpg" data-color="Rose" disabled data-i18n="kit_color_rose_oos">Rose (rupture de stock)</option>
         </select>
         <p style="font-size:.72rem;color:var(--muted);margin:-.2rem 0 .3rem" data-i18n="price_per10_wrapped">Emballées individuellement · Prix pour 10 unités</p>
         <div class="product-price-row">
@@ -2028,14 +2028,14 @@
     <!-- #25 Kit de reconstitution -->
     <div class="product-card" data-cat="accessoires">
       <div class="product-img-wrap">
-        <a href="kit-reconstitution.html"><img loading="lazy" class="kit-color-img" src="images/kit-reconstitution-rose.jpg" onerror="this.src='https://placehold.co/400x400/f0f0ee/9ca3af?text=Kit'" alt="Kit de reconstitution PurePep Labs"/></a>
+        <a href="kit-reconstitution.html"><img loading="lazy" class="kit-color-img" src="images/kit-reconstitution.jpg" onerror="this.src='https://placehold.co/400x400/f0f0ee/9ca3af?text=Kit'" alt="Kit de reconstitution PurePep Labs"/></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-accessoires"><span data-i18n="catb25">Accessoires</span></span>
         <p class="product-name" data-i18n="p25_name"><a href="kit-reconstitution.html" style="color:inherit">Kit de reconstitution</a></p>
         <select class="product-select" onchange="this.closest('.product-card').querySelector('.kit-color-img').src = this.value">
-          <option value="images/kit-reconstitution-rose.jpg" selected data-i18n="color_rose">Rose</option>
-          <option value="images/kit-reconstitution.jpg" data-i18n="color_orange">Orange</option>
+          <option value="images/kit-reconstitution.jpg" data-color="Orange" selected data-i18n="color_orange">Orange</option>
+          <option value="images/kit-reconstitution-rose.jpg" data-color="Rose" disabled data-i18n="kit_color_rose_oos">Rose (rupture de stock)</option>
         </select>
         <div class="product-price-row">
           <span class="product-price">$20.00</span>
@@ -2621,7 +2621,7 @@ function addToCart(name,btn){
     const priceEl=card.querySelector('.product-price,.pack-price-single');
     if(priceEl) price=parseFloat(priceEl.textContent.replace(',','.').replace(' $','').replace('$',''))||0;
     const doseEl=card.querySelector('.product-select,.product-dosage');
-    if(doseEl) dose=doseEl.tagName==='SELECT'?doseEl.value:doseEl.textContent;
+    if(doseEl) dose=doseEl.tagName==='SELECT'?(doseEl.selectedOptions[0].dataset.color || doseEl.value):doseEl.textContent;
     else{
       const tagEl=card.querySelector('.dose-tag');
       if(tagEl) dose=tagEl.textContent.trim().toLowerCase().replace(/\s+/g,'');
@@ -2903,6 +2903,7 @@ const I18N = {
     ship_msg_suffix: "left for free shipping",
     color_orange: "Orange",
     color_rose: "Pink",
+    kit_color_rose_oos: "Pink (out of stock)",
     help_default: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Do I need to create an account to order?</button><p class="help-a">No, guest checkout is possible without creating an account.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">How do I contact PurePep Labs support?</button><p class="help-a">Via our Telegram channel, or by email, we typically reply within 24 to 48 business hours.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">How many peptides do you offer?</button><p class="help-a">26 research peptides across 7 categories, plus 4 accessories.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
     cart_checkout_btn: "Checkout →",
     cart_secure_note: "100% secure payment",

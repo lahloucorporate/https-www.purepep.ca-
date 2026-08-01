@@ -1286,6 +1286,15 @@
   .confirm-warning-box p{color:#92400e;font-size:.8rem;line-height:1.5;margin:0}
   .confirm-trust-section{margin:2rem 0;text-align:left}
   .confirm-trust-section h3{font-size:1rem;margin-bottom:1rem;text-align:center}
+  .confirm-trust-toggle{cursor:default}
+  .confirm-trust-toggle .ct-chevron{display:none}
+  @media(max-width:640px){
+    .confirm-trust-toggle{cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.4rem;user-select:none}
+    .confirm-trust-toggle .ct-chevron{display:inline-block;transition:transform .2s;flex-shrink:0;color:var(--muted)}
+    .confirm-trust-toggle.open .ct-chevron{transform:rotate(180deg)}
+    .confirm-trust-grid{display:none}
+    .confirm-trust-grid.open{display:flex}
+  }
   .confirm-trust-grid{display:flex;flex-direction:column;gap:1rem}
   .confirm-trust-item{display:flex;gap:.9rem;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1rem 1.2rem}
   .confirm-trust-icon{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
@@ -1323,8 +1332,8 @@
   </div>
 
   <div class="confirm-trust-section">
-    <h3 data-i18n="cc_trust_h3">Pourquoi les chercheurs nous choisissent</h3>
-    <div class="confirm-trust-grid">
+    <h3 class="confirm-trust-toggle" id="confirm-trust-toggle" onclick="toggleTrustGrid('confirm-trust-toggle','confirm-trust-grid')"><span data-i18n="cc_trust_h3">Pourquoi les chercheurs nous choisissent</span><svg class="ct-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></h3>
+    <div class="confirm-trust-grid" id="confirm-trust-grid">
       <div class="confirm-trust-item">
         <div class="confirm-trust-icon"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
         <div><strong data-i18n="cc_trust1_t">Compte d'affaires vérifié</strong><p data-i18n="cc_trust1_p">Traitement sécurisé et instantané grâce au dépôt automatique.</p></div>
@@ -1461,6 +1470,13 @@
 </div>
 
 <script>
+function toggleTrustGrid(toggleId, gridId){
+  const toggle = document.getElementById(toggleId);
+  const grid = document.getElementById(gridId);
+  if(!toggle || !grid) return;
+  const open = grid.classList.toggle('open');
+  toggle.classList.toggle('open', open);
+}
 // ── DÉFILEMENT FLUIDE (premium easing, façon Apple) ──
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

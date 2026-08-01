@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
-Sitemap: https://biopep.fr/sitemap.xml
+Disallow: /admin-commandes
+Disallow: /checkout
+Disallow: /confirmation-commande
+
+Sitemap: https://purepep.ca/sitemap.xml

@@ -1285,7 +1285,7 @@
 <div class="product-hero reveal">
   <div class="ph-gallery">
     <div class="ph-main-img">
-      <img src="images/kit-reconstitution-rose.jpg" alt="Kit de reconstitution PurePep Labs : eau bactériostatique, seringues et tampons d'alcool"/>
+      <img src="images/kit-reconstitution.jpg" alt="Kit de reconstitution PurePep Labs : eau bactériostatique, seringues et tampons d'alcool"/>
     </div>
     <div class="ph-trust-row">
       <span class="ph-trust-item">✓ Matériel stérile</span>
@@ -1308,8 +1308,8 @@
     <div class="ph-buybox">
       <div class="ph-dose-label" data-i18n="kit_color_label">Couleur des seringues</div>
       <select class="ph-dose-select" id="kit-color-select" onchange="document.querySelector('.ph-main-img img').src = this.value">
-        <option value="images/kit-reconstitution-rose.jpg" selected data-i18n="color_rose">Rose</option>
-        <option value="images/kit-reconstitution.jpg" data-i18n="color_orange">Orange</option>
+        <option value="images/kit-reconstitution.jpg" selected data-i18n="color_orange">Orange</option>
+        <option value="images/kit-reconstitution-rose.jpg" disabled data-i18n="kit_color_rose_oos">Rose (rupture de stock)</option>
       </select>
       <div class="ph-price-row">
         <div><span class="ph-price" id="ph-price">$20.00</span><span class="ph-price-unit">CAD</span></div>
@@ -1952,6 +1952,7 @@ const I18N = {
     ship_msg_suffix: "left for free shipping",
     color_orange: "Orange",
     color_rose: "Pink",
+    kit_color_rose_oos: "Pink (out of stock)",
     help_product: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What purity do you guarantee?</button><p class="help-a">≥99% across our entire catalog, verified by HPLC on every batch.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Where can I find a product's COA?</button><p class="help-a">On each product page, as well as in the full list available on our quality page.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Some products show several dosages, how do I choose?</button><p class="help-a">The dosage is the amount of active ingredient in the vial (in mg). The choice depends on the concentration you want after reconstitution, calculable with our dedicated tool.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
     breadcrumb_products: "Our peptides",
     add_to_cart_btn: "Add to cart",

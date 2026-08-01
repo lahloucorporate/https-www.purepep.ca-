@@ -1337,6 +1337,15 @@
   .interac-warning-box strong{display:block;color:#b45309;font-size:.8rem;margin-bottom:.25rem}
   .interac-warning-box p{color:#92400e;font-size:.76rem;line-height:1.5;margin:0}
   .interac-trust-grid{display:flex;flex-direction:column;gap:.7rem;margin-top:.7rem}
+  .interac-trust-toggle{font-size:.85rem;font-weight:700;color:var(--text);margin-top:1.1rem;cursor:default}
+  .interac-trust-toggle .ct-chevron{display:none}
+  @media(max-width:640px){
+    .interac-trust-toggle{cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.4rem;user-select:none;text-align:center}
+    .interac-trust-toggle .ct-chevron{display:inline-block;transition:transform .2s;flex-shrink:0;color:var(--muted)}
+    .interac-trust-toggle.open .ct-chevron{transform:rotate(180deg)}
+    .interac-trust-grid{display:none;margin-top:.7rem}
+    .interac-trust-grid.open{display:flex}
+  }
   .interac-trust-item{display:flex;gap:.7rem;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.7rem .9rem}
   .interac-trust-icon{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
   .interac-trust-item:nth-child(1) .interac-trust-icon{background:rgba(34,197,94,.14);color:#16a34a}
@@ -1510,7 +1519,8 @@
         </div>
       </div>
 
-      <div class="interac-trust-grid">
+      <h3 class="interac-trust-toggle" id="interac-trust-toggle" onclick="toggleTrustGrid('interac-trust-toggle','interac-trust-grid')"><span data-i18n="ck_trust_h3">Pourquoi les chercheurs nous choisissent</span><svg class="ct-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></h3>
+      <div class="interac-trust-grid" id="interac-trust-grid">
         <div class="interac-trust-item">
           <div class="interac-trust-icon"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
           <div><strong data-i18n="ck_trust1_t">Compte d'affaires vérifié</strong><p data-i18n="ck_trust1_p">Traitement sécurisé et instantané grâce au dépôt automatique.</p></div>
@@ -2019,6 +2029,13 @@ function confirmOrder(){
 </div>
 
 <script>
+function toggleTrustGrid(toggleId, gridId){
+  const toggle = document.getElementById(toggleId);
+  const grid = document.getElementById(gridId);
+  if(!toggle || !grid) return;
+  const open = grid.classList.toggle('open');
+  toggle.classList.toggle('open', open);
+}
 // ── DÉFILEMENT FLUIDE (premium easing, façon Apple) ──
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -2621,6 +2638,7 @@ const I18N = {
     ck_business_note: "The name \"9572-6683 Québec inc.\" is our registered legal entity — that's really us, no need to worry if this name appears during the transfer.",
     ck_warning_title: "⚠️ Important",
     ck_warning_text: "Do not include product names in the message field. If a product name is included, the payment must be returned and the order cancelled.",
+    ck_trust_h3: "Why researchers choose us",
     ck_trust1_t: "Verified Business Account",
     ck_trust1_p: "Secure, instant processing via Auto-Deposit.",
     ck_trust2_t: "Fast Dispatch",

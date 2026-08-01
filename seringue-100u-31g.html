@@ -1092,7 +1092,7 @@
       .sp-vial{transform:none !important}
     }
   </style>
-  <link rel="canonical" href="https://purepep.ca/kit-reconstitution"/>
+  <link rel="canonical" href="https://purepep.ca/seringue-100u-31g"/>
 </head>
 <body>
 <div id="scroll-progress"></div>
@@ -1310,7 +1310,7 @@
       <div class="ph-dose-label">Couleur</div>
       <select class="ph-dose-select" id="ph-dose-select" onchange="updateHeroPrice()">
         <option value="orange" data-price="7.00" data-img="images/syringe.jpg" selected data-i18n="color_orange">Orange</option>
-        <option value="rose" data-price="7.00" data-img="images/syringe-rose.jpg" data-i18n="color_rose">Rose</option>
+        <option value="rose" data-price="7.00" data-img="images/syringe-rose.jpg" disabled data-i18n="kit_color_rose_oos">Rose (rupture de stock)</option>
       </select>
       <div class="ph-price-row">
         <div><span class="ph-price" id="ph-price">$7.00</span><span class="ph-price-unit">CAD</span></div>
@@ -1959,6 +1959,7 @@ const I18N = {
     ship_msg_suffix: "left for free shipping",
     color_orange: "Orange",
     color_rose: "Pink",
+    kit_color_rose_oos: "Pink (out of stock)",
     help_product: `<h4>Frequently asked here</h4><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">What purity do you guarantee?</button><p class="help-a">≥99% across our entire catalog, verified by HPLC on every batch.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Where can I find a product's COA?</button><p class="help-a">On each product page, as well as in the full list available on our quality page.</p><button class="help-q" onclick="this.nextElementSibling.classList.toggle('open')">Some products show several dosages, how do I choose?</button><p class="help-a">The dosage is the amount of active ingredient in the vial (in mg). The choice depends on the concentration you want after reconstitution, calculable with our dedicated tool.</p><div class="help-panel-footer"><a href="faq.html">See the full FAQ →</a></div>`,
     breadcrumb_products: "Our peptides",
     add_to_cart_btn: "Add to cart",
