@@ -598,7 +598,7 @@
     .cart-secure{text-align:center;font-size:.72rem;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:.3rem}
 
     /* ── WHATSAPP ── */
-    .floating-contact-buttons{position:fixed;bottom:calc(1.8rem + env(safe-area-inset-bottom));right:1.8rem;z-index:250;display:flex;flex-direction:column;gap:.7rem;align-items:flex-end}
+    .floating-contact-buttons{display:none !important}
     .whatsapp-btn,.telegram-btn{
       background:#25D366;color:#fff;
       display:flex;align-items:center;justify-content:center;
@@ -953,27 +953,6 @@
     @keyframes toastOut{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(20px)}}
 
     /* Preuve sociale, notification d'achat récent */
-    .social-proof-toast{
-      position:fixed;left:1.8rem;bottom:5.6rem;z-index:260;
-      display:none;align-items:center;gap:.7rem;max-width:290px;
-      background:rgba(245,245,244,.97);backdrop-filter:blur(10px);
-      border:1px solid var(--border);border-radius:14px;
-      box-shadow:var(--shadow-hover);padding:.75rem 2.1rem .75rem .8rem;
-      transform:translateX(-12px);opacity:0;transition:transform .4s cubic-bezier(.16,1,.3,1),opacity .4s ease;
-    }
-    .social-proof-toast.show{display:flex;transform:translateX(0);opacity:1}
-    .sp-icon{width:34px;height:34px;border-radius:9px;background:var(--trust-glow);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-    .sp-body{display:flex;flex-direction:column;gap:1px;min-width:0}
-    .sp-body strong{font-size:.8rem;color:var(--text);font-weight:600;line-height:1.35}
-    .sp-body span{font-size:.7rem;color:var(--muted)}
-    .sp-close{
-      position:absolute;top:6px;right:8px;background:none;border:none;
-      color:var(--muted);font-size:1.1rem;line-height:1;padding:2px;cursor:pointer;
-    }
-    .sp-close:hover{color:var(--text)}
-    @media(max-width:640px){.social-proof-toast{left:1rem;right:5.5rem;bottom:calc(5rem + env(safe-area-inset-bottom));max-width:none}}
-    @media(prefers-reduced-motion:reduce){.social-proof-toast{transition:opacity .2s ease;transform:none}}
-
     /* Back to top */
     #back-to-top{
       position:fixed;bottom:1.8rem;left:1.8rem;z-index:250;
@@ -1268,6 +1247,12 @@
   .article-body a{color:var(--accent-l);font-weight:600}
   .article-callout{background:var(--card2);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:1rem 1.3rem;margin:1.3rem 0;font-size:.85rem;line-height:1.6;color:var(--muted)}
   .article-callout strong{color:var(--text);display:block;margin-bottom:.3rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.03em}
+
+  .article-product-cta{background:var(--card2);border:1px solid var(--border);border-radius:16px;padding:1.4rem 1.6rem;margin:1.6rem 0 0;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap}
+  .article-product-cta-text strong{display:block;font-size:1rem;color:var(--text);margin-bottom:.15rem}
+  .article-product-cta-text span{font-size:.83rem;color:var(--muted)}
+  .article-product-cta .btn-primary{white-space:nowrap;flex-shrink:0;background:rgba(96,165,250,.14);border:1px solid rgba(96,165,250,.4);color:#1d4ed8;box-shadow:none}.article-product-cta .btn-primary:hover{background:rgba(96,165,250,.24);transform:translateY(-1px);box-shadow:none}
+  .article-product-cta-group{display:flex;flex-direction:column;gap:.8rem}
   .article-callout-warn{border-left-color:#4a4a4a;background:rgba(251,146,60,.08)}
   .article-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.85rem}
   .article-table th,.article-table td{padding:.6rem .8rem;border:1px solid var(--border);text-align:left}
@@ -1315,6 +1300,30 @@
 
     <h2>Ce qu'il faut retenir</h2>
     <p>Le niveau de preuve scientifique varie fortement d'un composé à l'autre, certains disposent d'essais cliniques de phase avancée, d'autres reposent principalement sur des données précliniques ou une littérature plus ancienne. Nous t'invitons à consulter directement les publications sources (PubMed, ClinicalTrials.gov) pour te faire ta propre opinion sur l'état de la recherche pour un composé donné.</p>
+
+    <div class="article-product-cta-group">
+      <div class="article-product-cta">
+        <div class="article-product-cta-text">
+          <strong>Retatrutide · Peptide de recherche HPLC ≥99%</strong>
+          <span>COA vérifiable par lot, expédié partout au Canada</span>
+        </div>
+        <a href="retatrutide-10mg.html" class="btn-primary">Voir la fiche produit →</a>
+      </div>
+      <div class="article-product-cta">
+        <div class="article-product-cta-text">
+          <strong>BPC-157 · Peptide de recherche HPLC ≥99%</strong>
+          <span>COA vérifiable par lot, expédié partout au Canada</span>
+        </div>
+        <a href="bpc-157-10mg.html" class="btn-primary">Voir la fiche produit →</a>
+      </div>
+      <div class="article-product-cta">
+        <div class="article-product-cta-text">
+          <strong>GHK-Cu · Peptide de recherche HPLC ≥99%</strong>
+          <span>COA vérifiable par lot, expédié partout au Canada</span>
+        </div>
+        <a href="ghk-cu-50mg.html" class="btn-primary">Voir la fiche produit →</a>
+      </div>
+    </div>
   </div>
   
 </div>
@@ -1368,16 +1377,6 @@
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
   <span id="mobile-cart-badge">0</span>
 </button>
-
-<!-- ── PREUVE SOCIALE (notifications d'achat récent) ── -->
-<div id="social-proof-toast" class="social-proof-toast" role="status" aria-live="polite">
-  <button class="sp-close" onclick="fermerPreuveSociale(event)" aria-label="Fermer">×</button>
-  <div class="sp-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-  <div class="sp-body">
-    <strong id="sp-text"></strong>
-    <span id="sp-time"></span>
-  </div>
-</div>
 
 <script>
 // ── DÉFILEMENT FLUIDE (premium easing, façon Apple) ──
@@ -1787,56 +1786,6 @@ function toggleWish(btn) {
   }
 }
 
-// ── PREUVE SOCIALE (notifications d'achat récent) ──
-(function(){
-  const prenoms = ['Thomas','Lucas','Léa','Emma','Hugo','Chloé','Nathan','Camille','Julien','Sarah','Maxime','Manon','Antoine','Julie','Alexandre','Clara','Romain','Laura','Nicolas','Marion','Kevin','Aurélie','Florian','Pauline','Mathieu','Charlotte','Baptiste','Inès','Quentin','Marine'];
-  const villes = ['Montréal','Toronto','Vancouver','Calgary','Ottawa','Québec','Edmonton','Winnipeg','Halifax','Victoria','Hamilton','London','Saskatoon','Regina','Mississauga','Kitchener','New York','Los Angeles','Chicago','Houston','Phoenix','Miami','Seattle','Boston','Austin','Denver','San Diego','Dallas','Atlanta','Portland'];
-  const produits = ['BPC-157','Retatrutide','GHK-Cu','TB-500','Melanotan 2','NAD+','Selank','Semax','MOTS-c','PT-141','Ipamorelin','Epithalon','Tesamorelin','Klow','Cagrilintide'];
-  const delais = ['à l&#39;instant','il y a 2 min','il y a 4 min','il y a 7 min','il y a 12 min','il y a 18 min','il y a 25 min'];
-  const delaisEn = ['just now','2 min ago','4 min ago','7 min ago','12 min ago','18 min ago','25 min ago'];
-
-  const toast = document.getElementById('social-proof-toast');
-  const textEl = document.getElementById('sp-text');
-  const timeEl = document.getElementById('sp-time');
-  let dismissed = sessionStorage.getItem('sp-dismissed') === '1';
-  let hideTimer = null;
-
-  function pick(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
-
-  function afficherNotification(){
-    if(dismissed) return;
-    const isEnSp = localStorage.getItem('purepep_lang') === 'en';
-    const prenom = pick(prenoms), ville = pick(villes), produit = pick(produits);
-    textEl.textContent = isEnSp
-      ? `${prenom} in ${ville} just ordered ${produit}`
-      : `${prenom} à ${ville} vient de commander ${produit}`;
-    timeEl.textContent = isEnSp ? pick(delaisEn) : pick(delais);
-    toast.classList.add('show');
-    clearTimeout(hideTimer);
-    hideTimer = setTimeout(() => toast.classList.remove('show'), 5500);
-  }
-
-  function planifierProchaine(){
-    const delai = 55000 + Math.random() * 65000; // entre 55s et 2min
-    setTimeout(() => {
-      if(!dismissed){ afficherNotification(); }
-      planifierProchaine();
-    }, delai);
-  }
-
-  window.fermerPreuveSociale = function(e){
-    e.stopPropagation();
-    toast.classList.remove('show');
-    dismissed = true;
-    sessionStorage.setItem('sp-dismissed', '1');
-  };
-
-  if(!dismissed){
-    setTimeout(afficherNotification, 8000); // première apparition après 8s
-    planifierProchaine();
-  }
-})();
-
 // ── SÉLECTEUR DE LANGUE / i18n ──
 const I18N = {
   en: {
@@ -1862,7 +1811,7 @@ const I18N = {
     es_h1: "Human studies: retatrutide, tirzepatide, BPC-157, GHK-Cu",
     es_date: "July 2026",
     es_callout: "<strong>Informational content</strong>This article summarizes the state of publicly available scientific literature. It does not constitute medical advice or a usage recommendation. PurePep Labs sells these compounds exclusively for laboratory research purposes.",
-    es_body: "<h2>Retatrutide</h2><p>Retatrutide is a triple agonist of the GLP-1, GIP, and glucagon receptors, developed and studied in clinical trials by Eli Lilly. Published phase 2 trials reported notable body weight reductions over several months of treatment in participants with obesity, with a side-effect profile that was primarily gastrointestinal, consistent with other molecules in this class.</p><h2>Tirzepatide</h2><p>Tirzepatide, a dual GIP/GLP-1 agonist, has a more advanced body of phase 3 clinical trials than retatrutide, having led to market authorizations in several countries for specific metabolic indications. Published data document its effect on body weight and glycemic control.</p><h2>BPC-157</h2><p>BPC-157 has a substantial body of preclinical studies (animal models) documenting effects on tissue healing, gastrointestinal protection, and angiogenesis. Published and controlled human data remain, to date, notably more limited than preclinical data. The reference scientific literature clearly distinguishes between these two levels of evidence.</p><h2>GHK-Cu</h2><p>GHK-Cu is one of the longest-studied peptides in the field, with publications dating back to the 1970s. The literature covers both studies on cellular models and certain human studies with topical application, in the context of dermatological research on tissue regeneration and collagen synthesis.</p><h2>Key takeaways</h2><p>The level of scientific evidence varies greatly from one compound to another. Some have advanced-phase clinical trials, others rely mainly on preclinical data or older literature. We invite you to consult the source publications directly (PubMed, ClinicalTrials.gov) to form your own opinion on the state of research for a given compound.</p>",
+    es_body: "<h2>Retatrutide</h2><p>Retatrutide is a triple agonist of the GLP-1, GIP, and glucagon receptors, developed and studied in clinical trials by Eli Lilly. Published phase 2 trials reported notable body weight reductions over several months of treatment in participants with obesity, with a side-effect profile that was primarily gastrointestinal, consistent with other molecules in this class.</p><h2>Tirzepatide</h2><p>Tirzepatide, a dual GIP/GLP-1 agonist, has a more advanced body of phase 3 clinical trials than retatrutide, having led to market authorizations in several countries for specific metabolic indications. Published data document its effect on body weight and glycemic control.</p><h2>BPC-157</h2><p>BPC-157 has a substantial body of preclinical studies (animal models) documenting effects on tissue healing, gastrointestinal protection, and angiogenesis. Published and controlled human data remain, to date, notably more limited than preclinical data. The reference scientific literature clearly distinguishes between these two levels of evidence.</p><h2>GHK-Cu</h2><p>GHK-Cu is one of the longest-studied peptides in the field, with publications dating back to the 1970s. The literature covers both studies on cellular models and certain human studies with topical application, in the context of dermatological research on tissue regeneration and collagen synthesis.</p><h2>Key takeaways</h2><p>The level of scientific evidence varies greatly from one compound to another. Some have advanced-phase clinical trials, others rely mainly on preclinical data or older literature. We invite you to consult the source publications directly (PubMed, ClinicalTrials.gov) to form your own opinion on the state of research for a given compound.</p><div class=\"article-product-cta-group\"><div class=\"article-product-cta\"><div class=\"article-product-cta-text\"><strong>Retatrutide · Research Peptide HPLC ≥99%</strong><span>COA verifiable per batch, shipped across Canada</span></div><a href=\"retatrutide-10mg.html\" class=\"btn-primary\">View product →</a></div><div class=\"article-product-cta\"><div class=\"article-product-cta-text\"><strong>BPC-157 · Research Peptide HPLC ≥99%</strong><span>COA verifiable per batch, shipped across Canada</span></div><a href=\"bpc-157-10mg.html\" class=\"btn-primary\">View product →</a></div><div class=\"article-product-cta\"><div class=\"article-product-cta-text\"><strong>GHK-Cu · Research Peptide HPLC ≥99%</strong><span>COA verifiable per batch, shipped across Canada</span></div><a href=\"ghk-cu-50mg.html\" class=\"btn-primary\">View product →</a></div></div>",
     age_gate_title: "Just a moment before entering",
     age_gate_desc: "PurePep Labs offers research peptides intended for laboratory use only. Access to this site is restricted to adults.",
     age_gate_yes: "I am over 18, Enter",

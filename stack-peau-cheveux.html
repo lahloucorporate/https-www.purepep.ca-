@@ -17,9 +17,9 @@
   <meta name="keywords" content="ghk-cu 50mg, klow, pack peptides"/>
   <meta property="og:title" content="Pack Peau Neuve, Cheveux Forts · PurePep Labs"/>
   <meta property="og:description" content="Pack Peau Neuve, Cheveux Forts : GHK-Cu 50mg + Klow, avec kit de reconstitution inclus. Régénération cutanée & densité capillaire."/>
-  <meta property="og:image" content="https://purepep.ca/images/logo-purepep.png"/>
+  <meta property="og:image" content="https://purepep.ca/images/ghk-cu-100mg.jpg"/>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Product","name":"Pack Peau Neuve, Cheveux Forts","description":"Le GHK-Cu est le peptide le plus documenté en recherche dermatologique, plus de 50 ans d'études sur son rôle dans la synthèse de collagène et la régénération tissulaire, avec des données suggérant au","brand":{"@type":"Brand","name":"PurePep Labs"},"offers":{"@type":"Offer","priceCurrency":"CAD","price":"180.00","availability":"https://schema.org/InStock","url":"https://purepep.ca/stack-peau-cheveux.html"}}
+  {"@context": "https://schema.org", "@type": "Product", "name": "Pack Peau Neuve, Cheveux Forts", "description": "Le GHK-Cu est le peptide le plus documenté en recherche dermatologique, plus de 50 ans d'études sur son rôle dans la synthèse de collagène et la régénération tissulaire, avec des données suggérant au", "brand": {"@type": "Brand", "name": "PurePep Labs"}, "offers": {"@type": "Offer", "priceCurrency": "CAD", "price": "180.00", "availability": "https://schema.org/InStock", "url": "https://purepep.ca/stack-peau-cheveux"}, "image": "https://purepep.ca/images/ghk-cu-100mg.jpg"}
   </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -601,7 +601,7 @@
     .cart-secure{text-align:center;font-size:.72rem;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:.3rem}
 
     /* ── WHATSAPP ── */
-    .floating-contact-buttons{position:fixed;bottom:calc(1.8rem + env(safe-area-inset-bottom));right:1.8rem;z-index:250;display:flex;flex-direction:column;gap:.7rem;align-items:flex-end}
+    .floating-contact-buttons{display:none !important}
     .whatsapp-btn,.telegram-btn{
       background:#25D366;color:#fff;
       display:flex;align-items:center;justify-content:center;
@@ -956,27 +956,6 @@
     @keyframes toastOut{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(20px)}}
 
     /* Preuve sociale, notification d'achat récent */
-    .social-proof-toast{
-      position:fixed;left:1.8rem;bottom:5.6rem;z-index:260;
-      display:none;align-items:center;gap:.7rem;max-width:290px;
-      background:rgba(245,245,244,.97);backdrop-filter:blur(10px);
-      border:1px solid var(--border);border-radius:14px;
-      box-shadow:var(--shadow-hover);padding:.75rem 2.1rem .75rem .8rem;
-      transform:translateX(-12px);opacity:0;transition:transform .4s cubic-bezier(.16,1,.3,1),opacity .4s ease;
-    }
-    .social-proof-toast.show{display:flex;transform:translateX(0);opacity:1}
-    .sp-icon{width:34px;height:34px;border-radius:9px;background:var(--trust-glow);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-    .sp-body{display:flex;flex-direction:column;gap:1px;min-width:0}
-    .sp-body strong{font-size:.8rem;color:var(--text);font-weight:600;line-height:1.35}
-    .sp-body span{font-size:.7rem;color:var(--muted)}
-    .sp-close{
-      position:absolute;top:6px;right:8px;background:none;border:none;
-      color:var(--muted);font-size:1.1rem;line-height:1;padding:2px;cursor:pointer;
-    }
-    .sp-close:hover{color:var(--text)}
-    @media(max-width:640px){.social-proof-toast{left:1rem;right:5.5rem;bottom:calc(5rem + env(safe-area-inset-bottom));max-width:none}}
-    @media(prefers-reduced-motion:reduce){.social-proof-toast{transition:opacity .2s ease;transform:none}}
-
     /* Back to top */
     #back-to-top{
       position:fixed;bottom:1.8rem;left:1.8rem;z-index:250;
@@ -1504,16 +1483,6 @@ saveCart(); updateCartUI();
   <span id="mobile-cart-badge">0</span>
 </button>
 
-<!-- ── PREUVE SOCIALE (notifications d'achat récent) ── -->
-<div id="social-proof-toast" class="social-proof-toast" role="status" aria-live="polite">
-  <button class="sp-close" onclick="fermerPreuveSociale(event)" aria-label="Fermer">×</button>
-  <div class="sp-icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-  <div class="sp-body">
-    <strong id="sp-text"></strong>
-    <span id="sp-time"></span>
-  </div>
-</div>
-
 <script>
 // ── DÉFILEMENT FLUIDE (premium easing, façon Apple) ──
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1921,56 +1890,6 @@ function toggleWish(btn) {
     wishlist.delete(name);
   }
 }
-
-// ── PREUVE SOCIALE (notifications d'achat récent) ──
-(function(){
-  const prenoms = ['Thomas','Lucas','Léa','Emma','Hugo','Chloé','Nathan','Camille','Julien','Sarah','Maxime','Manon','Antoine','Julie','Alexandre','Clara','Romain','Laura','Nicolas','Marion','Kevin','Aurélie','Florian','Pauline','Mathieu','Charlotte','Baptiste','Inès','Quentin','Marine'];
-  const villes = ['Montréal','Toronto','Vancouver','Calgary','Ottawa','Québec','Edmonton','Winnipeg','Halifax','Victoria','Hamilton','London','Saskatoon','Regina','Mississauga','Kitchener','New York','Los Angeles','Chicago','Houston','Phoenix','Miami','Seattle','Boston','Austin','Denver','San Diego','Dallas','Atlanta','Portland'];
-  const produits = ['BPC-157','Retatrutide','GHK-Cu','TB-500','Melanotan 2','NAD+','Selank','Semax','MOTS-c','PT-141','Ipamorelin','Epithalon','Tesamorelin','Klow','Cagrilintide'];
-  const delais = ['à l&#39;instant','il y a 2 min','il y a 4 min','il y a 7 min','il y a 12 min','il y a 18 min','il y a 25 min'];
-  const delaisEn = ['just now','2 min ago','4 min ago','7 min ago','12 min ago','18 min ago','25 min ago'];
-
-  const toast = document.getElementById('social-proof-toast');
-  const textEl = document.getElementById('sp-text');
-  const timeEl = document.getElementById('sp-time');
-  let dismissed = sessionStorage.getItem('sp-dismissed') === '1';
-  let hideTimer = null;
-
-  function pick(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
-
-  function afficherNotification(){
-    if(dismissed) return;
-    const isEnSp = localStorage.getItem('purepep_lang') === 'en';
-    const prenom = pick(prenoms), ville = pick(villes), produit = pick(produits);
-    textEl.textContent = isEnSp
-      ? `${prenom} in ${ville} just ordered ${produit}`
-      : `${prenom} à ${ville} vient de commander ${produit}`;
-    timeEl.textContent = isEnSp ? pick(delaisEn) : pick(delais);
-    toast.classList.add('show');
-    clearTimeout(hideTimer);
-    hideTimer = setTimeout(() => toast.classList.remove('show'), 5500);
-  }
-
-  function planifierProchaine(){
-    const delai = 55000 + Math.random() * 65000; // entre 55s et 2min
-    setTimeout(() => {
-      if(!dismissed){ afficherNotification(); }
-      planifierProchaine();
-    }, delai);
-  }
-
-  window.fermerPreuveSociale = function(e){
-    e.stopPropagation();
-    toast.classList.remove('show');
-    dismissed = true;
-    sessionStorage.setItem('sp-dismissed', '1');
-  };
-
-  if(!dismissed){
-    setTimeout(afficherNotification, 8000); // première apparition après 8s
-    planifierProchaine();
-  }
-})();
 
 // ── SÉLECTEUR DE LANGUE / i18n ──
 const I18N = {
