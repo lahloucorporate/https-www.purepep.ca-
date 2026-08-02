@@ -2221,7 +2221,7 @@ function loadGoogleAnalytics(){
 // ── VÉRIFICATION D'ÂGE ──
 function confirmAgeGate(isAdult){
   if(isAdult){
-    localStorage.setItem('purepep_age_confirmed', 'true');
+    sessionStorage.setItem('purepep_age_confirmed', 'true');
     document.getElementById('age-gate').classList.remove('show');
     initCookieBanner();
   } else {
@@ -2245,7 +2245,7 @@ function setCookieConsent(accepted){
   if(accepted) loadGoogleAnalytics();
 }
 (function initAgeGate(){
-  const ageConfirmed = localStorage.getItem('purepep_age_confirmed');
+  const ageConfirmed = sessionStorage.getItem('purepep_age_confirmed');
   if(!ageConfirmed){
     document.getElementById('age-gate').classList.add('show');
   } else {
