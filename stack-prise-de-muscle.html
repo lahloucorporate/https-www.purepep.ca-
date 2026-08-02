@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,16 +7,16 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Stack Prise de Muscle, Voies somatotropes, croissance & masse maigre · PurePep Labs</title>
+  <title>Muscle Building Stack, Somatotropic Pathways, Growth & Lean Mass · PurePep Labs</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Stack Prise de Muscle : Ipamorelin + Tesamorelin, avec kit de reconstitution inclus. Voies somatotropes, croissance & masse maigre."/>
+  <meta name="description" content="Muscle Building Stack: Ipamorelin + Tesamorelin, reconstitution kit included. Somatotropic pathways, growth & lean mass."/>
   <meta name="keywords" content="ipamorelin, tesamorelin, stack, pack peptides"/>
   <meta property="og:title" content="Stack Prise de Muscle · PurePep Labs"/>
-  <meta property="og:description" content="Stack Prise de Muscle : Ipamorelin + Tesamorelin, avec kit de reconstitution inclus. Voies somatotropes, croissance & masse maigre."/>
+  <meta property="og:description" content="Muscle Building Stack: Ipamorelin + Tesamorelin, reconstitution kit included. Somatotropic pathways, growth & lean mass."/>
   <meta property="og:image" content="https://purepep.ca/images/tesamorelin-5mg.jpg"/>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Product", "name": "Stack Prise de Muscle", "description": "Le duo GHRP + GHRH est considéré comme le protocole de stimulation de la croissance le plus établi dans la littérature de recherche. Tesamorelin est un analogue du GHRH (growth hormone-releasing hormo", "brand": {"@type": "Brand", "name": "PurePep Labs"}, "offers": {"@type": "Offer", "priceCurrency": "CAD", "price": "121.79", "availability": "https://schema.org/InStock", "url": "https://purepep.ca/stack-prise-de-muscle"}, "image": "https://purepep.ca/images/tesamorelin-5mg.jpg"}
@@ -2036,13 +2036,13 @@ function applyLang(lang){
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){
-  const current = localStorage.getItem('purepep_lang') || 'fr';
+  const current = localStorage.getItem('purepep_lang') || 'en';
   const idx = LANG_CYCLE.indexOf(current);
   const next = LANG_CYCLE[(idx + 1) % LANG_CYCLE.length];
   applyLang(next);
 }
 // Applique la langue sauvegardée (ou FR par défaut) au chargement
-const savedLang = localStorage.getItem('purepep_lang') || 'fr';
+const savedLang = localStorage.getItem('purepep_lang') || 'en';
 document.addEventListener('DOMContentLoaded', () => applyLang(savedLang));
 if(document.readyState !== 'loading') applyLang(savedLang);
 

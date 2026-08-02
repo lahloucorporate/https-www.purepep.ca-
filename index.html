@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,15 +7,15 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>PurePep Labs · Peptides de Recherche HPLC ≥99% · Livré partout au Canada</title>
+  <title>PurePep Labs · Research Peptides HPLC ≥99% · Shipped Across Canada</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="PurePep Labs, peptides de recherche certifiés HPLC ≥99%. COA vérifiable sur chaque lot. 19 références en stock, expédiées sous 24h partout au Canada."/>
+  <meta name="description" content="PurePep Labs, certified research peptides HPLC ≥99%. Verifiable COA on every batch. 19 products in stock, shipped within 24h across Canada."/>
   <meta name="keywords" content="peptides recherche, BPC-157, retatrutide, tirzepatide, HPLC, COA, Canada"/>
-  <meta property="og:title" content="PurePep Labs · Peptides de Recherche HPLC ≥99%"/>
+  <meta property="og:title" content="PurePep Labs · Research Peptides HPLC ≥99%"/>
   <meta property="og:description" content="26 peptides de recherche certifiés, expédiés sous 24h. COA vérifiable sur chaque lot."/>
   <meta property="og:image" content="https://purepep.ca/images/logo-purepep.png"/>
   <script type="application/ld+json">
@@ -453,6 +453,7 @@
       transition:background .2s,transform .1s;
     }
     .btn-add:hover{background:var(--accent-l);transform:scale(1.01)}
+    .btn-add.card-btn-disabled{background:#c7c7c7!important;color:#8a8a8a!important;cursor:not-allowed}
     .product-extras{display:flex;align-items:center;gap:.5rem;margin-top:.5rem}
     .coa-link{font-size:.72rem;color:var(--muted);display:flex;align-items:center;gap:3px;transition:color .2s}
     .coa-link:hover{color:var(--accent-l)}
@@ -1437,12 +1438,13 @@
         <img src="images/kit-reconstitution.jpg" alt="Kit de reconstitution" id="upsell-kit-img"/>
         <div class="upsell-single-info">
           <div class="upsell-single-name" data-i18n="upsell_kit_name">Kit de reconstitution</div>
-          <div class="upsell-single-desc" data-i18n="upsell_kit_desc">1 eau bactériostatique 10 ml, 10 seringues et 10 tampons d'alcool</div>
+          <div class="upsell-single-desc" data-i18n="upsell_kit_desc">1 flacon d'eau bactériostatique (10 ml), 10 seringues et 10 tampons d'alcool</div>
           <div class="upsell-single-price">$20.00</div>
-          <select class="upsell-kit-color" id="upsell-kit-color" onchange="document.getElementById('upsell-kit-img').src = this.value === 'Rose' ? 'images/kit-reconstitution-rose.jpg' : 'images/kit-reconstitution.jpg'">
+          <select class="upsell-kit-color" id="upsell-kit-color" onchange="document.getElementById('upsell-kit-img').src = this.value === 'Rose' ? 'images/kit-reconstitution-rose.jpg' : 'images/kit-reconstitution.jpg'; document.getElementById('upsell-kit-oos-note').style.display = this.value === 'Rose' ? 'block' : 'none'">
             <option value="Orange" selected data-i18n="color_orange">Orange</option>
-            <option value="Rose" disabled data-i18n="kit_color_rose_oos">Rose (rupture de stock)</option>
+            <option value="Rose" data-i18n="color_rose">Rose</option>
           </select>
+          <div id="upsell-kit-oos-note" style="display:none;font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#b91c1c;background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.3);border-radius:7px;padding:.3rem .55rem;width:fit-content;margin-top:.4rem">Rupture de stock temporaire</div>
         </div>
       </div>
       <button type="button" class="upsell-single-btn" onclick="addUpsellSingleToCart()" data-i18n="upsell_single_add">+ Ajouter</button>
@@ -1698,6 +1700,7 @@
     <!-- #4 Tesamorelin -->
     <div class="product-card" data-cat="perte">
       <div class="product-img-wrap">
+        <div class="featured-badge">Rupture de stock</div>
         <a href="tesamorelin-10mg.html"><img class="tesa-color-img" loading="lazy" src="images/tesamorelin-5mg.jpg" alt="Tesamorelin"/></a>
       </div>
       <div class="product-body">
@@ -1715,7 +1718,7 @@
             <button class="qty-btn" onclick="changeQty(this,1)">+</button>
           </div>
         </div>      </div>
-    <button class="btn-add" onclick="addToCart('Tesamorelin',this)"><span data-i18n="btn_add_cart">Ajouter au panier</span></button>
+    <button class="btn-add" style="background:#c7c7c7;color:#8a8a8a;cursor:not-allowed;pointer-events:none" disabled>Rupture de stock</button>
     </div>
 
     <!-- #5 BPC-157 -->
@@ -1744,6 +1747,7 @@
     <!-- #6 Ipamorelin -->
     <div class="product-card" data-cat="muscle">
       <div class="product-img-wrap">
+        <div class="featured-badge">Rupture de stock</div>
         <a href="ipamorelin-10mg.html"><img loading="lazy" src="images/ipamorelin-5mg.jpg" alt="Ipamorelin"/></a>
       </div>
       <div class="product-body">
@@ -1757,7 +1761,7 @@
             <button class="qty-btn" onclick="changeQty(this,1)">+</button>
           </div>
         </div>      </div>
-    <button class="btn-add" onclick="addToCart('Ipamorelin',this)"><span data-i18n="btn_add_cart">Ajouter au panier</span></button>
+    <button class="btn-add" style="background:#c7c7c7;color:#8a8a8a;cursor:not-allowed;pointer-events:none" disabled>Rupture de stock</button>
     </div>
 
     <!-- #7 NAD+ -->
@@ -1788,7 +1792,7 @@
         <span class="cat-badge cat-recuperation"><span data-i18n="catb8">Récupération</span></span>
         <p class="product-name" data-i18n="p8_name"><a href="tb-500-10mg.html" style="color:inherit">TB-500</a><span class="dose-tag">10 MG</span></p>
         <div class="product-price-row">
-          <span class="product-price" id="p-tb500">$70.00</span>
+          <span class="product-price" id="p-tb500">$80.00</span>
           <div class="qty-ctrl">
             <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
             <span class="qty-val">1</span>
@@ -1801,13 +1805,15 @@
     <!-- #9 BPC+TB -->
     <div class="product-card" data-cat="recuperation">
       <div class="product-img-wrap">
+        <div class="featured-badge">Promo</div>
         <a href="bpc-157-tb-500.html"><img loading="lazy" src="images/bpc157-tb500.jpg" onerror="this.src='https://placehold.co/160x160/f0f0ee/818cf8?text=BPC%2BTB'" alt="Flacon BPC-157/TB-500 PurePep Labs, étiquette verte, pureté HPLC ≥99%"/></a>
       </div>
       <div class="product-body">
         <span class="cat-badge cat-recuperation"><span data-i18n="catb9">Récupération</span></span>
         <p class="product-name" data-i18n="p9_name"><a href="bpc-157-tb-500.html" style="color:inherit">BPC-157 + TB-500</a><span class="dose-tag">20 MG</span></p>
         <div class="product-price-row">
-          <span class="product-price">$110.00</span>
+          <span class="product-price-old" style="text-decoration:line-through;color:var(--muted);font-size:.85em;margin-right:6px;font-weight:600">$175.00</span>
+          <span class="product-price">$145.00</span>
           <div class="qty-ctrl">
             <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
             <span class="qty-val">1</span>
@@ -1845,7 +1851,7 @@
         <span class="cat-badge cat-focus"><span data-i18n="catb12">Focus & Cognition</span></span>
         <p class="product-name" data-i18n="p12_name"><a href="semax-10mg.html" style="color:inherit">Semax</a><span class="dose-tag">10 MG</span></p>
         <div class="product-price-row">
-          <span class="product-price">$40.00</span>
+          <span class="product-price">$50.00</span>
           <div class="qty-ctrl">
             <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
             <span class="qty-val">1</span>
@@ -1921,7 +1927,7 @@
         <span class="cat-badge cat-perte">Perte de Poids</span>
         <p class="product-name"><a href="cagrilintide-5mg.html" style="color:inherit">Cagrilintide</a><span class="dose-tag">5 MG</span></p>
         <div class="product-price-row">
-          <span class="product-price">$40.00</span>
+          <span class="product-price">$65.00</span>
           <div class="qty-ctrl">
             <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
             <span class="qty-val">1</span>
@@ -1962,10 +1968,10 @@
       </div>
       <div class="product-body">
         <span class="cat-badge cat-accessoires"><span data-i18n="catb23">Accessoires</span></span>
-        <p class="product-name" data-i18n="p23_name"><a href="seringue-100u-31g.html" style="color:inherit">Seringue 100U 31G · 6mm</a></p>
-        <select class="product-select" onchange="this.closest('.product-card').querySelector('.syringe-color-img').src = this.value">
-          <option value="images/syringe.jpg" data-color="Orange" selected data-i18n="color_orange">Orange</option>
-          <option value="images/syringe-rose.jpg" data-color="Rose" disabled data-i18n="kit_color_rose_oos">Rose (rupture de stock)</option>
+        <p class="product-name" data-i18n="p23_name"><a href="seringue-100u-31g.html" style="color:inherit">Seringue 100U 31G · 8mm</a></p>
+        <select class="product-select" onchange="handleCardColorChange(this,'syringe-color-img')">
+          <option value="images/syringe.jpg" data-color="Orange" data-oos="0" selected data-i18n="color_orange">Orange</option>
+          <option value="images/syringe-rose.jpg" data-color="Rose" data-oos="1" data-i18n="color_rose">Rose</option>
         </select>
         <p style="font-size:.72rem;color:var(--muted);margin:-.2rem 0 .3rem" data-i18n="price_per10_wrapped">Emballées individuellement · Prix pour 10 unités</p>
         <div class="product-price-row">
@@ -2009,9 +2015,9 @@
       <div class="product-body">
         <span class="cat-badge cat-accessoires"><span data-i18n="catb25">Accessoires</span></span>
         <p class="product-name" data-i18n="p25_name"><a href="kit-reconstitution.html" style="color:inherit">Kit de reconstitution</a></p>
-        <select class="product-select" onchange="this.closest('.product-card').querySelector('.kit-color-img').src = this.value">
-          <option value="images/kit-reconstitution.jpg" data-color="Orange" selected data-i18n="color_orange">Orange</option>
-          <option value="images/kit-reconstitution-rose.jpg" data-color="Rose" disabled data-i18n="kit_color_rose_oos">Rose (rupture de stock)</option>
+        <select class="product-select" onchange="handleCardColorChange(this,'kit-color-img')">
+          <option value="images/kit-reconstitution.jpg" data-color="Orange" data-oos="0" selected data-i18n="color_orange">Orange</option>
+          <option value="images/kit-reconstitution-rose.jpg" data-color="Rose" data-oos="1" data-i18n="color_rose">Rose</option>
         </select>
         <div class="product-price-row">
           <span class="product-price">$20.00</span>
@@ -2021,7 +2027,7 @@
             <button class="qty-btn" onclick="changeQty(this,1)">+</button>
           </div>
         </div>
-        <div class="product-extras" style="font-size:.72rem;color:var(--muted)">1 eau bactério 10ml · 10 seringues · 10 tampons alcool</div>
+        <div class="product-extras" style="font-size:.72rem;color:var(--muted)">1 flacon d'eau bactériostatique · 10 seringues · 10 tampons alcool</div>
       </div>
     <button class="btn-add" onclick="addToCart('Kit de reconstitution',this)"><span data-i18n="btn_add_cart">Ajouter au panier</span></button>
     </div>
@@ -2064,7 +2070,7 @@
         <span class="stack-pep">BPC-157</span><span class="stack-plus">+</span><span class="stack-pep">TB-500</span>
       </div>
       <p class="pack-kit-note" data-i18n="pk_home_kitnote">Kit de reconstitution <span style="text-decoration:line-through;color:var(--muted);font-weight:500">$20</span> <span style="color:var(--accent-d)">Offert</span></p>
-      <p class="pack-price-single">$90.00</p>
+      <p class="pack-price-single">$120.00</p>
       <button class="btn-add" onclick="event.stopPropagation();addToCart('Pack Wolverine',this)" data-i18n="pk_home_addbtn">Ajouter le pack</button>
     </div>
 
@@ -2088,7 +2094,7 @@
         <span class="stack-pep">GHK-Cu</span><span class="stack-plus">+</span><span class="stack-pep">Klow</span>
       </div>
       <p class="pack-kit-note" data-i18n="pk_home_kitnote">Kit de reconstitution <span style="text-decoration:line-through;color:var(--muted);font-weight:500">$20</span> <span style="color:var(--accent-d)">Offert</span></p>
-      <p class="pack-price-single">$180.00</p>
+      <p class="pack-price-single">$160.00</p>
       <button class="btn-add" onclick="event.stopPropagation();addToCart('Pack Peau & Cheveux',this)" data-i18n="pk_home_addbtn">Ajouter le pack</button>
     </div>
 
@@ -2100,7 +2106,7 @@
         <span class="stack-pep">Semax</span><span class="stack-plus">+</span><span class="stack-pep">Selank</span>
       </div>
       <p class="pack-kit-note" data-i18n="pk_home_kitnote">Kit de reconstitution <span style="text-decoration:line-through;color:var(--muted);font-weight:500">$20</span> <span style="color:var(--accent-d)">Offert</span></p>
-      <p class="pack-price-single">$100.00</p>
+      <p class="pack-price-single">$110.00</p>
       <button class="btn-add" onclick="event.stopPropagation();addToCart('Pack Clarté Mentale',this)" data-i18n="pk_home_addbtn">Ajouter le pack</button>
     </div>
 
@@ -2569,6 +2575,10 @@ function addUpsellSingleToCart(){
   const colorSel = document.getElementById('upsell-kit-color');
   const color = colorSel ? colorSel.value : '';
   const isEnKit = localStorage.getItem('purepep_lang') === 'en';
+  if(color === 'Rose'){
+    showToast(isEnKit ? 'Temporarily out of stock' : 'Rupture de stock temporaire', '⚠️');
+    return;
+  }
   cart.push({name: 'Kit de reconstitution', price: 20.00, dose: color});
   saveCart();
   updateCartUI();
@@ -2577,6 +2587,29 @@ function addUpsellSingleToCart(){
   btn.innerHTML = isEnKit ? '✓ Added!' : '✓ Ajouté !';
   setTimeout(() => { btn.classList.remove('added'); btn.innerHTML = orig; }, 1400);
   showToast(isEnKit ? 'Reconstitution Kit added to cart' : 'Kit de reconstitution ajouté au panier', '✓');
+}
+
+function handleCardColorChange(sel, imgClass){
+  const card = sel.closest('.product-card');
+  const opt = sel.selectedOptions[0];
+  const img = card ? card.querySelector('.' + imgClass) : null;
+  if(img) img.src = opt.value;
+  const oos = opt.dataset.oos === '1';
+  let note = card ? card.querySelector('.card-oos-note') : null;
+  if(oos && !note && card){
+    note = document.createElement('div');
+    note.className = 'card-oos-note';
+    note.style.cssText = 'font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#b91c1c;background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.3);border-radius:7px;padding:.3rem .55rem;width:fit-content;margin:.5rem 0 .5rem';
+    const isEnNote = localStorage.getItem('purepep_lang') === 'en';
+    note.textContent = isEnNote ? 'Temporarily out of stock' : 'Rupture de stock temporaire';
+    sel.insertAdjacentElement('afterend', note);
+  }
+  if(note) note.style.display = oos ? 'block' : 'none';
+  const addBtn = card ? card.querySelector('.btn-add') : null;
+  if(addBtn){
+    addBtn.classList.toggle('card-btn-disabled', oos);
+    addBtn.style.pointerEvents = oos ? 'none' : '';
+  }
 }
 
 function addToCart(name,btn){
@@ -2879,7 +2912,7 @@ const I18N = {
     age_gate_legal: "By continuing, you confirm you are of legal age and accept our terms of use.",
     upsell_heading: "Ready to start your protocol? Add what you need:",
     upsell_kit_name: "Reconstitution Kit",
-    upsell_kit_desc: "1 bacteriostatic water 10 ml, 10 syringes and 10 alcohol swabs",
+    upsell_kit_desc: "1 bacteriostatic water vial (10 ml), 10 syringes and 10 alcohol swabs",
     btn_add_cart: "Add to cart", catb1: "Weight Loss",
     catb10: "Skin & Beauty", catb12: "Focus & Cognition",
     catb13: "Anti-Aging", catb14: "Anti-Aging",
@@ -2994,13 +3027,13 @@ function applyLang(lang){
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){
-  const current = localStorage.getItem('purepep_lang') || 'fr';
+  const current = localStorage.getItem('purepep_lang') || 'en';
   const idx = LANG_CYCLE.indexOf(current);
   const next = LANG_CYCLE[(idx + 1) % LANG_CYCLE.length];
   applyLang(next);
 }
 // Applique la langue sauvegardée (ou FR par défaut) au chargement
-const savedLang = localStorage.getItem('purepep_lang') || 'fr';
+const savedLang = localStorage.getItem('purepep_lang') || 'en';
 document.addEventListener('DOMContentLoaded', () => applyLang(savedLang));
 if(document.readyState !== 'loading') applyLang(savedLang);
 

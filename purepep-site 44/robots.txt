@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /admin-commandes
-Disallow: /checkout
-Disallow: /confirmation-commande
-
-Sitemap: https://purepep.ca/sitemap.xml

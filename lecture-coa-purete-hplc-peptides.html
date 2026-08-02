@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,16 +7,16 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Comment lire un COA de peptide de recherche · PurePep Labs</title>
+  <title>How to Read a Research Peptide COA · PurePep Labs</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Guide pour comprendre un certificat d'analyse (COA) de peptide de recherche : pureté HPLC, masse molaire, numéro de lot."/>
+  <meta name="description" content="Guide to understanding a research peptide certificate of analysis (COA): HPLC purity, molar mass, batch number."/>
   <meta name="keywords" content="peptides recherche, BPC-157, retatrutide, tirzepatide, HPLC, COA, Canada"/>
-  <meta property="og:title" content="Comment lire un COA de peptide de recherche · PurePep Labs"/>
-  <meta property="og:description" content="Guide pour comprendre un certificat d'analyse (COA) de peptide de recherche : pureté HPLC, masse molaire, numéro de lot."/>
+  <meta property="og:title" content="How to Read a Research Peptide COA · PurePep Labs"/>
+  <meta property="og:description" content="Guide to understanding a research peptide certificate of analysis (COA): HPLC purity, molar mass, batch number."/>
   <meta property="og:image" content="https://purepep.ca/images/logo-purepep.png"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -1961,13 +1961,13 @@ function applyLang(lang){
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){
-  const current = localStorage.getItem('purepep_lang') || 'fr';
+  const current = localStorage.getItem('purepep_lang') || 'en';
   const idx = LANG_CYCLE.indexOf(current);
   const next = LANG_CYCLE[(idx + 1) % LANG_CYCLE.length];
   applyLang(next);
 }
 // Applique la langue sauvegardée (ou FR par défaut) au chargement
-const savedLang = localStorage.getItem('purepep_lang') || 'fr';
+const savedLang = localStorage.getItem('purepep_lang') || 'en';
 document.addEventListener('DOMContentLoaded', () => applyLang(savedLang));
 if(document.readyState !== 'loading') applyLang(savedLang);
 

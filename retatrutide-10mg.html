@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,13 +7,13 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Retatrutide 10mg · Peptide de Recherche HPLC ≥99% · PurePep Labs</title>
+  <title>Retatrutide 10mg · Research Peptide HPLC ≥99% · PurePep Labs</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Retatrutide 10mg, peptide de recherche triple-agoniste GIP/GLP-1/glucagon, pureté ≥99% HPLC certifiée Freedom Diagnostics. COA par lot, livré partout au Canada. À partir de $60.00."/>
+  <meta name="description" content="Retatrutide 10mg, triple-agonist GIP/GLP-1/glucagon research peptide, ≥99% HPLC purity certified by Freedom Diagnostics. COA per batch, shipped across Canada. From $60.00."/>
   <meta name="keywords" content="retatrutide, retatrutide 10mg, peptide recherche, triple agoniste, GLP-1, GIP, glucagon, HPLC, COA, Canada"/>
   <meta property="og:title" content="Retatrutide 10mg · PurePep Labs"/>
   <meta property="og:description" content="Peptide de recherche triple-agoniste GIP/GLP-1/glucagon, pureté ≥99% HPLC. COA par lot, livré sous 48h."/>
@@ -1424,7 +1424,7 @@
     <a class="ph-related-card" href="index.html#produits">
       <img src="images/cagrilintide-5mg.jpg" alt="Cagrilintide"/>
       <div class="ph-related-name">CAGRILINTIDE</div>
-      <div class="ph-related-price">$40.00</div>
+      <div class="ph-related-price">$65.00</div>
     </a>
     <a class="ph-related-card" href="index.html#produits">
       <img src="images/tesamorelin-5mg.jpg" alt="Tesamorelin"/>
@@ -2168,13 +2168,13 @@ function applyLang(lang){
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){
-  const current = localStorage.getItem('purepep_lang') || 'fr';
+  const current = localStorage.getItem('purepep_lang') || 'en';
   const idx = LANG_CYCLE.indexOf(current);
   const next = LANG_CYCLE[(idx + 1) % LANG_CYCLE.length];
   applyLang(next);
 }
 // Applique la langue sauvegardée (ou FR par défaut) au chargement
-const savedLang = localStorage.getItem('purepep_lang') || 'fr';
+const savedLang = localStorage.getItem('purepep_lang') || 'en';
 document.addEventListener('DOMContentLoaded', () => applyLang(savedLang));
 if(document.readyState !== 'loading') applyLang(savedLang);
 

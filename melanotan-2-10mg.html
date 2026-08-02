@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,16 +7,16 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Melanotan 2 · Peptide de Recherche HPLC ≥99% · PurePep Labs</title>
+  <title>Melanotan 2 · Research Peptide HPLC ≥99% · PurePep Labs</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Melanotan 2, peptide de recherche, pureté ≥99% HPLC certifiée Freedom Diagnostics. COA par lot, livré partout au Canada. À partir de $45.00."/>
+  <meta name="description" content="Melanotan 2, research peptide, ≥99% HPLC purity certified by Freedom Diagnostics. COA per batch, shipped across Canada. From $45.00."/>
   <meta name="keywords" content="melanotan 2, peptide recherche, HPLC, COA, Canada"/>
   <meta property="og:title" content="Melanotan 2 · PurePep Labs"/>
-  <meta property="og:description" content="Melanotan 2, peptide de recherche, pureté ≥99% HPLC certifiée Freedom Diagnostics. COA par lot, livré partout au Canada. À partir de $45.00."/>
+  <meta property="og:description" content="Melanotan 2, research peptide, ≥99% HPLC purity certified by Freedom Diagnostics. COA per batch, shipped across Canada. From $45.00."/>
   <meta property="og:image" content="https://purepep.ca/images/melanotan-2-10mg.jpg"/>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Product", "name": "Melanotan 2", "description": "Le Melanotan 2 est un analogue synthétique de l'hormone alpha-MSH, agoniste non sélectif des récepteurs de la mélanocortine (MC1R et MC4R). Il est étudié pour son rôle dans la pigmentation cutanée et la régulation de l'appétit.", "brand": {"@type": "Brand", "name": "PurePep Labs"}, "offers": {"@type": "Offer", "priceCurrency": "CAD", "price": "45.00", "availability": "https://schema.org/InStock", "url": "https://purepep.ca/melanotan-2-10mg"}, "image": "https://purepep.ca/images/melanotan-2-10mg.jpg"}
@@ -2102,13 +2102,13 @@ function applyLang(lang){
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){
-  const current = localStorage.getItem('purepep_lang') || 'fr';
+  const current = localStorage.getItem('purepep_lang') || 'en';
   const idx = LANG_CYCLE.indexOf(current);
   const next = LANG_CYCLE[(idx + 1) % LANG_CYCLE.length];
   applyLang(next);
 }
 // Applique la langue sauvegardée (ou FR par défaut) au chargement
-const savedLang = localStorage.getItem('purepep_lang') || 'fr';
+const savedLang = localStorage.getItem('purepep_lang') || 'en';
 document.addEventListener('DOMContentLoaded', () => applyLang(savedLang));
 if(document.readyState !== 'loading') applyLang(savedLang);
 

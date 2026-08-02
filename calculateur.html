@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,16 +7,16 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Calculateur de Dosage · PurePep Labs</title>
+  <title>Dosage Calculator · PurePep Labs</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Calculateur de dosage et guide de reconstitution pour peptides de recherche PurePep Labs. Volume exact à prélever sur seringue U-100."/>
+  <meta name="description" content="Dosage calculator and reconstitution guide for PurePep Labs research peptides. Exact volume to draw with a U-100 syringe."/>
   <meta name="keywords" content="peptides recherche, BPC-157, retatrutide, tirzepatide, HPLC, COA, Canada"/>
-  <meta property="og:title" content="PurePep Labs · Peptides de Recherche HPLC ≥99%"/>
-  <meta property="og:description" content="27 peptides de recherche certifiés, expédiés sous 24h. COA vérifiable sur chaque lot."/>
+  <meta property="og:title" content="PurePep Labs · Research Peptides HPLC ≥99%"/>
+  <meta property="og:description" content="27 certified research peptides, shipped within 24h. Verifiable COA on every batch."/>
   <meta property="og:image" content="https://purepep.ca/images/logo-purepep.png"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -2139,13 +2139,13 @@ function applyLang(lang){
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){
-  const current = localStorage.getItem('purepep_lang') || 'fr';
+  const current = localStorage.getItem('purepep_lang') || 'en';
   const idx = LANG_CYCLE.indexOf(current);
   const next = LANG_CYCLE[(idx + 1) % LANG_CYCLE.length];
   applyLang(next);
 }
 // Applique la langue sauvegardée (ou FR par défaut) au chargement
-const savedLang = localStorage.getItem('purepep_lang') || 'fr';
+const savedLang = localStorage.getItem('purepep_lang') || 'en';
 document.addEventListener('DOMContentLoaded', () => applyLang(savedLang));
 if(document.readyState !== 'loading') applyLang(savedLang);
 

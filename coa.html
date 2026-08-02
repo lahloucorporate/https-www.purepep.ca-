@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,10 +13,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Contrôle qualité PurePep Labs : pureté HPLC ≥99%, certificat d'analyse (COA) par lot, laboratoire Freedom Diagnostics."/>
+  <meta name="description" content="PurePep Labs quality control: ≥99% HPLC purity, certificate of analysis (COA) per batch, Freedom Diagnostics laboratory."/>
   <meta name="keywords" content="peptides recherche, BPC-157, retatrutide, tirzepatide, HPLC, COA, Canada"/>
-  <meta property="og:title" content="PurePep Labs · Peptides de Recherche HPLC ≥99%"/>
-  <meta property="og:description" content="27 peptides de recherche certifiés, expédiés sous 24h. COA vérifiable sur chaque lot."/>
+  <meta property="og:title" content="PurePep Labs · Research Peptides HPLC ≥99%"/>
+  <meta property="og:description" content="27 certified research peptides, shipped within 24h. Verifiable COA on every batch."/>
   <meta property="og:image" content="https://purepep.ca/images/logo-purepep.png"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -2036,13 +2036,13 @@ function applyLang(lang){
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){
-  const current = localStorage.getItem('purepep_lang') || 'fr';
+  const current = localStorage.getItem('purepep_lang') || 'en';
   const idx = LANG_CYCLE.indexOf(current);
   const next = LANG_CYCLE[(idx + 1) % LANG_CYCLE.length];
   applyLang(next);
 }
 // Applique la langue sauvegardée (ou FR par défaut) au chargement
-const savedLang = localStorage.getItem('purepep_lang') || 'fr';
+const savedLang = localStorage.getItem('purepep_lang') || 'en';
 document.addEventListener('DOMContentLoaded', () => applyLang(savedLang));
 if(document.readyState !== 'loading') applyLang(savedLang);
 

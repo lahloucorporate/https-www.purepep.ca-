@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,16 +7,16 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Pack Renaissance, Énergie mitochondriale & métabolisme cellulaire · PurePep Labs</title>
+  <title>Renaissance Pack, Mitochondrial Energy & Cellular Metabolism · PurePep Labs</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Pack Renaissance : NAD+ + MOTS-c 10mg, avec kit de reconstitution inclus. Énergie mitochondriale & métabolisme cellulaire."/>
+  <meta name="description" content="Renaissance Pack: NAD+ + MOTS-c 10mg, reconstitution kit included. Mitochondrial energy & cellular metabolism."/>
   <meta name="keywords" content="nad+, mots-c 10mg, pack peptides"/>
   <meta property="og:title" content="Pack Renaissance · PurePep Labs"/>
-  <meta property="og:description" content="Pack Renaissance : NAD+ + MOTS-c 10mg, avec kit de reconstitution inclus. Énergie mitochondriale & métabolisme cellulaire."/>
+  <meta property="og:description" content="Renaissance Pack: NAD+ + MOTS-c 10mg, reconstitution kit included. Mitochondrial energy & cellular metabolism."/>
   <meta property="og:image" content="https://purepep.ca/images/nad-500mg.jpg"/>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Product", "name": "Pack Renaissance", "description": "NAD+ est une coenzyme essentielle au métabolisme énergétique cellulaire, elle alimente les sirtuines et les enzymes de réparation de l'ADN. MOTS-c est un peptide dérivé du génome mitochondrial qui ag", "brand": {"@type": "Brand", "name": "PurePep Labs"}, "offers": {"@type": "Offer", "priceCurrency": "CAD", "price": "110.00", "availability": "https://schema.org/InStock", "url": "https://purepep.ca/stack-regeneration-cellulaire"}, "image": "https://purepep.ca/images/nad-500mg.jpg"}
@@ -1398,7 +1398,7 @@
     <a class="ph-related-card" href="pack-wolverine.html">
       <img src="images/bpc157-tb500.jpg" alt="Pack Wolverine"/>
       <div class="ph-related-name" data-i18n="rel_wolvbase">PACK WOLVERINE</div>
-      <div class="ph-related-price">$90.00</div>
+      <div class="ph-related-price">$120.00</div>
     </a>
     <a class="ph-related-card" href="stack-wolverine.html">
       <img src="images/bpc-157-10mg.jpg" alt="Pack Wolverine Elite"/>
@@ -1413,7 +1413,7 @@
     <a class="ph-related-card" href="stack-peau-cheveux.html">
       <img src="images/ghk-cu-100mg.jpg" alt="Pack Peau & Cheveux"/>
       <div class="ph-related-name" data-i18n="rel_skin">PACK PEAU & CHEVEUX</div>
-      <div class="ph-related-price">$180.00</div>
+      <div class="ph-related-price">$160.00</div>
     </a>
   </div>
 </div>
@@ -2051,13 +2051,13 @@ function applyLang(lang){
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){
-  const current = localStorage.getItem('purepep_lang') || 'fr';
+  const current = localStorage.getItem('purepep_lang') || 'en';
   const idx = LANG_CYCLE.indexOf(current);
   const next = LANG_CYCLE[(idx + 1) % LANG_CYCLE.length];
   applyLang(next);
 }
 // Applique la langue sauvegardée (ou FR par défaut) au chargement
-const savedLang = localStorage.getItem('purepep_lang') || 'fr';
+const savedLang = localStorage.getItem('purepep_lang') || 'en';
 document.addEventListener('DOMContentLoaded', () => applyLang(savedLang));
 if(document.readyState !== 'loading') applyLang(savedLang);
 

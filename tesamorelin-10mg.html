@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,19 +7,19 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Tesamorelin · Peptide de Recherche HPLC ≥99% · PurePep Labs</title>
+  <title>Tesamorelin · Research Peptide HPLC ≥99% · PurePep Labs</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Tesamorelin, peptide de recherche, pureté ≥99% HPLC certifiée Freedom Diagnostics. COA par lot, livré partout au Canada. À partir de $90.00."/>
+  <meta name="description" content="Tesamorelin, research peptide, ≥99% HPLC purity certified by Freedom Diagnostics. COA per batch, shipped across Canada. From $90.00."/>
   <meta name="keywords" content="tesamorelin, peptide recherche, HPLC, COA, Canada"/>
   <meta property="og:title" content="Tesamorelin · PurePep Labs"/>
-  <meta property="og:description" content="Tesamorelin, peptide de recherche, pureté ≥99% HPLC certifiée Freedom Diagnostics. COA par lot, livré partout au Canada. À partir de $90.00."/>
+  <meta property="og:description" content="Tesamorelin, research peptide, ≥99% HPLC purity certified by Freedom Diagnostics. COA per batch, shipped across Canada. From $90.00."/>
   <meta property="og:image" content="https://purepep.ca/images/tesamorelin-5mg.jpg"/>
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "Product", "name": "Tesamorelin", "description": "Le Tesamorelin est un analogue synthétique du GHRH (growth hormone-releasing hormone). Il est étudié pour sa capacité à stimuler la sécrétion pulsatile de l'hormone de croissance par l'hypophyse, notamment dans la recherche sur la répartition des tissus adipeux.", "brand": {"@type": "Brand", "name": "PurePep Labs"}, "offers": {"@type": "Offer", "priceCurrency": "CAD", "price": "90.00", "availability": "https://schema.org/InStock", "url": "https://purepep.ca/tesamorelin-10mg"}, "image": "https://purepep.ca/images/tesamorelin-5mg.jpg"}
+  {"@context": "https://schema.org", "@type": "Product", "name": "Tesamorelin", "description": "Le Tesamorelin est un analogue synthétique du GHRH (growth hormone-releasing hormone). Il est étudié pour sa capacité à stimuler la sécrétion pulsatile de l'hormone de croissance par l'hypophyse, notamment dans la recherche sur la répartition des tissus adipeux.", "brand": {"@type": "Brand", "name": "PurePep Labs"}, "offers": {"@type": "Offer", "priceCurrency": "CAD", "price": "90.00", "availability": "https://schema.org/OutOfStock", "url": "https://purepep.ca/tesamorelin-10mg"}, "image": "https://purepep.ca/images/tesamorelin-5mg.jpg"}
   </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -1236,6 +1236,8 @@
   .ph-add-btn{flex:1;background:var(--accent-d);color:#fff;padding:0 1.4rem;height:48px;border-radius:10px;font-weight:700;font-size:.92rem;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:all .2s}
   .ph-add-btn:hover{background:var(--accent-l)}
   .ph-add-btn.added{background:var(--accent-l)}
+  .ph-add-btn.ph-btn-disabled{background:#c7c7c7;color:#8a8a8a;cursor:not-allowed;pointer-events:none}
+  .ph-oos-msg{display:flex;align-items:center;width:fit-content;font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#b91c1c;background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.3);border-radius:7px;padding:.4rem .65rem;margin:.9rem 0 1.1rem}
   .ph-tabs{display:flex;gap:1.6rem;border-bottom:1px solid var(--border);margin-bottom:1.6rem}
   .ph-tab{padding:.7rem 0;font-size:.85rem;font-weight:700;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s;cursor:pointer}
   .ph-tab.active{color:var(--text);border-color:var(--accent)}
@@ -1300,14 +1302,15 @@
         <option value="10mg" data-price="130.00" data-img="images/tesamorelin-10mg.jpg">10 mg</option>
       </select>
       <div class="ph-price-row"><div><span class="ph-price" id="ph-price">$90.00</span><span class="ph-price-unit">CAD</span></div></div>
+      <div class="ph-oos-msg"><span data-i18n="oos_high_demand_msg">Rupture de stock temporaire</span></div>
       <div class="ph-buy-row">
         <div class="qty-ctrl">
           <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
           <span class="qty-val">1</span>
           <button class="qty-btn" onclick="changeQty(this,1)">+</button>
         </div>
-        <button class="ph-add-btn" onclick="addHeroToCartFixed(this)">
-          <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span> <span data-i18n="add_to_cart_btn">Ajouter au panier</span>
+        <button class="ph-add-btn ph-btn-disabled">
+          <span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span> <span data-i18n="oos_btn_label">Rupture de stock</span>
         </button>
       </div>
     </div>
@@ -1384,7 +1387,7 @@
 <a class="ph-related-card" href="cagrilintide-5mg.html">
       <img src="images/cagrilintide-5mg.jpg" alt="Cagrilintide"/>
       <div class="ph-related-name">CAGRILINTIDE</div>
-      <div class="ph-related-price">$40.00</div>
+      <div class="ph-related-price">$65.00</div>
     </a>
     <a class="ph-related-card" href="ghk-cu-50mg.html">
       <img src="images/ghk-cu-100mg.jpg" alt="GHK-Cu"/>
@@ -1985,6 +1988,8 @@ const I18N = {
     rating_reviews: "verified reviews",
     dose_label: "Dosage",
     add_to_cart_btn: "Add to cart",
+    oos_high_demand_msg: "Temporarily out of stock",
+    oos_btn_label: "Out of stock",
     cat_weightloss: "Weight Loss",
     trust_coa: "COA per batch",
     trust_purity: "≥99% HPLC purity",
@@ -2132,13 +2137,13 @@ function applyLang(lang){
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){
-  const current = localStorage.getItem('purepep_lang') || 'fr';
+  const current = localStorage.getItem('purepep_lang') || 'en';
   const idx = LANG_CYCLE.indexOf(current);
   const next = LANG_CYCLE[(idx + 1) % LANG_CYCLE.length];
   applyLang(next);
 }
 // Applique la langue sauvegardée (ou FR par défaut) au chargement
-const savedLang = localStorage.getItem('purepep_lang') || 'fr';
+const savedLang = localStorage.getItem('purepep_lang') || 'en';
 document.addEventListener('DOMContentLoaded', () => applyLang(savedLang));
 if(document.readyState !== 'loading') applyLang(savedLang);
 

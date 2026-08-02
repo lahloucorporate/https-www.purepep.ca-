@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,19 +7,19 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Cagrilintide · Peptide de Recherche HPLC ≥99% · PurePep Labs</title>
+  <title>Cagrilintide · Research Peptide HPLC ≥99% · PurePep Labs</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Cagrilintide, peptide de recherche, pureté ≥99% HPLC certifiée Freedom Diagnostics. COA par lot, livré partout au Canada. À partir de $40.00."/>
+  <meta name="description" content="Cagrilintide, research peptide, ≥99% HPLC purity certified by Freedom Diagnostics. COA per batch, shipped across Canada. From $65.00."/>
   <meta name="keywords" content="cagrilintide, peptide recherche, HPLC, COA, Canada"/>
   <meta property="og:title" content="Cagrilintide · PurePep Labs"/>
-  <meta property="og:description" content="Cagrilintide, peptide de recherche, pureté ≥99% HPLC certifiée Freedom Diagnostics. COA par lot, livré partout au Canada. À partir de $40.00."/>
+  <meta property="og:description" content="Cagrilintide, research peptide, ≥99% HPLC purity certified by Freedom Diagnostics. COA per batch, shipped across Canada. From $65.00."/>
   <meta property="og:image" content="https://purepep.ca/images/cagrilintide-5mg.jpg"/>
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "Product", "name": "Cagrilintide", "description": "Le Cagrilintide est un analogue de l'amyline à action prolongée, agoniste des récepteurs de l'amyline. Il est étudié en recherche métabolique, notamment en association avec les agonistes GLP-1, pour son rôle dans la régulation de la satiété.", "brand": {"@type": "Brand", "name": "PurePep Labs"}, "offers": {"@type": "Offer", "priceCurrency": "CAD", "price": "40.00", "availability": "https://schema.org/InStock", "url": "https://purepep.ca/cagrilintide-5mg"}, "image": "https://purepep.ca/images/cagrilintide-5mg.jpg"}
+  {"@context": "https://schema.org", "@type": "Product", "name": "Cagrilintide", "description": "Le Cagrilintide est un analogue de l'amyline à action prolongée, agoniste des récepteurs de l'amyline. Il est étudié en recherche métabolique, notamment en association avec les agonistes GLP-1, pour son rôle dans la régulation de la satiété.", "brand": {"@type": "Brand", "name": "PurePep Labs"}, "offers": {"@type": "Offer", "priceCurrency": "CAD", "price": "65.00", "availability": "https://schema.org/InStock", "url": "https://purepep.ca/cagrilintide-5mg"}, "image": "https://purepep.ca/images/cagrilintide-5mg.jpg"}
   </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -1292,8 +1292,8 @@
     </div>
 
     <div class="ph-buybox">
-      <input type="hidden" id="ph-dose-select-fixed" value="40.00"/>
-      <div class="ph-price-row"><div><span class="ph-price" id="ph-price">$40.00</span><span class="ph-price-unit">CAD</span></div></div>
+      <input type="hidden" id="ph-dose-select-fixed" value="65.00"/>
+      <div class="ph-price-row"><div><span class="ph-price" id="ph-price">$65.00</span><span class="ph-price-unit">CAD</span></div></div>
       <div class="ph-buy-row">
         <div class="qty-ctrl">
           <button class="qty-btn" onclick="changeQty(this,-1)">−</button>
@@ -1401,7 +1401,7 @@ function updateHeroPrice(){
 }
 
 function addHeroToCartFixed(btn){
-  const price = 40.00;
+  const price = 65.00;
   const qtyEl = document.querySelector('.ph-buy-row .qty-val');
   const qty = qtyEl ? parseInt(qtyEl.textContent) : 1;
   for(let i=0;i<qty;i++) cart.push({name:'Cagrilintide', price, dose:'5mg'});
@@ -2070,13 +2070,13 @@ function applyLang(lang){
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){
-  const current = localStorage.getItem('purepep_lang') || 'fr';
+  const current = localStorage.getItem('purepep_lang') || 'en';
   const idx = LANG_CYCLE.indexOf(current);
   const next = LANG_CYCLE[(idx + 1) % LANG_CYCLE.length];
   applyLang(next);
 }
 // Applique la langue sauvegardée (ou FR par défaut) au chargement
-const savedLang = localStorage.getItem('purepep_lang') || 'fr';
+const savedLang = localStorage.getItem('purepep_lang') || 'en';
 document.addEventListener('DOMContentLoaded', () => applyLang(savedLang));
 if(document.readyState !== 'loading') applyLang(savedLang);
 

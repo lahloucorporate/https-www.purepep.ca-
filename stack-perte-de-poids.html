@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,16 +7,16 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <title>Pack Perte de Poids, Régulation de l'appétit & métabolisme · PurePep Labs</title>
+  <title>Weight Loss Pack, Appetite & Metabolism Regulation · PurePep Labs</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"/>
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png"/>
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
-  <meta name="description" content="Pack Perte de Poids : Retatrutide 10mg + Cagrilintide, avec kit de reconstitution inclus. Régulation de l'appétit & métabolisme."/>
+  <meta name="description" content="Weight Loss Pack: Retatrutide 10mg + Cagrilintide, reconstitution kit included. Appetite & metabolism regulation."/>
   <meta name="keywords" content="retatrutide 10mg, cagrilintide, pack peptides"/>
   <meta property="og:title" content="Pack Perte de Poids · PurePep Labs"/>
-  <meta property="og:description" content="Pack Perte de Poids : Retatrutide 10mg + Cagrilintide, avec kit de reconstitution inclus. Régulation de l'appétit & métabolisme."/>
+  <meta property="og:description" content="Weight Loss Pack: Retatrutide 10mg + Cagrilintide, reconstitution kit included. Appetite & metabolism regulation."/>
   <meta property="og:image" content="https://purepep.ca/images/retatrutide-10mg.jpg"/>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Product", "name": "Pack Perte de Poids", "description": "Le Retatrutide est un triple agoniste qui active les récepteurs GLP-1, GIP et glucagon en une seule molécule, trois voies métaboliques distinctes. Le Cagrilintide, lui, cible une quatrième voie total", "brand": {"@type": "Brand", "name": "PurePep Labs"}, "offers": {"@type": "Offer", "priceCurrency": "CAD", "price": "120.00", "availability": "https://schema.org/InStock", "url": "https://purepep.ca/stack-perte-de-poids"}, "image": "https://purepep.ca/images/retatrutide-10mg.jpg"}
@@ -1349,7 +1349,7 @@
         </a>
         <a class="stkp-comp-card" href="cagrilintide-5mg.html">
           <img src="images/cagrilintide-5mg.jpg" alt="Cagrilintide"/>
-          <div class="stkp-comp-info"><div class="stkp-comp-name">Cagrilintide</div><div class="stkp-comp-price">$40.00</div></div>
+          <div class="stkp-comp-info"><div class="stkp-comp-name">Cagrilintide</div><div class="stkp-comp-price">$65.00</div></div>
           <span class="stkp-comp-arrow">→</span>
         </a>
         <div class="stkp-comp-card stkp-comp-kit">
@@ -1398,7 +1398,7 @@
     <a class="ph-related-card" href="pack-wolverine.html">
       <img src="images/bpc157-tb500.jpg" alt="Pack Wolverine"/>
       <div class="ph-related-name" data-i18n="rel_wolvbase">PACK WOLVERINE</div>
-      <div class="ph-related-price">$90.00</div>
+      <div class="ph-related-price">$120.00</div>
     </a>
     <a class="ph-related-card" href="stack-wolverine.html">
       <img src="images/bpc-157-10mg.jpg" alt="Pack Wolverine Elite"/>
@@ -1408,7 +1408,7 @@
     <a class="ph-related-card" href="stack-peau-cheveux.html">
       <img src="images/ghk-cu-100mg.jpg" alt="Pack Peau & Cheveux"/>
       <div class="ph-related-name" data-i18n="rel_skin">PACK PEAU & CHEVEUX</div>
-      <div class="ph-related-price">$180.00</div>
+      <div class="ph-related-price">$160.00</div>
     </a>
     <a class="ph-related-card" href="stack-regeneration-cellulaire.html">
       <img src="images/nad-500mg.jpg" alt="Pack Renaissance"/>
@@ -2051,13 +2051,13 @@ function applyLang(lang){
 }
 const LANG_CYCLE = ['fr', 'en'];
 function cycleLang(){
-  const current = localStorage.getItem('purepep_lang') || 'fr';
+  const current = localStorage.getItem('purepep_lang') || 'en';
   const idx = LANG_CYCLE.indexOf(current);
   const next = LANG_CYCLE[(idx + 1) % LANG_CYCLE.length];
   applyLang(next);
 }
 // Applique la langue sauvegardée (ou FR par défaut) au chargement
-const savedLang = localStorage.getItem('purepep_lang') || 'fr';
+const savedLang = localStorage.getItem('purepep_lang') || 'en';
 document.addEventListener('DOMContentLoaded', () => applyLang(savedLang));
 if(document.readyState !== 'loading') applyLang(savedLang);
 
